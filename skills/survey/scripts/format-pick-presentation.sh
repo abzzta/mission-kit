@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# format-pick-presentation.sh — render a round's questions in canonical shape.
+# format-pick-presentation.sh -- render a round's questions in canonical shape.
 #
 # Project-agnostic. Reads a markdown questions-file containing Q-N definitions and
 # emits the standard survey question shape (Q-N: <axis>: <context>; (a)/(b)/(c)/(d)
 # labels), normalized to stdout. Round 1 covers Q1-Q3; Round 2 covers Q4-Q6.
 #
 # Input questions-file format:
-#   **Q-N — <axis>:** <context>
+#   **Q-N -- <axis>:** <context>
 #   - (a) <option>
 #   - (b) <option>
 #   - (c) <option>
@@ -17,7 +17,7 @@
 #
 # Exit codes:
 #   0  rendered
-#   64 EX_USAGE — bad/missing arguments
+#   64 EX_USAGE -- bad/missing arguments
 #   1  one or more expected questions missing from the file
 #
 # Pure bash + grep/awk/sed. No python/yq/npm.

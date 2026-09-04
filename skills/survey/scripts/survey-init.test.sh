@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Test cases for survey-init.sh — Survey envelope scaffolding.
+# Test cases for survey-init.sh -- Survey envelope scaffolding.
 # Pure bash asserts. Covers happy-path, work-item seeding, arg-errors (EX_USAGE 64),
 # refuse-overwrite, slug derivation, and bug-144 cwd-robustness (subdir invocation).
 
@@ -17,30 +17,30 @@ trap 'rm -rf "$TMPDIR"' EXIT INT TERM HUP
 assert_exit() {
   local expected=$1 actual=$2 label=$3
   if [[ "$actual" -eq "$expected" ]]; then
-    echo "  ✓ $label (exit $actual)"
+    echo "  ok   $label (exit $actual)"
     PASS=$((PASS+1))
   else
-    echo "  ✗ $label (expected exit $expected, got $actual)" >&2
+    echo "  FAIL $label (expected exit $expected, got $actual)" >&2
     FAIL=$((FAIL+1))
   fi
 }
 
 assert_exists() {
   if [[ -f "$1" ]]; then
-    echo "  ✓ $2 exists"
+    echo "  ok   $2 exists"
     PASS=$((PASS+1))
   else
-    echo "  ✗ $2 missing ($1)" >&2
+    echo "  FAIL $2 missing ($1)" >&2
     FAIL=$((FAIL+1))
   fi
 }
 
 assert_grep() {
   if grep -q "$1" "$2" 2>/dev/null; then
-    echo "  ✓ $3"
+    echo "  ok   $3"
     PASS=$((PASS+1))
   else
-    echo "  ✗ $3 (pattern '$1' not found in $2)" >&2
+    echo "  FAIL $3 (pattern '$1' not found in $2)" >&2
     FAIL=$((FAIL+1))
   fi
 }
@@ -65,7 +65,7 @@ assert_exists "$WD/surveys/my-feature-survey-survey.md" "envelope file (derived 
 assert_grep "My Feature Survey" "$WD/surveys/my-feature-survey-survey.md" "title substituted"
 assert_grep "TICKET-42" "$WD/surveys/my-feature-survey-survey.md" "item-id substituted"
 
-echo "[survey-init.test] Happy path with item-text-file (seeds §0)"
+echo "[survey-init.test] Happy path with item-text-file (seeds S0)"
 WD="$TMPDIR/with-text"
 setup_workdir "$WD"
 echo "Short description of the work item to survey" > "$TMPDIR/item-text.txt"
@@ -91,7 +91,7 @@ rc=$?
 assert_exit 0 "$rc" "arbitrary item-id accepted"
 assert_grep "JIRA-9001/sub-b" "$WD/surveys/migration-survey.md" "arbitrary item-id substituted"
 
-echo "[survey-init.test] bug-144 cwd-robustness — invoke from a subdir"
+echo "[survey-init.test] bug-144 cwd-robustness -- invoke from a subdir"
 WD="$TMPDIR/cwd"
 setup_workdir "$WD"
 mkdir -p "$WD/deeply/nested/sub"
@@ -99,21 +99,21 @@ mkdir -p "$WD/deeply/nested/sub"
 rc=$?
 assert_exit 0 "$rc" "invocation from subdir succeeds"
 assert_exists "$WD/surveys/anchored-survey.md" "envelope landed at REPO_ROOT not the caller cwd"
-[[ ! -e "$WD/deeply/nested/sub/surveys" ]] && { echo "  ✓ no surveys/ leaked into caller cwd"; PASS=$((PASS+1)); } || { echo "  ✗ surveys/ leaked into caller cwd" >&2; FAIL=$((FAIL+1)); }
+[[ ! -e "$WD/deeply/nested/sub/surveys" ]] && { echo "  ok   no surveys/ leaked into caller cwd"; PASS=$((PASS+1)); } || { echo "  FAIL surveys/ leaked into caller cwd" >&2; FAIL=$((FAIL+1)); }
 
-echo "[survey-init.test] Missing required arg → EX_USAGE 64"
+echo "[survey-init.test] Missing required arg -> EX_USAGE 64"
 WD="$TMPDIR/missing-arg"
 setup_workdir "$WD"
 set +e; ( cd "$WD" && bash skills/survey/scripts/survey-init.sh --title="No Item" >/dev/null 2>&1 ); rc=$?; set -e
-assert_exit 64 "$rc" "missing --item-id → EX_USAGE"
+assert_exit 64 "$rc" "missing --item-id -> EX_USAGE"
 
-echo "[survey-init.test] Unknown arg → EX_USAGE 64"
+echo "[survey-init.test] Unknown arg -> EX_USAGE 64"
 WD="$TMPDIR/unknown-arg"
 setup_workdir "$WD"
 set +e; ( cd "$WD" && bash skills/survey/scripts/survey-init.sh --title=T --item-id=X --bogus=1 >/dev/null 2>&1 ); rc=$?; set -e
-assert_exit 64 "$rc" "unknown argument → EX_USAGE"
+assert_exit 64 "$rc" "unknown argument -> EX_USAGE"
 
-echo "[survey-init.test] Refuse overwrite → exit 1"
+echo "[survey-init.test] Refuse overwrite -> exit 1"
 WD="$TMPDIR/overwrite"
 setup_workdir "$WD"
 ( cd "$WD" && bash skills/survey/scripts/survey-init.sh --title="Once" --item-id=O1 >/dev/null 2>&1 )

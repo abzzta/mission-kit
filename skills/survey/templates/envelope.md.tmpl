@@ -1,5 +1,5 @@
 ---
-# Survey envelope — captures stakeholder intent BEFORE a design is committed.
+# Survey envelope -- captures stakeholder intent BEFORE a design is committed.
 # Scaffolded by survey-init.sh. Placeholders in <angle-brackets> are unfilled;
 # validate-envelope.sh rejects any pick/required-field still left as <...>.
 survey-title: <TITLE>
@@ -28,7 +28,7 @@ stakeholder-picks:
 # classification is OPTIONAL. Delete this key if your project has no work-item
 # taxonomy. If you keep it and set SURVEY_CLASSES (env) or --classes, the value
 # must be one of that pipe-separated set; otherwise any non-placeholder string passes.
-classification: <optional; e.g. feature | refactor | spike | migration — your taxonomy>
+classification: <optional; e.g. feature | refactor | spike | migration -- your taxonomy>
 outcome-axis:
   # The consumer-supplied set of goals / objectives this work serves. Generic
   # replacement for any project-specific outcome framework. Free-form labels.
@@ -62,7 +62,7 @@ contradictory-constraints:
   #   constraint-envelope: <description of the common-satisfiable constraint>
 ---
 
-# <TITLE> — Survey envelope
+# <TITLE> -- Survey envelope
 
 **Methodology:** <methodology reference> (2-round, 3-orthogonal-questions-per-round pick-list)
 **Work item:** <ITEM-ID>
@@ -71,34 +71,34 @@ contradictory-constraints:
 
 ---
 
-## §0 Context
+## S0 Context
 
 <1-2 paragraphs: where this work item came from + surrounding context + which
 methodology anchor governs this survey. Cite the work item and any related items.>
 
 ---
 
-## §1 Round 1 picks
+## S1 Round 1 picks
 
 | Q | Pick | Intent reading (1-line summary) |
 |---|---|---|
-| Q1 — <axis title> | **<letter>** <option label> | <brief reading> |
-| Q2 — <axis title> | **<letter>** <option label> | <brief reading> |
-| Q3 — <axis title> | **<letter>** <option label> | <brief reading> |
+| Q1 -- <axis title> | **<letter>** <option label> | <brief reading> |
+| Q2 -- <axis title> | **<letter>** <option label> | <brief reading> |
+| Q3 -- <axis title> | **<letter>** <option label> | <brief reading> |
 
-### §1.Q1 — Per-question interpretation
+### S1.Q1 -- Per-question interpretation
 
 <1-2 paragraphs: cite the work-item text + the outcome-axis (round-1 mapping) +
 the aggregate of the round's picks. State the hypothesis: "given the picks + the
 work item + the goals, here is what Q1 most likely means.">
 
-### §1.Q2 — Per-question interpretation
+### S1.Q2 -- Per-question interpretation
 
-<1-2 paragraphs, same shape as §1.Q1.>
+<1-2 paragraphs, same shape as S1.Q1.>
 
-### §1.Q3 — Per-question interpretation
+### S1.Q3 -- Per-question interpretation
 
-<1-2 paragraphs, same shape as §1.Q1.>
+<1-2 paragraphs, same shape as S1.Q1.>
 
 **Round-1 composite read** (1-2 sentences): <aggregate interpretation of all 3 picks;
 cross-question coherence check; flag any tension as a Round-2 clarification candidate.>
@@ -109,27 +109,27 @@ what that means for the design.>
 
 ---
 
-## §2 Round 2 picks
+## S2 Round 2 picks
 
 | Q | Pick | Round-1 aggregate relation | Intent reading (1-line summary) |
 |---|---|---|---|
-| Q4 — <axis title> | **<letter>** <option label> | <refines\|challenges\|disambiguates\|deepens Round-1 aggregate> | <brief reading> |
-| Q5 — <axis title> | **<letter>** <option label> | <refines\|challenges\|disambiguates\|deepens Round-1 aggregate> | <brief reading> |
-| Q6 — <axis title> | **<letter>** <option label> | <refines\|challenges\|disambiguates\|deepens Round-1 aggregate> | <brief reading> |
+| Q4 -- <axis title> | **<letter>** <option label> | <refines\|challenges\|disambiguates\|deepens Round-1 aggregate> | <brief reading> |
+| Q5 -- <axis title> | **<letter>** <option label> | <refines\|challenges\|disambiguates\|deepens Round-1 aggregate> | <brief reading> |
+| Q6 -- <axis title> | **<letter>** <option label> | <refines\|challenges\|disambiguates\|deepens Round-1 aggregate> | <brief reading> |
 
-### §2.Q4 — Per-question interpretation
+### S2.Q4 -- Per-question interpretation
 
 <1-2 paragraphs: work item + Round-1 responses + interpretations + Round-1
 composite read + how this question refines/challenges/disambiguates/deepens that
 aggregate + Round-2 outcome mapping + aggregate Round-2 surface.>
 
-### §2.Q5 — Per-question interpretation
+### S2.Q5 -- Per-question interpretation
 
-<1-2 paragraphs, same shape as §2.Q4.>
+<1-2 paragraphs, same shape as S2.Q4.>
 
-### §2.Q6 — Per-question interpretation
+### S2.Q6 -- Per-question interpretation
 
-<1-2 paragraphs, same shape as §2.Q4.>
+<1-2 paragraphs, same shape as S2.Q4.>
 
 **Round-2 composite read** (1-2 sentences): <aggregate interpretation of all 3
 Round-2 picks, explicitly stating how Round 2 changed, confirmed, or sharpened
@@ -141,9 +141,9 @@ how that compares with Round 1.>
 
 ---
 
-## §3 Composite intent envelope
+## S3 Composite intent envelope
 
-<1-3 paragraphs: the solved matrix — compose the Round-1 aggregate interpretation
+<1-3 paragraphs: the solved matrix -- compose the Round-1 aggregate interpretation
 and Round-2 aggregate interpretation into the final derived intent. State the
 primary outcome + secondary outcomes + key design constraints surfaced. This is
 the load-bearing envelope the design phase concretizes.>
@@ -154,7 +154,7 @@ should shape downstream design choices.>
 
 ---
 
-## §4 Scope summary
+## S4 Scope summary
 
 | Axis | Bound |
 |---|---|
@@ -173,7 +173,7 @@ should shape downstream design choices.>
 
 ---
 
-## §5 Anti-goals (out-of-scope; deferred)
+## S5 Anti-goals (out-of-scope; deferred)
 
 | AG | Description | Composes-with target |
 |---|---|---|
@@ -182,7 +182,7 @@ should shape downstream design choices.>
 
 ---
 
-## §6 Flags / open questions for the design phase
+## S6 Flags / open questions for the design phase
 
 Open questions and risks surfaced during interpretation, each with a recommendation
 to challenge during design review.
@@ -194,33 +194,33 @@ to challenge during design review.
 
 ---
 
-## §7 Sequencing / cross-work considerations
+## S7 Sequencing / cross-work considerations
 
-### §7.1 Branch + review strategy
+### S7.1 Branch + review strategy
 
 <branch handle + review cadence if applicable>
 
-### §7.2 Composability with concurrent / pending work
+### S7.2 Composability with concurrent / pending work
 
 <related items and how they compose with this work>
 
-### §7.3 Compressed-timeline candidate?
+### S7.3 Compressed-timeline candidate?
 
 <assessment of whether this can collapse phases; risk-flag if scope warrants stakeholder awareness>
 
 ---
 
-## §calibration — Calibration data point
+## Scalibration -- Calibration data point
 
 Captures an empirical baseline for the methodology-evolution loop.
 
 - **Stakeholder time-cost (minutes):** <integer> (across both rounds)
 - **Comparison baseline:** <prior survey reference OR prior process reference OR "none">
-- **Notes:** <free text — what worked, what didn't, novel constraints, multi-pick observations>
+- **Notes:** <free text -- what worked, what didn't, novel constraints, multi-pick observations>
 
 ---
 
-## §contradictory — Contradictory multi-pick carry-forward
+## Scontradictory -- Contradictory multi-pick carry-forward
 
 (Fill ONLY when a multi-pick signals a both-at-once constraint. Otherwise omit this section entirely.)
 
@@ -230,12 +230,12 @@ Captures an empirical baseline for the methodology-evolution loop.
 
 ---
 
-## §8 Cross-references
+## S8 Cross-references
 
-- **<methodology reference>** — the survey methodology this followed
-- **<ITEM-ID>** — source work item
+- **<methodology reference>** -- the survey methodology this followed
+- **<ITEM-ID>** -- source work item
 - **<related items / follow-on work>**
 
 ---
 
-— Proposer: <name> / <YYYY-MM-DD> (Survey envelope; <N> picks ratified across 2 rounds)
+-- Proposer: <name> / <YYYY-MM-DD> (Survey envelope; <N> picks ratified across 2 rounds)

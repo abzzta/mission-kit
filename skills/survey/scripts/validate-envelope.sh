@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# validate-envelope.sh — schema-check a Survey envelope.
+# validate-envelope.sh -- schema-check a Survey envelope.
 #
 # Project-agnostic. Validates the generalized 2-round / 3-questions-per-round survey
 # envelope produced by survey-init.sh. Each check emits a diagnostic naming the first
@@ -11,28 +11,28 @@
 #      calibration-data)
 #   2. All 6 picks (Q1..Q6) present, non-placeholder, one-or-more letters a-d
 #      (multi-pick supported)
-#   3. classification — OPTIONAL. Validated against an enum ONLY when both the key is
+#   3. classification -- OPTIONAL. Validated against an enum ONLY when both the key is
 #      present AND a non-empty enum is configured (--classes / SURVEY_CLASSES, a
 #      pipe-separated set). With no configured enum, any non-placeholder value passes;
 #      absent key is always fine.
 #   4. Outcome-axis present: a whole-survey roll-up (top-level primary + secondary)
 #      AND a per-round mapping (round-1 + round-2 each need primary + secondary).
-#      This is the generic outcome/goal-axis mapping — the kernel's drift-check surface.
+#      This is the generic outcome/goal-axis mapping -- the kernel's drift-check surface.
 #   5. Lifecycle handoff is exactly intent-open -> intent-captured and carries authority/planning refs.
 #   6. Axiom/principle anchors carry whole-survey and per-round mappings.
 #   7. Calibration-data fields (stakeholder-time-cost-minutes numeric; comparison-baseline
 #      + notes non-empty)
-#   8. Contradictory-constraints frontmatter ↔ §contradictory prose consistency
-#   9. Per-question interpretation sub-sections (§1.Q1..§1.Q3, §2.Q4..§2.Q6) present + non-empty
+#   8. Contradictory-constraints frontmatter <-> Scontradictory prose consistency
+#   9. Per-question interpretation sub-sections (S1.Q1..S1.Q3, S2.Q4..S2.Q6) present + non-empty
 #  10. Round composite/anchor prose, Round-2 relation markers, and final anchor are present.
-#  11. Required prose sections present (§0/§1/§2/§3/§4/§5/§6/§7/§calibration/§8)
+#  11. Required prose sections present (S0/S1/S2/S3/S4/S5/S6/S7/Scalibration/S8)
 #
 # Usage:
 #   validate-envelope.sh --envelope-path=<path> [--classes="a|b|c"]
 #
 # Exit codes:
 #   0  envelope conforms
-#   64 EX_USAGE — bad/missing arguments
+#   64 EX_USAGE -- bad/missing arguments
 #   1  validation failure or file-not-found
 #
 # Pure bash + grep/awk/sed. No python/yq/npm.
@@ -107,7 +107,7 @@ for key in survey-title work-item methodology-source lifecycle-handoff stakehold
   fi
 done
 
-# (2) Stakeholder picks — all 6 present, non-placeholder, one-or-more letters a-d.
+# (2) Stakeholder picks -- all 6 present, non-placeholder, one-or-more letters a-d.
 for q in Q1 Q2 Q3 Q4 Q5 Q6; do
   if ! grep -qE "^[[:space:]]+${q}:" <<<"$FRONTMATTER"; then
     fail "stakeholder-picks missing required pick: $q"
@@ -122,7 +122,7 @@ for q in Q1 Q2 Q3 Q4 Q5 Q6; do
   fi
 done
 
-# (3) classification — OPTIONAL; enum-checked only when present AND an enum is configured.
+# (3) classification -- OPTIONAL; enum-checked only when present AND an enum is configured.
 if grep -qE "^classification:" <<<"$FRONTMATTER"; then
   CLASSIFICATION=$(grep -E "^classification:" <<<"$FRONTMATTER" | head -1 | sed 's/^classification: *//;s/^"//;s/"$//')
   if [[ "$CLASSIFICATION" =~ ^\<.*\>$ || -z "$CLASSIFICATION" ]]; then
@@ -142,7 +142,7 @@ if grep -qE "^classification:" <<<"$FRONTMATTER"; then
   fi
 fi
 
-# (4a) Whole-survey outcome-axis roll-up — top-level primary + secondary keys
+# (4a) Whole-survey outcome-axis roll-up -- top-level primary + secondary keys
 # (the two-space-indented keys directly under `outcome-axis:`, before any round block).
 if ! awk '
   BEGIN { in_oa = 0; found_p = 0; found_s = 0 }
@@ -156,7 +156,7 @@ if ! awk '
   fail "outcome-axis missing whole-survey roll-up (top-level primary + secondary keys)"
 fi
 
-# (4b) Per-round outcome-axis — round-1 + round-2 each need primary + secondary.
+# (4b) Per-round outcome-axis -- round-1 + round-2 each need primary + secondary.
 for round in round-1 round-2; do
   if ! awk -v r="$round" '
     BEGIN { in_oa = 0; in_round = 0; found_p = 0; found_s = 0 }
@@ -172,7 +172,7 @@ for round in round-1 round-2; do
   fi
 done
 
-# (5) Lifecycle handoff — survey owns only intent-open -> intent-captured.
+# (5) Lifecycle handoff -- survey owns only intent-open -> intent-captured.
 LIFECYCLE_BLOCK=$(awk '
   BEGIN { in_lh = 0 }
   /^lifecycle-handoff:/ { in_lh = 1; next }
@@ -191,7 +191,7 @@ for key in authority-ref planning-input-ref; do
   fi
 done
 
-# (6) Axiom/principle anchors — whole-survey + per-round mappings.
+# (6) Axiom/principle anchors -- whole-survey + per-round mappings.
 ANCHOR_BLOCK=$(awk '
   BEGIN { in_ap = 0 }
   /^axiom-principle-anchors:/ { in_ap = 1; next }
@@ -235,7 +235,7 @@ for f in comparison-baseline notes; do
   fi
 done
 
-# (8) Contradictory-constraints frontmatter ↔ prose consistency.
+# (8) Contradictory-constraints frontmatter <-> prose consistency.
 if grep -qE "^contradictory-constraints:" <<<"$FRONTMATTER"; then
   CC_BLOCK=$(awk '
     BEGIN { in_cc = 0 }
@@ -245,29 +245,29 @@ if grep -qE "^contradictory-constraints:" <<<"$FRONTMATTER"; then
   ' <<<"$FRONTMATTER")
   CC_NONCOMMENT=$(grep -vE '^[[:space:]]*#' <<<"$CC_BLOCK" | grep -vE '^[[:space:]]*$' || true)
   if [[ -n "$CC_NONCOMMENT" ]]; then
-    if ! grep -qE "^## §contradictory" "$ENVELOPE_PATH"; then
-      fail "contradictory-constraints declared in frontmatter but §contradictory prose section missing"
+    if ! grep -qE "^## Scontradictory" "$ENVELOPE_PATH"; then
+      fail "contradictory-constraints declared in frontmatter but Scontradictory prose section missing"
     fi
   fi
 fi
 
 # (9) Per-question interpretation sub-sections present + non-empty.
 for q in Q1 Q2 Q3 Q4 Q5 Q6; do
-  if ! grep -qE "^### §[12]\.${q}" "$ENVELOPE_PATH"; then
-    fail "missing §[1|2].${q} per-question interpretation sub-section"
+  if ! grep -qE "^### S[12]\.${q}" "$ENVELOPE_PATH"; then
+    fail "missing S[1|2].${q} per-question interpretation sub-section"
   fi
   if ! awk -v q="$q" '
     BEGIN { found_header = 0; non_empty = 0 }
-    /^### §[12]\./ {
-      if ($0 ~ "^### §[12]\\." q "[ \t]*—") { found_header = 1; next }
+    /^### S[12]\./ {
+      if ($0 ~ "^### S[12]\\." q "[ \t]*--") { found_header = 1; next }
       else if (found_header) { exit !non_empty }
     }
-    /^## §/ { if (found_header) exit !non_empty }
+    /^## S/ { if (found_header) exit !non_empty }
     /^\*\*Round-[12] composite read/ { if (found_header) exit !non_empty }
     found_header && NF > 0 && !/^<[^>]+>$/ { non_empty = 1 }
     END { exit !(found_header && non_empty) }
   ' "$ENVELOPE_PATH"; then
-    fail "§[1|2].${q} per-question interpretation sub-section is empty or contains only placeholder text"
+    fail "S[1|2].${q} per-question interpretation sub-section is empty or contains only placeholder text"
   fi
 done
 
@@ -281,7 +281,7 @@ RELATION_COUNT=$(grep -Eio 'refines|challenges|disambiguates|deepens' "$ENVELOPE
 [[ "$RELATION_COUNT" -ge 3 ]] || fail "Round 2 must state at least three refine/challenge/disambiguate/deepen relations to the Round-1 aggregate"
 
 # (11) Required prose sections.
-REQUIRED_SECTIONS=("## §0 Context" "## §1 Round 1 picks" "## §2 Round 2 picks" "## §3 Composite intent envelope" "## §4 Scope summary" "## §5 Anti-goals" "## §6 Flags" "## §7 Sequencing" "## §calibration" "## §8 Cross-references")
+REQUIRED_SECTIONS=("## S0 Context" "## S1 Round 1 picks" "## S2 Round 2 picks" "## S3 Composite intent envelope" "## S4 Scope summary" "## S5 Anti-goals" "## S6 Flags" "## S7 Sequencing" "## Scalibration" "## S8 Cross-references")
 for section in "${REQUIRED_SECTIONS[@]}"; do
   if ! grep -qE "^${section}" "$ENVELOPE_PATH"; then
     fail "required prose section missing: $section"
