@@ -64,11 +64,23 @@ run "entries conform to their contract" bash -c 'cd schemas && npm ci --silent >
 run "standing-context template holds" ./tools/check-standing-context.sh $network_flag _template-standing-context.md
 run "this repo's own standing context holds" ./tools/check-standing-context.sh $network_flag AGENTS.md
 
+# A tool's own behaviour tests, discovered rather than listed, so adding a test adds its gate.
+# These run over fixtures rather than the corpus, so they are unconditional: a checker can be
+# broken by a change that touches no markdown at all.
+for t in "$root"/tools/*.test.sh; do
+	[ -e "$t" ] || continue
+	run "$(basename "$t" .test.sh) behaves" "$t"
+done
+
 # Every per-rule checker, discovered rather than listed, so adding a rule adds its gate.
 run_style() { # files...
 	local rule tool
 	for tool in "$root"/tools/s[0-9]*-*.sh "$root"/tools/s[0-9]*-*.mjs; do
 		[ -e "$tool" ] || continue
+		# A test exercises a checker; it is not one. Left in this glob it is handed the changed
+		# file list, ignores it, and reports PASS -- a gate that looks like it ran the corpus and
+		# ran nothing. Tests are gated separately below, unconditionally.
+		case "$tool" in *.test.sh) continue ;; esac
 		rule=$(basename "$tool" | grep -oE '^s[0-9]+' | tr 'a-z' 'A-Z')
 		case "$tool" in
 			*.mjs) run "$rule" node "$tool" --check "$@" ;;

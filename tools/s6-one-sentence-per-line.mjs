@@ -79,9 +79,19 @@ function isStructural(line) {
 		/^\s{2,}\S/.test(line) ||             // indented continuation (list body)
 		/^---$/.test(line) ||                 // horizontal rule
 		/^<!--/.test(line) ||                 // html comment / marker
-		/^\s*`{3,}/.test(line)                // fence
+		/^\s*`{3,}/.test(line) ||             // fence
+		/^\s*\*\*[^*]+:\*\*/.test(line)       // metadata line - see below
 	);
 }
+// The metadata line is a `**Key:** value` header block, and it is not prose. S6 calls it
+// "coupled, each needing its own rendered line"; joining a run of them produces the single
+// rendered block the rule exists to prevent. The join was also unrecoverable: with no sentence
+// terminator between a key's value and the next "**Key:**", the splitter could not undo it, and
+// the tool then reported the damaged file clean - a fix that certifies its own corruption.
+//
+// The colon must sit INSIDE the bold span. That is what separates a metadata key from a bold
+// sentence opener like "**Diffs.** Rewording one sentence...", which is prose and must still
+// split. Both cases are held by tools/s6-one-sentence-per-line.test.sh.
 
 function reflow(src) {
 	const lines = src.split('\n');

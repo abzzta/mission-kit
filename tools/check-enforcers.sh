@@ -32,6 +32,10 @@ done
 
 for tool in tools/s[0-9]*-*; do
 	[ -e "$tool" ] || continue
+	# A test names the tool it exercises, not a rule. It enforces nothing and no rule may claim
+	# it, so requiring a pairing would force a rule to declare two enforcers and break the
+	# one-rule-one-tool invariant this script exists to hold.
+	case "$tool" in *.test.sh) continue ;; esac
 	rule=$(basename "$tool" | grep -oE '^s[0-9]+' | tr 'a-z' 'A-Z')
 	grep -ql "^enforced-by: $tool$" style/${rule}-*.md 2>/dev/null \
 		|| report "orphan tool" "$tool is claimed by no rule; expected style/${rule}-*.md to name it"

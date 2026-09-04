@@ -146,7 +146,26 @@ Declaring it in frontmatter makes it checkable in both directions: a rule naming
 
 **Run it when** you add or rename a style rule or its enforcer.
 
-Exit status is non-zero if either direction is broken.
+Exit status is non-zero if either direction is broken.\
+A `*.test.sh` beside a tool is skipped: it names the tool it exercises rather than a rule, so no rule may claim it.
+
+---
+
+## s6-one-sentence-per-line.test.sh
+
+Holds the S6 enforcer to the rule it enforces.
+
+```sh
+tools/s6-one-sentence-per-line.test.sh
+```
+
+**Why it exists.**\
+S6 owns both halves of its rule, so a fix that corrupts its input makes the gate unsatisfiable rather than merely noisy.\
+The tool once joined a run of `**Key:** value` metadata lines into one line, and because no sentence terminator separated them the splitter could not undo it -- then reported the damaged file clean, certifying its own corruption.
+
+**Run it when** you change the sentence splitter, the structural-line predicate, or the fix path.
+
+Exit status is non-zero if any behaviour check fails.
 
 ---
 
