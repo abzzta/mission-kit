@@ -210,6 +210,34 @@ Exit status is non-zero if any entry is missing a declared section or carries th
 
 ---
 
+## check-charter-shape.sh
+
+Holds every knowledge layer's charter to the sections a member cannot supply for itself.
+
+```sh
+tools/check-charter-shape.sh            # report, never blocking
+tools/check-charter-shape.sh --strict   # exit non-zero on any gap
+```
+
+**Why it exists.**\
+A charter is a set's only voice: it states the territory the population covers, what admits a member, what a healthy population looks like against a merely valid one, and where the members are.\
+Thirteen charters were written before anything declared that shape, and each invented its own - an admission rule appears in six, a faults list in eight, a body shape in five, and a territory statement in one.\
+That divergence is what [`E3`](../entities/E3-set.md) records and this check stops recurring.
+
+**Advisory, deliberately, and with a stated end.**\
+Thirty sections are missing across the thirteen predating charters.\
+Gating on that today would refuse every unrelated change for a debt the change did not create, so the check reports and exits zero.\
+It flips to blocking when the count reaches nought, which is tracked as `B4`.\
+An advisory gate with no flip condition is decoration, so the condition is the point rather than a caveat.
+
+**Run it when** you write or edit a charter, or add a layer.
+
+The charter set is derived rather than listed: a charter is the entry whose id is its set's prefix followed by zero, so a layer added tomorrow is covered without editing this tool.\
+The required sections are data in [`schemas/entry-body/v1alpha1/entry-body.json`](../schemas/entry-body/v1alpha1/entry-body.json) under `spec.charters`.\
+Order is free and every other section is the set's own substance.
+
+---
+
 ## check-standing-context.sh
 
 Validates a standing-context document against the contract it declares.

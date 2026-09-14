@@ -82,6 +82,35 @@
               }
             }
           }
+        },
+        "charters": {
+          "type": "object",
+          "properties": {
+            "rationale": {
+              "type": "string"
+            },
+            "ordered": {
+              "type": "boolean"
+            },
+            "sections": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "exemptIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "rationale",
+            "sections"
+          ],
+          "additionalProperties": false
         }
       }
     }

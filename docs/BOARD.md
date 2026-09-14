@@ -62,9 +62,9 @@ Held rows are [below](#held).
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
 |---|---|---|---|---|---|---|
 | **B5** | S4 | **A3 mandate** | author | **L** | **M1** `DONE` | `set` is undefined while sixteen layers compose by it; four other rows depend on it |
-| **B4** | S2 | **A3 mandate** - A4 | author | M | **M1** | thirteen charters, thirteen shapes; admission appears in 5 of 13, body shape in 0 |
+| **B4** | S2 | **A3 mandate** - A4 | author | M | **M5** | thirteen charters, thirteen shapes; admission appears in 5 of 13, body shape in 0 |
 | **B3** | S4 | **A14 mandate** | author | M | **M1** `DONE` | no set declares its territory, so no set can find its own gaps |
-| **B6** | S2 | A3 signal | agent | S | **M1** | a member cannot name its own canonical name or its governing set |
+| **B6** | S2 | A3 signal | agent | S | **M1** `DONE` | a member cannot name its own canonical name or its governing set |
 | **B15** | **S1** | **A4 mandate** | adopter | M | **M2** | `AR4` prescribed to adopters and unheld here; rulings live only in commit messages |
 | **B2** | S2 | A2 signal | adopter | S | **M2** | no canonical instance filenames; only `VISION.md` is prescribed, and only by illustration |
 | **B11** | S2 | **A0 mandate** | adopter | S | **DONE** | `AR6` told authors to use a peer instance the corpus did not contain |
@@ -103,7 +103,7 @@ Its trigger is the first delta, which makes it solvable rather than merely urgen
 
 ---
 
-## M1 - define the set - `WIP`
+## M1 - define the set - `DONE`
 
 **The keystone.**\
 Everything in `M1` is one delta and should not be split.
@@ -112,13 +112,29 @@ Everything in `M1` is one delta and should not be split.
 |---|---|---|---|
 | M1.1 | Author `E3 - set`: what a set owns, what a member owes it, how a parent registers a child and delegates | `B5` | `DONE` - `E3` exists, `E2` cross-references it, contract passes |
 | M1.2 | Require a **territory statement** on every set - the denominator without which a gap is undetectable | `B3` | `DONE` - `E3` requires it; `C0` carries the first one |
-| M1.3 | Declare the charter shape, and check it the way `SC6` checks member bodies | `B4` | a checker refuses a charter missing a required section, proven by mutation |
-| M1.4 | Give a member a resolvable pointer to its governing set | `B6` | `category` resolves to a charter, or a new field does |
+| M1.3 | Declare the charter shape, and check it the way `SC6` checks member bodies | `B4` | `DONE` - declared in `spec.charters`, checked by `check-charter-shape.sh`, mutation-proven. Advisory until the 30-section debt clears |
+| M1.4 | Give a member a resolvable pointer to its governing set | `B6` | `DONE` - `category` now names the set and the contract states how its charter resolves |
 
 **Exit criteria.**\
 `set` is defined and cited by at least two charters.\
 A charter missing a required section is refused by a script, and the refusal is proven by injecting the defect.\
 One set states its territory, and a gap in that set is demonstrably findable.
+
+---
+
+## M5 - clear the charter debt - `TODO`
+
+Thirty sections missing across thirteen charters, measured by `check-charter-shape.sh --strict`.\
+Each charter states its own territory, which is the section that cannot be filled mechanically and is the reason this is a milestone rather than a chore.
+
+| # | Item | Row |
+|---|---|---|
+| M5.1 | Write a territory statement for each of the twelve charters lacking one | `B4`, `B3` |
+| M5.2 | Add the missing admission, faults and index sections | `B4` |
+| M5.3 | Flip `check-charter-shape.sh` to `--strict` in the gate | `B4` |
+
+**Exit criteria.**\
+`tools/check-charter-shape.sh --strict` exits zero, and `check-all.sh` invokes it in strict mode.
 
 ---
 

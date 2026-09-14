@@ -48,6 +48,11 @@ Without a stated territory a gap is invisible, so an uncharted population can be
 The set is the population; the category is the member's claim about it.\
 They are not interchangeable for the same reason a layer and a category are not: a set may exist that no category names.
 
+**The charter is resolvable from the member, without a lookup.**\
+A knowledge layer's charter is the entry whose id is that set's prefix followed by zero, held at `<directory>/README.md`.\
+So an entry read in isolation names its set in `category`, and the rules that govern its population are one hop away rather than somewhere the reader must already know about.\
+That regularity is load-bearing rather than tidy: it is what lets a member be self-describing without every member restating what its set owns.
+
 **A member's row in a parent's index is not a member.**\
 When a set contains a set, the child appears in the parent's index carrying a purpose and a description, indistinguishable at that altitude from an entry.\
 It is a pointer to a population, not an item, and a reader should be able to tell which without opening it.

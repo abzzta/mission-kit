@@ -58,6 +58,7 @@ run "repository structure is documented" ./tools/check-structure.sh
 run "rules and enforcers are paired" ./tools/check-enforcers.sh
 run "tool index matches the directory" ./tools/check-tool-docs.sh
 run "entry bodies match their category" ./tools/check-entry-body.sh
+run "charters carry their required sections" ./tools/check-charter-shape.sh
 run "index is derived, not typed" node tools/generate-index.mjs --check
 run "catalogue graph resolves" node tools/skill-graph.mjs
 run "entries conform to their contract" bash -c 'cd schemas && npm ci --silent >/dev/null 2>&1 || npm install --silent >/dev/null 2>&1; npm test --silent'
