@@ -30,6 +30,32 @@ Rebuilding is not merely wasted effort; it produces a second unit with the same 
 
 ---
 
+## Territory
+
+What this population claims to cover, stated so that a gap in it is a finding rather than a silence.\
+Required of any [`set`](../entities/E3-set.md), and this is the corpus's first.
+
+**The territory is the duty space of the systems this organisation builds** - every concern that appears as a box in an architecture's anchored core, at the altitude where a box has one duty.
+
+The denominator is therefore **derivable rather than invented**: it is the union of anchored cores across the architectures this organisation holds.\
+A duty declared in one architecture is a candidate; a duty declared in several and filled by no component is a gap with a name, a count, and somewhere to put it.
+
+**Three properties follow, and none of them can be held by a member.**
+
+- **Coverage.** The fraction of declared duties that a component fills. A miss is information only once this has a denominator, which is why `C0`'s admission rule could not previously be run.
+- **Orthogonality.** No two components' duties intersect, and none is a composition of others already present. Every entry can pass the one-duty test individually while the population overlaps, so this is checked across the set or not at all.
+- **Duplication.** One duty implemented in several projects with no component. Found by reading architectures rather than components, which is why no entry can surface it.
+
+**The intended end state is a managed set of orthogonal duties - a few dozen - covering most of what a system needs, with configuration and glue as the remainder.**\
+That is a target rather than a rule, and the distinction matters: a registry of forty perfectly orthogonal components that no project assembles from has failed, where ten overlapping ones everybody uses has not.\
+Orthogonality serves adoption; where they conflict, adoption wins and the overlap becomes a finding rather than a refusal.
+
+**This territory is not yet measurable.**\
+It needs several architectures carrying declared anchored cores to join against, and this corpus currently holds one.\
+The denominator is identified and not yet computable, which is a gap in the evidence rather than in the definition.
+
+---
+
 ## Use before build
 
 The registry is a catalogue, not a discipline.\

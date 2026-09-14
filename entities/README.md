@@ -86,4 +86,5 @@ A definition that only says what a thing is leaves every adjacent case undecided
 | [E0](README.md) | Entities - precise definitions of load-bearing terms, and what earns one | You are about to define a term the corpus leans on, or two readers could act differently on the same sentence |
 | [E1](E1-sovereign-hierarchy.md) | sovereign-hierarchy - layered authority where each layer holds final say over one class of decision | You are deciding which layer owns a decision, or an actor is about to decide something at another layer's altitude |
 | [E2](E2-layer.md) | layer - a top-level directory owning one concern, and the three names a knowledge layer answers to | You are deciding which layer owns an entry, or you have met the words layer, category and prefix and cannot tell whether they name one thing or three |
+| [E3](E3-set.md) | set - a bounded population whose charter states what its members owe each other | You are writing a charter, adding a member to a curated population, or asking whether a population is complete |
 <!-- END GENERATED -->

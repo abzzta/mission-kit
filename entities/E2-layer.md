@@ -57,6 +57,11 @@ That uniformity is load-bearing rather than tidy: it is what lets a layer be dis
 A layer owns a concern, not a topic.\
 If two directories could each plausibly hold the same entry, they are one layer wearing two names.
 
+**Layer against set.**\
+Every knowledge layer **is** a [`set`](E3-set.md), and its charter is the `<prefix>0` entry.\
+The converse does not hold: a set may nest inside another, and may span directories or none, where a layer is top-level and is a directory by definition.\
+This entry fixes the directory, prefix and category correspondence; `E3` fixes what the population owes itself - its territory, its admission, and where its members live.
+
 ---
 
 ## Boundaries

@@ -61,9 +61,9 @@ Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
 |---|---|---|---|---|---|---|
-| **B5** | S4 | **A3 mandate** | author | **L** | **M1** | `set` is undefined while sixteen layers compose by it; four other rows depend on it |
+| **B5** | S4 | **A3 mandate** | author | **L** | **M1** `DONE` | `set` is undefined while sixteen layers compose by it; four other rows depend on it |
 | **B4** | S2 | **A3 mandate** - A4 | author | M | **M1** | thirteen charters, thirteen shapes; admission appears in 5 of 13, body shape in 0 |
-| **B3** | S4 | **A14 mandate** | author | M | **M1** | no set declares its territory, so no set can find its own gaps |
+| **B3** | S4 | **A14 mandate** | author | M | **M1** `DONE` | no set declares its territory, so no set can find its own gaps |
 | **B6** | S2 | A3 signal | agent | S | **M1** | a member cannot name its own canonical name or its governing set |
 | **B15** | **S1** | **A4 mandate** | adopter | M | **M2** | `AR4` prescribed to adopters and unheld here; rulings live only in commit messages |
 | **B2** | S2 | A2 signal | adopter | S | **M2** | no canonical instance filenames; only `VISION.md` is prescribed, and only by illustration |
@@ -103,15 +103,15 @@ Its trigger is the first delta, which makes it solvable rather than merely urgen
 
 ---
 
-## M1 - define the set - `TODO`
+## M1 - define the set - `WIP`
 
 **The keystone.**\
 Everything in `M1` is one delta and should not be split.
 
 | # | Item | Row | Proof it landed |
 |---|---|---|---|
-| M1.1 | Author `E3 - set`: what a set owns, what a member owes it, how a parent registers a child and delegates | `B5` | entry exists, resolves, passes the entry-body contract |
-| M1.2 | Require a **territory statement** on every set - the denominator without which a gap is undetectable | `B3` | `E3` states it; at least one charter carries one |
+| M1.1 | Author `E3 - set`: what a set owns, what a member owes it, how a parent registers a child and delegates | `B5` | `DONE` - `E3` exists, `E2` cross-references it, contract passes |
+| M1.2 | Require a **territory statement** on every set - the denominator without which a gap is undetectable | `B3` | `DONE` - `E3` requires it; `C0` carries the first one |
 | M1.3 | Declare the charter shape, and check it the way `SC6` checks member bodies | `B4` | a checker refuses a charter missing a required section, proven by mutation |
 | M1.4 | Give a member a resolvable pointer to its governing set | `B6` | `category` resolves to a charter, or a new field does |
 
