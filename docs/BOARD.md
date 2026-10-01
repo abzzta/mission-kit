@@ -56,7 +56,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All fifteen rows, scored.\
+All sixteen rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -74,6 +74,7 @@ Held rows are [below](#held).
 | **B14** | S4 | A3 signal | author | **L** | **M3** | `backlog/` and `AR5` are two objects wearing one word |
 | **B10** | S5 | A4 signal | adopter | S | **M4** | `CSSA`/`TSSA` is one programme's vocabulary presented as convention |
 | **B7** | S4 | A2 signal | adopter | M | **M4** | `AR2` has no instance naming or ordinal scheme |
+| **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |
 | **B12** | S4 | A14 signal | author | M | **Held** | recovery methodology unwritten; its reasoning is untested |
 
@@ -86,11 +87,11 @@ Held rows are [below](#held).
 
 Three things the scoring surfaced that reading the backlog did not.
 
-**`B5` is the keystone and does not look like one.**\
+**`B5` was the keystone and did not look like one - discharged in `M1`.**\
 By impact it is `S4` - nothing is broken and no adopter is blocked.\
 By principle it is an `A3` mandate breach, because the corpus composes sixteen layers, nests sets inside `docs/`, and leaves the governing term undefined.\
-`B3`, `B4` and `B6` each resolve trivially once `set` exists and are each half-guesses without it.\
-Four rows collapse into one move.
+`B3`, `B4` and `B6` each resolved readily once `set` existed and were half-guesses without it.\
+Four rows collapsed into one move, which is the case for the two-signal device made on first use rather than argued: `B5` would have sorted near the bottom on impact alone.
 
 **`B1` and `B15` are the same defect at two altitudes.**\
 Both are the corpus prescribing what it does not hold.\
@@ -119,22 +120,6 @@ Everything in `M1` is one delta and should not be split.
 `set` is defined and cited by at least two charters.\
 A charter missing a required section is refused by a script, and the refusal is proven by injecting the defect.\
 One set states its territory, and a gap in that set is demonstrably findable.
-
----
-
-## M5 - clear the charter debt - `TODO`
-
-Thirty sections missing across thirteen charters, measured by `check-charter-shape.sh --strict`.\
-Each charter states its own territory, which is the section that cannot be filled mechanically and is the reason this is a milestone rather than a chore.
-
-| # | Item | Row |
-|---|---|---|
-| M5.1 | Write a territory statement for each of the twelve charters lacking one | `B4`, `B3` |
-| M5.2 | Add the missing admission, faults and index sections | `B4` |
-| M5.3 | Flip `check-charter-shape.sh` to `--strict` in the gate | `B4` |
-
-**Exit criteria.**\
-`tools/check-charter-shape.sh --strict` exits zero, and `check-all.sh` invokes it in strict mode.
 
 ---
 
@@ -178,8 +163,24 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | # | Item | Row |
 |---|---|---|
 | M4.1 | Rule on `CSSA`/`TSSA` - keep, drop "conventionally", or promote as `E` entities | `B10` |
-| M4.2 | Mechanize the board-record contract: every item cites a live row, every closed row names a milestone | contract rule 5 |
+| M4.2 | Mechanize the board-record contract: every item cites a live row, every open row is on the board or in Held, milestone order matches the plan | `B16` |
 | M4.3 | `AR2` instance naming and ordinal scheme | `B7` |
+
+---
+
+## M5 - clear the charter debt - `TODO`
+
+Thirty sections missing across thirteen charters, measured by `check-charter-shape.sh --strict`.\
+Each charter states its own territory, which is the section that cannot be filled mechanically and is the reason this is a milestone rather than a chore.
+
+| # | Item | Row |
+|---|---|---|
+| M5.1 | Write a territory statement for each of the twelve charters lacking one | `B4`, `B3` |
+| M5.2 | Add the missing admission, faults and index sections | `B4` |
+| M5.3 | Flip `check-charter-shape.sh` to `--strict` in the gate | `B4` |
+
+**Exit criteria.**\
+`tools/check-charter-shape.sh --strict` exits zero, and `check-all.sh` invokes it in strict mode.
 
 ---
 
