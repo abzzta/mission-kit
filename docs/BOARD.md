@@ -189,15 +189,40 @@ A standard can pass every check and still make a charter worse to use, and only 
 | M5.3 | **Trial conversion of one charter**, by the protocol below | `B4` | `DONE` - `M0`, verdict **improved** - [verdict](audits/M5.3-trial-verdict-M0.md), [candidate](audits/M5.3-trial-candidate-M0.md). Awaiting director review |
 | M5.4 | Revise `E4` on what the trial shows, or stop if the enhancement did not improve utility | `B4` | `DONE` - territory must be derived and show a gap; growth must be paid for |
 | M5.4b | **Second trial, on `A0`**, isolating whether growth comes from the standard or from `M0` missing two concerns | `B4` | `DONE` - verdict **improved**, growth paid for. Growth tracks missing concerns: 36 percent here against 78 for `M0` - [verdict](audits/M5.4b-trial-verdict-A0.md), [candidate](audits/M5.4b-trial-candidate-A0.md). Awaiting director review |
-| M5.5 | Convert the remaining eleven, one per change, moving existing content rather than rewriting it | `B4` | `TODO` |
+| M5.5 | Convert all thirteen, one per change - draft, audit, director review, apply - under the editing rule below | `B4` | `WIP` |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
+
+### The editing rule
+
+Conversion is not limited to adding sections around untouched text.\
+**The aim is the best version of the charter in its context**, and existing words may be improved where improving them advances that.
+
+The first two trials were run under a stricter rule - every original sentence preserved character for character - and that rule was wrong.\
+It proved nothing was lost and capped the result at the original plus an appendix.\
+It kept sentences the new structure made redundant, kept a sentence the conversion showed to be contradicted while flagging the contradiction beside it, and kept vocabulary that `E4` had made imprecise.
+
+**What is preserved is meaning, and the check on meaning is as strict as the check on words was.**\
+Every edit is weighed for cost against quality: an edit is made when it advances the document toward its best form in context, and not otherwise.\
+Changing settled text carries a real cost - it invalidates a reader's memory of it and puts reasoning at risk - so a marginal improvement is not made.
+
+| Change | Permitted | Evidence required in the audit |
+|---|---|---|
+| **move** | yes | none |
+| **reword** | when it materially improves clarity or precision | old and new side by side, and the reason |
+| **merge** | when two passages state one thing | both originals, and why one suffices |
+| **correct** | when the conversion exposes an error or contradiction | the error cited, the old text retained in the record |
+| **delete** | only when the claim is wrong, unpaid, or held elsewhere | the claim, and which of the three applies |
+
+**The safeguard is that every changed or removed sentence is accounted for.**\
+Not that nothing changed, but that nothing changed without being shown.\
+The original stays recoverable at its commit, so the record of what a charter said is never lost even where the charter no longer says it.
 
 ### Trial protocol for M5.3
 
 The trial is the evidence `M5.5` depends on, so it is specified before it is run.
 
 1. **Choose a charter with real content at stake** - one carrying argued, specific passages that a careless conversion could flatten, not the thinnest available. A trial on an easy case proves nothing about a hard one.
-2. **Convert it** to `E4`, moving and labelling existing content and authoring only what is genuinely absent - in practice Territory and Composition.
+2. **Convert it** to `E4` under the editing rule below.
 3. **Hold the old and new side by side.** The archived original is the baseline; it is not edited.
 4. **Triangulate against the population.** Read the charter's actual members and ask of both versions:
    - does the charter describe the members that actually exist, or an idealised set?
