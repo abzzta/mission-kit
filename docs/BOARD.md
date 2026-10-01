@@ -170,19 +170,44 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 
 ## M5 - bring the charters to `E4` - `WIP`
 
-[`E4`](../entities/E4-charter.md) defines what a charter is: six required concerns, six conditional ones, and the rest free.\
-The concerns are questions rather than headings, so conformance is measured by whether an answer is present, not by whether a heading is named.
+[`E4`](../entities/E4-charter.md) defines what a charter is: six required concerns - four at fixed headings, two answered anywhere - six conditional ones, and the rest free.
 
-| # | Item | Row |
-|---|---|---|
-| M5.1 | Audit all thirteen charters against `E4`: answered, partial or absent, citing where | `B4` |
-| M5.2 | Reconcile: where a charter carries something `E4` has no slot for, correct `E4` first | `B4` |
-| M5.3 | Bring each charter to conformance, moving existing content rather than rewriting it | `B4` |
-| M5.4 | Rebuild the charter checker to test answers against `E4`, and re-enable it | `B17` |
+The charters are **not** converted in a sweep.\
+One charter is converted first, as a trial, and judged qualitatively before any other is touched.\
+A standard can pass every check and still make a charter worse to use, and only a side-by-side reading against the charter's own population can tell the difference.
+
+| # | Item | Row | Status |
+|---|---|---|---|
+| M5.1 | Audit all thirteen charters against `E4`: answered, partial or absent, citing where | `B4` | `DONE` - [audit](audits/charter-audit-against-E4.md) |
+| M5.2 | Reconcile `E4` with what the audit found | `B4` | `DONE` |
+| M5.3 | **Trial conversion of one charter**, by the protocol below | `B4` | `TODO` |
+| M5.4 | Revise `E4` on what the trial shows, or stop if the enhancement did not improve utility | `B4` | `TODO` |
+| M5.5 | Convert the remaining twelve, one per change, moving existing content rather than rewriting it | `B4` | `TODO` |
+| M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
+
+### Trial protocol for M5.3
+
+The trial is the evidence `M5.5` depends on, so it is specified before it is run.
+
+1. **Choose a charter with real content at stake** - one carrying argued, specific passages that a careless conversion could flatten, not the thinnest available. A trial on an easy case proves nothing about a hard one.
+2. **Convert it** to `E4`, moving and labelling existing content and authoring only what is genuinely absent - in practice Territory and Composition.
+3. **Hold the old and new side by side.** The archived original is the baseline; it is not edited.
+4. **Triangulate against the population.** Read the charter's actual members and ask of both versions:
+   - does the charter describe the members that actually exist, or an idealised set?
+   - would a reader holding only the charter know what earns entry, and route an excluded item correctly?
+   - does the territory statement make a real gap in *this* population findable, or merely sound complete?
+   - does the composition statement describe how *these* members actually relate?
+5. **Judge against two purposes, not one** - the charter's own stated purpose, and the intent behind a set as [`E3`](../entities/E3-set.md) defines it: that a population can be asked what it owes itself, including whether anything is missing.
+6. **Record a verdict** - improved, unchanged, or degraded - with the reasoning and the specific passages that decided it. A degraded verdict halts `M5.5` and returns to `M5.4`.
+
+**What would count as failure.**\
+The new charter passes every check and reads worse: a specific argument replaced by a generic heading, a territory that sounds complete and detects nothing, or structure imposed on a charter whose existing organisation was carrying meaning.\
+Any of those means `E4` is wrong somewhere, and the trial is what is meant to find it.
 
 **Exit criteria.**\
-Every charter answers `E4`'s six required concerns, cited by location.\
-The checker tests answers rather than heading names and gates every change.
+The trial returns an `improved` verdict, recorded with its reasoning.\
+Every charter then answers `E4`'s six required concerns.\
+The checker tests the four fixed headings by name and the two free concerns by declared location, and gates every change.
 
 ---
 

@@ -45,6 +45,7 @@ Flat, until there is reason to subdivide.
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | [`AR1`](../artifacts/AR1-system-architecture.md) | this corpus stated at one altitude, instant `current` |
 | [`BOARD.md`](BOARD.md) | [`AR3`](../artifacts/AR3-board.md) | the triaged legal next moves, for director selection |
 | [`BACKLOG.md`](BACKLOG.md) | [`AR5`](../artifacts/AR5-backlog.md) | findings about this corpus, each with evidence and a revival trigger |
+| [`audits/`](audits/) | - | evidence produced by auditing this corpus against its own standards, cited from the board |
 
 The vision is not in this directory by design - [`AR0`](../artifacts/README.md) anchors it at the component root, which for this corpus is [`../VISION.md`](../VISION.md).
 

@@ -37,14 +37,45 @@ If no member could, it is a set property, and the remaining question is only whe
 
 ### Required - every charter
 
-| Concern | The question | Why a member cannot answer it |
+| Concern | The question | Why a member cannot answer it | Location |
+|---|---|---|---|
+| **Purpose** | Why does this set exist, and what goes wrong without it? | A member knows why *it* exists, never why the collection does | heading `Purpose` |
+| **Territory** | What does this set claim to cover? | Completeness is a property of the population; a member cannot see its siblings' absence | heading `Territory` |
+| **Boundaries** | What belongs here, what does not, and where does the excluded thing go instead? | An exclusion decides a case no member holds | anywhere |
+| **Composition** | How do members relate to one another? | A relation has two ends, and a member holds one | anywhere |
+| **Faults** | What does an unhealthy population look like, as against a merely valid one? | Every member can be valid while the set is wrong | heading `Faults` |
+| **Index** | What is in it? | Generated, never typed | heading `Index` |
+
+**Where the location is fixed and where it is free.**\
+The rule is derived from what thirteen charters actually do rather than chosen in advance: **where every set asks the same question and answers it in the same form, the heading is fixed; where the form of the answer varies by set, the answer is required and its heading is free.**
+
+Purpose, Territory, Faults and Index are the same question in every set and are answered in the same form, so each takes a fixed heading.\
+A fixed heading makes the answer addressable - it can be linked, checked by a script, and seen by a reader skimming the spine - which is the corpus's own reachability property applied to the charter.\
+Purpose is the clearest case: every charter answers it, nearly always in untitled opening paragraphs, and an untitled answer is invisible to everything except a full read.
+
+Boundaries and Composition vary in form, and the form carries the content.\
+Composition has been answered as a loop, as declared edges, as generative axes, as containment, and as orthogonality with no apex member; forcing one heading would flatten five different relations into one shape.\
+Boundaries has three legitimate forms, below.\
+For these two the answer must be present and findable, and its heading belongs to the set.
+
+**The three forms of Boundaries.**\
+A charter may use any or all of them, and the strongest charters use all three.
+
+| Form | States | Example shape |
 |---|---|---|
-| **Purpose** | Why does this set exist, and what goes wrong without it? | A member knows why *it* exists, never why the collection does |
-| **Territory** | What does this set claim to cover? | Completeness is a property of the population; a member cannot see its siblings' absence |
-| **Boundaries** | What belongs here, what does not, and where does the excluded thing go instead? | An exclusion decides a case no member holds |
-| **Composition** | How do members relate to one another? | A relation has two ends, and a member holds one |
-| **Faults** | What does an unhealthy population look like, as against a merely valid one? | Every member can be valid while the set is wrong |
-| **Index** | What is in it? | Generated, never typed |
+| **Admission test** | what earns membership | a short list of tests, all of which must pass |
+| **Exclusion with route** | a named thing that is not a member, and where it goes instead | "X is not a member of this set; it belongs in Y" |
+| **Neighbour table** | how this set is told apart from each adjacent set | one row per neighbour, one discriminating question |
+
+An exclusion without a route is half an answer: it tells the reader where not to put something and leaves them to guess where it belongs.\
+**Relations to other sets belong here.**\
+A set defining itself against a neighbour is stating a boundary, and every observed instance of an inter-set relation takes that form.
+
+**Two kinds of fault, and only one belongs in a charter.**\
+A **population fault** is visible only across the set - a member admitted for importance rather than fit, two members restating one rule, a population that has stopped being searched.\
+A **member fault** is a failure mode of one member's invariant, and belongs in that member, where a reader meets it while doing the thing that risks it.\
+Collected in a charter, member faults are read only by people already looking for them.\
+The `Faults` concern is for population faults alone.
 
 ### Conditional - when the property is present
 
@@ -78,9 +109,8 @@ This entry defines the document that states it.
 ## Boundaries
 
 It is **not a template.**\
-The required concerns are questions, not headings.\
-A charter answers each, under whatever heading reads naturally for its set; what is required is that the answer is present and findable, not that a section carries a particular name.\
-Two charters can satisfy this entry with no heading in common.
+Four concerns take a fixed heading because every set asks them in the same form; the rest of a charter is organised as its set is organised.\
+Two conformant charters share those four headings and may share nothing else.
 
 It is **not the enforcement.**\
 Where a concern is machine-checkable, the machine declaration holds it and the charter reads it.\
@@ -131,3 +161,10 @@ It reported charters as missing an admission rule when they carried several, wri
 And it disagreed with `E3`, the definition it was meant to enforce, so the enforcement and the thing it enforced were already two statements of one rule drifting apart.
 
 The required concerns are stated as questions so that the third failure cannot recur: a checker can only test for the presence of an answer if it knows what question it is testing, and a heading name is not a question.
+
+A later audit read all thirteen charters in full and graded each concern by whether an answer was present, under any heading.\
+It found the heading count wrong in both directions.\
+Purpose was answered in every charter and titled in two, so a heading checker would have reported it absent eleven times.\
+Boundaries was answered in eleven, mostly as exclusions under other headings, which the earlier standard counted as missing.\
+And the two concerns genuinely absent - territory in most charters, composition in several - were ones the earlier standard either omitted or could not detect.\
+The split between fixed and free headings is the correction: it keeps the four answers that are always the same form checkable by a script, and refuses to flatten the two whose form is the content.
