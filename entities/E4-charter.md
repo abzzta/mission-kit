@@ -77,6 +77,22 @@ A **member fault** is a failure mode of one member's invariant, and belongs in t
 Collected in a charter, member faults are read only by people already looking for them.\
 The `Faults` concern is for population faults alone.
 
+**A territory must earn itself.**\
+Requiring a territory is checkable; requiring a *good* one is not, and a poorly chosen territory passes every check while hiding the gaps it exists to expose.\
+So a territory carries two obligations beyond being present.
+
+- **It is derived from the population, not imposed on it.** The partition should be readable from the members themselves - their triggers, their subjects, the moments or risks they address - so that every existing member lands in it and lands in exactly one place. A member that fits nowhere, or fits everywhere, is evidence the partition is wrong.
+- **It shows a gap or argues that there is none.** A territory that names at least one real, checked absence has demonstrated that it can detect one. A territory that names none must say why the population is complete against it. A territory that can do neither is decoration, however complete it sounds.
+
+More than one partition is usually defensible, and choosing among them is a judgement this entry cannot make.\
+The two obligations do not pick the right partition; they rule out the ones that cannot do the job.
+
+**Growth must be paid for.**\
+Conforming a charter usually lengthens it, because the concerns most often missing - territory and composition - are the ones that need authoring rather than moving.\
+Length is acceptable when it is paid for, and only then.\
+An added passage is paid for when it **answers a question the charter could not previously answer**, and when that answer **improves what a reader can do with the charter** - route an item, find a gap, choose a member, or see a relation they would otherwise have had to reconstruct from the members.\
+A passage that restates, introduces, or summarises what is already present is unpaid, and is removed.
+
 ### Conditional - when the property is present
 
 | Concern | Required when | The question |
@@ -168,3 +184,8 @@ Purpose was answered in every charter and titled in two, so a heading checker wo
 Boundaries was answered in eleven, mostly as exclusions under other headings, which the earlier standard counted as missing.\
 And the two concerns genuinely absent - territory in most charters, composition in several - were ones the earlier standard either omitted or could not detect.\
 The split between fixed and free headings is the correction: it keeps the four answers that are always the same form checkable by a script, and refuses to flatten the two whose form is the content.
+
+A trial conversion of one charter then tested the standard against a real population before any other charter was touched.\
+It preserved every line of the original and was judged improved, because its territory detected a real gap - no procedure for handing work over - that had gone unrecorded.\
+It also showed the standard's weakest point: nothing stopped a territory from being well-formed and useless.\
+The obligation that a territory be derived from its population and show a gap, or argue there is none, is the correction that trial made necessary.

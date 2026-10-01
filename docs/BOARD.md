@@ -184,8 +184,9 @@ A standard can pass every check and still make a charter worse to use, and only 
 | M5.1 | Audit all thirteen charters against `E4`: answered, partial or absent, citing where | `B4` | `DONE` - [audit](audits/charter-audit-against-E4.md) |
 | M5.2 | Reconcile `E4` with what the audit found | `B4` | `DONE` |
 | M5.3 | **Trial conversion of one charter**, by the protocol below | `B4` | `DONE` - `M0`, verdict **improved** - [verdict](audits/M5.3-trial-verdict-M0.md), [candidate](audits/M5.3-trial-candidate-M0.md). Awaiting director review |
-| M5.4 | Revise `E4` on what the trial shows, or stop if the enhancement did not improve utility | `B4` | `TODO` |
-| M5.5 | Convert the remaining twelve, one per change, moving existing content rather than rewriting it | `B4` | `TODO` |
+| M5.4 | Revise `E4` on what the trial shows, or stop if the enhancement did not improve utility | `B4` | `DONE` - territory must be derived and show a gap; growth must be paid for |
+| M5.4b | **Second trial, on `A0`**, isolating whether growth comes from the standard or from `M0` missing two concerns | `B4` | `TODO` |
+| M5.5 | Convert the remaining eleven, one per change, moving existing content rather than rewriting it | `B4` | `TODO` |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
 
 ### Trial protocol for M5.3
