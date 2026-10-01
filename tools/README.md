@@ -210,6 +210,40 @@ Exit status is non-zero if any entry is missing a declared section or carries th
 
 ---
 
+## check-board.mjs
+
+Holds the board and the backlog to the contract that binds them.
+
+```sh
+node tools/check-board.mjs
+```
+
+**Why it exists.**\
+`docs/BOARD.md` is the plan and `docs/BACKLOG.md` is the record, and the board states a five-rule contract between them.\
+Until this tool every rule was prose.\
+Within two commits of the board being written it carried a milestone out of plan order, a finding arguing that a closed row was still open, and an item citing no row at all - and that item was the one whose duty was to mechanise this contract.\
+A person found all three by asking.
+
+**On its first run it found a fourth that the manual pass missed**: an item in an open milestone still citing a row that had closed when its requirement landed.\
+That is the argument for a script over a careful reader, made by the script.
+
+| Rule | Checks | Catches |
+|---|---|---|
+| R1 | every board item cites a backlog row | an orphaned plan item |
+| R2 | every cited row exists | a citation to nothing |
+| R3 | every open row is on the board or under Held | a known problem silently falling off |
+| R4 | no closed row is planned in an open milestone | the record and the plan disagreeing |
+| R5 | milestones appear in ascending order | an accidental priority nobody chose |
+| R6 | a finished milestone cites no row left open and unplanned | a milestone claiming more than it delivered |
+
+**Run it when** you edit either file, which `check-all.sh` does on every change.
+
+It reads both files as written rather than a separate declaration, because the files are the declaration; a second statement of the board's structure would be the drift this exists to prevent.\
+A corpus with no board passes, since absence is the bootstrap state and refusing it would block the commit that creates the board.\
+Exit status is non-zero on any disagreement.
+
+---
+
 ## check-charter-shape.sh
 
 Holds every knowledge layer's charter to the sections a member cannot supply for itself.

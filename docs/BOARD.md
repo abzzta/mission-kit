@@ -23,8 +23,7 @@ They exist so the plan can move fast without the record losing fidelity.
 4. **The board is reorderable and items may be dropped.** A dropped item is not deleted: its `B` row is rewritten with the reason as a revival trigger. Explicit deferral is permitted; silence is not.
 5. **A move ships with the mechanism that would catch its absence**, where one is possible. A rule with no enforcer is recorded as unenforced rather than presented as held.
 
-Reconciliation is mechanizable and is not yet mechanized - no checker asserts that every board item cites a live row.\
-That is item `M4.2`.
+Reconciliation is mechanized by [`tools/check-board.mjs`](../tools/check-board.mjs), which refuses any change that breaks this contract.
 
 **Status vocabulary:** `TODO` - `WIP` - `BLOCKED` - `DONE` - `DROPPED`
 
@@ -163,7 +162,7 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | # | Item | Row |
 |---|---|---|
 | M4.1 | Rule on `CSSA`/`TSSA` - keep, drop "conventionally", or promote as `E` entities | `B10` |
-| M4.2 | Mechanize the board-record contract: every item cites a live row, every open row is on the board or in Held, milestone order matches the plan | `B16` |
+| M4.2 | Mechanize the board-record contract: every item cites a live row, every open row is on the board or in Held, milestone order matches the plan | `B16` `DONE` |
 | M4.3 | `AR2` instance naming and ordinal scheme | `B7` |
 
 ---
@@ -175,7 +174,7 @@ Each charter states its own territory, which is the section that cannot be fille
 
 | # | Item | Row |
 |---|---|---|
-| M5.1 | Write a territory statement for each of the twelve charters lacking one | `B4`, `B3` |
+| M5.1 | Write a territory statement for each of the twelve charters lacking one | `B4` |
 | M5.2 | Add the missing admission, faults and index sections | `B4` |
 | M5.3 | Flip `check-charter-shape.sh` to `--strict` in the gate | `B4` |
 
