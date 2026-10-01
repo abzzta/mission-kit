@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All twenty-two rows, scored.\
+All twenty-three rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -76,7 +76,8 @@ Held rows are [below](#held).
 | **B17** | S1 | **A8 mandate** | author | M | **M5** | a checker enforcing a superseded standard, suspended rather than left misreporting |
 | **B18** | S4 | **A4 mandate** | agent | M | **Held** | no procedure for handing over work in progress |
 | **B19** | S4 | A14 signal | author | S | **Held** | nothing proportionate for a small design decision |
-| **B21** | **S2** | **A3 mandate** | adopter | **L** | **Held** | no axiom protects against an adversary; every axiom assumes cooperating actors |
+| **B21** | **S2** | **A4 mandate** | agent | **L** | **Held** | no axiom states the property that protects an agent against its own error |
+| **B23** | S2 | **A13 mandate** | agent | S | **Held** | the corpus never states it serves a lone agent; framed organisationally throughout |
 | **B22** | S4 | A9 signal | author | S | **Held** | `A9` binds every system and is the least exercised axiom |
 | **B20** | S5 | A3 signal | author | S | **Held** | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
@@ -230,10 +231,12 @@ Rows on the record and not on the board, **scored on the same scale**, so declin
 | **B19** | S4 | A14 signal | Found by the `M0` trial. A thin moment is not a failure until something fails at it. | **a small design decision fails in a way an anchoring check would have caught** |
 | **B20** | S5 | A3 signal | Found by the `M0` trial. A recorded tension, not yet a defect. | **someone declines `M7` on an extensive design and its lawfulness has to be ruled** |
 
-| **B21** | **S2** | **A3 mandate** | Found by the `A0` trial. Scored high, and held anyway: adding an axiom is a change to the constitution, and whether adversarial integrity is one invariant, several, or a property of the existing ones is a design question that warrants its own audit rather than an entry written from one observed gap. | **a design satisfies every axiom in force and is subverted by an actor it trusted** |
+| **B21** | **S2** | **A4 mandate** | Found by the `A0` trial, then corrected: first framed as defence against an adversary, which is out of scope. Scored high and held anyway, since adding an axiom changes the constitution and warrants its own audit. | **a lone agent ships a claim it corroborated itself and was wrong** |
 | **B22** | S4 | A9 signal | Found by the `A0` trial. A low citation count has two legitimate readings and one observation cannot separate them. | **a deployment fails in a way chaos validation would have caught** |
 
-All are deferrals of evidence, not of appetite.\
+| **B23** | S2 | **A13 mandate** | Vision-level, and a vision is director-ratified - not an agent's to rewrite. Held for the next revision rather than for evidence. | **the next revision of `VISION.md`** |
+
+All are deferrals of evidence or of authority, not of appetite.\
 Neither is blocked on effort.
 
 ---
