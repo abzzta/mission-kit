@@ -13,6 +13,11 @@ This repository holds the constitution, the composable axes of work, the methods
 
 mission-kit is complete enough that an agent holding nothing can instantiate the organisation, compile strategic intent into correct work, and have that correctness measured rather than trusted.
 
+**An organisation is one agent or many, operating with mission-kit.**\
+The word is used throughout this corpus and means a unit of engineering work under one intent, at any size.\
+A single agent working alone is an organisation of one, and is a primary reader rather than a degenerate case: everything here must be of value to an agent engineering by itself, with no second actor to check its work.\
+Where an entry needs more than one actor, it says so - axioms carry it in their applicability tags - and an agent working alone can tell from the entry whether it applies.
+
 Four properties, each falsifiable:
 
 - **Portable.** The corpus is self-contained and resolves from any host, any working directory, any harness. A rule that only works on one machine is a project artifact, not an entry here.

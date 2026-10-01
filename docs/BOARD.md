@@ -77,7 +77,7 @@ Held rows are [below](#held).
 | **B18** | S4 | **A4 mandate** | agent | M | **Held** | no procedure for handing over work in progress |
 | **B19** | S4 | A14 signal | author | S | **Held** | nothing proportionate for a small design decision |
 | **B21** | **S2** | **A4 mandate** | agent | **L** | **Held** | no axiom states the property that protects an agent against its own error |
-| **B23** | S2 | **A13 mandate** | agent | S | **Held** | the corpus never states it serves a lone agent; framed organisationally throughout |
+| **B23** | S2 | **A13 mandate** | agent | S | `DONE` | organisation now defined as one agent or many; lone agent named a primary reader |
 | **B22** | S4 | A9 signal | author | S | **Held** | `A9` binds every system and is the least exercised axiom |
 | **B20** | S5 | A3 signal | author | S | **Held** | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
@@ -234,7 +234,6 @@ Rows on the record and not on the board, **scored on the same scale**, so declin
 | **B21** | **S2** | **A4 mandate** | Found by the `A0` trial, then corrected: first framed as defence against an adversary, which is out of scope. Scored high and held anyway, since adding an axiom changes the constitution and warrants its own audit. | **a lone agent ships a claim it corroborated itself and was wrong** |
 | **B22** | S4 | A9 signal | Found by the `A0` trial. A low citation count has two legitimate readings and one observation cannot separate them. | **a deployment fails in a way chaos validation would have caught** |
 
-| **B23** | S2 | **A13 mandate** | Vision-level, and a vision is director-ratified - not an agent's to rewrite. Held for the next revision rather than for evidence. | **the next revision of `VISION.md`** |
 
 All are deferrals of evidence or of authority, not of appetite.\
 Neither is blocked on effort.
