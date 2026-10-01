@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All twenty rows, scored.\
+All twenty-two rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -76,6 +76,8 @@ Held rows are [below](#held).
 | **B17** | S1 | **A8 mandate** | author | M | **M5** | a checker enforcing a superseded standard, suspended rather than left misreporting |
 | **B18** | S4 | **A4 mandate** | agent | M | **Held** | no procedure for handing over work in progress |
 | **B19** | S4 | A14 signal | author | S | **Held** | nothing proportionate for a small design decision |
+| **B21** | **S2** | **A3 mandate** | adopter | **L** | **Held** | no axiom protects against an adversary; every axiom assumes cooperating actors |
+| **B22** | S4 | A9 signal | author | S | **Held** | `A9` binds every system and is the least exercised axiom |
 | **B20** | S5 | A3 signal | author | S | **Held** | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |
@@ -185,7 +187,7 @@ A standard can pass every check and still make a charter worse to use, and only 
 | M5.2 | Reconcile `E4` with what the audit found | `B4` | `DONE` |
 | M5.3 | **Trial conversion of one charter**, by the protocol below | `B4` | `DONE` - `M0`, verdict **improved** - [verdict](audits/M5.3-trial-verdict-M0.md), [candidate](audits/M5.3-trial-candidate-M0.md). Awaiting director review |
 | M5.4 | Revise `E4` on what the trial shows, or stop if the enhancement did not improve utility | `B4` | `DONE` - territory must be derived and show a gap; growth must be paid for |
-| M5.4b | **Second trial, on `A0`**, isolating whether growth comes from the standard or from `M0` missing two concerns | `B4` | `TODO` |
+| M5.4b | **Second trial, on `A0`**, isolating whether growth comes from the standard or from `M0` missing two concerns | `B4` | `DONE` - verdict **improved**, growth paid for. Growth tracks missing concerns: 36 percent here against 78 for `M0` - [verdict](audits/M5.4b-trial-verdict-A0.md), [candidate](audits/M5.4b-trial-candidate-A0.md). Awaiting director review |
 | M5.5 | Convert the remaining eleven, one per change, moving existing content rather than rewriting it | `B4` | `TODO` |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
 
@@ -227,6 +229,9 @@ Rows on the record and not on the board, **scored on the same scale**, so declin
 | **B18** | S4 | **A4 mandate** | Found by the `M0` trial and not yet triaged. Authoring a handover procedure from one observed absence would repeat the shape-from-one-instance error. | **a handover loses information a procedure would have kept** |
 | **B19** | S4 | A14 signal | Found by the `M0` trial. A thin moment is not a failure until something fails at it. | **a small design decision fails in a way an anchoring check would have caught** |
 | **B20** | S5 | A3 signal | Found by the `M0` trial. A recorded tension, not yet a defect. | **someone declines `M7` on an extensive design and its lawfulness has to be ruled** |
+
+| **B21** | **S2** | **A3 mandate** | Found by the `A0` trial. Scored high, and held anyway: adding an axiom is a change to the constitution, and whether adversarial integrity is one invariant, several, or a property of the existing ones is a design question that warrants its own audit rather than an entry written from one observed gap. | **a design satisfies every axiom in force and is subverted by an actor it trusted** |
+| **B22** | S4 | A9 signal | Found by the `A0` trial. A low citation count has two legitimate readings and one observation cannot separate them. | **a deployment fails in a way chaos validation would have caught** |
 
 All are deferrals of evidence, not of appetite.\
 Neither is blocked on effort.
