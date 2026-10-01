@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All seventeen rows, scored.\
+All twenty rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -74,6 +74,9 @@ Held rows are [below](#held).
 | **B10** | S5 | A4 signal | adopter | S | **M4** | `CSSA`/`TSSA` is one programme's vocabulary presented as convention |
 | **B7** | S4 | A2 signal | adopter | M | **M4** | `AR2` has no instance naming or ordinal scheme |
 | **B17** | S1 | **A8 mandate** | author | M | **M5** | a checker enforcing a superseded standard, suspended rather than left misreporting |
+| **B18** | S4 | **A4 mandate** | agent | M | **Held** | no procedure for handing over work in progress |
+| **B19** | S4 | A14 signal | author | S | **Held** | nothing proportionate for a small design decision |
+| **B20** | S5 | A3 signal | author | S | **Held** | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |
 | **B12** | S4 | A14 signal | author | M | **Held** | recovery methodology unwritten; its reasoning is untested |
@@ -180,7 +183,7 @@ A standard can pass every check and still make a charter worse to use, and only 
 |---|---|---|---|
 | M5.1 | Audit all thirteen charters against `E4`: answered, partial or absent, citing where | `B4` | `DONE` - [audit](audits/charter-audit-against-E4.md) |
 | M5.2 | Reconcile `E4` with what the audit found | `B4` | `DONE` |
-| M5.3 | **Trial conversion of one charter**, by the protocol below | `B4` | `TODO` |
+| M5.3 | **Trial conversion of one charter**, by the protocol below | `B4` | `DONE` - `M0`, verdict **improved** - [verdict](audits/M5.3-trial-verdict-M0.md), [candidate](audits/M5.3-trial-candidate-M0.md). Awaiting director review |
 | M5.4 | Revise `E4` on what the trial shows, or stop if the enhancement did not improve utility | `B4` | `TODO` |
 | M5.5 | Convert the remaining twelve, one per change, moving existing content rather than rewriting it | `B4` | `TODO` |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
@@ -220,7 +223,11 @@ Rows on the record and not on the board, **scored on the same scale**, so declin
 | **B8** | S3 | **A2 mandate** | No available remedy. A bootstrap has no completed transitions to derive a current projection from, so the rule is unsatisfiable rather than unsatisfied. Ranking it would put an unsolvable item first. | **this corpus runs its first delta**, at which point a derived projection becomes possible and the rule is testable |
 | **B12** | S4 | A14 signal | Its reasoning has not survived contact with a repository. Writing it now would be authoring a procedure from one un-run prompt, which is the shape-from-one-instance error the corpus has already made twice. | **the first external brownfield adopter reports back** |
 
-Both are deferrals of evidence, not of appetite.\
+| **B18** | S4 | **A4 mandate** | Found by the `M0` trial and not yet triaged. Authoring a handover procedure from one observed absence would repeat the shape-from-one-instance error. | **a handover loses information a procedure would have kept** |
+| **B19** | S4 | A14 signal | Found by the `M0` trial. A thin moment is not a failure until something fails at it. | **a small design decision fails in a way an anchoring check would have caught** |
+| **B20** | S5 | A3 signal | Found by the `M0` trial. A recorded tension, not yet a defect. | **someone declines `M7` on an extensive design and its lawfulness has to be ruled** |
+
+All are deferrals of evidence, not of appetite.\
 Neither is blocked on effort.
 
 ---
