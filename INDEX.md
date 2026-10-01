@@ -205,6 +205,7 @@ This file described them a second time and the copy had already drifted, naming 
 | [E1](entities/E1-sovereign-hierarchy.md) | sovereign-hierarchy - layered authority where each layer holds final say over one class of decision | You are deciding which layer owns a decision, or an actor is about to decide something at another layer's altitude |
 | [E2](entities/E2-layer.md) | layer - a top-level directory owning one concern, and the three names a knowledge layer answers to | You are deciding which layer owns an entry, or you have met the words layer, category and prefix and cannot tell whether they name one thing or three |
 | [E3](entities/E3-set.md) | set - a bounded population whose charter states what its members owe each other | You are writing a charter, adding a member to a curated population, or asking whether a population is complete |
+| [E4](entities/E4-charter.md) | charter - the document that voices a set, and the questions only it can answer | You are writing or revising a charter, or deciding whether a section belongs in one |
 
 ---
 

@@ -58,7 +58,9 @@ run "repository structure is documented" ./tools/check-structure.sh
 run "rules and enforcers are paired" ./tools/check-enforcers.sh
 run "tool index matches the directory" ./tools/check-tool-docs.sh
 run "entry bodies match their category" ./tools/check-entry-body.sh
-run "charters carry their required sections" ./tools/check-charter-shape.sh
+# check-charter-shape.sh is SUSPENDED: it enforces a four-section list derived from a heading count,
+# which E4 supersedes. It matches heading names rather than answers, so it miscounts. Re-enabled
+# when rebuilt against E4 - tracked as B17.
 run "the board and the backlog agree" node tools/check-board.mjs
 run "index is derived, not typed" node tools/generate-index.mjs --check
 run "catalogue graph resolves" node tools/skill-graph.mjs

@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All sixteen rows, scored.\
+All seventeen rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -73,6 +73,7 @@ Held rows are [below](#held).
 | **B14** | S4 | A3 signal | author | **L** | **M3** | `backlog/` and `AR5` are two objects wearing one word |
 | **B10** | S5 | A4 signal | adopter | S | **M4** | `CSSA`/`TSSA` is one programme's vocabulary presented as convention |
 | **B7** | S4 | A2 signal | adopter | M | **M4** | `AR2` has no instance naming or ordinal scheme |
+| **B17** | S1 | **A8 mandate** | author | M | **M5** | a checker enforcing a superseded standard, suspended rather than left misreporting |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |
 | **B12** | S4 | A14 signal | author | M | **Held** | recovery methodology unwritten; its reasoning is untested |
@@ -167,19 +168,21 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 
 ---
 
-## M5 - clear the charter debt - `TODO`
+## M5 - bring the charters to `E4` - `WIP`
 
-Thirty sections missing across thirteen charters, measured by `check-charter-shape.sh --strict`.\
-Each charter states its own territory, which is the section that cannot be filled mechanically and is the reason this is a milestone rather than a chore.
+[`E4`](../entities/E4-charter.md) defines what a charter is: six required concerns, six conditional ones, and the rest free.\
+The concerns are questions rather than headings, so conformance is measured by whether an answer is present, not by whether a heading is named.
 
 | # | Item | Row |
 |---|---|---|
-| M5.1 | Write a territory statement for each of the twelve charters lacking one | `B4` |
-| M5.2 | Add the missing admission, faults and index sections | `B4` |
-| M5.3 | Flip `check-charter-shape.sh` to `--strict` in the gate | `B4` |
+| M5.1 | Audit all thirteen charters against `E4`: answered, partial or absent, citing where | `B4` |
+| M5.2 | Reconcile: where a charter carries something `E4` has no slot for, correct `E4` first | `B4` |
+| M5.3 | Bring each charter to conformance, moving existing content rather than rewriting it | `B4` |
+| M5.4 | Rebuild the charter checker to test answers against `E4`, and re-enable it | `B17` |
 
 **Exit criteria.**\
-`tools/check-charter-shape.sh --strict` exits zero, and `check-all.sh` invokes it in strict mode.
+Every charter answers `E4`'s six required concerns, cited by location.\
+The checker tests answers rather than heading names and gates every change.
 
 ---
 
