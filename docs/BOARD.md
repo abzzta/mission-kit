@@ -191,7 +191,7 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | M5.3 | **Trial conversion of one charter** | `B4` | `DONE` - `M0`, verdict **improved** - [verdict](audits/M5.3-trial-verdict-M0.md), [candidate](audits/M5.3-trial-candidate-M0.md). Awaiting director review |
 | M5.4 | Revise `E4` on what the trial shows, or stop if the enhancement did not improve utility | `B4` | `DONE` - territory must be derived and show a gap; growth must be paid for |
 | M5.4b | **Second trial, on `A0`**, isolating whether growth comes from the standard or from `M0` missing two concerns | `B4` | `DONE` - verdict **improved**, growth paid for. Growth tracks missing concerns: 36 percent here against 78 for `M0` - [verdict](audits/M5.4b-trial-verdict-A0.md), [candidate](audits/M5.4b-trial-candidate-A0.md). Awaiting director review |
-| M5.5 | Convert all thirteen, one per change - draft, audit, evaluate, director review, apply | `B4` | `WIP` - `M0` approved, [audit](audits/M5.5-01-M0.md); `A0` evaluated, awaiting review, [audit](audits/M5.5-02-A0.md) |
+| M5.5 | Convert all thirteen, one per change - draft, audit, evaluate, director review, apply | `B4` | `WIP` - `M0` and `A0` **applied**, [M0](audits/M5.5-01-M0.md), [A0](audits/M5.5-02-A0.md); 11 remain |
 | M5.5b | Revisit the compositional split behind the work axes when conversion reaches `R0`, `D0` and `W0` | `B24` | `TODO` |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
 
