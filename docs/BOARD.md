@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All twenty-four rows, scored.\
+All twenty-five rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -80,7 +80,8 @@ Held rows are [below](#held).
 | **B23** | S2 | **A13 mandate** | agent | S | `DONE` | organisation now defined as one agent or many; lone agent named a primary reader |
 | **B24** | S3 | **A3 mandate** | author | **L** | **M5** | the compositional split behind the work axes has not been revisited since sets were defined |
 | **B22** | S4 | A9 signal | author | S | **Held** | `A9` binds every system and is the least exercised axiom |
-| **B20** | S5 | A3 signal | author | S | **Held** | `M7` may be axiom-shaped in a methodology's place |
+| **B25** | S2 | A13 signal | agent | S | **M3** | `M7`'s trigger is narrower than its title, so nothing routes an author to it unprompted |
+| **B20** | S5 | A3 signal | author | S | `DONE` | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |
 | **B12** | S4 | A14 signal | author | M | **Held** | recovery methodology unwritten; its reasoning is untested |
@@ -158,6 +159,7 @@ This milestone tests whether composition is structural or theoretical.
 |---|---|---|
 | M3.1 | Amend `MREQ-9` to the broader finding, and rule on the third reading now that `M8` cites an `AR` type | `B13` |
 | M3.2 | Instance-check `AR3` against this board and record what it surfaced | `B9` |
+| M3.4 | Align `M7`'s trigger with its title, so an author reaches it without already asking about anchoring | `B25` |
 | M3.3 | Rule on `backlog/` versus `AR5` - keep both, migrate, or split by concern, without breaking `MREQ` citations | `B14` |
 
 **Exit criteria.**\
@@ -256,7 +258,6 @@ Rows on the record and not on the board, **scored on the same scale**, so declin
 
 | **B18** | S4 | **A4 mandate** | Found by the `M0` trial and not yet triaged. Authoring a handover procedure from one observed absence would repeat the shape-from-one-instance error. | **a handover loses information a procedure would have kept** |
 | **B19** | S4 | A14 signal | Found by the `M0` trial. A thin moment is not a failure until something fails at it. | **a small design decision fails in a way an anchoring check would have caught** |
-| **B20** | S5 | A3 signal | Found by the `M0` trial. A recorded tension, not yet a defect. | **someone declines `M7` on an extensive design and its lawfulness has to be ruled** |
 
 | **B21** | **S2** | **A4 mandate** | Found by the `A0` trial, then corrected: first framed as defence against an adversary, which is out of scope. Scored high and held anyway, since adding an axiom changes the constitution and warrants its own audit. | **a lone agent ships a claim it corroborated itself and was wrong** |
 | **B22** | S4 | A9 signal | Found by the `A0` trial. A low citation count has two legitimate readings and one observation cannot separate them. | **a deployment fails in a way chaos validation would have caught** |
