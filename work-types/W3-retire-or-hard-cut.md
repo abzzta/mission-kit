@@ -10,7 +10,7 @@ evidenceContract:
   - {kind: commit, description: merged SHA}
   - {kind: freeform, description: reference scan + residual disposition}
 evidenceAuthority: executor-evidence
-domainEligibility: [delivery-code, distribution, tooling-harness]
+domainEligibility: [delivery-code, distribution, tooling-harness, product-data]
 domainFreedom: free
 parameters:
   - {name: target, fills: the surface to retire, bindingSource: operator-supplied}
@@ -37,7 +37,7 @@ All nine composition constraints and the closeability preflight are canonical in
 
 ## Generation
 
-`arc-seeded` - minted by a driver inside a cleanup/hygiene blueprint against a `target` the operator supplies. idea-425 (rolextypexdomain compose) instantiates it as an engineer node on a `free` domain; idea-451 brackets it so a FAILed scan grows a repair edge rather than merging a live-ref deletion; idea-403's pool never auto-mints it (deletion needs an explicit target).\
+`arc-seeded` - minted by a driver inside a cleanup/hygiene blueprint against a `target` the operator supplies. idea-425 (rolextypexdomain compose) instantiates it as an engineer node on a `free` domain; idea-451 brackets it so a FAILed scan grows a repair edge rather than merging a live-ref deletion; idea-403's pool never auto-mints it (deletion needs an explicit target).
 **Falsifier:** active refs remain, or the rollback/disposition is not documented - either turns the node FAIL rather than done.
 
 ---

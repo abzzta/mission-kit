@@ -9,7 +9,7 @@ evidenceContract:
   - kind: freeform
     description: live transcript/log/result with timestamp + target revision
 evidenceAuthority: executor-evidence-provisional
-domainEligibility: [delivery-code, distribution, tooling-harness]
+domainEligibility: [delivery-code, distribution, tooling-harness, product-data]
 domainFreedom: free
 parameters:
   - name: target

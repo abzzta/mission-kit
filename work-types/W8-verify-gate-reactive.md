@@ -9,7 +9,7 @@ evidenceContract:
   - kind: review
     description: verifier-authored review doc (or SEAL attestation when structurally valid)
 evidenceAuthority: verifier-attestation
-domainEligibility: [delivery-code, distribution, tooling-harness, authority-governance, coordination-substrate, knowledge-methodology]
+domainEligibility: [delivery-code, distribution, tooling-harness, authority-governance, coordination-substrate, knowledge-methodology, product-data]
 domainFreedom: free
 parameters:
   - name: target

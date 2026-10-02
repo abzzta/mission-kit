@@ -16,6 +16,7 @@ domainEligibility:
   - authority-governance
   - coordination-substrate
   - knowledge-methodology
+  - product-data
 domainFreedom: free
 parameters:
   - name: target
@@ -47,7 +48,7 @@ Per constraint 6, the bracketing M7 axiom-alignment-gate on `completionDependsOn
 
 ## Generation
 
-`arc-seeded` - a driver mints it inside a blueprint (a design rung ahead of build). idea-425/451/403 instantiate the `architect x design-a-contract-or- invariant x <domain>` triple into a claimable WorkItem whose `targetRef` resolves the operator-supplied `target`.\
+`arc-seeded` - a driver mints it inside a blueprint (a design rung ahead of build). idea-425/451/403 instantiate the `architect x design-a-contract-or- invariant x <domain>` triple into a claimable WorkItem whose `targetRef` resolves the operator-supplied `target`.
 **Falsifier:** no acceptance tests/invariants in the doc, or axioms cited as decoration - either turns the node FAIL rather than done.
 
 ---

@@ -16,6 +16,7 @@ domainEligibility:
   - authority-governance
   - coordination-substrate
   - knowledge-methodology
+  - product-data
 domainFreedom: free
 parameters:
   - name: target

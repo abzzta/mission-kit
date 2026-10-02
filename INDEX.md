@@ -73,6 +73,7 @@ This file described them a second time and the copy had already drifted, naming 
 | [D4](domains/D4-authority-governance.md) | authority-governance - the governance/authority substrate | You are changing who holds authority or how governance is enforced |
 | [D5](domains/D5-coordination-substrate.md) | coordination-substrate - the WorkGraph/lifecycle/messaging machinery | You are changing the machinery that coordinates work between agents |
 | [D6](domains/D6-knowledge-methodology.md) | knowledge-methodology - the durable knowledge capital | You are changing the durable knowledge the organisation keeps |
+| [D7](domains/D7-product-data.md) | product-data - the data the product holds | You are changing the data a product holds - applying a schema change to it, or repairing, migrating or deleting its records |
 
 ---
 

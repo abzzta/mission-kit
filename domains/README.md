@@ -11,7 +11,7 @@ related: [W0, R0, A1, A3, A5, T0]
 
 ## Purpose
 
-Six **subject-surfaces**: a domain names *what a node's evidence resolves against*.\
+Seven **subject-surfaces**: a domain names *what a node's evidence resolves against*.\
 The work-*mode* is carried by the work-type, never by the domain - a mode-domain (e.g. `verification`) would double-count with the mode-encoding work-type (`verify-gate` *is* verification) and break orthogonality.
 
 A domain answers one question about a unit of work: *where does its evidence land?*\
@@ -21,31 +21,33 @@ It is what makes two pieces of work comparable - a verification of the release c
 
 ## Territory
 
-This set covers **the surfaces an engineering organisation's work lands on** - every place a unit of work's evidence can resolve, less one gap recorded below.
+This set covers **the surfaces an engineering organisation's work lands on** - every place a unit of work's evidence can resolve.
 
 The surfaces group by which part of the organisation they belong to, and those parts are the denominator a gap is checked against.
 
 | Part | Where evidence resolves | Domain |
 |---|---|---|
-| **The product** | the delivered codebase - source, changes, tests | [`D1`](D1-delivery-code.md) delivery-code |
+| **The product** | its source - code, changes, tests - and the data it holds, live | [`D1`](D1-delivery-code.md) delivery-code, [`D7`](D7-product-data.md) product-data |
 | **Its delivery** | released artifacts, how they reach consumers, and the estate they roll out to | [`D2`](D2-distribution.md) distribution |
 | **The toolchain** | the harness that builds, launches and hosts the work | [`D3`](D3-tooling-harness.md) tooling-harness |
 | **The control plane** | who holds authority, and how work is coordinated | [`D4`](D4-authority-governance.md) authority-governance, [`D5`](D5-coordination-substrate.md) coordination-substrate |
 | **The knowledge** | what the organisation durably knows | [`D6`](D6-knowledge-methodology.md) knowledge-methodology |
 
 Every domain sits in exactly one row.\
-The control plane holds two, because authority and coordination have different evidence: a ruling resolves against a decision record, a coordination change against the state of the work itself.
+Two rows hold two domains, each because the evidence differs.\
+The product's source resolves against code and CI, and its data against the records themselves, before and after.\
+A ruling resolves against a decision record, and a coordination change against the state of the work itself.
 
-**A gap the territory exposes: the product's own stored data.**\
-Work on the data a product holds - applying a schema migration to live data, repairing bad records - resolves evidence against the records themselves, before and after.\
-`delivery-code` covers the migration's code and not its application to the records.\
-`distribution` covers the rolled-out estate - the machines a product runs on - and not the records it holds.\
-The control-plane and knowledge domains resolve against records of their own substrates, not the product's.\
-So everything a data migration does to the records has no domain, and two people placing it would reasonably disagree.
+**The set grows when the territory finds a gap.**\
+This set is not complete and is not expected to be.\
+A surface work lands on that no domain resolves is closed by adding a domain with its own evidence contract, not by stretching a neighbour to cover it, because a stretched domain holds two evidence contracts under one name.\
+Until the new domain exists, the work is recorded against the gap rather than forced into the nearest domain.\
+A gap that fits none of the parts above means the parts are incomplete too, and the part is added with the domain.\
+`product-data` entered this way: work on a product's records - applying a schema migration, repairing bad records - had no domain, since `delivery-code` holds the source and `distribution` the estate, and neither holds the records.
 
 **Gaps tested and not found.**\
 *Infrastructure* - provisioned machines and networks - is covered, by the same evidence rule as everything else: provisioning code in the product's codebase is `delivery-code`, in the harness it is `tooling-harness`, and the rolled-out estate is `distribution`.\
-That is the difference from data: applying infrastructure changes the estate, which `distribution` covers, and applying a migration changes the records, which nothing does.\
+That is the difference from data: applying infrastructure changes the estate, which `distribution` covers, and applying a migration changes the records, which `product-data` covers.\
 *Incidents* are not a surface at all; see below.
 
 ---
@@ -56,11 +58,11 @@ Orthogonality of the domain axis is **partial**, and the taxonomy says so:
 
 - **free** - object-level build/ship/assurance work *acts on* a surface, so the
   domain is a free, discriminating choice (`verifier x audit-surface x
-  distribution` != `... x authority-governance`, a role x work-type x domain triple). D1/D2/D3 are object-level surfaces, reached this way.
+  distribution` != `... x authority-governance`, a role x work-type x domain triple). D1, D2, D3 and D7 are object-level surfaces, reached this way.
 - **pinned** - meta/substrate work whose *type names its own surface*: the
   domain is a constant function of the work-type (N=1), so the generator does
   not vary it. A type that names its own surface is substrate work, so pinned
-  work lands on the substrate domains. Which work-types are pinned, and to which domain, is declared on
+  work lands on the substrate domains - D4, D5 and D6. Which work-types are pinned, and to which domain, is declared on
   each work-type; the lists domains carry are not consulted.
 
 D4/D5/D6 remain first-class domains (not deletions) because they are still valid **free** targets - every one of them can be audited as a surface in its own right.\
@@ -120,8 +122,8 @@ Population faults - visible across the set and invisible to any one domain.
 - **The mode-domain.** A domain that is really a mode of work - verification, review - double-counting with the work-type that already carries the mode.
 - **The indistinct pair.** Two domains with no difference in what their evidence resolves against. A domain earns its place by a distinct evidence contract, and without one the generator produces two names for the same work.
 - **The doubly-declared pairing.** The same pairing stated on both the work-type and the domain, free to disagree. Measured when this charter was converted, the two sides disagreed widely, every disagreement an omission on the domain side; only the work-type's list is consulted.
-- **The domain named after a tool.** A surface described by one organisation's particular tools rather than by what it is, so a different team cannot place its own work. Five of the six current members do this in their own entries - every one but `delivery-code` names tools in its subject surface - and it is recorded rather than corrected here.
-- **The unresolved surface.** Work whose evidence lands somewhere no domain names, so two people place it differently. The territory exists to make these visible; it records one today.
+- **The domain named after a tool.** A surface described by one organisation's particular tools rather than by what it is, so a different team cannot place its own work. Five of the seven current members do this in their own entries - every one but `delivery-code` and `product-data` names tools in its subject surface - and it is recorded rather than corrected here.
+- **The unresolved surface.** Work whose evidence lands somewhere no domain names, so two people place it differently. The territory exists to make these visible, and a visible one is closed by adding a domain; it records none today.
 
 ---
 
@@ -137,4 +139,5 @@ Population faults - visible across the set and invisible to any one domain.
 | [D4](D4-authority-governance.md) | authority-governance - the governance/authority substrate | You are changing who holds authority or how governance is enforced |
 | [D5](D5-coordination-substrate.md) | coordination-substrate - the WorkGraph/lifecycle/messaging machinery | You are changing the machinery that coordinates work between agents |
 | [D6](D6-knowledge-methodology.md) | knowledge-methodology - the durable knowledge capital | You are changing the durable knowledge the organisation keeps |
+| [D7](D7-product-data.md) | product-data - the data the product holds | You are changing the data a product holds - applying a schema change to it, or repairing, migrating or deleting its records |
 <!-- END GENERATED -->

@@ -11,7 +11,7 @@ evidenceContract:
   - {kind: test-run, description: regression test}
   - {kind: freeform, description: bug-state update}
 evidenceAuthority: executor-evidence
-domainEligibility: [delivery-code, tooling-harness, distribution]
+domainEligibility: [delivery-code, tooling-harness, distribution, product-data]
 domainFreedom: free
 parameters:
   - {name: bug, fills: the bug id, bindingSource: provided-by-trigger}
