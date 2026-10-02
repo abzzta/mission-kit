@@ -91,7 +91,7 @@ for (const line of board.split("\n")) {
 		continue;
 	}
 
-	const it = line.match(/^\|\s*(M\d+\.\d+)\s*\|/);
+	const it = line.match(/^\|\s*(M\d+\.\d+[a-z]?)\s*\|/);
 	if (it && current) {
 		const cited = [...line.matchAll(/`(B\d+)`/g)].map((x) => x[1]);
 		items.push({ id: it[1], milestone: current, cited });
