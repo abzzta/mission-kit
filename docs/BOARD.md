@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All twenty-eight rows, scored.\
+All twenty-nine rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -84,6 +84,7 @@ Held rows are [below](#held).
 | **B26** | S2 | **A3 mandate** | adopter | S | `DONE` | multi-tag binding ambiguous in every revision; ruled any-tag |
 | **B27** | S3 | **A8 signal** | author | S | **M4** | network check fails under throttling, inviting `--no-network`, which would hide a real break |
 | **B28** | S2 | **A3 mandate** | adopter | M | `DONE` | applicability tags were undefined vocabulary; now the `traits/` layer |
+| **B29** | S2 | **A8 mandate** | author | S | **Held** | an evaluation key is the author's opinion; a wrong one yields a confident wrong result |
 | **B20** | S5 | A3 signal | author | S | `DONE` | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |
@@ -221,6 +222,8 @@ Rows on the record and not on the board, **scored on the same scale**, so declin
 | **B21** | **S2** | **A4 mandate** | Found by the `A0` trial, then corrected: first framed as defence against an adversary, which is out of scope. Scored high and held anyway, since adding an axiom changes the constitution and warrants its own audit. | **a lone agent ships a claim it corroborated itself and was wrong** |
 | **B22** | S4 | A9 signal | Found by the `A0` trial. A low citation count has two legitimate readings and one observation cannot separate them. | **a deployment fails in a way chaos validation would have caught** |
 
+
+| **B29** | S2 | **A8 mandate** | One wrong key observed. The control - a director read of every key - spends the scarcest attention, so it should be earned by a second instance or by revising `M2` deliberately, not assumed. | **a second wrong key is found, or `M2` is next revised** |
 
 All are deferrals of evidence or of authority, not of appetite.\
 Neither is blocked on effort.

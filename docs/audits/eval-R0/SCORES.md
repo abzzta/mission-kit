@@ -14,7 +14,12 @@ The scorer authored Y, so ties go to X.
 | P7 gaps                      | 1 | 1 | 1 | 2 | 2 | 2 |
 | **Total / 14**               | **10** | **10** | **10** | **14** | **14** | **14** |
 
-Mean: **X 10.0 / 14**   **Y 14.0 / 14**
+Mean, as first scored: **X 10.0 / 14**   **Y 14.0 / 14**
+
+**Rescored under the corrected P5 key: X 10.0 / 14, Y 13.0 / 14.**\
+The original P5 key taught that a lone agent cannot verify its own work.\
+Every evaluator agreed and every candidate run scored 2 against it.\
+Under the corrected key - checking is always required, it just cannot stand as assurance - every candidate run gave only the assurance half and scores 1.
 
 ## Judgement calls
 
@@ -51,3 +56,30 @@ Every Y run named assurance, quoted.
 | backlog `B21` cited from a charter | Y1, Y2, Y3 | Y | **corrected** - the charter cites the gap T0 records, not this corpus's own backlog |
 
 Seven of the twelve findings were errors in text the author added, all in the two concerns this conversion authored: territory and composition.
+
+---
+
+## Follow-up: the P5 correction, re-evaluated
+
+The candidate was corrected to state that a lone agent must check its own work by means its own reasoning cannot bias, and that the check does not count as independent assurance.\
+Three fresh readers were given the corrected candidate, `charter-Z-correction-as-evaluated.md`, and two questions.
+
+| | Z1 | Z2 | Z3 |
+|---|:-:|:-:|:-:|
+| Can I verify my own work? | 2 | 2 | 2 |
+| Am I still expected to check it, and how? | 2 | 2 | 2 |
+
+Every run gave both halves, quoted: checking is mandatory, it must use a mechanism, a fresh reader or a measurement rather than re-reading, and it does not seal a gate needing independence.\
+Every run also quoted the new fault, *the unchecked lone agent*, as naming the misreading.
+
+Their further findings, and dispositions:
+
+| Finding | Raised by | Disposition |
+|---|---|---|
+| the territory says the lone agent cannot hold assurance; composition says it holds the verifier role | all 3 | corrected - it may hold every role and can never exercise assurance, having no work but its own |
+| does the director become a verifier when a check goes to it? | all 3 | corrected - the gate is met by ratification instead of attestation |
+| does a fresh sub-agent count as an independent identity? | all 3 | **director ruling: a strong self-check, not assurance** - independent of context and motive, not of the shared model |
+| "independent seat" undefined | 1 | corrected - a second agent |
+| the `T0` sentence is hard to parse | 1 | corrected |
+| no end condition on waiting for a second agent | 2 | not corrected - held by W0's constraint set, not by this charter |
+| which gates require independence is not stated here | 3 | not corrected - deliberately cited to W0 rather than forked |
