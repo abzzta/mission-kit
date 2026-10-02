@@ -22,7 +22,7 @@ The model is **axes + composition** - there is no separate overlay layer, and no
 - **ROLES (M=4)** - `architect, engineer, verifier, director`. Pure on
   *essence*; the authority component of engagement-mode is *type-determined*.
   See `roles/`.
-- **DOMAINS (N=6)** - subject-surfaces (what a node's evidence resolves
+- **DOMAINS (N=7)** - subject-surfaces (what a node's evidence resolves
   against). Orthogonality is **bimodal**: `free` for object-level build/ship/
   assurance work, `pinned` for meta/substrate work. See `domains/`.
 - **WORK-TYPES (K~=26)** - verb-families carrying the *mode* + *shape* of work.

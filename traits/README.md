@@ -44,7 +44,7 @@ Every trait sits in exactly one row.
 The *Actors* row has one member, `multi-agent`, and it is defined by the presence of collaborators.\
 Its complement - an organisation of one, with no second actor to verify its work - is not a trait, though it is the condition under which an agent's own error goes uncaught.\
 Every axiom that defends against that error needs a second actor, and no trait lets an axiom bind specifically when there is none.\
-That is the trait an axiom answering backlog `B21` would need, and it is recorded here rather than added, because a trait earns its place by bringing an obligation, and until an axiom states that obligation the trait would bind nothing.
+That is the trait an axiom protecting an agent against its own uncaught error would need, and it is recorded here rather than added, because a trait earns its place by bringing an obligation, and until an axiom states that obligation the trait would bind nothing.
 
 **Gaps tested and not found.**\
 *Distribution* - a system spanning machines - looks absent and is not obviously a trait: its obligations are held by `T1` for shared state and `T3` where actors coordinate, and no axiom binds on distribution alone.\
