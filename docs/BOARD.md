@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All twenty-nine rows, scored.\
+All thirty rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -85,6 +85,7 @@ Held rows are [below](#held).
 | **B27** | S3 | **A8 signal** | author | S | **M4** | network check fails under throttling, inviting `--no-network`, which would hide a real break |
 | **B28** | S2 | **A3 mandate** | adopter | M | `DONE` | applicability tags were undefined vocabulary; now the `traits/` layer |
 | **B29** | S2 | **A8 mandate** | author | S | **Held** | an evaluation key is the author's opinion; a wrong one yields a confident wrong result |
+| **B30** | S3 | **A8 signal** | adopter | S | **M4** | external addresses outside AGENTS.md are unchecked; placeholder links look real |
 | **B20** | S5 | A3 signal | author | S | `DONE` | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |
@@ -179,6 +180,7 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | M4.2 | Mechanize the board-record contract: every item cites a live row, every open row is on the board or in Held, milestone order matches the plan | `B16` `DONE` |
 | M4.3 | `AR2` instance naming and ordinal scheme | `B7` |
 | M4.4 | Retry network checks with backoff on 5xx, so throttling is told apart from a broken address | `B27` |
+| M4.5 | Check every external address in the corpus, and make placeholders unmistakable | `B30` |
 
 ---
 
