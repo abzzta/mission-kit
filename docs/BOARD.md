@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All thirty-one rows, scored.\
+All thirty-three rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -87,6 +87,8 @@ Held rows are [below](#held).
 | **B29** | S2 | **A8 mandate** | author | S | **M5** | an evaluation key is the author's opinion; a wrong one yields a confident wrong result |
 | **B30** | S3 | **A8 signal** | adopter | S | **M4** | external addresses outside AGENTS.md are unchecked; placeholder links look real |
 | **B31** | S3 | A10 signal | adopter | S | **M5** | the duty to expand a set on a found gap is stated for domains only, not work-types, traits or sets in general |
+| **B32** | **S2** | **A12 mandate** - A3 | agent | M | **M5** | no record states how the axis layers compose; a context-less agent assembles it from four charters |
+| **B33** | S3 | A8 signal | agent | S | **M5** | `W0` constraints 2 and 9 contradict on same-agent degradation |
 | **B20** | S5 | A3 signal | author | S | `DONE` | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |
@@ -199,6 +201,8 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | M5.5 | Convert all thirteen, one per change - draft, audit, evaluate, director review, apply | `B4` | `WIP` - `M0`, `A0`, `R0`, `D0` **applied** - [M0](audits/M5.5-01-M0.md), [A0](audits/M5.5-02-A0.md), [R0](audits/M5.5-03-R0.md), [D0](audits/M5.5-04-D0.md); 9 remain |
 | M5.5b | Revisit the compositional split behind the work axes when conversion reaches `R0`, `D0` and `W0` | `B24` | `TODO` |
 | M5.5c | Carry the duty to expand a set on a found gap into `W0` and `T0`, or state it once in `E3` | `B31` | `TODO` |
+| M5.5d | **Composition record**: measure a context-less agent's composition of the axis layers against the current corpus, author one declared record of how they compose and the order to read them, re-measure | `B32` | `WIP` - key committed and reviewed |
+| M5.5e | Resolve the constraint 2 / constraint 9 contradiction in the `W0` conversion | `B33` | `TODO` |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
 | M5.7 | **Add a key review to `M2`** - a fresh reader audits the answer key against the population before any evaluator runs. Trigger fired at `D0`: three of seven answers wrong, caught before use | `B29` | `TODO` |
 
