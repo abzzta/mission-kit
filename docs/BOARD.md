@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All twenty-five rows, scored.\
+All twenty-seven rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -81,6 +81,8 @@ Held rows are [below](#held).
 | **B24** | S3 | **A3 mandate** | author | **L** | **M5** | the compositional split behind the work axes has not been revisited since sets were defined |
 | **B22** | S4 | A9 signal | author | S | **Held** | `A9` binds every system and is the least exercised axiom |
 | **B25** | S2 | A13 signal | agent | S | **M3** | `M7`'s trigger is narrower than its title, so nothing routes an author to it unprompted |
+| **B26** | S2 | **A3 mandate** | adopter | S | `DONE` | multi-tag binding ambiguous in every revision; ruled any-tag |
+| **B27** | S3 | **A8 signal** | author | S | **M4** | network check fails under throttling, inviting `--no-network`, which would hide a real break |
 | **B20** | S5 | A3 signal | author | S | `DONE` | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |
@@ -174,6 +176,7 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | M4.1 | Rule on `CSSA`/`TSSA` - keep, drop "conventionally", or promote as `E` entities | `B10` |
 | M4.2 | Mechanize the board-record contract: every item cites a live row, every open row is on the board or in Held, milestone order matches the plan | `B16` `DONE` |
 | M4.3 | `AR2` instance naming and ordinal scheme | `B7` |
+| M4.4 | Retry network checks with backoff on 5xx, so throttling is told apart from a broken address | `B27` |
 
 ---
 
@@ -188,7 +191,7 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | M5.3 | **Trial conversion of one charter** | `B4` | `DONE` - `M0`, verdict **improved** - [verdict](audits/M5.3-trial-verdict-M0.md), [candidate](audits/M5.3-trial-candidate-M0.md). Awaiting director review |
 | M5.4 | Revise `E4` on what the trial shows, or stop if the enhancement did not improve utility | `B4` | `DONE` - territory must be derived and show a gap; growth must be paid for |
 | M5.4b | **Second trial, on `A0`**, isolating whether growth comes from the standard or from `M0` missing two concerns | `B4` | `DONE` - verdict **improved**, growth paid for. Growth tracks missing concerns: 36 percent here against 78 for `M0` - [verdict](audits/M5.4b-trial-verdict-A0.md), [candidate](audits/M5.4b-trial-candidate-A0.md). Awaiting director review |
-| M5.5 | Convert all thirteen, one per change - draft, audit, evaluate, director review, apply | `B4` | `WIP` - `M0` approved and evaluated, [audit](audits/M5.5-01-M0.md) |
+| M5.5 | Convert all thirteen, one per change - draft, audit, evaluate, director review, apply | `B4` | `WIP` - `M0` approved, [audit](audits/M5.5-01-M0.md); `A0` evaluated, awaiting review, [audit](audits/M5.5-02-A0.md) |
 | M5.5b | Revisit the compositional split behind the work axes when conversion reaches `R0`, `D0` and `W0` | `B24` | `TODO` |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
 
