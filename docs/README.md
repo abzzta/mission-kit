@@ -17,12 +17,16 @@ Publishing a placement rule while sitting outside it is the same defect at one r
 The same holds for every file here against the type it instantiates.
 
 `AR0` states one direction - completed instances do not belong in the type layers.\
-**This directory holds the other: an instance holds no product content.**\
-A procedure, a rule, a definition or a standard written into a board, a backlog or an architecture here is product content in the wrong place.\
-It is unreachable from the ledger, uncitable by ID, ungoverned by any charter, and it closes with the milestone it was written into.\
-An instance may *plan* the writing of product content, and *cite* it once written; it never holds it.
+**This directory holds the other: content intended for the benefit of every project does not belong in an instance.**
 
-This was learned by breaking it: the corpus's charter-editing rule and its evaluation protocol were both first written inside this directory's board, and both moved into the corpus once their home was clear.
+The test is the intended reader, not the kind of content.\
+An instance may hold rules, procedures and definitions that govern only itself - this board's contract with its record and its triage scale are both rules, and both belong here, because no other project is meant to follow them.\
+An instance may cite anything in the corpus, which is one of its main uses.\
+What it may not hold is content meant to reach every project: that belongs in the corpus, where it is reachable from the ledger, citable by ID, governed by a charter, and outlives the milestone that produced it.\
+Written into an instance, it is none of those things, and the projects it was meant for never find it.
+
+This was learned by breaking it: the charter-editing rule and the evaluation protocol were both first written inside this directory's board, though both were meant for every project that keeps a charter or evaluates a reasoning document.\
+Both moved into the corpus once their home was clear.
 
 ---
 
