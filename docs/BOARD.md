@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All thirty rows, scored.\
+All thirty-one rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -84,8 +84,9 @@ Held rows are [below](#held).
 | **B26** | S2 | **A3 mandate** | adopter | S | `DONE` | multi-tag binding ambiguous in every revision; ruled any-tag |
 | **B27** | S3 | **A8 signal** | author | S | **M4** | network check fails under throttling, inviting `--no-network`, which would hide a real break |
 | **B28** | S2 | **A3 mandate** | adopter | M | `DONE` | applicability tags were undefined vocabulary; now the `traits/` layer |
-| **B29** | S2 | **A8 mandate** | author | S | **Held** | an evaluation key is the author's opinion; a wrong one yields a confident wrong result |
+| **B29** | S2 | **A8 mandate** | author | S | **M5** | an evaluation key is the author's opinion; a wrong one yields a confident wrong result |
 | **B30** | S3 | **A8 signal** | adopter | S | **M4** | external addresses outside AGENTS.md are unchecked; placeholder links look real |
+| **B31** | S3 | A10 signal | adopter | S | **M5** | the duty to expand a set on a found gap is stated for domains only, not work-types, traits or sets in general |
 | **B20** | S5 | A3 signal | author | S | `DONE` | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |
@@ -199,6 +200,7 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | M5.5b | Revisit the compositional split behind the work axes when conversion reaches `R0`, `D0` and `W0` | `B24` | `TODO` |
 | M5.5c | Carry the duty to expand a set on a found gap into `W0` and `T0`, or state it once in `E3` | `B31` | `TODO` |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
+| M5.7 | **Add a key review to `M2`** - a fresh reader audits the answer key against the population before any evaluator runs. Trigger fired at `D0`: three of seven answers wrong, caught before use | `B29` | `TODO` |
 
 **How each charter is converted is product, not plan, and lives in the corpus.**\
 The editing rule is [`E4`](../entities/E4-charter.md) section *Changing a charter*; the evaluation that tests each conversion is [`M2`](../methodology/M2-test-drive-docs-by-execution.md).\
@@ -226,7 +228,6 @@ Rows on the record and not on the board, **scored on the same scale**, so declin
 | **B22** | S4 | A9 signal | Found by the `A0` trial. A low citation count has two legitimate readings and one observation cannot separate them. | **a deployment fails in a way chaos validation would have caught** |
 
 
-| **B29** | S2 | **A8 mandate** | One wrong key observed. The control - a director read of every key - spends the scarcest attention, so it should be earned by a second instance or by revising `M2` deliberately, not assumed. | **a second wrong key is found, or `M2` is next revised** |
 
 All are deferrals of evidence or of authority, not of appetite.\
 Neither is blocked on effort.
