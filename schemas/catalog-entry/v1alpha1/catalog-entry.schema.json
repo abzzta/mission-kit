@@ -34,7 +34,8 @@
         "contract",
         "entity",
         "component",
-        "artifact"
+        "artifact",
+        "trait"
       ]
     },
     "title": {
@@ -92,10 +93,19 @@
       }
     },
     "applies-to": {
-      "description": "Axiom scope: the class of system the mandate governs.",
+      "description": "The traits a system must have at least one of for this axiom to bind it, or 'any-system' to bind every system. Each value other than 'any-system' is a trait declared in traits/, so a misspelled or undefined tag is refused rather than silently binding nothing. Values are alternatives, never a conjunction.",
       "type": "array",
+      "minItems": 1,
       "items": {
-        "type": "string"
+        "type": "string",
+        "enum": [
+          "any-system",
+          "stateful",
+          "declarative",
+          "multi-agent",
+          "autonomous",
+          "llm-in-the-loop"
+        ]
       }
     },
     "source": {

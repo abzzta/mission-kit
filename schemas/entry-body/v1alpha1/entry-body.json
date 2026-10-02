@@ -67,6 +67,21 @@
         "exemptIds": [
           "AR0"
         ]
+      },
+      {
+        "category": "trait",
+        "rationale": "A trait decides whether axioms bind, so a reader must be able to apply it to their own system: it states what the characteristic is, an observable test, where its edges are, which axioms it brings into force, and why the obligation follows from the characteristic.",
+        "ordered": true,
+        "sections": [
+          "Definition",
+          "Test",
+          "Boundaries",
+          "Axioms it brings into force",
+          "Why the obligation follows"
+        ],
+        "exemptIds": [
+          "T0"
+        ]
       }
     ],
     "charters": {

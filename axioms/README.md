@@ -5,7 +5,7 @@ title: Axioms - standing commitments, what brings one into force, and how they c
 status: active
 hydrate-when: You are deciding whether a principle is a standing commitment or a situated move, or which axioms bind the system in front of you
 supersedes: []
-related: [SC6, W0, R0, D0, E1]
+related: [SC6, W0, R0, D0, E1, T0]
 ---
 
 # Axioms - the standing-commitment layer
@@ -83,14 +83,9 @@ Tags are alternatives, not a conjunction: an axiom tagged `multi-agent` and `aut
 A project does not adopt all axioms by fiat; it adopts the axioms whose tags its architecture actually satisfies.\
 The more architectural commitments a system makes, the more axioms come into force for it.
 
-The vocabulary:
-
-- **`any-system`** - holds for every system in scope, with no further architectural precondition. The universal floor.
-- **`stateful`** - holds for systems that own and mutate persistent state (a store, a backplane, a ledger). In force the moment the system has authoritative state worth being transparent about.
-- **`declarative`** - holds for systems whose desired behavior is expressed as specifications reconciled toward, rather than imperative steps executed once.
-- **`multi-agent`** - holds for systems where two or more autonomous actors coordinate over shared substrate. In force as soon as collaboration crosses an agent boundary.
-- **`autonomous`** - holds for systems that operate and recover without a human in the synchronous loop. In force when the system is expected to keep running unattended.
-- **`llm-in-the-loop`** - holds for systems where a language model participates in perception, reasoning, or action. In force whenever model cognition is on the critical path.
+The vocabulary is defined in [`traits/`](../traits/README.md), one entry per trait, each with an observable test a reader can apply to their own system: [`T1`](../traits/T1-stateful.md) stateful, [`T2`](../traits/T2-declarative.md) declarative, [`T3`](../traits/T3-multi-agent.md) multi-agent, [`T4`](../traits/T4-autonomous.md) autonomous, [`T5`](../traits/T5-llm-in-the-loop.md) llm-in-the-loop.\
+`any-system` is the floor rather than a trait: an axiom tagged with it binds every system.\
+The contract accepts only these values, so an undefined tag is refused rather than silently binding nothing.
 
 `applies-to` answers *whether* an axiom binds, and it is the only field that does.\
 What the axiom then demands on a particular subject surface is a question for the [`domains/`](../domains/README.md) axis.\

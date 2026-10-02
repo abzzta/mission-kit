@@ -47,7 +47,8 @@
                   "axiom",
                   "entity",
                   "component",
-                  "artifact"
+                  "artifact",
+                  "trait"
                 ]
               },
               "rationale": {

@@ -55,7 +55,7 @@ A mandate breach is the commitment itself failing; a signal breach is a mechanic
 
 ## Triage ledger
 
-All twenty-seven rows, scored.\
+All twenty-eight rows, scored.\
 Held rows are [below](#held).
 
 | Row | Impact | Principle | Visible | Size | Milestone | One line |
@@ -83,6 +83,7 @@ Held rows are [below](#held).
 | **B25** | S2 | A13 signal | agent | S | **M3** | `M7`'s trigger is narrower than its title, so nothing routes an author to it unprompted |
 | **B26** | S2 | **A3 mandate** | adopter | S | `DONE` | multi-tag binding ambiguous in every revision; ruled any-tag |
 | **B27** | S3 | **A8 signal** | author | S | **M4** | network check fails under throttling, inviting `--no-network`, which would hide a real break |
+| **B28** | S2 | **A3 mandate** | adopter | M | `DONE` | applicability tags were undefined vocabulary; now the `traits/` layer |
 | **B20** | S5 | A3 signal | author | S | `DONE` | `M7` may be axiom-shaped in a methodology's place |
 | **B16** | S3 | **A8 mandate** | author | S | **M4** | the board drifted from itself within two commits, and the item meant to prevent that cited no row |
 | **B8** | S3 | **A2 mandate** | adopter | **L** | **Held** | `AR1` forbids the hand-authored current projection a bootstrap cannot avoid |

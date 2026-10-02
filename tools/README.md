@@ -244,6 +244,26 @@ Exit status is non-zero on any disagreement.
 
 ---
 
+## check-traits.mjs
+
+Holds the `applies-to` vocabulary and the `traits/` layer to naming the same things.
+
+```sh
+node tools/check-traits.mjs
+```
+
+**Why it exists.**\
+An axiom's `applies-to` field is constrained to an enum in the catalogue contract, so a misspelled or undefined tag is refused instead of silently binding nothing.\
+That enum is a second list of the traits declared in `traits/`, and two lists of one thing drift.\
+Add a trait and forget the enum, and every axiom tagged with it is refused; remove one and the enum keeps admitting a tag nothing defines.
+
+**Run it when** you add, rename or retire a trait.
+
+The floor, `any-system`, is a valid value and deliberately not a trait, so it is the one name allowed in the enum without a trait behind it.\
+Exit status is non-zero if either list names something the other does not.
+
+---
+
 ## check-charter-shape.sh
 
 Holds every knowledge layer's charter to the sections a member cannot supply for itself.

@@ -232,6 +232,19 @@ This file described them a second time and the copy had already drifted, naming 
 
 ---
 
+## Traits
+
+| ID | Title | Hydrate when |
+|---|---|---|
+| [T0](traits/README.md) | Traits - characteristics of a system that decide which axioms bind it | You need to know whether an axiom applies to the system you are working on, or you are tagging an axiom with the systems it governs |
+| [T1](traits/T1-stateful.md) | stateful - the system owns and mutates persistent state | You are deciding whether your system holds state that something else depends on being true |
+| [T2](traits/T2-declarative.md) | declarative - the system's behaviour is declared and reconciled toward, not scripted | You are deciding whether your system is driven by a specification it reconciles toward |
+| [T3](traits/T3-multi-agent.md) | multi-agent - two or more independent actors coordinate over shared work | You are deciding whether more than one actor's work meets in your system |
+| [T4](traits/T4-autonomous.md) | autonomous - the system operates and recovers without a human in the synchronous loop | You are deciding whether your system is expected to keep running unattended |
+| [T5](traits/T5-llm-in-the-loop.md) | llm-in-the-loop - a language model reasons on the system's critical path | You are deciding whether model cognition is part of how your system decides or acts |
+
+---
+
 ## Backlog
 
 | ID | Title | Hydrate when |
