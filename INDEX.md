@@ -116,7 +116,7 @@ This file described them a second time and the copy had already drifted, naming 
 |---|---|---|
 | [M0](methodology/README.md) | Methodology - how work is conducted, as against how artifacts are written | You are choosing how to run a review, audit or deferral, or you need to know whether a rule belongs here or in style |
 | [M1](methodology/M1-triangulated-review.md) | Triangulated review - minimum 4 independent inputs | You are reviewing a patch or design that ships to production or upstream |
-| [M2](methodology/M2-test-drive-docs-by-execution.md) | Test-drive docs by execution | You are about to ship an operator-facing workflow document to someone who will run it |
+| [M2](methodology/M2-test-drive-docs-by-execution.md) | Test-drive docs by execution - run the steps, or have a cold reader reason with it | You are about to ship a document someone will act on - an operator workflow, or a charter, axiom or other reasoning document an agent will rely on |
 | [M3](methodology/M3-default-reject-honest-yield.md) | Default-reject discipline + honest yield reporting | You are running an improvement sweep, refactor programme or audit cycle |
 | [M4](methodology/M4-frozen-history-rule.md) | Frozen-history rule | You are making a policy change that would rewrite artifacts recorded before it |
 | [M5](methodology/M5-anti-amnesia-deferral.md) | Anti-amnesia deferral - every parked or cut item carries a revival trigger | You are parking, cutting or marking won't-do on a unit of tracked work |

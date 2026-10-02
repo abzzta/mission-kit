@@ -10,6 +10,22 @@ Publishing a placement rule while sitting outside it is the same defect at one r
 
 ---
 
+## Type, not instance - and the converse
+
+[`AR3`](../artifacts/AR3-board.md) is product: the definition of what any project's board must be.\
+[`BOARD.md`](BOARD.md) is an instance: mission-kit's own board, planning changes to the product.\
+The same holds for every file here against the type it instantiates.
+
+`AR0` states one direction - completed instances do not belong in the type layers.\
+**This directory holds the other: an instance holds no product content.**\
+A procedure, a rule, a definition or a standard written into a board, a backlog or an architecture here is product content in the wrong place.\
+It is unreachable from the ledger, uncitable by ID, ungoverned by any charter, and it closes with the milestone it was written into.\
+An instance may *plan* the writing of product content, and *cite* it once written; it never holds it.
+
+This was learned by breaking it: the corpus's charter-editing rule and its evaluation protocol were both first written inside this directory's board, and both moved into the corpus once their home was clear.
+
+---
+
 ## Why these are not entries
 
 Nothing here carries an ID, appears in [`INDEX.md`](../INDEX.md), or is citable from another project.\

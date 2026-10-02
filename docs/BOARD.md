@@ -181,69 +181,24 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 
 [`E4`](../entities/E4-charter.md) defines what a charter is: six required concerns - four at fixed headings, two answered anywhere - six conditional ones, and the rest free.
 
-The charters are **not** converted in a sweep.\
-One charter is converted first, as a trial, and judged qualitatively before any other is touched.\
-A standard can pass every check and still make a charter worse to use, and only a side-by-side reading against the charter's own population can tell the difference.
-
 | # | Item | Row | Status |
 |---|---|---|---|
 | M5.1 | Audit all thirteen charters against `E4`: answered, partial or absent, citing where | `B4` | `DONE` - [audit](audits/charter-audit-against-E4.md) |
 | M5.2 | Reconcile `E4` with what the audit found | `B4` | `DONE` |
-| M5.3 | **Trial conversion of one charter**, by the protocol below | `B4` | `DONE` - `M0`, verdict **improved** - [verdict](audits/M5.3-trial-verdict-M0.md), [candidate](audits/M5.3-trial-candidate-M0.md). Awaiting director review |
+| M5.3 | **Trial conversion of one charter** | `B4` | `DONE` - `M0`, verdict **improved** - [verdict](audits/M5.3-trial-verdict-M0.md), [candidate](audits/M5.3-trial-candidate-M0.md). Awaiting director review |
 | M5.4 | Revise `E4` on what the trial shows, or stop if the enhancement did not improve utility | `B4` | `DONE` - territory must be derived and show a gap; growth must be paid for |
 | M5.4b | **Second trial, on `A0`**, isolating whether growth comes from the standard or from `M0` missing two concerns | `B4` | `DONE` - verdict **improved**, growth paid for. Growth tracks missing concerns: 36 percent here against 78 for `M0` - [verdict](audits/M5.4b-trial-verdict-A0.md), [candidate](audits/M5.4b-trial-candidate-A0.md). Awaiting director review |
-| M5.5 | Convert all thirteen, one per change - draft, audit, director review, apply - under the editing rule below | `B4` | `WIP` |
+| M5.5 | Convert all thirteen, one per change - draft, audit, evaluate, director review, apply | `B4` | `WIP` - `M0` approved and evaluated, [audit](audits/M5.5-01-M0.md) |
 | M5.5b | Revisit the compositional split behind the work axes when conversion reaches `R0`, `D0` and `W0` | `B24` | `TODO` |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
 
-### The editing rule
-
-Conversion is not limited to adding sections around untouched text.\
-**The aim is the best version of the charter in its context**, and existing words may be improved where improving them advances that.
-
-The first two trials were run under a stricter rule - every original sentence preserved character for character - and that rule was wrong.\
-It proved nothing was lost and capped the result at the original plus an appendix.\
-It kept sentences the new structure made redundant, kept a sentence the conversion showed to be contradicted while flagging the contradiction beside it, and kept vocabulary that `E4` had made imprecise.
-
-**What is preserved is meaning, and the check on meaning is as strict as the check on words was.**\
-Every edit is weighed for cost against quality: an edit is made when it advances the document toward its best form in context, and not otherwise.\
-Changing settled text carries a real cost - it invalidates a reader's memory of it and puts reasoning at risk - so a marginal improvement is not made.
-
-| Change | Permitted | Evidence required in the audit |
-|---|---|---|
-| **move** | yes | none |
-| **reword** | when it materially improves clarity or precision | old and new side by side, and the reason |
-| **merge** | when two passages state one thing | both originals, and why one suffices |
-| **correct** | when the conversion exposes an error or contradiction | the error cited, the old text retained in the record |
-| **delete** | only when the claim is wrong, unpaid, or held elsewhere | the claim, and which of the three applies |
-
-**The safeguard is that every changed or removed sentence is accounted for.**\
-Not that nothing changed, but that nothing changed without being shown.\
-The original stays recoverable at its commit, so the record of what a charter said is never lost even where the charter no longer says it.
-
-### Trial protocol for M5.3
-
-The trial is the evidence `M5.5` depends on, so it is specified before it is run.
-
-1. **Choose a charter with real content at stake** - one carrying argued, specific passages that a careless conversion could flatten, not the thinnest available. A trial on an easy case proves nothing about a hard one.
-2. **Convert it** to `E4` under the editing rule below.
-3. **Hold the old and new side by side.** The archived original is the baseline; it is not edited.
-4. **Triangulate against the population.** Read the charter's actual members and ask of both versions:
-   - does the charter describe the members that actually exist, or an idealised set?
-   - would a reader holding only the charter know what earns entry, and route an excluded item correctly?
-   - does the territory statement make a real gap in *this* population findable, or merely sound complete?
-   - does the composition statement describe how *these* members actually relate?
-5. **Judge against two purposes, not one** - the charter's own stated purpose, and the intent behind a set as [`E3`](../entities/E3-set.md) defines it: that a population can be asked what it owes itself, including whether anything is missing.
-6. **Record a verdict** - improved, unchanged, or degraded - with the reasoning and the specific passages that decided it. A degraded verdict halts `M5.5` and returns to `M5.4`.
-
-**What would count as failure.**\
-The new charter passes every check and reads worse: a specific argument replaced by a generic heading, a territory that sounds complete and detects nothing, or structure imposed on a charter whose existing organisation was carrying meaning.\
-Any of those means `E4` is wrong somewhere, and the trial is what is meant to find it.
+**How each charter is converted is product, not plan, and lives in the corpus.**\
+The editing rule is [`E4`](../entities/E4-charter.md) section *Changing a charter*; the evaluation that tests each conversion is [`M2`](../methodology/M2-test-drive-docs-by-execution.md).\
+This milestone records which charters are done, not how.
 
 **Exit criteria.**\
-The trial returns an `improved` verdict, recorded with its reasoning.\
-Every charter then answers `E4`'s six required concerns.\
-The checker tests the four fixed headings by name and the two free concerns by declared location, and gates every change.
+Every charter answers `E4`'s required concerns and has passed `M2` evaluation against its previous version.\
+The charter checker tests fixed headings by name and free concerns by declared location, and gates every change.
 
 ---
 

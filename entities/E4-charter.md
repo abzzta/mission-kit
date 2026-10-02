@@ -103,6 +103,16 @@ A passage that restates, introduces, or summarises what is already present is un
 | **Enforcement boundary** | some properties are machine-held and some are not | Which rules a script holds, and which are settled by reading? |
 | **Sub-sets** | the set contains sets | Which children exist, and what each is for - and nothing more |
 | **Axiom alignment** | the set makes a claim an axiom governs | Which standing commitments bind it, and where it falls short |
+| **Probes** | a change to the charter would alter what a reader decides | What must a reader holding only this charter be able to answer? |
+
+**Probes are what makes a charter's purpose testable.**\
+They are questions a fresh reader holding only the charter must be able to answer, each with the answer it should reach.\
+They belong here rather than in the procedure that runs them, because what good looks like is specific to each set: a good axiom charter lets a reader find which kind of failure has no protector, and a good methodology charter lets a reader choose the procedure for the moment they are in.\
+No member can state them, so they are a set property.\
+[`M2`](../methodology/M2-test-drive-docs-by-execution.md) holds the procedure that runs them; this concern holds what they ask.
+
+A charter's probes are derived from its population - from what members actually do - and never from the text of its latest revision, or they can only confirm that revision.\
+Weakening a probe is a change to the charter's standard and is as visible in review as weakening a claim.
 
 ### Free - everything else
 
@@ -119,6 +129,34 @@ A charter section that describes one member in detail has absorbed that member's
 The set is the population; the charter is its voice.\
 [`E3`](E3-set.md) defines what a set owns.\
 This entry defines the document that states it.
+
+---
+
+## Changing a charter
+
+A charter is changed to make it the best version of itself in context, and its existing words may be improved where improving them advances that.\
+What is preserved is meaning, and the check on meaning is as strict as a check on words would be: **every changed or removed sentence is accounted for.**
+
+| Change | Permitted | Evidence the change carries |
+|---|---|---|
+| **move** | yes | none |
+| **reword** | when it materially improves clarity or precision | old and new side by side, and the reason |
+| **merge** | when two passages state one thing | both originals, and why one suffices |
+| **correct** | when an error or contradiction is exposed | the error cited, and the old text kept in the record |
+| **delete** | only when the claim is wrong, unpaid, or held elsewhere | the claim, and which of the three applies |
+
+Every edit is weighed for cost against quality.\
+Changing settled text has a real cost - it invalidates a reader's memory and puts reasoning at risk - so an edit is made when it advances the document, and a marginal one is not made.\
+An added passage is held to the same test as any growth: it answers a question the charter could not, and improves what a reader can do.
+
+A change that would alter what a reader decides is tested before it is ratified, by the procedure in [`M2`](../methodology/M2-test-drive-docs-by-execution.md), against the charter's probes and with the previous version as the comparison.\
+The author's own reading of old against new is not that test.\
+The previous version stays recoverable at its commit, so the record of what a charter said is never lost where the charter no longer says it.
+
+**An earlier rule preserved every original sentence character for character, and was withdrawn.**\
+It proved nothing was lost and capped every revision at the original plus an appendix.\
+Its decisive failure was a sentence it forbade fixing: the sentence was ambiguous, the rule allowed only flagging it, and the flag recorded a contradiction that did not exist.\
+Fixing the sentence removed both the ambiguity and the paragraph that had been defending a false conflict, and the charter got shorter.
 
 ---
 
