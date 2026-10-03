@@ -204,7 +204,7 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | M5.5c | Carry the duty to expand a set on a found gap into `W0` and `T0`, or state it once in `E3` | `B31` | `TODO` |
 | M5.5d | **Composition record**: measure a context-less agent's composition of the axis layers against the current corpus, author one declared record of how they compose and the order to read them, re-measure | `B32` | `WIP` - baseline **14 / 14** in three runs: correctness is already met, so the record is unearned on these probes. Two questions every run had to guess - whose traits count, and what an axiom alignment refers to - are the measured gap. [scores](audits/eval-COMP/SCORES.md) |
 | M5.5e | Resolve the constraint 2 / constraint 9 contradiction in the `W0` conversion | `B33` | `TODO` |
-| M5.5f | **Axioms as asymptotes, and `system` defined** - amend `A0`, scope `M7`, add the entity; evaluate before and after | `B34` | `WIP` - keys committed and reviewed |
+| M5.5f | **Axioms as asymptotes, and `system` defined** - amend `A0`, scope `M7`, add the entity; evaluate before and after | `B34` | `WIP` - drafted and evaluated: **8.3 to 16.0 / 16**, then 12 / 12 on corrections; one wording awaits director review - [audit](audits/M5.5f-asymptote-and-system.md) |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `TODO` |
 | M5.7 | **Add a key review to `M2`** - a fresh reader audits the answer key against the population before any evaluator runs. Trigger fired at `D0`: three of seven answers wrong, caught before use | `B29` | `TODO` |
 

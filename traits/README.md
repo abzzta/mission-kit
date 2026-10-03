@@ -5,18 +5,18 @@ title: Traits - characteristics of a system that decide which axioms bind it
 status: active
 hydrate-when: You need to know whether an axiom applies to the system you are working on, or you are tagging an axiom with the systems it governs
 supersedes: []
-related: [A0, D0, E3, E4]
+related: [A0, D0, E3, E4, E5]
 ---
 
 # Traits
 
 ## Purpose
 
-A **trait** is a characteristic of the system an organisation is working on - stateful, declarative, autonomous - that brings a set of axioms into force.\
+A **trait** is a characteristic of the [system](../entities/E5-system.md) an organisation is working on - stateful, declarative, autonomous - that brings a set of axioms into force.\
 An axiom names the traits it governs in its `applies-to` field, and it binds a system that has at least one of them.
 
 The layer exists because a binding decision is only as precise as the words it is made in.\
-Before this layer, the six traits were defined in one bullet each inside the axiom charter, and the most-used of them appeared in seventeen files with no definition anything could cite.\
+Before this layer, the six applicability tags were defined in one bullet each inside the axiom charter, and the most-used of them appeared in seventeen files with no definition anything could cite.\
 Two readers could reasonably disagree on whether a system was `autonomous`, and the disagreement would decide whether three axioms applied.
 
 ---

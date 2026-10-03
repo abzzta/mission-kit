@@ -8,7 +8,7 @@
     "categories": [
       {
         "category": "axiom",
-        "rationale": "An axiom states an invariant and its consequences, so the reader needs the claim, how it is held, why it is load-bearing, what breaks without it, and how conformance is observed.",
+        "rationale": "An axiom states a limit and its consequences, so the reader needs the limit, how it is approached and held, why it is load-bearing, what breaks short of it or moving away from it, and how distance from it is observed.",
         "ordered": true,
         "sections": [
           "Mandate",

@@ -1,0 +1,97 @@
+---
+id: E5
+category: entity
+title: system - a unit with a declared boundary, which traits describe and axioms bind
+status: active
+hydrate-when: You are deciding which systems' axioms a change answers to, or what counts as the system you are working on
+supersedes: []
+related: [A0, T0, A3, D0, AR1]
+---
+
+# E5 - system
+
+## Definition
+
+A **system** is a unit of engineering with a **declared boundary**: what is inside it, and the contracts through which anything outside reaches it.
+
+Traits describe a system, and axioms bind it.\
+A trait's test is applied to a system, never to a task, and an axiom is in force for a system rather than for a piece of work.
+
+Two systems with a declared boundary between them relate in exactly two ways.
+
+- **Contain.** A system can be made of systems. A module inside a service is a system, and the service contains it.
+- **Compose.** Two systems work together through a declared contract, and neither contains the other. A launcher that hands sessions to a service through a declared interface composes with it.
+
+---
+
+## Discriminators
+
+**Contains against composes.**\
+Ask whether a change inside one unit is necessarily a change to the other.\
+If it is, the other contains it: changing a module changes the service it sits in.\
+If the two reach each other only through a declared contract that can stay unchanged while either side changes, they compose.
+
+**A declared boundary against an assumed one.**\
+A declared boundary is one a reader can point at: an interface, a schema, a protocol, a published version, an architecture that states the system's scope.\
+Behaviour another unit depends on without any declaration is a contract in fact, not a boundary - and a change to it reaches across.
+
+**A system against a component's directory.**\
+"A component's scope is its directory" places documents.\
+A system's boundary decides what a change can reach.\
+The two often coincide and need not.
+
+**A versioned contract changes only for the systems that adopt the new version.**\
+Publishing a new version of an interface alters no consumer that has not adopted it; each adoption is a change to that consumer, and answers to that consumer's axioms; the component is not altered by being adopted.\
+So a change to a shared component's interface reaches the systems that take it up, one adoption at a time - not everything that has ever depended on it.
+
+**A system against a domain.**\
+A [domain](../domains/README.md) is the surface a piece of work lands on - the codebase, the records, the estate.\
+A system is the unit that has traits.\
+Work on the records of a stateful service lands on `product-data` and is bound by the service's axioms; neither fact decides the other.
+
+---
+
+## Boundaries
+
+**Not a repository, a deployment unit or a process by definition.**\
+One repository can hold several systems, and one system can span several.
+
+**Not defined by size or by traits.**\
+A one-shot script with no traits is a system, bound by the axioms every system carries.
+
+**Not separated by an undeclared boundary.**\
+Where nothing declares the boundary between two units, nothing shows that a change to one leaves the other unchanged, so for deciding what binds a change they are **one system, with the traits of both**.\
+Declaring the boundary is what makes them two again.\
+This is not a third way of relating; it is the absence of the boundary that would let them relate at all.\
+The undeclared dependency is itself a fault against [`A3`](../axioms/A3-sovereign-composition.md), which requires units to interact only through declared contracts.
+
+---
+
+## Relations
+
+**To [`A0`](../axioms/README.md).**\
+Axioms bind systems, and `A0` states which systems' axioms a change answers to.\
+This entry defines the terms that rule uses and does not restate it.
+
+**To [`T0`](../traits/README.md).**\
+A trait is a characteristic of a system, and its test is applied to one.
+
+**To [`A3`](../axioms/A3-sovereign-composition.md).**\
+Composition is A3's declared contract.\
+A system reaching into another without one is an A3 fault, and it collapses the two into one system for binding.
+
+**To [`AR1`](../artifacts/AR1-system-architecture.md).**\
+A system architecture states one system's scope and its interfaces, which is where its boundary is declared.
+
+**To [`D0`](../domains/README.md).**\
+Orthogonal: a domain is where work lands, a system is what has traits.
+
+---
+
+## Why precision matters
+
+Which systems' axioms a change answers to depends entirely on this word.\
+Asked without it, three cold readers each marked the same three cases unsettled - whether a module answers to its service's axioms, whether a change to an interface reaches the other side, and whether an undeclared dependency does - and guessed.
+
+Conflated in one direction, a change answers to systems it cannot reach: a small shared library would carry the axioms of every system that uses it, and the most-reused code would carry the most obligations.\
+Conflated in the other, a stateful system escapes its own axioms by being described as stateless modules, each of which passes on its own.

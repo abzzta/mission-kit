@@ -88,4 +88,5 @@ A definition that only says what a thing is leaves every adjacent case undecided
 | [E2](E2-layer.md) | layer - a top-level directory owning one concern, and the three names a knowledge layer answers to | You are deciding which layer owns an entry, or you have met the words layer, category and prefix and cannot tell whether they name one thing or three |
 | [E3](E3-set.md) | set - a bounded population whose charter states what its members owe each other | You are writing a charter, adding a member to a curated population, or asking whether a population is complete |
 | [E4](E4-charter.md) | charter - the document that voices a set, and the questions only it can answer | You are writing or revising a charter, or deciding whether a section belongs in one |
+| [E5](E5-system.md) | system - a unit with a declared boundary, which traits describe and axioms bind | You are deciding which systems' axioms a change answers to, or what counts as the system you are working on |
 <!-- END GENERATED -->

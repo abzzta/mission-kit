@@ -5,7 +5,7 @@ title: Axioms - standing commitments, what brings one into force, and how they c
 status: active
 hydrate-when: You are deciding whether a principle is a standing commitment or a situated move, or which axioms bind the system in front of you
 supersedes: []
-related: [SC6, W0, R0, D0, E1, T0]
+related: [SC6, W0, R0, D0, E1, E5, T0]
 ---
 
 # Axioms - the standing-commitment layer
@@ -13,7 +13,7 @@ related: [SC6, W0, R0, D0, E1, T0]
 ## Purpose
 
 Foundational, always-in-force principles for aligned systems.\
-The "what must always hold" layer beneath the tactical entries.
+The layer that states the limits a system is built toward, beneath the tactical entries.
 
 This entry is the layer's composition rule, in the shape [`AR0`](../artifacts/README.md) and [`W0`](../work-types/README.md) use: it states what an axiom is, what brings one into force, and how the set composes, and it does not restate any individual axiom - its territory characterises what each protects without repeating any mandate.\
 It is not itself an axiom, which is why the axiom body shape declared in [`SC6`](../schemas/SC6-entry-body.md) exempts it, and why the frontmatter contract does not ask it for `applies-to`.
@@ -30,7 +30,7 @@ This is recorded so the next reader does not rediscover the question: reclaiming
 
 ## Territory
 
-This set covers **the properties a system must preserve to stay aligned with its own intent** - the ones whose violation makes a system wrong in a way more effort elsewhere cannot repair.
+This set covers **the limits a system is built toward to stay aligned with its own intent** - the ones where moving away makes a system wrong in a way more effort elsewhere cannot repair.
 
 The applicability tags below say *when* an axiom binds.\
 They do not say *what it protects*, and a set can be fully tagged while leaving a whole kind of failure unforbidden.\
@@ -55,7 +55,7 @@ Neither is an axiom, so the protection most load-bearing for an agent working al
 Thirteen of the fourteen axioms can bind a lone agent - every one except `A6`, which concerns collaboration itself - and none states it.
 
 That is recorded as a gap, not filled.\
-An axiom earns its place by forbidding something the others permit, and whether this is a new invariant or a property one of the existing fourteen should state - [`A8`](A8-gated-recursive-integrity.md)'s refusal to promote unproven work and [`A4`](A4-zero-loss-knowledge.md)'s refusal to lose reasoning are nearest - is a question for the set.
+An axiom earns its place by forbidding something the others permit, and whether this is a new axiom or a property one of the existing fourteen should state - [`A8`](A8-gated-recursive-integrity.md)'s refusal to promote unproven work and [`A4`](A4-zero-loss-knowledge.md)'s refusal to lose reasoning are nearest - is a question for the set.
 
 **A gap tested and not found.**\
 Cost looks absent from the row titles and is not: it is the whole mandate of [`A11`](A11-cognitive-minimalism.md) and [`A12`](A12-precision-context-engineering.md), and five more axioms cite it.
@@ -64,14 +64,29 @@ Cost looks absent from the row titles and is not: it is the whole mandate of [`A
 
 ## Standing commitment, not situated move
 
-An **axiom** is a load-bearing invariant - a property a system must preserve to stay aligned with its architecture's intent.\
-It is not advice you weigh against deadlines; it is a constraint that, once your architecture is in scope, is always in force.
+An **axiom** is a load-bearing **asymptote** - a limit a system is built toward to stay aligned with its architecture's intent.\
+Its mandate states the limit.\
+Few systems reach it, and a system is not wrong for being short of it; it is wrong for moving away from it.
+
+So an axiom binds every change in two directions at once.\
+**No change may move the system away from the limit, and each change moves it toward the limit as far as the change's own scope allows.**\
+Preserving and improving are one rule: never backwards, and forward with every step.\
+It is not advice you weigh against deadlines; once your architecture is in scope, it is always in force.
+
+**How far a change moves is set by its scope** - what the change was undertaken to do, and the parts of the system it touches in doing it.\
+A change touches what it modifies and what it newly depends on; code that merely sits beside it, in the same file or module, is not touched.\
+Inside the scope, build at the limit or nearer to it than what was there: new work never repeats a gap the axiom names, and work that touches a gap closes as much of it as the touch allows.\
+Outside the scope, a gap found is recorded with its evidence and a revival trigger ([`M5`](../methodology/M5-anti-amnesia-deferral.md), [`A14`](A14-compounding-learning.md)) rather than closed silently, because choosing what work happens next is the director's ([`A13`](A13-director-intent-amplification.md)).\
+Widening a task to chase the limit is not what the axiom asks; passing a gap without recording it is what it forbids.
+
+A gate that passes or fails a change is consistent with this, not in tension with it.\
+The gate's question is binary - may this change be promoted - and the direction rule is what it can check: that the change moved the system no further from any limit in force, and repeated no gap it touched.
 
 This is what separates axioms from the tactical `S` / `M` / `P` / `K` entries.\
 A Style, Methodology, Pattern, or Skill entry is a *situated move*: you reach for it when a specific task touches its domain, and it does not apply when no task does.\
 An axiom is a *standing commitment*: it holds across every task for as long as your system claims the architectural assumptions the axiom depends on.
 
-Where an `S`/`M`/`P`/`K` entry answers "how should I do this thing well?", an axiom answers "what must remain true no matter what I do?".
+Where an `S`/`M`/`P`/`K` entry answers "how should I do this thing well?", an axiom answers "what must I never move this system away from, and what should every change move it toward?".
 
 ---
 
@@ -91,6 +106,12 @@ The contract accepts only these values, so an undefined tag is refused rather th
 What the axiom then demands on a particular subject surface is a question for the [`domains/`](../domains/README.md) axis.\
 The two stack rather than compete, and the direction is one-way: a domain entry cites the axioms it must satisfy, and no axiom names a domain.\
 An axiom that named domains would couple a stable invariant to a mutable taxonomy.
+
+**An axiom binds a system, and a change answers to every system it alters.**\
+That is the system it modifies, every system containing it, and any system whose contract with it the change alters.\
+A system it only composes with, through a contract the change leaves as it was, is not altered, and its axioms do not bind.\
+Where no boundary is declared, nothing shows the change is contained, so the two are one system with the traits of both, and both systems' axioms bind - and the undeclared dependency is itself a fault under [`A3`](A3-sovereign-composition.md).\
+*System*, *contain* and *compose* are defined in [`E5`](../entities/E5-system.md).
 
 ---
 
@@ -116,11 +137,17 @@ Adopt the rows your architecture satisfies: a plain library takes `any-system`; 
 
 The axioms are **orthogonal in statement and conjunctive in force**.\
 Orthogonal means no axiom is derivable from another, so each earns its place by forbidding something the others permit.\
-Conjunctive means the set holds only when every axiom in force holds simultaneously; satisfying thirteen of fourteen is not partial compliance, it is a violated system with thirteen consolations.
+Conjunctive means every axiom in force binds every change at once: a change that moves the system toward thirteen limits and away from the fourteenth is a regression with thirteen consolations, not partial progress.
+
+> **CORRECTION - axioms were described here as invariants that hold or fail.**\
+> This sentence read: *the set holds only when every axiom in force holds simultaneously; satisfying thirteen of fourteen is not partial compliance, it is a violated system with thirteen consolations.*\
+> Read as pass or fail, nearly every real system fails nearly every axiom, and the rule gives no direction.\
+> Three blind readers took the charter at its word and defined an axiom as a test a change must not fail; none read it as a limit to advance toward.\
+> The director ruled the asymptote reading, and the conjunctive claim is kept in that form: no axiom may be traded against another.
 
 Composition therefore runs through the tags, not through a hierarchy.\
 There is deliberately **no apex axiom**.\
-A single umbrella under which the others are sub-conditions reads as a synthesis and behaves as a duplicate: it restates its constituents, so it can never fail independently of them, and an invariant that cannot fail on its own is not one.\
+A single umbrella under which the others are sub-conditions reads as a synthesis and behaves as a duplicate: it restates its constituents, so it can never fail independently of them, and an axiom that cannot fail on its own is not one.\
 The set's coherence is a property to be checked rather than an entry to be written, and [`M7`](../methodology/M7-axiom-alignment-audit.md) is where that check lives.
 
 **Weight is uneven, and the unevenness is information.**\
@@ -145,19 +172,20 @@ What a whole-design question needs is a *procedure* that walks the set, not a *p
 Frontmatter is governed by [`SC1`](../schemas/SC1-catalog-entry.md), which requires `applies-to` and `related` of every axiom, and the body by [`SC6`](../schemas/SC6-entry-body.md), enforced by `tools/check-entry-body.sh`.\
 The list below is a reading of those contracts rather than a second copy of them.
 
-- **Mandate** - the invariant itself, stated as a standing commitment. The thing that must always hold.
-- **Mechanics** - how the invariant is realized and enforced in a real system. The structural means by which the mandate becomes true rather than aspirational.
-- **Rationale** - why the invariant is load-bearing. What architectural intent it protects.
-- **Faults** - the failure modes that appear when the axiom is violated. The named pathologies you observe when the invariant lapses.
-- **Success signals** - the observable evidence that the axiom is being upheld. What you can point at to claim conformance.
+- **Mandate** - the limit, stated as a standing commitment. The state the system is built toward.
+- **Mechanics** - how the limit is approached and held in a real system. The structural means by which the mandate becomes true rather than aspirational.
+- **Rationale** - why the limit is load-bearing. What architectural intent it protects.
+- **Faults** - the failure modes of a system short of the limit or moving away from it. The named pathologies you observe, and the gaps a change must not repeat.
+- **Success signals** - the observable evidence of where a system stands against the limit. What you measure to show a change moved toward it.
 
-Axioms carry this shape rather than the `S`/`M`/`P`/`K` skeleton because an axiom states an invariant and its consequences rather than a situated move.
+Axioms carry this shape rather than the `S`/`M`/`P`/`K` skeleton because an axiom states a limit and its consequences rather than a situated move.
 
 ---
 
 ## Faults
 
 - **Fragmented Asymptote.** Contributors optimise locally without knowing the global target, and local maxima diverge from the system's intended limit. The remedy is a traversable set plus a procedure that walks it, never a summary entry.
+- **The conformance reading.** An axiom treated as a pass-or-fail test. A system short of the limit reads either as already failed, so nothing is owed, or as passing because the change added no new violation, so nothing moves. Either way no change advances the system, and the gaps the axioms name become permanent.
 - **Umbrella Amnesia.** An addition that contradicts the set is proposed and accepted because nothing tested it against the set. The set is only a constitution if something reads it at admission time.
 - **The restated axiom.** An entry that is true because its neighbours are true. It cannot fail independently, so it cannot be violated, so it constrains nothing.
 - **The situated move in axiom clothing.** A tactical rule promoted for importance rather than for being always-in-force. It is declinable in practice, and its presence teaches that axioms are declinable.

@@ -19,6 +19,10 @@ It maps the proposed plan/design to the active charter axioms, names load-bearin
 Do not use axioms to generate a preferred answer from an unverified story.\
 Establish reality first, design from evidence, then use axioms to interrogate the near-final artifact.
 
+This governs the order of reasoning about **facts**: an axiom never tells you what is true of a system, so where the system stands is established by evidence first.\
+It does not stop axioms guiding design.\
+An axiom states a limit the system is built toward ([`A0`](../axioms/README.md)), so it gives the direction a design should move the system, and evidence gives where the system stands; a design needs both.
+
 ---
 
 ## When this is required
@@ -40,7 +44,7 @@ The cost is small; the missed-gate cost is compounding drift.
 ## Required sequencing
 
 1. **Establish reality.** Read the real code, entities, prior decisions, WorkGraph state, and observed incidents before invoking axioms.
-2. **Produce the plan/design.** Let evidence and stakeholder intent shape the proposed mechanism.
+2. **Produce the plan/design.** Let evidence and stakeholder intent shape the proposed mechanism, and the axioms in force set the direction it moves the system.
 3. **Audit the near-final artifact.** Map it to axioms and look for gaps, contradictions, overreach, and missing proof.
 4. **Record deltas.** If the audit finds a flaw, either update the design or record an explicit authority-accepted deviation.
 5. **Gate implementation.** Do not start implementation until the audit verdict is `pass`, `pass-with-guardrails`, or an authorized exception.
@@ -93,7 +97,7 @@ This is the first slice of the broader axiom application guide; extend it only f
 
 | Failure | Why it is bad | Correction |
 |---|---|---|
-| Axiom-first generation | A confident axiom story can bless an unverified false premise | Establish reality first; axioms audit conclusions |
+| Axiom-first generation | A confident axiom story can bless an unverified false premise | Establish reality by evidence; axioms set the direction and audit the result, and never supply the facts |
 | Decorative mapping | Every axiom gets a vague paragraph but none changes the design | Mark load-bearing mappings and remove filler |
 | Hidden exception | The design violates an axiom but calls it a pragmatic shortcut | Record an explicit guardrail, follow-up, or authority-accepted deviation |
 | Prompt-only enforcement | A recurring deterministic rule is left for the LLM to remember | Mechanize or file a primitive/config follow-up |
