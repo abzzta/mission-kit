@@ -1,0 +1,14 @@
+{
+  "id": "component-a3",
+  "mode": "file",
+  "file": "axioms/A3-sovereign-composition.md",
+  "source": "docs/audits/eval-COMPONENT/KEY.md (C5)",
+  "probes": [
+    {
+      "id": "C5",
+      "question": "You are adding a small feature to a service that already contains a 'utils' module accumulating unrelated concerns. What does A3 ask of your change?",
+      "key": "The feature is built as its own one-concern unit and adds nothing to the accretion module - the change does not move the system away from A3's limit; the existing accretion is not something this change must fully remove; what the change touches it cleans up, and the rest is recorded.",
+      "rubric": "2 for that, grounded in the file's own text. 1 for avoiding the module but framing A3 as already failed or pass/fail, or the right answer labelled the reader's own inference. 0 for 'the system fails A3', or 'remove the module first', or 'already violated, nothing applies'."
+    }
+  ]
+}

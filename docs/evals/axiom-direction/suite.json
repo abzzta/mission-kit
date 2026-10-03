@@ -1,0 +1,20 @@
+{
+  "id": "axiom-direction",
+  "mode": "corpus",
+  "group": "system",
+  "source": "docs/audits/eval-AXDIR/KEY.md",
+  "probes": [
+    {
+      "id": "Q1",
+      "question": "You are adding a feature to a long-running service that holds persistent state and is operated by several cooperating agents. While working, you notice one component keeps important state only in process memory, invisible to the other agents. Your task does not mention it. Using the corpus, what - if anything - do its axioms ask of you about that component, and how should they shape the way you build your feature?",
+      "key": "A1 sets a limit the change moves toward: the new feature adds no hidden state and is built the A1 way; the component's gap is outside the task, so it is recorded with evidence and a revival trigger (not silently passed, not silently fixed), unless the change touches it, in which case it closes what the touch allows.",
+      "rubric": "2 for the feature built toward the limit plus the gap recorded (or closed where touched). 1 for recognising A1 and recording the gap but framing the feature only as 'do not violate'. 0 for 'the task does not mention it, so nothing', or A1 as pure pass/fail."
+    },
+    {
+      "id": "Q2",
+      "question": "In your own words, and citing the corpus: when you change a system an axiom binds, what is the axiom for?",
+      "key": "A limit (asymptote) the system is built toward: no change may move the system away from it, and each change moves toward it as far as its scope allows.",
+      "rubric": "2 for a direction or limit to move toward with each change. 1 for both readings, or improvement as secondary. 0 for only a constraint not to break."
+    }
+  ]
+}

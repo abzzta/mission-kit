@@ -333,3 +333,30 @@ This makes those edges load-bearing: every `prerequisite` and `composes` target 
 **Run it when** you add or retire a skill, or change a `prerequisite` or `composes` edge.
 
 Exit status is non-zero on any broken edge or cycle.
+
+---
+
+## eval.mjs
+
+Measures whether cold agents read the corpus as intended, before and after a change, and refuses a regression.
+
+```sh
+node tools/eval.mjs export  --out DIR [--ref REF]
+node tools/eval.mjs prepare --suites a,b --corpus LABEL=PATH --readers 3 --out RUN
+node tools/eval.mjs blind   --run RUN
+node tools/eval.mjs score   --run RUN
+node tools/eval.mjs compare --base RESULT.json[:LABEL] --head RESULT.json[:LABEL]
+```
+
+**Why it exists.**\
+Every evaluation was run by hand and scored by the author of the change, knowing which version each answer came from, and none had been re-run after a later change.\
+This tool makes a run repeatable from the record, hands scoring to a separate agent who sees no version label, and turns old probes into a regression gate.
+
+**It calls no agent.**\
+It holds the deterministic half - export, prompts, blinding, scoring arithmetic, comparison - and leaves reading and scoring to whatever agent harness runs the lines it writes, so it depends on no agent runtime.\
+Suites and runs live in [`docs/evals/`](../docs/evals/README.md).
+
+**Run it when** a change touches how the corpus is meant to be read - an axiom, an entity, a trait, a charter - and compare against the last baseline.
+
+`eval.test.sh` holds its behaviour: no version label reaches a reader or scorer, an unscored or doubly-scored answer refuses the result, and a regression fails the comparison.\
+Each refusal was mutation-tested - removed from the tool to confirm the test goes red.

@@ -1,0 +1,50 @@
+{
+  "id": "composition",
+  "mode": "corpus",
+  "group": "composition",
+  "source": "docs/audits/eval-COMP/KEY.md",
+  "probes": [
+    {
+      "id": "P1",
+      "question": "You will work on a long-running service that holds persistent state, is operated by several cooperating agents, and has a language model making decisions on its critical path. Which axioms bind it, and how did you determine that?",
+      "key": "A1, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14 - every axiom except A2. Traits stateful, multi-agent, llm-in-the-loop (autonomous adds nothing new), union of the axioms each trait brings via applies-to, plus the any-system floor A3 A4 A8 A9 A14. A2 binds only declarative systems.",
+      "rubric": "2 for the exact set by the traits-plus-floor route (A2 stated as conditional on the unstated declarative trait is fine). 1 for at most two errors, or the right set without the trait route. 0 otherwise."
+    },
+    {
+      "id": "P2",
+      "question": "You will work on a stateless command-line text formatter, run by one person, with no model in the loop, written as an ordinary script. Which axioms bind it? Separately: the delivery-code domain entry cites A1 in its axiom alignment - does A1 constrain your work on this formatter's codebase?",
+      "key": "The floor only - A3, A4, A8, A9, A14. No: applies-to alone decides whether an axiom binds, A1 binds stateful systems only; a domain's citation says what an axiom demands on that surface where it binds.",
+      "rubric": "2 for both parts. 1 for one. 0 for neither."
+    },
+    {
+      "id": "P3",
+      "question": "You must apply an already-merged schema migration to a production database. Which work-type, which domain, and which role? Name the entry IDs.",
+      "key": "W7 publish-deploy-or-canonicalize, D7 product-data, engineer (R2). Applying a landed change to production is the deploy act; the records are what it alters. W25 backstop is credited only as an additional bracketing node, never in place of W7.",
+      "rubric": "2 for all three. 1 for two. 0 otherwise; W25 in place of W7 counts as an error."
+    },
+    {
+      "id": "P4",
+      "question": "Which work-types may a verifier perform on product-data? List them, and say which entries you treated as authoritative.",
+      "key": "W8, W9, W10, W11 - roleEligibility includes verifier and domainEligibility includes product-data. The work-type entries are authoritative; domain-side lists are not consulted.",
+      "rubric": "2 for the exact set with the work-type entries as authority. 1 for at most one error, or the set read from the domain list without noting the work-type governs. 0 otherwise."
+    },
+    {
+      "id": "P5",
+      "question": "You are the only agent. You have just built a change. Can you perform verify-gate-reactive on it yourself? If not, what do you do instead?",
+      "key": "No - W8 gates work the verifier did not author; an organisation of one cannot hold assurance. Instead: self-check by means the author's reasoning cannot bias (mechanical checks, tests, validate-locally, a fresh sub-agent as strongest self-check, still not assurance), and the gate waits for a second agent or is met by director ratification. The director does not become a verifier.",
+      "rubric": "2 for no, unbiased self-checking, not assurance, and defer-or-ratify. 1 for no with a partial instead. 0 for yes, or 'the director verifies it'."
+    },
+    {
+      "id": "P6",
+      "question": "Using the ledger's 'Hydrate when' column, list the entries you would read before changing the harness that launches agents for a service that holds persistent state. Say why each matched.",
+      "key": "Must include: D3 tooling-harness; a work-type route (any work-type entry, or W0); a binding route (any trait entry, T0, or A0).",
+      "rubric": "2 for all three groups. 1 for D3 plus one group, or D3 alone. 0 for no D3."
+    },
+    {
+      "id": "P7",
+      "question": "(a) A domain entry's list of work-types and a work-type's list of domains disagree. Which governs, and where does the corpus say so? (b) A trait entry lists the axioms it brings into force. If that list disagreed with an axiom's applies-to field, which would govern, and where does the corpus say so?",
+      "key": "(a) The work-type - W0 constraint 3; D0 says domain lists are not consulted. (b) The axiom's applies-to - A0: applies-to is the only field that decides binding; inference from it is fully grounded.",
+      "rubric": "2 for both grounded. 1 for one. 0 for neither."
+    }
+  ]
+}

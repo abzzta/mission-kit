@@ -1,0 +1,32 @@
+{
+  "id": "component",
+  "mode": "corpus",
+  "group": "component",
+  "source": "docs/audits/eval-COMPONENT/KEY.md",
+  "probes": [
+    {
+      "id": "C1",
+      "question": "You are fixing a bug in module X of a service. X calls module Y through Y's declared interface, and Y returns an error message so vague that it cost you twenty minutes to diagnose the bug; making it precise is a five-minute change to Y. Module Z, also in the service, keeps important state hidden in process memory; X does not use it, and fixing it is about two days. Your fix to X is written but not yet landed. What do the corpus's axioms ask about Y, and about Z?",
+      "key": "Y: optional and justified - adjacent (X stands on it), friction-rooted, near payback, small cost; make it as a change of its own and record it, or record it. Z: not adjacent, large, outside scope - record it with evidence and a revival trigger and leave selection to the director.",
+      "rubric": "2 for Y optional-and-justified plus Z recorded and not done. 1 for Z right with Y recorded-only, forbidden or mandated; or Y right with Z wrong. 0 for both mandated, or neither recorded."
+    },
+    {
+      "id": "C2",
+      "question": "In this corpus, what is a 'component', and how does it differ from a 'system'? Cite where it is defined, or say that it is not.",
+      "key": "E6: a system seen as a part of a containing system, with one duty at its altitude and interfaces of its own; every component is a system - 'component' names its place in a larger whole. Registration in components/ is not part of the definition.",
+      "rubric": "2 for part-of-a-containing-system, one duty at an altitude, interfaces, and the relation to system, with a correct citation. 1 for part. 0 for a fabricated citation or 'not defined'."
+    },
+    {
+      "id": "C3",
+      "question": "A component's code lives in parts/thing/. Code in parts/other/ reaches into parts/thing/'s internal functions directly; nothing declares an interface between them. Is the directory parts/thing/ the component's boundary? What, if anything, is wrong?",
+      "key": "No - a directory places documents; the boundary is declared interfaces, and here there are none, so the two are one system for deciding what a change answers to. The reach into internals is an A3 fault.",
+      "rubric": "2 for no, the declared-interface reason, and the fault. 1 for two of three. 0 for 'yes, the directory is the boundary'."
+    },
+    {
+      "id": "C4",
+      "question": "Inside a service, component P exposes a declared interface that component Q consumes. You change P's internals; the interface and its behaviour are unchanged. Which systems' axioms does your change answer to, is Q altered, and is Q a candidate for opportunistic improvement?",
+      "key": "P's and the service's (and anything containing the service); Q is not altered - its contract is unchanged; Q is adjacent, so a candidate, not an obligation - weaker than something the change stands on.",
+      "rubric": "2 for all three. 1 for two. 0 for one or none."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+# Evaluation suites
+
+The standing probes that measure whether cold agents read this corpus as intended.\
+Run with [`tools/eval.mjs`](../../tools/eval.mjs); method in [`M2`](../../methodology/M2-test-drive-docs-by-execution.md), *Reasoning documents*.
+
+---
+
+## Layout
+
+```text
+docs/evals/
+  <suite>/suite.json   probes, keys and rubrics - the live key for the current corpus
+  runs/<run-id>/       one run: prompts, answers, scorer prompts, scores, RESULT, sealed mapping
+```
+
+Each suite names the frozen key it came from in `source`.\
+The frozen key in `docs/audits/` is the record of what was measured then and is never edited.\
+The suite holds what is correct now, and changes when the corpus legitimately changes - a suite edit is a ruling about the corpus and says so in its commit.
+
+Suites are under `docs/` because they are about this corpus, and because `eval.mjs export` strips `docs/`, so no reader can reach a key.
+
+---
+
+## A run
+
+```sh
+c=$(node tools/eval.mjs export --out /tmp/eval | cut -f1)
+node tools/eval.mjs prepare --suites composition,system-boundary,axiom-direction,component,component-a3 \
+  --corpus head="$c" --readers 3 --out docs/evals/runs/<run-id>
+```
+
+Give each line of `TASKS.md` to a fresh agent as its whole instruction.\
+Then blind the answers, give each scorer line to a different fresh agent, and score.
+
+```sh
+node tools/eval.mjs status --run docs/evals/runs/<run-id>
+node tools/eval.mjs blind  --run docs/evals/runs/<run-id>
+node tools/eval.mjs score  --run docs/evals/runs/<run-id>
+node tools/eval.mjs compare --base docs/evals/runs/<baseline>/RESULT.json --head docs/evals/runs/<run-id>/RESULT.json
+```
+
+A before-and-after run passes two `--corpus` options to one `prepare`, so both versions are scored blind by the same scorer.
+
+---
+
+## What a result can and cannot claim
+
+Readers and scorers are agents of one model family unless a run states otherwise, so agreement across them is one measurement family, not several.\
+The scorer is independent of the author of the change and blind to version; it is not independent of the key, which the author wrote and a fresh reader reviewed.
+
+---
+
+## Not yet migrated
+
+The `R0`, `D0`, `M0` and `A0` charter evaluations in `docs/audits/` are not yet suites.\
+Their keys were written for the charters as they stood, and at least one answer is now false - `D0`'s product-data probe predates `D7` - so migrating them means re-deriving each key, not copying it.
