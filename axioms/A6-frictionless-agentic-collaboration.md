@@ -42,7 +42,8 @@ Mechanizing the translation of approved intent into executable state removes the
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. No actor ever copy-pastes approved content into a downstream artifact.
 2. Ratification reaches execution through a single tool call or an automatic cascade.
 3. No role is ever blocked on another role's administrative or tooling gap.

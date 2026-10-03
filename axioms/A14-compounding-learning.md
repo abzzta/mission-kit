@@ -23,7 +23,7 @@ Two corollaries are always in force: an uncaptured insight is a wasted detour, a
 
 - **Friction -> root cause, never workaround.** When execution hits a wall, the default is to mine it - diagnose, file, fix, absorb into design - rather than route around it. The two-minute dishonest workaround is the canonical anti-pattern. The corrective loop (A10: failure -> defect record -> post-mortem -> remediation) is the mining apparatus; this axiom governs the *election* to mine.
 - **Capture-on-discovery.** The yield of any tangent, incident, or probe is banked into durable, queryable, system-of-record state - evidence registers, backlog entries, defect records, design invariants - the moment it is recognized. Capture IS the investment step: it converts experience into capital. Fidelity of the banked artifact is A4's law; the obligation to bank, and the economics of why, are this axiom's.
-- **Tangent discipline.** Side-quests are legitimate and often superior, but investment is separated from wandering by two properties: **adjacency** (the tangent sits under load-bearing infrastructure the main line will stand on - payback scales with proximity) and **capture** (the yield is banked). Friction-rooted, infrastructure-adjacent, durably-captured tangents pay fastest.
+- **Tangent discipline.** Side-quests are legitimate and often superior, but investment is separated from wandering by two properties: **adjacency** (the tangent sits under load-bearing infrastructure the main line will stand on - payback scales with proximity; the structural sense is [`E6`](../entities/E6-component.md)) and **capture** (the yield is banked). Friction-rooted, infrastructure-adjacent, durably-captured tangents pay fastest.
 - **Toil-vs-learning attention ledger.** Attention spent is typed: *toil* (transcription, chasing, archaeology, re-fighting fixed problems) trends to zero by mechanization; *learning* (tension-probes, meta-questions, root-cause mining, co-design) is protected and provisioned, never optimized away. No efficiency metric may reward suppressing curiosity.
 - **Compounding is traceable.** The return on a learning investment is observable as **deleted future friction** (per-item taxes converted into one-time capital costs) and **avoided rework** (lessons entering new designs as invariants before build). Payback cycles are recorded when measured.
 
@@ -33,7 +33,7 @@ Two corollaries are always in force: an uncaptured insight is a wasted detour, a
 
 An organization can scale execution arbitrarily, but its velocity ceiling is set by what it *retains*.\
 An org that ships fast and learns nothing pays the same taxes forever; an org that mines its friction and banks the yield gets structurally faster every cycle.\
-Without a named invariant, shortest-path pressure silently wins every local decision - workarounds beat root causes under any deadline, insights die in conversation scrollback at session end, and the same lesson is purchased repeatedly.\
+Without a named axiom, shortest-path pressure silently wins every local decision - workarounds beat root causes under any deadline, insights die in conversation scrollback at session end, and the same lesson is purchased repeatedly.\
 Naming the economics makes the trade auditable: a day of mining is visible as investment, and its return is visible as friction that never comes back.
 
 ---
@@ -49,7 +49,8 @@ Naming the economics makes the trade auditable: a day of mining is visible as in
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. Friction encountered on any path is mined to root cause or *explicitly* deferred with a filed marker - zero silent workarounds.
 2. Insights land in durable queryable state at discovery; a cold-start agent can recall every banked lesson from substrate alone, with zero reliance on session memory.
 3. Mined friction does not recur; recurrence of a captured lesson's failure mode is itself a fault, filed and mined.

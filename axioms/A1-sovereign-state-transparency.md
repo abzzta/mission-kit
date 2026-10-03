@@ -43,7 +43,8 @@ The principle is load-bearing wherever shared state outlives a single process; i
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. Every persistent entity survives a process or infrastructure restart with identical field values.
 2. No actor or tool holds state that another authorized actor cannot query.
 3. Topology changes go through a formal declared refactor; value changes do not.

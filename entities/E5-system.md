@@ -1,25 +1,26 @@
 ---
 id: E5
 category: entity
-title: system - a unit with a declared boundary, which traits describe and axioms bind
+title: system - a unit with a boundary, which traits describe and axioms bind
 status: active
 hydrate-when: You are deciding which systems' axioms a change answers to, or what counts as the system you are working on
 supersedes: []
-related: [A0, T0, A3, D0, AR1]
+related: [A0, T0, A3, D0, AR1, E6]
 ---
 
 # E5 - system
 
 ## Definition
 
-A **system** is a unit of engineering with a **declared boundary**: what is inside it, and the contracts through which anything outside reaches it.
+A **system** is a unit of engineering with a **boundary**: what is inside it, and the contracts through which anything outside reaches it.\
+The boundary separates it from its neighbours only where it is **declared**; where one unit depends on another across a boundary nobody declared, the two are one system for deciding what a change answers to.
 
 Traits describe a system, and axioms bind it.\
 A trait's test is applied to a system, never to a task, and an axiom is in force for a system rather than for a piece of work.
 
-Two systems with a declared boundary between them relate in exactly two ways.
+Systems relate in exactly two ways.
 
-- **Contain.** A system can be made of systems. A module inside a service is a system, and the service contains it.
+- **Contain.** A system can be made of systems. A module inside a service is a system, and the service contains it, whether or not the module's interfaces are declared.
 - **Compose.** Two systems work together through a declared contract, and neither contains the other. A launcher that hands sessions to a service through a declared interface composes with it.
 
 ---
@@ -27,18 +28,19 @@ Two systems with a declared boundary between them relate in exactly two ways.
 ## Discriminators
 
 **Contains against composes.**\
-Ask whether a change inside one unit is necessarily a change to the other.\
+Ask whether one unit is part of the other - inside its scope, so that changing it is changing the whole.\
 If it is, the other contains it: changing a module changes the service it sits in.\
-If the two reach each other only through a declared contract that can stay unchanged while either side changes, they compose.
+If the two reach each other only through a declared contract that can stay unchanged while either side changes, they compose.\
+If one reaches the other with no declared contract and neither is part of the other, they do neither; see *Boundaries*.
 
 **A declared boundary against an assumed one.**\
-A declared boundary is one a reader can point at: an interface, a schema, a protocol, a published version, an architecture that states the system's scope.\
-Behaviour another unit depends on without any declaration is a contract in fact, not a boundary - and a change to it reaches across.
+A declared boundary is one a reader can point at: an interface, a schema, a protocol, a published version, or an architecture that states the system's scope and its interfaces.\
+Behaviour another unit depends on without any declaration is a contract in fact, not a declared boundary - and a change to it reaches across.
 
-**A system against a component's directory.**\
-"A component's scope is its directory" places documents.\
-A system's boundary decides what a change can reach.\
-The two often coincide and need not.
+**A system against a component.**\
+A [component](E6-component.md) is a system seen as a part of a containing system.\
+Which traits a unit has and which axioms bind it are questions about it as a system; its duty, interfaces and neighbours are questions about it as a component.\
+A directory places a component's documents; it is the boundary of neither the system nor the component.
 
 **A versioned contract changes only for the systems that adopt the new version.**\
 Publishing a new version of an interface alters no consumer that has not adopted it; each adoption is a change to that consumer, and answers to that consumer's axioms; the component is not altered by being adopted.\
@@ -60,9 +62,9 @@ One repository can hold several systems, and one system can span several.
 A one-shot script with no traits is a system, bound by the axioms every system carries.
 
 **Not separated by an undeclared boundary.**\
-Where nothing declares the boundary between two units, nothing shows that a change to one leaves the other unchanged, so for deciding what binds a change they are **one system, with the traits of both**.\
+Where one unit depends on another and nothing declares the boundary between them, nothing shows that a change to one leaves the other unchanged, so for deciding what binds a change they are **one system, with the traits of both**.\
 Declaring the boundary is what makes them two again.\
-This is not a third way of relating; it is the absence of the boundary that would let them relate at all.\
+This is not a third way of relating: two units that depend on each other with no declared contract, neither containing the other, cannot compose, and are treated as one.\
 The undeclared dependency is itself a fault against [`A3`](../axioms/A3-sovereign-composition.md), which requires units to interact only through declared contracts.
 
 ---

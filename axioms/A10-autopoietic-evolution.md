@@ -43,7 +43,8 @@ The deeper principle - a system that observes its own failures, formalizes the d
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. Every failed unit of work auto-spawns a defect record.
 2. Every completion report includes governance- and workflow-friction reflection sections (required; "no friction observed" is an acceptable value).
 3. Self-healing chains (defect -> post-mortem -> proposal/design -> remediation work) execute on a single human approval.

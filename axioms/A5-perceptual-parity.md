@@ -42,7 +42,8 @@ The deeper principle - perception precedes cognition; an actor must see verified
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. Agents never ask "what is the status of X?" - the system hydrates the answer before the question can arise.
 2. The human<->agent perception delta is measurably within an explicitly-defined bound on shared entities.
 3. Agent output is perceived in context (rendered, mirrored, or streamed) before any cognitive decision acts on it.

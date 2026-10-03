@@ -42,7 +42,8 @@ The deeper resilience discipline (error isolation, durable audit, typed feedback
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. No silent failures - every failure logs to durable audit and surfaces actionable feedback.
 2. Error boundaries isolate failures; primary operations complete even when secondary operations fail.
 3. Connectors resume cleanly after rate limits and network drops, replaying their backlog rather than losing it.

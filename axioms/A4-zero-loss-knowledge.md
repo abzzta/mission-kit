@@ -43,7 +43,8 @@ The principle is foundational for any system, but becomes acute the moment a mem
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. Every artifact - specification, design, decision record, plan, or report - carries explicit Mechanics, Rationale, and Consequence sections.
 2. Prose appears only as wrapping around structured content; lists, tables, and trees carry the load.
 3. A cold pickup from the record alone reproduces the same outputs as a warm actor who never lost context - zero decision context is lost at handover.

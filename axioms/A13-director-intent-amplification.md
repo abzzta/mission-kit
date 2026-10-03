@@ -49,7 +49,8 @@ The deeper principle - treat the irreplaceable human principal's attention as th
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. Director attention is spent on strategic judgment and gate-point decisions, not status, ceremony, or how-to; substrate-decidable matters never reach the Director.
 2. Every decision surfaced to the Director presents the full, unbiased option set; a revealed-preference lean appears only as a labeled tie-break input on a genuine inter-axiom divergence, never as a narrowed or pre-selected choice.
 3. The ratify/approve/decide act is always exercised by the Director; no agent synthesizes the decision on the Director's behalf, even while it scaffolds and pre-stages everything around it.

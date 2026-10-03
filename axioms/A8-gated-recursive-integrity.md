@@ -21,7 +21,7 @@ There is no "mostly verified" state.
 - **Sovereign Onion** - the system is constructed as nested layers, each layer grounding the one above; the innermost layer is the substrate of ground truth that everything else inherits.
 - **Gated Ascension** - entry into any layer requires bit-perfect certification of the layer beneath it. An uncertified layer cannot bear weight, and nothing builds on it until it seals.
 - **Law of Fallback** - failure at layer N triggers a recursive audit of layers N-1 down to the base; patching the surface where the symptom appeared, without auditing the layer that actually failed, is forbidden.
-- **Binary Certification** - gates are pass/fail only. There is no partial credit and no "mostly verified" credit: a layer is either sealed or it is not.
+- **Binary Certification** - gates are pass/fail only. There is no partial credit and no "mostly verified" credit: a layer is either sealed or it is not. The gate is binary; the axiom it serves is a limit, and each sealed layer is how far the system has reached it.
 
 ---
 
@@ -43,7 +43,8 @@ The principle is foundational to any layered system; the autonomous-coordination
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. Each architectural layer has a binary pass/fail certification.
 2. Layer N+1 cannot be activated or deployed without layer N's certification.
 3. Failure at any layer triggers an audit downward toward the base, not an upward surface patch.

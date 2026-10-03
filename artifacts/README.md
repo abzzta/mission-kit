@@ -159,9 +159,10 @@ A shape imposed on an unlike system produces empty headings; an address left uns
 Three consequences, and the first is the point of the rule.
 
 **Placement is scope-relative, never repository-relative.**\
-A sovereign repository and a nested subsystem take the same rule, because both are components and a component's scope is its directory.\
+A sovereign repository and a nested subsystem take the same rule, because both are systems and the document tree is addressed by the directory at the system's root.\
+The directory addresses the documents; it is not the system's boundary, which its declared interfaces set ([`E5`](../entities/E5-system.md), [`E6`](../entities/E6-component.md)).\
 A component at `<root>/parts/thing/` carries `<root>/parts/thing/VISION.md`, and that vision governs that directory and nothing above or below it.\
-Two visions in one repository are not a conflict; they are two components, and the path states which is which.
+Two visions in one repository are not a conflict; they are two systems, and the path states which documents belong to which.
 
 **The vision anchors at the root and the rest live under `docs/`.**\
 The vision is the one document an arriving reader needs before they know anything about the project, including where its documentation is kept, so it is the one that cannot be behind a directory they would have to guess.\

@@ -13,7 +13,7 @@ related: [A8]
 ## Mandate
 Every module is a self-contained sovereign unit owning exactly one concern, exposing bit-perfect semantic interfaces, composing without leaking internals.\
 A boundary that isolates a concern is distinct from a surface that others depend on: the first is earned by having one concern, the second by a real consumer that needs it.\
-God objects, spaghetti coupling, and dual-purpose modules are structurally impossible.
+At the limit, god objects, spaghetti coupling and dual-purpose modules are structurally impossible; a change short of it adds none of them, and removes what it touches.
 
 ---
 
@@ -47,7 +47,8 @@ Without the principle, concerns merge, change radius grows without bound, and th
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. Every module owns exactly one concern; no accretion-bucket modules exist.
 2. All inter-module interaction passes through declared contracts; nothing reaches into another unit's internals.
 3. New capabilities arrive by composition, not by modifying existing units.

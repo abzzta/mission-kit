@@ -5,7 +5,7 @@ title: Axioms - standing commitments, what brings one into force, and how they c
 status: active
 hydrate-when: You are deciding whether a principle is a standing commitment or a situated move, or which axioms bind the system in front of you
 supersedes: []
-related: [SC6, W0, R0, D0, E1, E5, T0]
+related: [SC6, W0, R0, D0, E1, E5, E6, T0]
 ---
 
 # Axioms - the standing-commitment layer
@@ -73,11 +73,16 @@ So an axiom binds every change in two directions at once.\
 Preserving and improving are one rule: never backwards, and forward with every step.\
 It is not advice you weigh against deadlines; once your architecture is in scope, it is always in force.
 
-**How far a change moves is set by its scope** - what the change was undertaken to do, and the parts of the system it touches in doing it.\
-A change touches what it modifies and what it newly depends on; code that merely sits beside it, in the same file or module, is not touched.\
+**How far a change must move is set by its scope** - what the change was undertaken to do, and the parts of the system it touches in doing it.\
+A change touches what it modifies, what it newly depends on, and any consumer whose contract it alters; code that merely sits beside it, in the same file or module, is not touched.\
+Scope and binding are different sets: a component the change newly depends on through a declared interface is touched but not altered, so its gaps must not be built on, and its axioms do not bind the change.\
 Inside the scope, build at the limit or nearer to it than what was there: new work never repeats a gap the axiom names, and work that touches a gap closes as much of it as the touch allows.\
-Outside the scope, a gap found is recorded with its evidence and a revival trigger ([`M5`](../methodology/M5-anti-amnesia-deferral.md), [`A14`](A14-compounding-learning.md)) rather than closed silently, because choosing what work happens next is the director's ([`A13`](A13-director-intent-amplification.md)).\
-Widening a task to chase the limit is not what the axiom asks; passing a gap without recording it is what it forbids.
+**Beyond the scope, improvement is considered, never mandated.**\
+A gap or friction in a component [adjacent](../entities/E6-component.md) to what the change touches - one it stands on, or one that stands on it, through a declared interface - may be closed opportunistically when compounding learning supports it ([`A14`](A14-compounding-learning.md), *tangent discipline*): the payback is near, strongest where the work stands on the component; the yield is captured; and the cost does not significantly distract from the change's own goal.\
+A gap that fails that test - not adjacent, too little payback, or large enough to displace the goal - is recorded with its evidence and a revival trigger ([`M5`](../methodology/M5-anti-amnesia-deferral.md)) rather than closed, because larger choices of what work happens next are the director's ([`R4`](../roles/R4-director.md), [`AR3`](../artifacts/AR3-board.md)).\
+An opportunistic improvement is made as a change of its own, so its yield is captured and its cost is visible, and like any change it answers to every system it alters - if it changes a component's interface, its consumers are altered too, or for a versioned interface those that adopt it ([`E5`](../entities/E5-system.md)).\
+Either way the gap is recorded.\
+Passing it silently is what the axiom forbids; chasing the limit far from the change's goal is the *tangent sprawl* `A14` names.
 
 A gate that passes or fails a change is consistent with this, not in tension with it.\
 The gate's question is binary - may this change be promoted - and the direction rule is what it can check: that the change moved the system no further from any limit in force, and repeated no gap it touched.
@@ -110,7 +115,7 @@ An axiom that named domains would couple a stable invariant to a mutable taxonom
 **An axiom binds a system, and a change answers to every system it alters.**\
 That is the system it modifies, every system containing it, and any system whose contract with it the change alters.\
 A system it only composes with, through a contract the change leaves as it was, is not altered, and its axioms do not bind.\
-Where no boundary is declared, nothing shows the change is contained, so the two are one system with the traits of both, and both systems' axioms bind - and the undeclared dependency is itself a fault under [`A3`](A3-sovereign-composition.md).\
+Where one unit depends on another and no boundary between them is declared, nothing shows the change is contained, so the two are one system with the traits of both, and the axioms either unit would bring all bind - and the undeclared dependency is itself a fault under [`A3`](A3-sovereign-composition.md).\
 *System*, *contain* and *compose* are defined in [`E5`](../entities/E5-system.md).
 
 ---

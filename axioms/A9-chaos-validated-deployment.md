@@ -43,7 +43,8 @@ The chaos surface - node death, packet loss, races, cascades - is richest in dis
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. The simulation harness covers every documented workflow under the standardized entropy battery, including client caches and network transports, not just the central service.
 2. Promotion to the production trunk is gated on full chaos-path resolution of the coordinating-actor graph; an unproven change cannot merge.
 3. The simulation<->production delta is measurably within an explicitly-defined threshold; exceeding it declares the simulation broken and blocks feature work until refactored.

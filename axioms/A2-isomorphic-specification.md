@@ -43,7 +43,8 @@ Most importantly, documentation cannot rot relative to execution - there is no s
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. The enforcement layer parses the sovereign spec at runtime to generate the governing state machines - they are not compiled in.
 2. Zero unhandled-event / unhandled-transition occurrences arise during normal multi-agent operation.
 3. An automated conformance harness covers 100% of documented workflows, including negative and adversarial/chaos paths.

@@ -50,7 +50,8 @@ Together the two axioms compose the extensive and intensive margins of the cogni
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. Every LLM-facing prompt has an explicit size budget; overflow triggers compaction or offload, never silent truncation.
 2. Context is structured wherever the data has shape; prose appears only as wrapping around structured content.
 3. A precision metric (Virtual Tokens Saved or equivalent) is observable per prompt and per subsystem, and its trend is treated as telemetry.

@@ -46,7 +46,8 @@ The principle generalises past the LLM case to any system holding a scarce, expe
 ---
 
 ## Success signals
-You'll know it holds when:
+You'll know the system is nearer the limit as more of these hold, and at it when all do.\
+How an axiom binds a change is stated in [`A0`](README.md):
 1. Every recurring deterministic operation has a primitive; an LLM doing that operation is prevented by design or flagged as a fault.
 2. Per-operation token consumption is observable; outlier paths surface for refactor as routine.
 3. No prompt contains work a deterministic primitive could perform.
