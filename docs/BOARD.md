@@ -295,6 +295,22 @@ Rows on the record and not on the board, **scored on the same scale**, so declin
 All are deferrals of evidence or of authority, not of appetite.\
 Neither is blocked on effort.
 
+
+| **B55** | S4 | A14 signal | Territory gaps moved out of the `AR0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B56** | S4 | A14 signal | Territory gaps moved out of the `A0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B57** | S4 | A14 signal | Territory gaps moved out of the `C0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B58** | S4 | A14 signal | Territory gaps moved out of the `E0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B59** | S4 | A14 signal | Territory gaps moved out of the `M0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B60** | S4 | A14 signal | Territory gaps moved out of the `P0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B61** | S4 | A14 signal | Territory gaps moved out of the `PC0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B62** | S4 | A14 signal | Territory gaps moved out of the `R0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B63** | S4 | A14 signal | Territory gaps moved out of the `RU0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B64** | S4 | A14 signal | Territory gaps moved out of the `SC0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B65** | S4 | A14 signal | Territory gaps moved out of the `ST0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B66** | S4 | A14 signal | Territory gaps moved out of the `K0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B67** | S4 | A14 signal | Territory gaps moved out of the `S0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B68** | S4 | A14 signal | Territory gaps moved out of the `T0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+| **B69** | S4 | A14 signal | Territory gaps moved out of the `W0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
 ---
 
 ## Decisions required
