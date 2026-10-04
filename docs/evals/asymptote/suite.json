@@ -6,8 +6,8 @@
   "probes": [
     {
       "id": "Z1",
-      "question": "What does a charter's Purpose state first, and why does it come first?",
-      "key": "The set's end state: the ideal the set approaches, like an axiom or the vision - a direction, never reached. Why the set exists follows it. It comes first because the scope, the growth policy and every judgement about the population are measured against it.",
+      "question": "What does a charter state first, and why does it come first?",
+      "key": "The set's end state - its vision, under the Vision heading: the ideal the set approaches, like an axiom or the vision - a direction, never reached. It comes first because the scope, the growth policy and every judgement about the population are measured against it.",
       "rubric": "2 for the end state, as an asymptote the population is measured against. 1 for end state without the reason, or for why-it-exists alone. 0 otherwise."
     },
     {
