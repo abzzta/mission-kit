@@ -202,7 +202,10 @@ tools/check-entry-body.sh
 The catalogue entry contract governs frontmatter and stops at the closing marker, so nothing governed the body.\
 `axioms/README.md` had always specified a five-section shape and all fifteen axioms had always followed it, which is a convention held by the care of whoever wrote last rather than a rule.
 
-**Run it when** you add an entry in a governed category, or change a declared shape.
+It also holds every layer charter - the entry whose id is its prefix followed by zero - to the headings `E4` fixes, declared under `spec.charters`: Vision, Territory, Operation, Faults and Index, in any order.\
+That pass replaced a separate charter checker, so one tool holds the one contract.
+
+**Run it when** you add an entry in a governed category, or change a declared shape. or a charter
 
 The shape is data in [`schemas/entry-body/v1alpha1/entry-body.json`](../schemas/entry-body/v1alpha1/entry-body.json), so adding a category is an edit to that file rather than to this tool.\
 A category absent from it is ungoverned by design.\
@@ -264,33 +267,6 @@ Exit status is non-zero if either list names something the other does not.
 
 ---
 
-## check-charter-shape.sh
-
-Holds every knowledge layer's charter to the sections a member cannot supply for itself.
-
-```sh
-tools/check-charter-shape.sh            # report, never blocking
-tools/check-charter-shape.sh --strict   # exit non-zero on any gap
-```
-
-**Why it exists.**\
-A charter is a set's only voice: it states the territory the population covers, what admits a member, what a healthy population looks like against a merely valid one, and where the members are.\
-Thirteen charters were written before anything declared that shape, and each invented its own - an admission rule appears in six, a faults list in eight, a body shape in five, and a territory statement in one.\
-That divergence is what [`E3`](../entities/E3-set.md) records and this check stops recurring.
-
-**Advisory, deliberately, and with a stated end.**\
-Thirty sections are missing across the thirteen predating charters.\
-Gating on that today would refuse every unrelated change for a debt the change did not create, so the check reports and exits zero.\
-It flips to blocking when the count reaches nought, which is tracked as `B4`.\
-An advisory gate with no flip condition is decoration, so the condition is the point rather than a caveat.
-
-**Run it when** you write or edit a charter, or add a layer.
-
-The charter set is derived rather than listed: a charter is the entry whose id is its set's prefix followed by zero, so a layer added tomorrow is covered without editing this tool.\
-The required sections are data in [`schemas/entry-body/v1alpha1/entry-body.json`](../schemas/entry-body/v1alpha1/entry-body.json) under `spec.charters`.\
-Order is free and every other section is the set's own substance.
-
----
 
 ## check-standing-context.sh
 

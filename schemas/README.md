@@ -10,12 +10,29 @@ related: [SC1, SC6, A2, A8, E4]
 
 # Schemas - the machine-checkable layer
 
-## Purpose
+## Vision
 
-**End state.**\
+**North star.**\
 Every structured document the organisation relies on, or defines a type for, is governed by exactly one contract a machine checks, so a malformed instance is refused wherever it is written.\
-No structured file's shape is whatever its last writer chose, no tool re-implements a contract by hand, and every contract has both a check and a consumer.\
-It is a direction approached and never reached, because every new kind of document is ungoverned until it is.
+A contract here is a schema, validatable without importing a skill or a project's runtime.
+
+**What this set is, and is not.**\
+It is one contract per kind of structured document, each with a check that validates against it and a consumer that uses it.\
+It is not the definition of a term, which an entity holds in prose, and not the check itself, which a tool runs; a contract may enforce an entity's definition and never replaces it.
+
+**Succeeding.**\
+Measured on four dimensions, never one score:
+
+- **Coverage** - no structured file's shape is whatever its last writer chose; approached and never reached, because every new kind of document is ungoverned until it is.
+- **Non-overlap** - one concern, one contract, and contracts that must agree are held together by a test.
+- **Held, not read** - every contract has a check, and no tool re-implements a contract by hand.
+- **Earned** - every contract has a consumer and is mapped in `catalog.json`.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no contract and licenses no change of direction; admission is by the growth policy under *Territory* and the rules under *Boundaries and composition*.
 
 This set holds **cross-project contracts a machine can check**: each a schema that says what a valid instance of one kind of document looks like, validatable without importing a skill or a project's runtime.\
 Prose states intent; a contract holds the part of it a machine can hold, so a malformed document is refused rather than read and believed.
@@ -33,6 +50,16 @@ Uncapped.\
 A member is one contract for one kind of document, validatable without importing a skill or a project's runtime; a concern that varies by category is one contract with conditions, not a contract per layer.\
 Members are balanced on non-overlap - one concern, one contract - and contracts that must agree are held together by a test rather than by care.\
 A contract is admitted with the check that validates against it and a consumer that uses it, never ahead of either.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on non-overlap, so an analysis counts a contract per layer for one concern as a finding, because a concern that varies by category is one contract with conditions.\
+Coverage is measured against structured files wherever their instances are written, including those a project writes from a type this corpus defines, since an ungoverned file is in scope before any contract governs it.\
+For each contract an analysis confirms that a check validates against it, a consumer uses it, and `catalog.json` maps it.\
+A candidate that defines a term in prose is routed to entities, and one that runs a check rather than stating a contract is routed to tools.
 
 ---
 

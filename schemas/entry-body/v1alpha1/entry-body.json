@@ -85,11 +85,12 @@
       }
     ],
     "charters": {
-      "rationale": "A charter is a set's only voice, and a set with no charter is a directory listing. These sections are the questions a member cannot answer for itself: what the population covers, what admits one, what a healthy population looks like against a merely valid one, and where its members are. Everything else a charter says is that set's own substance and is deliberately unconstrained.",
+      "rationale": "A charter is a set's vision and its operating instructions, and these are the questions every set asks in the same form: what end state it approaches, what it covers and how it grows, how it is analysed and changed, what an unhealthy population looks like, and what is in it. Boundaries and composition must be answered too, under headings of the set's own choosing.",
       "ordered": false,
       "sections": [
+        "Vision",
         "Territory",
-        "What earns an entry",
+        "Operation",
         "Faults",
         "Index"
       ],

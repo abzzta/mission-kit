@@ -73,7 +73,7 @@
                 }
               },
               "exemptIds": {
-                "description": "Entries of this category that the shape does not govern. The layer's composition entry defines the category rather than instantiating it, so it carries a different body. Declared rather than derived from the ID, because A0 follows the axiom shape genuinely and must stay governed.",
+                "description": "Entries of this category that the shape does not govern. The layer's composition entry defines the category rather than instantiating it, so it carries a different body. A charter is held to the charter headings in spec.charters instead, so listing it here moves it from its category's member shape to the charter shape.",
                 "type": "array",
                 "uniqueItems": true,
                 "items": {
