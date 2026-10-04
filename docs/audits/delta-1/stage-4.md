@@ -1,7 +1,7 @@
 # Delta-1 stage 4 - evaluation
 
-Before: export of `719351d`, the corpus before Delta-1.\
-After: export of `c002a9c`, stages 1 to 3 landed.\
+Before: export of `bac8b35`, the corpus before Delta-1.\
+After: export of `3a9017a`, stages 1 to 3 landed.\
 Scored blind by agents who did not author the change; mapping sealed in each run.
 
 ---

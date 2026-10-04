@@ -6,7 +6,7 @@ row:          B38, B42
 intent:       docs/surveys/b38-director-communication-requirements.md
 evidence:     human run moves-2-*, guidance-1-*; docs/evals/human/MATRIX.md
 guidance:     docs/evals/human/guidance-1/guidance-as-tested.txt - the text the director preferred 4 of 4
-from-state:   docs/ARCHITECTURE.md, at d39808e
+from-state:   docs/ARCHITECTURE.md, at 6676172
 ```
 
 Revisions 1 and 2 are retained in history; revision 2 was withdrawn because it rested on agents scoring agents, not on the human the set is for.

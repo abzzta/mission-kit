@@ -6,7 +6,7 @@ Gaps found here are carried as backlog rows.
 
 ---
 
-## Partition and gaps (from the charter at 9db6261)
+## Partition and gaps (from the charter at 1a862fe)
 
 This set covers **the kinds of work an engineering organisation does**, each a verb-family that compiles to a closeable claimable node.\
 The kinds group by what the work does, and the groups are the denominator.

@@ -6,7 +6,7 @@ Gaps found here are carried as backlog rows.
 
 ---
 
-## Partition and gaps (from the charter at 9db6261)
+## Partition and gaps (from the charter at 1a862fe)
 
 This set covers **the points in a unit of work where judgement about how to proceed changes the result and leaves no record**, at the moments `M0` names.
 

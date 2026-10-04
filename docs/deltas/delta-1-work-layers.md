@@ -4,7 +4,7 @@
 status:       complete - all four stages run; evaluation 21.66 to 28 of 28 after the director's L5 ruling; docs/audits/delta-1/
 row:          B24
 intent:       docs/surveys/b24-work-layers-survey.md
-from-state:   docs/ARCHITECTURE.md, at 719351d
+from-state:   docs/ARCHITECTURE.md, at bac8b35
 review:       revision 1 audited by a fresh adversarial reviewer; every must-fix answered in section 8
 ```
 
@@ -104,7 +104,7 @@ The moved body is copied unedited.
 | four distinct kinds of content (Q1) | **proves** procedures, rules and practices in separate layers; units of work already apart |
 | procedures a single-source layer (Q5) | **proves** for `K1`; **defers** every packaged skill |
 | practices and rules (Q4) | **proves** the ruling: two layers |
-| the vision amended (Q3) | already absorbed, `719351d` |
+| the vision amended (Q3) | already absorbed, `bac8b35` |
 | work-types cite their procedures (Q6) | **defers** to the `W0` conversion |
 | `methodology/` renamed `methods/` | **proves** - ruled by the director: downstream breakage is not a reason to carry legacy |
 
@@ -130,7 +130,7 @@ The moved body is copied unedited.
 1. The stage-1 mutation proof: each of the three malformed fixtures fails the gate, and passes once corrected.
 2. Every active entry in `methods/` produces a result of its own, and every entry in `rules/` declares a `trace` - the second half checked by the schema.
 3. The reference check passes.
-4. For each moved entry, its body is byte-identical to its predecessor's body at `719351d`, outside frontmatter and retargeted references.
+4. For each moved entry, its body is byte-identical to its predecessor's body at `bac8b35`, outside frontmatter and retargeted references.
 5. `tools/check-all.sh` passes.
 6. The extended `work-layers` suite, key committed and reviewed before drafting:
    - the six existing probes, kept as controls, score no lower after than before;

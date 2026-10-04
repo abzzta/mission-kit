@@ -2,7 +2,7 @@
   "id": "work-layers",
   "mode": "corpus",
   "group": "layers",
-  "source": "baseline of the methodology / skill / work-type boundary, keyed to the corpus at 5fbe0ec, before any B24 ruling; keys widened at Delta-1 stage 4 to accept each corpus's correct answer, and L7 added - after the change was drafted, so L7 cannot claim the delta's key-before-draft order; L5 rubric corrected by director ruling after the Delta-1 stage-4 scores were seen: a kind-dependent answer is correct",
+  "source": "baseline of the methodology / skill / work-type boundary, keyed to the corpus at 2c374a4, before any B24 ruling; keys widened at Delta-1 stage 4 to accept each corpus's correct answer, and L7 added - after the change was drafted, so L7 cannot claim the delta's key-before-draft order; L5 rubric corrected by director ruling after the Delta-1 stage-4 scores were seen: a kind-dependent answer is correct",
   "probes": [
     {
       "id": "L1",

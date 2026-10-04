@@ -6,7 +6,7 @@ Gaps found here are carried as backlog rows.
 
 ---
 
-## Partition and gaps (from the charter at 9db6261)
+## Partition and gaps (from the charter at 1a862fe)
 
 This set covers **every document an engineering lifecycle produces whose shape recurs across projects** - each position in the lifecycle loop, below, at the altitude of a system, and the altitudes and transitions around it.\
 The claim is set by what the set is for; a position, altitude or transition with no type is a gap, not a reason to narrow the claim.

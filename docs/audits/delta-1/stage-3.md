@@ -22,7 +22,7 @@ Each rule declares its `trace`.
 ## Exit criteria for this stage
 
 - **Criterion 3, references.** `tools/check-moves.sh`, new and in the gate: every superseded entry names a live successor that claims it, and no live entry outside `docs/` and generated indexes cites a superseded id. Mutation-proved: a stub naming a missing successor failed it, and a live citation of `M5` added to `A0` failed it.
-- **Criterion 4, bodies unedited.** Each moved body diffed against its predecessor at `719351d`: every changed line is an id or path retarget - one line each for `RU1` to `RU3` and `PC1` (the heading's id), six for `M9`, five for `RU4`.
+- **Criterion 4, bodies unedited.** Each moved body diffed against its predecessor at `bac8b35`: every changed line is an id or path retarget - one line each for `RU1` to `RU3` and `PC1` (the heading's id), six for `M9`, five for `RU4`.
 - **Criterion 5.** `tools/check-all.sh` passes, 22 checks.
 
 ---

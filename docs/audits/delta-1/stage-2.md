@@ -1,7 +1,7 @@
 # Delta-1 stage 2 - charters
 
 `RU0` and `PC0` authored, `M0` rewritten for procedures, the root layer table and `E2` updated.\
-Key committed and independently reviewed before any draft: `docs/evals/layer-charters/suite.json`, at `e2d9bb9`.
+Key committed and independently reviewed before any draft: `docs/evals/layer-charters/suite.json`, at `8a3b545`.
 
 ---
 

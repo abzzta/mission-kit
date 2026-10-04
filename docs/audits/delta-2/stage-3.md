@@ -4,7 +4,7 @@
 
 ## Criterion 5 - the human check: passed, 6 of 6
 
-Six scenarios - bad news, a status update, an explanation, teaching a concept, one decision, two linked decisions - written by a fresh agent from the director's statement and the friction log, without sight of the guidance, and committed before any message was written (`2a22b71`).\
+Six scenarios - bad news, a status update, an explanation, teaching a concept, one decision, two linked decisions - written by a fresh agent from the director's statement and the friction log, without sight of the guidance, and committed before any message was written (`9982957`).\
 A fresh agent given only the landed `M10` and `S15`, and a fresh agent given nothing, each wrote one message per scenario.\
 Shown to the director in chat, unaltered, one pair per turn, positions random.\
 **The director preferred the guided message in all six.**\
@@ -24,7 +24,7 @@ A cold agent with the corpus, given each of the six moments, named `M10` or `S15
 
 Every standing suite on the after-corpus, run `2026-10-03-delta2-routing`, 84.34 of 88.\
 Against the Delta-1 layer run, no drop.\
-Against the Delta-1 regression run, three drops, each on text unchanged since that run (`git diff c002a9c HEAD` touches no axiom, `E5`, `E6` or `components/`), so classified as noise under the rule:
+Against the Delta-1 regression run, three drops, each on text unchanged since that run (`git diff 3a9017a HEAD` touches no axiom, `E5`, `E6` or `components/`), so classified as noise under the rule:
 
 | Probe | Drop | Note |
 |---|---|---|

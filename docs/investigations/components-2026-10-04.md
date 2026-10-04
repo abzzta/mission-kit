@@ -6,7 +6,7 @@ Gaps found here are carried as backlog rows.
 
 ---
 
-## Partition and gaps (from the charter at 9db6261)
+## Partition and gaps (from the charter at 1a862fe)
 
 What this population claims to cover, stated so that a gap in it is a finding rather than a silence.\
 Required of any [`set`](../../entities/E3-set.md), and this is the corpus's first.
