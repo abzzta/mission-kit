@@ -1,0 +1,50 @@
+{
+  "id": "ar0",
+  "mode": "corpus",
+  "group": "ar0",
+  "source": "AR0 conversion to E4, derived from AR1-AR6, skill templates (K5 envelope, K23 closeout packet), schemas and the current charter. Q1-Q3 are controls the current AR0 answers. Key reviewed by a fresh agent before any reader ran; Q4 reframed (closeout is AR2's unspecified half, envelope argued against AR4), Q3, Q6, Q7 loosened.",
+  "probes": [
+    {
+      "id": "Q1",
+      "question": "Why may the current projection of a system architecture (AR1 'now') not be written by hand?",
+      "key": "It is derived from a delta's exit criteria when they go green; writing it by hand cuts the loop's feedback path, leaving a controller with no measurement reporting on itself.",
+      "rubric": "2 for derived from exit criteria, with the feedback path cut. 1 for derived alone. 0 otherwise."
+    },
+    {
+      "id": "Q2",
+      "question": "A project produced a document and wants to add that completed document to the artifacts layer as a type. Does it belong?",
+      "key": "No: the layer holds types, never instances; a completed project document fails the cross-project test and dates immediately. Instances live in the project, at its component root (VISION.md) and under docs/.",
+      "rubric": "2 for no, types not instances, with where instances live or the disqualifier. 1 for no alone. 0 otherwise."
+    },
+    {
+      "id": "Q3",
+      "question": "A team proposes a document type because two projects that read this corpus each wrote one. Should the count of those instances be recorded as evidence of recurrence?",
+      "key": "No: a corpus cannot count adoption of itself as evidence for itself - a downstream instance shows compliance, not recurrence; recurrence is a judgement argued at admission, not a recorded field.",
+      "rubric": "2 for no, with the compliance-not-recurrence reason or that a recorded field outlives the reasoning that set it. 1 for no alone. 0 otherwise."
+    },
+    {
+      "id": "Q4",
+      "question": "What does the artifacts layer's territory claim that no artifact type fills today?",
+      "key": "The component altitude below AR1 (held, because how a component specification binds upward is answered incompatibly). Also: the closing half of a delta - whether its to-state was reached - is left unspecified in AR2 and deferred; the only shape for it is a closeout template held in a coordination-substrate skill (K23), which fails the cross-project test as written - the template-in-the-toolbox fault. Intent captured before a design has a shape only in K5's survey envelope; AR4 says a decision register may absorb it, so it is an argued candidate, not a settled gap.",
+      "rubric": "2 for the component altitude plus any one of: AR2's unspecified closing half, the envelope argued against AR4, or a skill-held template named as a toolbox fault. 1 for one of these alone. 0 for no gap named."
+    },
+    {
+      "id": "Q5",
+      "question": "Someone wants to add a document type for the output log of a test run. Does it qualify?",
+      "key": "No: a tool output's shape is the tool's contract - a disqualifier; machine-checkable shapes, if any, belong to schemas.",
+      "rubric": "2 for no, tool output disqualified. 1 for no alone. 0 otherwise."
+    },
+    {
+      "id": "Q6",
+      "question": "How is the artifacts layer told apart from schemas, style and skills?",
+      "key": "Schemas hold machine-checkable contracts for a shape - a type here must not fork one; style governs how any artifact is written, not which document a lifecycle produces; skills may carry a template, but a deliverable shape buried in one capability is a fault - its type belongs here.",
+      "rubric": "2 for all three distinctions (style may be distinguished by its document-type rules governing a document's form rather than which lifecycle document is produced). 1 for two. 0 otherwise."
+    },
+    {
+      "id": "Q7",
+      "question": "What would an unhealthy population of artifact types look like?",
+      "key": "Population faults, e.g.: a deliverable shape buried in a skill's template; a type admitted without a position in the loop; a completed instance admitted as a type; document structure enforced as a style rule instead of a type; a position or altitude with no type, so authors reinvent it; one rule restated in two types. A single type whose acceptance is prose about quality is a member defect.",
+      "rubric": "2 for two population faults. 1 for one. 0 for none, or only a single type's defect."
+    }
+  ]
+}
