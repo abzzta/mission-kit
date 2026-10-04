@@ -147,7 +147,7 @@ That split is the load-bearing rule of this section.
 | `skills/` | `K` | executable operator capability | invocable procedures with declared edges | `A`, `M` |
 | `traits/` | `T` | characteristics of a system that decide which axioms bind it | the `applies-to` vocabulary, each with a test | `A` |
 | `entities/` | `E` | what a thing is - definition, never mechanism | precise terms the corpus leans on | `A` |
-| `components/` | `C` | sovereign shareable substrates | a registry of units to use rather than rebuild | `A`, `AR` |
+| `components/` | `C` | sovereign shareable units | a registry of units to use rather than rebuild | `A`, `AR` |
 | `artifacts/` | `AR` | engineering document types | shapes with acceptance falsifiers | `A`, `M` |
 | `schemas/` | `SC` | machine-verifiable entity contracts | JSON Schema, validatable without a runtime | nothing - contracts are self-contained |
 
