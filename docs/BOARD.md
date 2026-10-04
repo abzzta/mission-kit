@@ -35,27 +35,18 @@ The thread of the current conversation, so a reader can see how the active work 
 Updated whenever the thread moves; the milestones below remain the plan.
 
 ```text
-M5  bring the charters to E4                     12 of 12 applied; frame in review <- HERE
- +- how the axis layers compose (B32)            done
-     +- axioms as asymptotes, system, component  done
-     +- six open design questions (B36)          done
-     +- evaluation harness                       built
-     +- how mission-kit says how to do work (B24)
-         +- Delta-1: methods, rules, practices   ready to ratify                  PARKED
-         +- the explain set (B38)
-             +- Delta-2                          withdrawn - needs a real metric  PARKED
-             +- communication limits             understand, decide: confirmed
-             +- moves                            eight, provisional
-             +- human evaluation                 session 2: restructured won 4 of 4
-             +- placement drafted                   style, one practice, one method
-             +- draft guidance tested on director   won 4 of 4
-             +- Delta-2                              done; human check 6 of 6
-         +- Delta-1                                  done
+M5  bring the charters to E4                     all charters applied; frame approved  <- HERE
+ +- charters: E4, then asymptote, then frame     done - vision + operation, M11 M12 M13
+ +- terms defined: gate, evidence, substrate     done - E7 E8 E9
+ +- eval runs purged from published history      done
+ +- still open in M5                             M5.5d composition record, M5.5i baseline defects,
+                                                 M5.5l always-on confound, M5.5m moves matrix
 ```
 
-**Explain branch complete.**\
-Next on the main path: the five remaining `B36` questions, then the nine remaining charters.
-**To return to, in order:** the human evaluation tool, then Delta-2 revised from its results; ratify Delta-1; the five remaining `B36` questions; the nine remaining charters.
+**Charter branch complete.**\
+M5 cannot close while four items remain open in it; whether to finish them or move them is the next decision.
+
+**To return to:** the four open M5 items above; Delta-2 stays withdrawn until it has a real metric.
 
 ---
 
@@ -239,7 +230,7 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | M5.3 | **Trial conversion of one charter** | `B4` | `DONE` - `M0`, verdict **improved** - [verdict](audits/M5.3-trial-verdict-M0.md), [candidate](audits/M5.3-trial-candidate-M0.md). Awaiting director review |
 | M5.4 | Revise `E4` on what the trial shows, or stop if the enhancement did not improve utility | `B4` | `DONE` - territory must be derived and show a gap; growth must be paid for |
 | M5.4b | **Second trial, on `A0`**, isolating whether growth comes from the standard or from `M0` missing two concerns | `B4` | `DONE` - verdict **improved**, growth paid for. Growth tracks missing concerns: 36 percent here against 78 for `M0` - [verdict](audits/M5.4b-trial-verdict-A0.md), [candidate](audits/M5.4b-trial-candidate-A0.md). Awaiting director review |
-| M5.5 | Convert all thirteen, one per change - draft, audit, evaluate, director review, apply | `B4` | `DONE` - `M0`, `A0`, `R0`, `D0` **applied** - [M0](audits/M5.5-01-M0.md), [A0](audits/M5.5-02-A0.md), [R0](audits/M5.5-03-R0.md), [D0](audits/M5.5-04-D0.md); `SC0` **applied**, approved - [SC0](audits/M5.5-05-SC0.md); `MREQ-0` retired with its layer; `W0` **applied**, approved - [W0](audits/M5.5-06-W0.md); `S0` **applied**, approved - [S0](audits/M5.5-07-S0.md); the ten applied charters rechecked against the vision ruling, approved - [recheck](audits/M5.5-07a-vision-recheck.md); ruling A, the organisation's machinery is its own domains, approved - [machinery](audits/M5.5-07b-machinery-domain.md); `P0` **applied**, approved, with `P1` moved to style as `S16` and the six earlier stubs removed - [P0](audits/M5.5-08-P0.md); `E0` **applied**, approved - [E0](audits/M5.5-09-E0.md); terms defined before `K0`, approved: `gate` as `E7` - [gate](audits/M5.5-09a-gate.md), `evidence` as `E8` - [evidence](audits/M5.5-09b-evidence.md), `substrate` as `E9` - [substrate](audits/M5.5-09c-substrate.md); `K0` **applied**, approved - [K0](audits/M5.5-10-K0.md); `AR0` **applied**, approved - [AR0](audits/M5.5-11-AR0.md); `C0` **applied**, approved - [C0](audits/M5.5-12-C0.md); charters as asymptotes applied to all sixteen, approved - [asymptote](audits/M5.5-13-charter-asymptote.md); eval runs purged from history - [purge](audits/history-purge-2026-10-04.md); then the charter frame - vision and operating halves, `M11` and `M12`, the charter shape in `SC6` - awaiting review - [frame](audits/M5.5-14-charter-frame.md) |
+| M5.5 | Convert all thirteen, one per change - draft, audit, evaluate, director review, apply | `B4` | `DONE` - `M0`, `A0`, `R0`, `D0` **applied** - [M0](audits/M5.5-01-M0.md), [A0](audits/M5.5-02-A0.md), [R0](audits/M5.5-03-R0.md), [D0](audits/M5.5-04-D0.md); `SC0` **applied**, approved - [SC0](audits/M5.5-05-SC0.md); `MREQ-0` retired with its layer; `W0` **applied**, approved - [W0](audits/M5.5-06-W0.md); `S0` **applied**, approved - [S0](audits/M5.5-07-S0.md); the ten applied charters rechecked against the vision ruling, approved - [recheck](audits/M5.5-07a-vision-recheck.md); ruling A, the organisation's machinery is its own domains, approved - [machinery](audits/M5.5-07b-machinery-domain.md); `P0` **applied**, approved, with `P1` moved to style as `S16` and the six earlier stubs removed - [P0](audits/M5.5-08-P0.md); `E0` **applied**, approved - [E0](audits/M5.5-09-E0.md); terms defined before `K0`, approved: `gate` as `E7` - [gate](audits/M5.5-09a-gate.md), `evidence` as `E8` - [evidence](audits/M5.5-09b-evidence.md), `substrate` as `E9` - [substrate](audits/M5.5-09c-substrate.md); `K0` **applied**, approved - [K0](audits/M5.5-10-K0.md); `AR0` **applied**, approved - [AR0](audits/M5.5-11-AR0.md); `C0` **applied**, approved - [C0](audits/M5.5-12-C0.md); charters as asymptotes applied to all sixteen, approved - [asymptote](audits/M5.5-13-charter-asymptote.md); eval runs purged from history - [purge](audits/history-purge-2026-10-04.md); then the charter frame - vision and operating halves, `M11`, `M12` and `M13`, the charter shape in `SC6` - approved - [frame](audits/M5.5-14-charter-frame.md) |
 | M5.5b | Revisit the compositional split behind the work axes when conversion reaches `R0`, `D0` and `W0` | `B24` | `DONE` - in the `W0` conversion |
 | M5.5c | Carry the duty to expand a set on a found gap into `W0` and `T0`, or state it once in `E3` | `B31` | `DONE` - in the `W0` conversion |
 | M5.5d | **Composition record**: measure a context-less agent's composition of the axis layers against the current corpus, author one declared record of how they compose and the order to read them, re-measure | `B32` | `WIP` - baseline **14 / 14** in three runs: correctness is already met, so the record is unearned on these probes. Two questions every run had to guess - whose traits count, and what an axiom alignment refers to - are the measured gap. [scores](audits/eval-COMP/SCORES.md) |
