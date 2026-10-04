@@ -1,0 +1,56 @@
+{
+  "id": "e0",
+  "mode": "corpus",
+  "group": "e0",
+  "source": "E0 conversion to E4, derived from E1-E6, SC6, the layer charters and term usage counted across the corpus. Q1-Q3 are controls the current E0 answers. Key reviewed by a fresh agent before any reader ran; Q4 (arc is defined in skills, with a second meaning) and Q6 corrected.",
+  "probes": [
+    {
+      "id": "Q1",
+      "question": "A term appears in dozens of documents in this corpus. Does that alone earn it an entity entry?",
+      "key": "No: ubiquity alone does not qualify; a term earns one when imprecision would cost something real - the test is whether two competent readers could act differently on the same sentence.",
+      "rubric": "2 for no with the two-readers test. 1 for no alone. 0 otherwise."
+    },
+    {
+      "id": "Q2",
+      "question": "Someone drafts an entity entry that explains how to run a gate review step by step. Is that an entity?",
+      "key": "No: an entity states what a thing is, never how it is done; a procedure belongs in methods (or skills, if executable).",
+      "rubric": "2 for no, with what-not-how and a route to methods or skills. 1 for no alone. 0 otherwise."
+    },
+    {
+      "id": "Q3",
+      "question": "Which section of an entity entry is load-bearing for stopping one term from fragmenting into many readings, and why?",
+      "key": "Boundaries - what it explicitly is not: a definition that only says what a thing is leaves every adjacent case undecided.",
+      "rubric": "2 for Boundaries with the reason. 1 for Boundaries alone. 0 otherwise."
+    },
+    {
+      "id": "Q4",
+      "question": "Does any entity entry define 'gate', 'evidence' or 'arc'? Where, if anywhere, is each defined?",
+      "key": "No entity entry defines any of the three. Gate and evidence are defined nowhere (A8 describes gates, W0 names evidence fields, but neither defines the word). Arc is defined in the skills layer (arc-lifecycle: a tree of rungs climbing one summit), while the workgraph skills use it for a WorkItem graph seeded from a blueprint - two meanings. All three are load-bearing across layers and so are gaps within the entity set's claim.",
+      "rubric": "2 for no entity defining any, gate and evidence undefined, and arc's skill-layer definition or its second meaning noted, with the gap reading. 1 for no entity alone, or two of the three placed correctly. 0 for naming an entity entry that defines one."
+    },
+    {
+      "id": "Q5",
+      "question": "The entity entries define several terms. Group them by what kind of thing they define, and name a kind of term the corpus relies on that has no entity at all.",
+      "key": "Authority: E1 sovereign-hierarchy. The corpus's own structure: E2 layer, E3 set, E4 charter. What is engineered: E5 system, E6 component. No entity: work and its proof - gate, evidence, seal, closeout, unit of work - or coordination - arc, lease; substrate is also undefined.",
+      "rubric": "2 for a grouping in which E2-E4 sit together and E5-E6 sit together, plus one undefined kind with an example term. 1 for one of the two parts. 0 otherwise."
+    },
+    {
+      "id": "Q6",
+      "question": "A layer charter states 'a rule is guidance that leaves a trace a check could test'. Should 'rule' therefore get an entity entry?",
+      "key": "Not on that basis alone. The rules charter states what its members are; an entity is earned only if 'rule' is load-bearing across layers and two readers could act on it differently (it is used loosely elsewhere, e.g. AGENTS.md calls its doctrine rules). If one is written it fixes the word's meaning and cites the charter rather than restating its admission test, as E2 does for layer.",
+      "rubric": "2 for not on that basis, with the two-readers test, or a conditional yes that cites rather than restates (E2 as precedent). 1 for no alone. 0 for yes because the charter defines it."
+    },
+    {
+      "id": "Q7",
+      "question": "How does an entity entry's definition relate to the schema that validates instances of that thing?",
+      "key": "The entity fixes what the term means; a schema in schemas/ holds the machine-checkable shape of an instance. Neither restates the other: E2 layer cites SC1, whose category field carries an entry's layer.",
+      "rubric": "2 for meaning vs machine shape, with an example or the no-restatement point. 1 for the distinction alone. 0 otherwise."
+    },
+    {
+      "id": "Q8",
+      "question": "What would an unhealthy population of entity entries look like?",
+      "key": "Any two population faults: a load-bearing term defined nowhere; two words for one concept, or one word for two, across entries; definitions cited by nothing; a procedure filed as a definition; a term defined both here and in a charter or member. One entry missing its Boundaries is a member defect.",
+      "rubric": "2 for two population faults. 1 for one. 0 for none, or only a single entry's defect."
+    }
+  ]
+}
