@@ -56,7 +56,7 @@ Members are balanced on what the capability does, so that no family grows while 
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on what the capability does, and an analysis also checks each family for a counterpart that serves work done without its coordination system.\
 Dependencies between members are the `prerequisite` and `composes` edges declared in each body's frontmatter, so an analysis reads them from those edges and [`tools/skill-graph.mjs`](../tools/skill-graph.mjs), never from names or prose.\
 A candidate that only describes is routed to methods, rules or practices, one a script could take whole to [tools](../tools/README.md), and a composition of capabilities into an operator role to [bundles](../bundles/README.md).

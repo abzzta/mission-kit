@@ -60,7 +60,7 @@ A characteristic that would bring an obligation no trait captures is closed by a
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on non-overlap of the question each settles, so an analysis asks of each pair whether they settle the same question, and of each trait defined by a presence whether the matching absence brings an obligation no trait captures.\
 A candidate no axiom binds on, or would, is routed to [`entities/`](../entities/README.md); a surface work lands on is routed to [`domains/`](../domains/README.md); a statement of what must hold is routed to [`axioms/`](../axioms/README.md), all as *What belongs here, and what does not* sets out.\
 Because the contract accepts only declared traits as `applies-to` values, adding or retiring a trait changes which axioms bind which systems, so the change is read against every axiom that names it.

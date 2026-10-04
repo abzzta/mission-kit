@@ -78,7 +78,7 @@ Members are balanced on one home per term - no term defined here and in a charte
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on one home per term and on being cited, so an analysis searches the corpus for a term defined both here and elsewhere, and for places a term carries weight without citing its definition.\
 A gap is a term that passes the two-readers test under *What earns an entry*, never one that is merely frequent.\
 A candidate that names one layer's members is routed to that layer's charter, one that answers how rather than what to [methods](../methods/README.md) or [skills](../skills/README.md), and the shape of an instance to [schemas](../schemas/README.md).

@@ -58,7 +58,7 @@ Rules for media other than documents are grouped into sub-sets by medium once th
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on non-overlap, so an analysis looks for two rules holding one decision on one surface, and for a rule a predicate could express that names no tool.\
 A rule a script can hold names exactly one tool, and the pairing is verified as stated under *Enforcement boundary*.\
 A candidate that governs what the work does or records is routed to [rules](../rules/README.md), and one whose following the finished artifact could not show is routed to [practices](../practices/README.md).

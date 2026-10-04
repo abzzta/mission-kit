@@ -58,7 +58,7 @@ Members are balanced on evidence and on leaving no trace: a practice is admitted
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on evidence and on leaving no trace, so an analysis asks of each member whether its evidence still holds, whether it has acquired a trace, and whether its situation recurs without it being applied.\
 A member that has acquired a trace is routed to [`rules/`](../rules/README.md), a candidate producing a result of its own to [`methods/`](../methods/README.md), and one governing an artifact's form to [`style/`](../style/README.md), by the placement stated once in [`M0`](../methods/README.md).\
 A gap found here is not closed by minting a practice, because admission waits on observed evidence, as *Member shape* states.

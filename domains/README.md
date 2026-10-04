@@ -57,7 +57,7 @@ Members are balanced on distinct evidence contracts, never on modes of work: a s
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on distinct evidence contracts, never on modes of work, so an analysis tests each pair of domains for a difference in what their evidence resolves against, and places each unit of work by the tie-break rule below rather than by the surface its benefit lands on.\
 A candidate that is a mode of work is routed to [`work-types/`](../work-types/README.md), a characteristic of the system being worked on to [`traits/`](../traits/README.md), and an incident to the surface it hit.\
 Which work-types act on which domains is analysed and changed on the work-types, because the domain side of every pairing is generated from them.

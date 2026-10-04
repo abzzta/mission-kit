@@ -55,7 +55,7 @@ A contract is admitted with the check that validates against it and a consumer t
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on non-overlap, so an analysis counts a contract per layer for one concern as a finding, because a concern that varies by category is one contract with conditions.\
 Coverage is measured against structured files wherever their instances are written, including those a project writes from a type this corpus defines, since an ungoverned file is in scope before any contract governs it.\
 For each contract an analysis confirms that a check validates against it, a consumer uses it, and `catalog.json` maps it.\

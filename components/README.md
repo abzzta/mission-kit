@@ -68,7 +68,7 @@ A component is admitted when a consumer needs it, not because a gap was named.
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on orthogonality at architecture altitude, and adoption outranks orthogonality: an overlap an analysis finds is recorded as a finding, never resolved by refusing or removing a member.\
 Its extent is read from the union of anchored cores across the architectures this organisation holds, and one duty duplicated across projects with no component is a finding of the same kind.\
 Every analysis reads the count of external entries, the measurement *Internal and external* declares.\

@@ -58,7 +58,7 @@ Members are balanced on their traces: each declares one that a tool or a reader 
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on their traces, so an analysis checks each declared `trace` against whether anything actually reads it; `tools/check-enforcers.sh` holds only that a named enforcer exists, never that the trace is read.\
 A candidate whose trace nothing could check is routed to [`practices/`](../practices/README.md), one governing an artifact's form to [`style/`](../style/README.md), and one producing a result of its own to [`methods/`](../methods/README.md).\
 Placement is stated in [`M0`](../methods/README.md) and is changed there, not here, and a practice that acquires a trace moves into this set.

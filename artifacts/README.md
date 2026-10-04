@@ -57,7 +57,7 @@ Members are balanced on non-overlap: one position, one type, and a type enters o
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on non-overlap: one position in the loop, one type, at a stated altitude.\
 Analysis reads the population against the loop, and also searches projects for a concern that recurs without a home, because only that bottom-up pass can show the loop itself is missing a position (*The strongest evidence is an absence*).\
 A misplaced candidate is routed by the neighbour table: a machine-checkable contract to schemas, a writing convention to style, a capability to skills, and a kind of work to work-types; an instance stays in the project that produced it.

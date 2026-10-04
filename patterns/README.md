@@ -57,7 +57,7 @@ Members are balanced on the forces they resolve, so that no force is crowded wit
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on the forces they resolve, so an analysis weighs balance by force, and a force crowded with shapes beside one holding none is the finding.\
 The strongest evidence of a missing member is a shape being rebuilt slightly differently, as *What earns an entry* states.\
 A candidate that is an artifact to depend on is routed to [components](../components/README.md), as is a member every consumer has come to reproduce by hand, and a shape to avoid is routed to the `Faults` of the entry owning the invariant it breaks.

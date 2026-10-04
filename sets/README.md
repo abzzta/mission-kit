@@ -52,7 +52,7 @@ Members are balanced on non-overlap of concern - one concern, one set - and a se
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on non-overlap of concern, one concern to one set, and a gap here is evidence that readers in a situation missed guidance that applies, not the observation that a concern could be gathered.\
 Membership is read from each set's `members` list, never from the members' own frontmatter, because a member need not know its set.\
 A candidate whose members all sit in one layer is routed to that layer's charter as its sub-concern.

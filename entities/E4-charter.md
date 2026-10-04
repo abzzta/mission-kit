@@ -34,7 +34,8 @@ The **vision half** is the set's end state, written with the devices a [vision](
 - **what the vision does not authorise** - citing the end state admits no member and licenses no change of direction; only the operating half's tests admit.
 
 The **operating half** says how the set is run: what it covers and how it grows, what enters and where the rest goes, how members relate, how it goes wrong, and how it is analysed and changed.\
-The general procedures are methods - [`M12`](../methods/M12-investigate-a-set.md) to investigate a set, [`M11`](../methods/M11-change-a-charter.md) to change a charter - and a charter cites them and adds only what is specific to its set.
+It operates two things, and they are kept apart: the **set** - its population, analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M13`](../methods/M13-change-a-set.md), which admits, modifies, retires and rebalances members - and the **charter** itself, changed by [`M11`](../methods/M11-change-a-charter.md).\
+A charter cites these methods and adds only what is specific to its set.
 
 **Members need not know their set.**\
 A member need not know its siblings, or how the population is governed; the charter is the one place that aggregates it.\
@@ -69,7 +70,7 @@ If no member could, it is a set property, and the remaining question is only whe
 |---|---|---|---|
 | **Vision** | What end state does this set approach, and why does it exist? Written with the vision devices above, first, because the scope, the growth policy and every judgement about the population are measured against it. | A member knows why *it* exists, never what the collection is heading towards | heading `Vision` |
 | **Territory** | What does this set claim to cover, and by what growth policy does it grow? | Scope and growth are properties of the population; a member cannot see its siblings | heading `Territory` |
-| **Operation** | How is this set analysed, balanced and changed? It cites the methods and states what is specific to this set. | Analysing and changing a population is done across it, never from inside one member | heading `Operation` |
+| **Operation** | How is this set analysed and its membership changed, and how is this charter changed? It cites the methods and states what is specific to this set. | Analysing and changing a population is done across it, never from inside one member | heading `Operation` |
 | **Boundaries** | What belongs here, what does not, and where does the excluded thing go instead? | An exclusion decides a case no member holds | anywhere |
 | **Composition** | How do members relate to one another? | A relation has two ends, and a member holds one | anywhere |
 | **Faults** | What does an unhealthy population look like, as against a merely valid one? | Every member can be valid while the set is wrong | heading `Faults` |

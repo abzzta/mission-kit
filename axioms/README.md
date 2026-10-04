@@ -65,7 +65,7 @@ A candidate is read against the whole set at admission, so a contradiction or a 
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on orthogonality, so an analysis asks of each member what it forbids that no other does, and of the set whether a way to drift from intent is left unforbidden.\
 Admission carries one step the methods do not: the read of the candidate against the whole set that the growth policy requires, which is what keeps a contradiction from being accepted unseen.\
 Citation counts are read as information about a member, never as a reason to admit or retire one, for the reason given under *How the set composes*.\

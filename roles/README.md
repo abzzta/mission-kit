@@ -55,7 +55,7 @@ Members are balanced on independence of mandates: no two roles hold the same aut
 
 ## Operation
 
-This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and its membership changed by [`M13`](../methods/M13-change-a-set.md); this charter is changed by [`M11`](../methods/M11-change-a-charter.md).\
 Its members are balanced on independence of mandates, so an analysis asks of each pair of roles whether they hold one authority, and of the set whether any decision the work needs falls outside every role.\
 A candidate that is a mode of work, or a flag a unit of work carries, is routed to [`work-types/`](../work-types/README.md), as *Backstop is not a role* records; a candidate that is a surface work lands on is routed to [`domains/`](../domains/README.md).\
 The constraint that one identity may not execute and independently verify the same work is authored in [`W0`](../work-types/README.md) and cited here, so a change to it is made there and not in this charter.

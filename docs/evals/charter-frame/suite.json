@@ -18,9 +18,9 @@
     },
     {
       "id": "F3",
-      "question": "Where is the procedure for changing a charter, and where is the procedure for investigating a set? What does an individual charter say about them?",
-      "key": "Each is a method (M11 changing a charter; M12 investigating a set). A charter's operating half cites them and states only what is specific to its set - its growth policy and what members are balanced on; the director ratifies changes to any charter.",
-      "rubric": "2 for both methods and the charter citing them with its set-specific parts. 1 for the methods alone. 0 otherwise."
+      "question": "Where are the procedures for changing a charter, investigating a set, and changing a set's membership? What does an individual charter say about them?",
+      "key": "Each is a method: M11 changes a charter, M12 investigates a set, M13 changes its membership. A charter's operating half cites them and states only what is specific to its set - its growth policy and what members are balanced on; the director ratifies changes to any charter.",
+      "rubric": "2 for the three methods and the charter citing them with its set-specific parts. 1 for the methods alone, or two of three with the citing. 0 otherwise."
     },
     {
       "id": "F4",
