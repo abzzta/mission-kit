@@ -179,6 +179,7 @@ This file described them a second time and the copy had already drifted, naming 
 | [S13](style/S13-plain-ascii-in-markdown.md) | Plain ASCII in markdown - typeable characters only | You are about to type a character you could not produce on a standard keyboard |
 | [S14](style/S14-hydration-triggers-state-a-condition.md) | Hydration triggers state a condition, not a topic | You are adding a catalogue entry, or reviewing one that has never routed anyone |
 | [S15](style/S15-message-to-a-human.md) | A message to a human - point first, one step, explained names, clear picks | You are about to write a message a human will read without the context you have |
+| [S16](style/S16-path-a-path-b-workflow-paths.md) | Path A / Path B - one complete path per substrate in a workflow document | You are authoring a workflow document that supports more than one execution path |
 
 ---
 
@@ -187,7 +188,6 @@ This file described them a second time and the copy had already drifted, naming 
 | ID | Title | Hydrate when |
 |---|---|---|
 | [P0](patterns/README.md) | Patterns - recurring solution shapes, and what separates one from a single good design | You are reaching for a known solution shape, or you are deciding whether a design you just built recurs widely enough to be one |
-| [P1](patterns/P1-path-a-path-b-dual-substrate.md) | Path A / Path B labeling for dual-substrate workflows | You are authoring a workflow document that supports more than one execution path |
 | [P2](patterns/P2-node-label-gate-cross-component-contracts.md) | Node-label gate for cross-component contracts | You have producer and consumer components co-scheduled onto the same nodes |
 | [P3](patterns/P3-twin-parity-by-generation.md) | Twin-parity by generation - one master, generate the other, gate the round-trip | You have a spec and data, or a view and source, that must not disagree |
 | [P4](patterns/P4-neutral-core-tenant-composition.md) | Neutral core + tenant composition - shared mechanism, injected semantics, promote down by evidence | A second domain is about to grow a mechanism the first already has |

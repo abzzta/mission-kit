@@ -5,7 +5,7 @@ title: Alternative paths in separate code blocks under subsections
 status: active
 hydrate-when: You are documenting two or more alternative paths the reader must choose between
 supersedes: []
-related: [S2, S5, S8, P1]
+related: [S2, S5, S8, S16]
 ---
 
 # S7 - Alternative paths in separate code blocks under subsections
@@ -86,5 +86,5 @@ kubectl rollout status -n kube-system ds/foo
   deployment paths.
 - Any doc showing "do this OR that" patterns where each branch has multiple
   commands.
-- Pairing with [[P1]] which establishes the Path A / Path B labeling
-  convention - S7 is how P1's labels render in markdown.
+- Pairing with [[S16]] which establishes the Path A / Path B labeling
+  convention - S7 is how S16's labels render in markdown.

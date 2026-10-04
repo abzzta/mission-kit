@@ -1,14 +1,14 @@
 ---
-id: P1
-category: pattern
-title: Path A / Path B labeling for dual-substrate workflows
+id: S16
+category: style
+title: Path A / Path B - one complete path per substrate in a workflow document
 status: active
 hydrate-when: You are authoring a workflow document that supports more than one execution path
 supersedes: []
-related: [S1, S4]
+related: [S1, S4, S7]
 ---
 
-# P1 - Path A / Path B dual-substrate labeling
+# S16 - Path A / Path B workflow paths
 
 ## Rule
 

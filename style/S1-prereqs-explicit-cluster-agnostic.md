@@ -5,7 +5,7 @@ title: Prerequisites explicit + cluster-agnostic + assumes authenticated tooling
 status: active
 hydrate-when: You are authoring a workflow document that drives shared infrastructure
 supersedes: []
-related: [S2, M2, P1]
+related: [S2, M2, S16]
 ---
 
 # S1 - Prerequisites explicit + cluster-agnostic + assumes authenticated tooling

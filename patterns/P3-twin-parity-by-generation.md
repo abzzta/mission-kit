@@ -5,7 +5,7 @@ title: Twin-parity by generation - one master, generate the other, gate the roun
 status: active
 hydrate-when: You have a spec and data, or a view and source, that must not disagree
 supersedes: []
-related: [A2, P1]
+related: [A2]
 ---
 
 # P3 - Twin-parity by generation
