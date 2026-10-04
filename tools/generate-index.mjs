@@ -142,13 +142,17 @@ const headingOf = (dir) => dir[0].toUpperCase() + dir.slice(1);
 function table(entries, linkFrom, { enforcement = false } = {}) {
 	const withStatus = entries.some((e) => e.status !== 'active');
 	const withEnforcer = enforcement && entries.some((e) => e['enforced-by']);
-	const cols = ['ID', 'Title', ...(withStatus ? ['Status'] : []), ...(withEnforcer ? ['Held by'] : []), 'Hydrate when'];
+	// The same reverse view for an axiom's applies-to: which systems' traits bring it into force,
+	// declared once on the axiom and shown here so the charter need keep no applicability matrix.
+	const withApplies = enforcement && entries.some((e) => e['applies-to']);
+	const cols = ['ID', 'Title', ...(withStatus ? ['Status'] : []), ...(withEnforcer ? ['Held by'] : []), ...(withApplies ? ['Binds'] : []), 'Hydrate when'];
 	const head = [`| ${cols.join(' | ')} |`, `|${cols.map(() => '---').join('|')}|`];
 	const rows = entries.map((e) => {
 		const href = linkFrom ? path.relative(linkFrom, e.rel) : e.rel;
 		const cells = [`[${e.id}](${href})`, cell(e.title)];
 		if (withStatus) cells.push(cell(e.status));
 		if (withEnforcer) cells.push(e['enforced-by'] ? `\`${cell(e['enforced-by'])}\`` : (/0$/.test(e.id) ? '' : 'reading'));
+		if (withApplies) cells.push(e['applies-to'] ? cell(String(e['applies-to']).replace(/[[\]]/g, '')) : '');
 		cells.push(cell(e['hydrate-when']));
 		return `| ${cells.join(' | ')} |`;
 	});
