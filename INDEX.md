@@ -124,6 +124,7 @@ This file described them a second time and the copy had already drifted, naming 
 | [M10](methods/M10-guided-dialogue.md) | Guided dialogue - lead a human to understanding, then to a recorded decision | You need a human with limited context to understand something or decide something |
 | [M11](methods/M11-change-a-charter.md) | Change a charter - account for every changed sentence, test before ratifying | You are about to change a charter's text, its vision, its scope or its growth policy |
 | [M12](methods/M12-investigate-a-set.md) | Investigate a set - partition the population against its charter and find the gaps | You need to know whether a set is complete, balanced or lopsided against its charter, or where its gaps are |
+| [M13](methods/M13-change-a-set.md) | Change a set's membership - admit, modify, retire or rebalance a member | You are about to add an entry to a set, substantively change one, retire one, or split, merge or replace members |
 
 ---
 

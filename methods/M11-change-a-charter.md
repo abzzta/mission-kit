@@ -5,7 +5,7 @@ title: Change a charter - account for every changed sentence, test before ratify
 status: active
 hydrate-when: You are about to change a charter's text, its vision, its scope or its growth policy
 supersedes: []
-related: [E4, E3, M2, M12, RU2, AR4]
+related: [E4, E3, M2, M12, M13, RU2, AR4]
 ---
 
 # M11 - Change a charter
@@ -49,4 +49,6 @@ Fixing the sentence removed both the ambiguity and the paragraph that had been d
 
 - Any edit to a charter's text.
 - A re-aim: an investigation shows the vision, scope or growth policy is wrong.
-- A growth-policy decision, such as replacing a member in a capped set, chosen on the board and ratified by the director.
+- A change to the growth policy itself, chosen on the board and ratified by the director.
+
+> **Correction.** This list once included *replacing a member in a capped set*. Replacing a member changes the set, not the charter, and is done by [`M13`](M13-change-a-set.md).

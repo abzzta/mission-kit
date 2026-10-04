@@ -59,7 +59,7 @@ Members are balanced on distinct situations and on composition: a candidate diff
 
 ## Operation
 
-This set is analysed by [`M12`](M12-investigate-a-set.md) and changed by [`M11`](M11-change-a-charter.md).\
+This set is analysed by [`M12`](M12-investigate-a-set.md) and its membership changed by [`M13`](M13-change-a-set.md); this charter is changed by [`M11`](M11-change-a-charter.md).\
 Its members are balanced on distinct situations and on composition, so an analysis reads which members are primitives and which compounds from the citation graph, and takes a member with no edges as the prompt *The orphaned primitive* names.\
 A candidate is placed by the questions under *What belongs here, and what does not*: one producing nothing of its own goes to [`rules/`](../rules/README.md) if it leaves a trace and to [`practices/`](../practices/README.md) if it does not, a convention about the artifact to [`style/`](../style/README.md), and an invocable capability to [`skills/`](../skills/README.md).\
 The population is read against what actually went wrong in the work, not only against its members, because this set's characteristic gap is a failure no procedure covers.\
@@ -149,4 +149,5 @@ A failure mode of one procedure belongs in that procedure.
 | [M10](M10-guided-dialogue.md) | Guided dialogue - lead a human to understanding, then to a recorded decision | You need a human with limited context to understand something or decide something |
 | [M11](M11-change-a-charter.md) | Change a charter - account for every changed sentence, test before ratifying | You are about to change a charter's text, its vision, its scope or its growth policy |
 | [M12](M12-investigate-a-set.md) | Investigate a set - partition the population against its charter and find the gaps | You need to know whether a set is complete, balanced or lopsided against its charter, or where its gaps are |
+| [M13](M13-change-a-set.md) | Change a set's membership - admit, modify, retire or rebalance a member | You are about to add an entry to a set, substantively change one, retire one, or split, merge or replace members |
 <!-- END GENERATED -->

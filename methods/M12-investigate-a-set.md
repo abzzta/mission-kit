@@ -5,7 +5,7 @@ title: Investigate a set - partition the population against its charter and find
 status: active
 hydrate-when: You need to know whether a set is complete, balanced or lopsided against its charter, or where its gaps are
 supersedes: []
-related: [E4, E3, M11, AR5, AR3, RU3]
+related: [E4, E3, M11, M13, AR5, AR3, RU3]
 ---
 
 # M12 - Investigate a set
@@ -23,7 +23,7 @@ It produces a partition, the place of each member in it, and the gaps; the chart
 6. **Check the balance** against the growth policy: a crowded cell beside empty ones is a finding.
 7. **Record it in the project's own record**, dated, citing the charter it measured against. The charter does not link to it.
 8. **Carry each gap to the backlog** ([`AR5`](../artifacts/AR5-backlog.md)) as a row with a revival trigger; the board ([`AR3`](../artifacts/AR3-board.md)) weighs them for the director.
-9. **If the vision, scope or growth policy is itself shown wrong,** propose a re-aim under [`M11`](M11-change-a-charter.md).
+9. **If the vision, scope or growth policy is itself shown wrong,** propose a re-aim under [`M11`](M11-change-a-charter.md); a finding about members - overlap, crowding, a candidate - is acted on by [`M13`](M13-change-a-set.md).
 
 ---
 
