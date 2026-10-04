@@ -1,0 +1,38 @@
+{
+  "id": "evidence",
+  "mode": "corpus",
+  "group": "evidence",
+  "source": "Director ruling A on the term evidence: a verdict is never evidence; evidence is what a judge receives. Keyed before the entry is written. Key reviewed by a fresh agent before any reader ran; V3 (executor-evidence is not a gate) and V5 (a cited FAIL stays a verdict) corrected - the first V5 key had smuggled in an exception the ruling does not make.",
+  "probes": [
+    {
+      "id": "V1",
+      "question": "What is evidence, in this corpus, and how does it relate to a gate?",
+      "key": "Something offered to show that a claim holds. At a gate the claim is the gate's condition, and evidence is what the judge receives; the verdict is what the judge decides, and is never evidence.",
+      "rubric": "2 for the core meaning plus evidence as the judge's input, distinct from the verdict. 1 for either. 0 otherwise."
+    },
+    {
+      "id": "V2",
+      "question": "A verifier's attestation is stored in a work item's evidence slot. Is the attestation evidence?",
+      "key": "No: it is the verdict, recorded in the evidence slot because that is where the coordination system stores it. The evidence is what the verifier examined.",
+      "rubric": "2 for no, a verdict stored in an evidence slot. 1 for no alone. 0 for yes."
+    },
+    {
+      "id": "V3",
+      "question": "What does the field evidenceAuthority name? What does its value executor-evidence mean?",
+      "key": "Who may close the evidence requirement. Where the value is verifier-attestation or director-ratification it names the gate's judge. executor-evidence means the author closes the requirement on their own evidence; that closure is not a gate, and any gate on the work - by a machine or an independent agent - sits elsewhere. The field and value names belong to the live coordination system and are kept.",
+      "rubric": "2 for who may close the requirement (the judge where a verifier or the director), with executor-evidence not a gate. 1 for the judge alone. 0 for a kind of evidence."
+    },
+    {
+      "id": "V4",
+      "question": "An engineer runs the tests on their own change and records the results. Is that evidence, and can it pass an independent-agent gate?",
+      "key": "Yes, it is evidence - the author's own. It can be offered to the gate, but it never satisfies an independent-agent gate: the judge must be someone who did not author the work.",
+      "rubric": "2 for evidence yes and never satisfies an independent gate. 1 for one part. 0 otherwise."
+    },
+    {
+      "id": "V5",
+      "question": "A gate failed and a repair is attempted under a new gate. May the earlier FAIL be cited at the new gate?",
+      "key": "Yes, cited as the earlier gate's verdict, recorded - never evidence at either gate. The evidence at the repair gate is what its judge examines: the repair, re-checked with the same or stronger checks; the recorded failure reason may shape what the repair must show. The FAIL stays true and is not superseded; a later PASS means the repair passed.",
+      "rubric": "2 for yes, cited as a recorded verdict and not evidence, with the repair's own checks as the evidence. 1 for yes alone. 0 for no, or for calling the FAIL evidence at the repair gate."
+    }
+  ]
+}
