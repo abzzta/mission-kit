@@ -1,0 +1,50 @@
+{
+  "id": "k0",
+  "mode": "corpus",
+  "group": "k0",
+  "source": "K0 conversion to E4, derived from K3-K28, their prerequisite/composes edges, bundles, M0/M1/M2 and tools. Q1-Q3 are controls the current K0 answers. Key reviewed by a fresh agent before any reader ran; Q5 (K17 a SysML-only near miss), Q2, Q4 and Q6 corrected.",
+  "probes": [
+    {
+      "id": "Q1",
+      "question": "Why is each skill two files - a K stub in skills/ and a SKILL.md in its own directory?",
+      "key": "The stub is the catalogue entry (id, status, title, hydration trigger) and points at the body; the body carries none of those, so it stays portable - a foreign catalogue id would make it unusable elsewhere. SC3 governs the body, SC1 the stub.",
+      "rubric": "2 for the stub as catalogue entry and the body kept portable. 1 for one half. 0 otherwise."
+    },
+    {
+      "id": "Q2",
+      "question": "Someone proposes naming skills by level - l1-, l2- - to show which build on which. What does the corpus say?",
+      "key": "No: composition is declared as edges (prerequisite, composes) in each SKILL.md frontmatter and depth is derived as the longest path; a level in the name freezes a graph that is expected to change. skill-graph.mjs checks the edges.",
+      "rubric": "2 for no, with edges and derived depth. 1 for no alone. 0 otherwise."
+    },
+    {
+      "id": "Q3",
+      "question": "A document describes how to run a review but has no scripts or assets and is meant to be read, not executed. Is it a skill?",
+      "key": "No: a skill is invoked and executed largely as written, earning its packaging where scripts or assets make it necessary; descriptive guidance is a method, rule or practice.",
+      "rubric": "2 for no, routed to method (or rule/practice). 1 for no alone. 0 otherwise."
+    },
+    {
+      "id": "Q4",
+      "question": "An agent working alone, with no coordination substrate, needs to have a change independently verified and then shipped. Which skills help?",
+      "key": "None directly: the verification-gate (K21), delivery (K22), closeout (K23) and recovery (K24) skills all operate inside the coordination substrate; outside it there is no skill for gating, delivering or closing out - a gap. Methods help (M1 triangulated review; E7 says a lone agent's gate waits or the director decides).",
+      "rubric": "2 for none, naming that the gate/delivery skills are coordination-substrate-only, as a gap; borrowing K22's proof layers or K21's staging advice as guidance is fine. 1 for none alone, or M1 cited as the only help. 0 for presenting K21 or K22 as operable without the coordination substrate."
+    },
+    {
+      "id": "Q5",
+      "question": "Is there a skill for running a blind before-and-after evaluation of a document with cold readers?",
+      "key": "No general skill: M2 is the method and tools/eval.mjs the tool, but no skill packages before-and-after blind evaluation for an agent to invoke - a gap within the skills set's claim. K17 is the nearest: a blind with-and-without comparison, limited to SysML skills.",
+      "rubric": "2 for no general skill, with M2 and/or eval.mjs placed, as a gap (K17 placed as SysML-only or not mentioned). 1 for no alone. 0 for naming a skill as the general answer."
+    },
+    {
+      "id": "Q6",
+      "question": "Group the skills into families and say how members of a family relate.",
+      "key": "Research (K3, K4 - K4 is a dependency of K3 stated in prose, not a declared edge); intent capture (K5); modelling in SysML (K7 literacy as every member's prerequisite; primitives K8, K9, K10, K13, K14, K15; K16 composes the primitives; meta K11, K12, K17); operating staged work (K6; K18 operator as prerequisite of K19-K24; K25, K26); writing discipline (K27, K28).",
+      "rubric": "2 for at least four families with the SysML prerequisite or the operator prerequisite edge stated. 1 for families without any edge. 0 otherwise."
+    },
+    {
+      "id": "Q7",
+      "question": "What would an unhealthy population of skills look like?",
+      "key": "Any two population faults: a stub without a body or a body without a stub; levels encoded in names; one family growing while whole kinds of capability have none; two skills packaging one procedure; skills that only work inside one host's coordination system with no neutral counterpart; descriptive guidance filed as skills. A single skill's narrated body is a member defect.",
+      "rubric": "2 for two population faults. 1 for one. 0 for none, or only a single skill's defect."
+    }
+  ]
+}
