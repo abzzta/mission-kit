@@ -23,18 +23,6 @@
       "rubric": "2 for Boundaries with the reason. 1 for Boundaries alone. 0 otherwise."
     },
     {
-      "id": "Q4",
-      "question": "Does any entity entry define 'gate', 'evidence' or 'arc'? Where, if anywhere, is each defined?",
-      "key": "Gate is defined by E7 and evidence by E8. No entity defines arc: it is defined in the skills layer (arc-lifecycle: a tree of rungs climbing one summit), while the workgraph skills use it for a WorkItem graph seeded from a blueprint - two meanings. Arc is load-bearing across layers and so a gap within the entity set's claim.",
-      "rubric": "2 for E7 and E8, and arc's skill-layer definition or second meaning noted, with the gap reading. 1 for two of the three placed correctly. 0 for naming an entity entry that defines arc. Since the charter-as-asymptote ruling, charters name no gaps: an absence found by reading the members and judged within the charter's scope is the full answer, and saying the corpus does not itself record it as a gap is accurate, not a hedge."
-    },
-    {
-      "id": "Q5",
-      "question": "The entity entries define several terms. Group them by what kind of thing they define, and name a load-bearing term the corpus relies on that has no entity yet.",
-      "key": "Authority: E1 sovereign-hierarchy. The corpus's own structure: E2 layer, E3 set, E4 charter. What is engineered: E5 system, E6 component. Work and its proof: E7 gate, E8 evidence. Coordination: E9 substrate. Undefined load-bearing terms: unit of work, seal, closeout, arc, lease (or bare sovereign).",
-      "rubric": "2 for a grouping in which E2-E4 sit together and E5-E6 sit together, plus one undefined load-bearing term from the key. 1 for one of the two parts. 0 otherwise. Since the charter-as-asymptote ruling, charters name no gaps: an absence found by reading the members and judged within the charter's scope is the full answer, and saying the corpus does not itself record it as a gap is accurate, not a hedge."
-    },
-    {
       "id": "Q6",
       "question": "A layer charter states 'a rule is guidance that leaves a trace a check could test'. Should 'rule' therefore get an entity entry?",
       "key": "Not on that basis alone. The rules charter states what its members are; an entity is earned only if 'rule' is load-bearing across layers and two readers could act on it differently (it is used loosely elsewhere, e.g. AGENTS.md calls its doctrine rules). If one is written it fixes the word's meaning and cites the charter rather than restating its admission test, as E2 does for layer.",

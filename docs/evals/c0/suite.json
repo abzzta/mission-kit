@@ -23,12 +23,6 @@
       "rubric": "2 for no, with the altitude reasoning. 1 for no alone. 0 otherwise."
     },
     {
-      "id": "Q4",
-      "question": "How complete is the components registry against what it claims to cover, and can a gap be found from the corpus?",
-      "key": "Coverage is not yet measurable: the charter's scope is the duty space of the systems the organisation builds, and the corpus holds one architecture to join against. A gap can still be found by reading against the scope, e.g. retry and idempotency primitives that A11 says should exist once have no component; or a duty the corpus's own tools each implement separately, such as reading frontmatter.",
-      "rubric": "2 for not yet measurable plus one gap found by reading the corpus against the scope. 1 for one of the two. 0 for claiming coverage can be stated. Since the charter-as-asymptote ruling, charters name no gaps: an absence found by reading the members and judged within the charter's scope is the full answer, and saying the corpus does not itself record it as a gap is accurate, not a hedge."
-    },
-    {
       "id": "Q5",
       "question": "How is a component told apart from a pattern, a skill and a bundle?",
       "key": "A component is a unit you depend on; a pattern is a shape you reproduce in your own code; a skill is a capability an agent invokes; a bundle composes skills into an operator role.",

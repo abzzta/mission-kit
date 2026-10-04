@@ -29,12 +29,6 @@
       "rubric": "2 for at least three correct in each group and none misplaced. Placing S15 under a tool is misplaced: check-guidance-placement.sh holds its tested wording, not messages. 1 for one group right. 0 otherwise."
     },
     {
-      "id": "Q5",
-      "question": "A team wants a style rule for comments in source code. Is there one, and where would it go?",
-      "key": "No style rule covers source-code comments today. S15 is already a single-medium style rule (messages to a human), so a source-comment rule would be the second, which is what makes sub-sets of style by medium due. Acceptable mentions: K27 (a skill) covers doc comments; S8 is about comments in markdown code blocks, not source files. Calling K27 or S8 the style rule for source comments is wrong.",
-      "rubric": "2 for no style rule today, plus: it would be a second single-medium rule and so make a sub-set by medium due. 1 for no style rule today alone, or with K27/S8 correctly placed. 0 if K27 or S8 is named as the style rule, or otherwise."
-    },
-    {
       "id": "Q6",
       "question": "Someone proposes: every deferred item's record must carry a revival trigger. Is that a style rule?",
       "key": "No: it governs what the work must record, not how an artifact is written, so it is a rule (rules/); style governs an artifact's form whatever the work was.",

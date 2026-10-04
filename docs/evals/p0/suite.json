@@ -29,12 +29,6 @@
       "rubric": "2 for P3 and P5, with or without P4. 1 for one of P3/P5 without a wrong member. P2 cited for version skew is neutral, neither credited nor penalised; P2 for readiness is wrong. 0 otherwise."
     },
     {
-      "id": "Q5",
-      "question": "Is there a pattern in this corpus for making an operation safe to retry after a partial failure?",
-      "key": "No pattern covers failure and recovery (retry, idempotency, compensation). Recurring designs for it are within what the patterns set is for, so it is a gap; where a reusable artifact would serve, A11 points to a component instead, and that is a gap there too. Acceptable mentions, none of them a pattern: A7 states the commitment; C1 excludes retry; K22 and K24 are skills with arc-specific retry rules.",
-      "rubric": "2 for no pattern, plus that it is a gap within the set's scope (patterns and/or components, A11 cited). 1 for no pattern alone. 0 for naming a pattern, or naming K22/K24/C1 as the pattern. Since the charter-as-asymptote ruling, charters name no gaps: an absence found by reading the members and judged within the charter's scope is the full answer, and saying the corpus does not itself record it as a gap is accurate, not a hedge."
-    },
-    {
       "id": "Q6",
       "question": "A team proposes a convention for laying out alternative installation paths in a markdown document. Is that a pattern or a style rule?",
       "key": "Style: M0's placement asks at its third question whether guidance governs an artifact's form, and M0's routing table sends the artifact you produce to style and the shape of a solution to patterns. The convention already exists as S16 (Path A / Path B), with S7 rendering its paths; strengthen those rather than add.",
