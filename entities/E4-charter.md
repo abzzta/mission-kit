@@ -53,7 +53,7 @@ If no member could, it is a set property, and the remaining question is only whe
 
 | Concern | The question | Why a member cannot answer it | Location |
 |---|---|---|---|
-| **Purpose** | What end state does this set approach, and why does it exist? The end state comes first. | A member knows why *it* exists, never what the collection is heading towards | heading `Purpose` |
+| **Purpose** | What end state does this set approach, and why does it exist? The end state comes first, because the scope, the growth policy and every judgement about the population are measured against it. | A member knows why *it* exists, never what the collection is heading towards | heading `Purpose` |
 | **Territory** | What does this set claim to cover, and by what growth policy does it grow? | Scope and growth are properties of the population; a member cannot see its siblings | heading `Territory` |
 | **Boundaries** | What belongs here, what does not, and where does the excluded thing go instead? | An exclusion decides a case no member holds | anywhere |
 | **Composition** | How do members relate to one another? | A relation has two ends, and a member holds one | anywhere |

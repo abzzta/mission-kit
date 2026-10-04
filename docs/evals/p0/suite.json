@@ -32,7 +32,7 @@
       "id": "Q5",
       "question": "Is there a pattern in this corpus for making an operation safe to retry after a partial failure?",
       "key": "No pattern covers failure and recovery (retry, idempotency, compensation). Recurring designs for it are within what the patterns set is for, so it is a gap; where a reusable artifact would serve, A11 points to a component instead, and that is a gap there too. Acceptable mentions, none of them a pattern: A7 states the commitment; C1 excludes retry; K22 and K24 are skills with arc-specific retry rules.",
-      "rubric": "2 for no pattern, plus that it is a gap within the set's scope (patterns and/or components, A11 cited). 1 for no pattern alone. 0 for naming a pattern, or naming K22/K24/C1 as the pattern."
+      "rubric": "2 for no pattern, plus that it is a gap within the set's scope (patterns and/or components, A11 cited). 1 for no pattern alone. 0 for naming a pattern, or naming K22/K24/C1 as the pattern. Since the charter-as-asymptote ruling, charters name no gaps: an absence found by reading the members and judged within the charter's scope is the full answer, and saying the corpus does not itself record it as a gap is accurate, not a hedge."
     },
     {
       "id": "Q6",

@@ -35,7 +35,7 @@ The claim is set by what the set is for, not by what it holds today.
 Uncapped.\
 A member is one convention about the form of one medium at one grain, judged in the finished artifact, earned by a real defect, and holding across artifacts.\
 Members are balanced on non-overlap: one rule holds one decision on one surface, and an enforced rule names exactly one tool.\
-Rules for a medium other than documents are grouped as a sub-set once that medium holds a second rule.
+Rules for media other than documents are grouped into sub-sets by medium once there is a second such rule, in any medium other than documents.
 
 ---
 
@@ -104,7 +104,7 @@ It falls short further wherever a medium it claims carries knowledge with no rul
 
 - **The forked enforcer.** Two tools holding one rule, disagreeing at the edges. This is why a rule names exactly one.
 - **The orphaned rule.** A convention nobody enforces and nobody reviews, which teaches readers that the layer is decorative.
-- **The unscoped medium.** Rules for one medium scattered among the document rules with nothing grouping them. A second rule for a medium other than documents is the point at which that medium earns a sub-set of its own.
+- **The unscoped medium.** Rules for one medium scattered among the document rules with nothing grouping them. A second rule for a medium other than documents, in any such medium, is the point at which the medium rules earn sub-sets of their own.
 - **The work rule in style clothing.** A convention filed here that governs what the work does or records rather than how the artifact reads, where an author applying rules will not look for it.
 - **The corpus-wide sweep.** Converting all legacy debt in one commit, producing a diff no one can review and hiding a real change inside it.
 

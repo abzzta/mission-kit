@@ -26,7 +26,7 @@
       "id": "Q4",
       "question": "Contracts in this set are not all of one kind. Name the kinds, say what separates them, and place each existing contract.",
       "key": "Two kinds, separated by whose instances they govern: contracts for the corpus's own files - SC1 catalogue frontmatter, SC2 standing context, SC3 skill bodies, SC6 entry bodies - checked by the corpus's gate; and resource contracts for documents a process writes - SC4 Question, SC5 ContextFrame - the two kinds catalog.json lists as resources with semantic validators, with no consumer yet. SC2 and SC3 are portable as well; an answer saying so and still placing them with the corpus's own files is correct.",
-      "rubric": "2 for both kinds, a discriminator that places them correctly (whose instances, or corpus files against process resources), and each contract placed. 1 for the kinds with most placed. 0 otherwise. Since the charter-as-asymptote ruling the split is an investigation's partition, not the charter's: an answer noting it is one defensible partition rather than canonical is not hedging and keeps its score."
+      "rubric": "2 for kinds with a discriminator that places every existing contract consistently - whose instances they govern is the key's, and another consistent partition also scores 2, since several are defensible. 1 for kinds with most placed. 0 otherwise."
     },
     {
       "id": "Q5",

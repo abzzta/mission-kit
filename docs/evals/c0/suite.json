@@ -24,9 +24,9 @@
     },
     {
       "id": "Q4",
-      "question": "How complete is the components registry against what it claims to cover, and has any concrete gap been found?",
-      "key": "The territory - the duty space of the systems the organisation builds - is not yet measurable across architectures: the corpus holds one architecture. Checked gaps exist anyway: frontmatter is read by nine tools and three schema tests, each with its own code, already diverging, needed by two anchored-core boxes (tools and schemas) with no shared component; and retry/idempotency primitives that A11 says should exist once have no component (also recorded by the patterns charter).",
-      "rubric": "2 for not yet measurable plus one checked gap (frontmatter reading across tools and schemas, retry/idempotency, or another real one). 1 for one of the two. 0 for claiming coverage can be stated."
+      "question": "How complete is the components registry against what it claims to cover, and can a gap be found from the corpus?",
+      "key": "Coverage is not yet measurable: the charter's scope is the duty space of the systems the organisation builds, and the corpus holds one architecture to join against. A gap can still be found by reading against the scope, e.g. retry and idempotency primitives that A11 says should exist once have no component; or a duty the corpus's own tools each implement separately, such as reading frontmatter.",
+      "rubric": "2 for not yet measurable plus one gap found by reading the corpus against the scope. 1 for one of the two. 0 for claiming coverage can be stated. Since the charter-as-asymptote ruling, charters name no gaps: an absence found by reading the members and judged within the charter's scope is the full answer, and saying the corpus does not itself record it as a gap is accurate, not a hedge."
     },
     {
       "id": "Q5",

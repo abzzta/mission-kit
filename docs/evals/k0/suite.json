@@ -26,7 +26,7 @@
       "id": "Q4",
       "question": "An agent working alone, with no coordination substrate, needs to have a change independently verified and then shipped. Which skills help?",
       "key": "None directly: the verification-gate (K21), delivery (K22), closeout (K23) and recovery (K24) skills all operate inside the coordination substrate; outside it there is no skill for gating, delivering or closing out - a gap. Methods help (M1 triangulated review; E7 says a lone agent's gate waits or the director decides).",
-      "rubric": "2 for none, naming that the gate/delivery skills are coordination-substrate-only, as a gap; borrowing K22's proof layers or K21's staging advice as guidance is fine. 1 for none alone, or M1 cited as the only help. 0 for presenting K21 or K22 as operable without the coordination substrate."
+      "rubric": "2 for none, naming that the gate/delivery skills are coordination-substrate-only, as a gap; borrowing K22's proof layers or K21's staging advice as guidance is fine. 1 for none alone, or M1 cited as the only help. 0 for presenting K21 or K22 as operable without the coordination substrate. Since the charter-as-asymptote ruling, charters name no gaps: an absence found by reading the members and judged within the charter's scope is the full answer, and saying the corpus does not itself record it as a gap is accurate, not a hedge."
     },
     {
       "id": "Q5",
