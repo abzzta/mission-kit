@@ -42,8 +42,8 @@
     },
     {
       "id": "H7",
-      "question": "Which moment in a unit of work does the corpus record as a gap, with nothing at all governing it - no procedure, rule or practice?",
-      "key": "Handing over - passing work in progress to another agent or a later session, including a lone agent's own next session.",
+      "question": "Which kind of work does the corpus record as having nothing at all governing it - no procedure, rule or practice?",
+      "key": "Handing work in progress over to another agent or a later session, including a lone agent's own next session. Handing over to a human is governed (M10); handing work to an agent or session is not.",
       "rubric": "2 for handing over, recorded as a gap. 1 for handing over without its being recorded as a gap. 0 otherwise."
     }
   ]
