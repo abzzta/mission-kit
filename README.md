@@ -65,7 +65,9 @@ The constraint set is authored once in the cross-axis reference and never forked
 | - | [`docs/`](docs/README.md) | This corpus's own artifact instances, held where [`AR0`](artifacts/README.md) says an instance lives. |
 
 **Identity is stable and never reused.**\
-A replaced entry keeps its ID and flips `status`, and the replacement carries `supersedes`.\
+An entry that moves to another layer takes a new ID there, and the old file is removed rather than kept as a stub; live guidance cites the new ID, and frozen records keep the old one as history.\
+A retired ID is therefore never issued again, which [`tools/check-id-reuse.mjs`](tools/check-id-reuse.mjs) holds from git history.\
+Entries moved before this rule still carry superseded stubs, which keep their ID and point to the replacement through `supersedes`.\
 [`INDEX.md`](INDEX.md) is the flat ledger across every category.
 
 **Composition is expressed as edges, not as names.**\
