@@ -18,7 +18,7 @@ Maximum logic-per-token is the engineering objective.
 ---
 
 ## Mechanics
-- **Substrate-First** - if deterministic code can do it, code does it. The LLM handles only irreducibly cognitive work; everything else belongs to the deterministic layer.
+- **Deterministic-First** - if deterministic code can do it, code does it. The LLM handles only irreducibly cognitive work; everything else belongs to the deterministic layer.
 - **Token Accounting** - token consumption is first-class telemetry; every invocation can disclose its budget, and work that fits in deterministic code consumes none.
 - **Cognitive-Boundary Discipline** - the seam between the deterministic layer and the cognitive agent is explicit, documented, and auditable per subsystem. Work drifts toward the cheaper side; drift the wrong way surfaces as a fault.
 - **Hydration-as-Offload** - pre-compute state, surfaces, and scoped tool-catalogs before invoking the LLM, so it reads (cheap) rather than derives (expensive). Pairs with A5 Perceptual Parity.
@@ -37,7 +37,7 @@ The principle generalises past the LLM case to any system holding a scarce, expe
 
 ## Faults
 - **LLM as Calculator** - the agent doing deterministic work (counting, sorting, pattern-matching, schema-validation, repetitive transformation) a function would do in microseconds at zero token cost.
-- **Substrate Leakage** - deterministic logic drifts into prompts because no primitive exists for it; the workaround becomes permanent because no one refactors back.
+- **Logic Leakage** - deterministic logic drifts into prompts because no primitive exists for it; the workaround becomes permanent because no one refactors back.
 - **Token Fragility** - the workload becomes brittle to model-change, quota limits, or tier-cost changes because it does too much per invocation.
 - **Context Displacement** - genuinely cognitive work can't fit because administrative overhead consumed the window; judgment quality degrades invisibly.
 - **Economic Blindness** - architecture ignores marginal-token-cost as a design constraint; inefficient patterns proliferate unobserved.

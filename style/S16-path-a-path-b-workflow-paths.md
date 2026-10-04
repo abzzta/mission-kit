@@ -1,7 +1,7 @@
 ---
 id: S16
 category: style
-title: Path A / Path B - one complete path per substrate in a workflow document
+title: Path A / Path B - one complete path per execution environment in a workflow document
 status: active
 hydrate-when: You are authoring a workflow document that supports more than one execution path
 supersedes: []
@@ -12,14 +12,14 @@ related: [S1, S4, S7]
 
 ## Rule
 
-When a single workflow has two (or more) valid substrates - e.g., Docker Compose **and** Kubernetes; bare-metal **and** cloud; local **and** remote - structure the doc as:
+When a single workflow has two (or more) valid execution environments - e.g., Docker Compose **and** Kubernetes; bare-metal **and** cloud; local **and** remote - structure the doc as:
 
 1. **Shared prerequisites + intro.** Everything that applies
-   regardless of substrate.
-2. **Path A - `<substrate name>`.** A complete, independently
-   followable sequence for substrate A.
-3. **Path B - `<substrate name>`.** A complete, independently
-   followable sequence for substrate B.
+   regardless of environment.
+2. **Path A - `<environment name>`.** A complete, independently
+   followable sequence for environment A.
+3. **Path B - `<environment name>`.** A complete, independently
+   followable sequence for environment B.
 4. **Shared verification / next-steps.** Anything that's the same
    regardless of path.
 
@@ -28,15 +28,15 @@ The doc explicitly states at the top which path is recommended for production (i
 The operator picks a path once and never has to mentally context-switch mid-workflow.
 
 If a step is shared between paths, **duplicate it** under each path's section rather than introducing a "for both paths..." interleaved aside.\
-Substrate sections must not interleave.
+Environment sections must not interleave.
 
 ---
 
 ## Rationale
 
-Substrate-interleaved docs read like: *"for substrate A do X; for substrate B do Y; for both do Z; except in substrate A also do W."*\
+Environment-interleaved docs read like: *"for environment A do X; for environment B do Y; for both do Z; except in environment A also do W."*\
 Every step costs the operator a context-switch to figure out which clause applies.\
-The cost compounds across a long workflow and operators make mistakes from the cognitive overhead, not from the substrates being hard.
+The cost compounds across a long workflow and operators make mistakes from the cognitive overhead, not from the environments being hard.
 
 Pre-splitting the doc into independent paths trades a small amount of duplication (the shared steps appear twice) for a large reduction in cognitive load: each operator follows one linear sequence with no branches.\
 Duplication of shared steps is cheap to maintain - they're shared precisely because they don't vary - while the cognitive overhead of an interleaved doc is paid by every reader.
@@ -81,11 +81,11 @@ Operators making a first-time decision shouldn't have to infer it.
 ## When to apply
 
 - Authoring a workflow doc that genuinely supports more than one
-  substrate.
+  environment.
 - Refactoring a doc whose conditionals (`if you're on X...`, `for Y
   only...`) have started to dominate the prose.
 - Onboarding-doc design when readers will arrive with different
-  substrate choices already made.
+  environment choices already made.
 
-Don't apply: when one substrate is overwhelmingly more common + the other is a niche fallback.\
-In that case write the doc for the common substrate and add a short "alternative substrate" section with the deltas; the dual-path structure adds cost without proportionate value.
+Don't apply: when one environment is overwhelmingly more common + the other is a niche fallback.\
+In that case write the doc for the common environment and add a short "alternative environment" section with the deltas; the dual-path structure adds cost without proportionate value.

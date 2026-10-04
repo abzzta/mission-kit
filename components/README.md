@@ -1,7 +1,7 @@
 ---
 id: C0
 category: component
-title: Components - sovereign shareable substrates to be used rather than rebuilt
+title: Components - sovereign shareable units to be used rather than rebuilt
 status: active
 hydrate-when: You are about to build a capability that may already exist as a unit you could depend on instead
 supersedes: []
@@ -10,7 +10,7 @@ related: [P0, M0, A3]
 
 # Components
 
-Sovereign, shareable substrates that should be **used** rather than rebuilt.
+Sovereign, shareable units that should be **used** rather than rebuilt.
 
 This entry is the layer's composition rule: it states what earns a component entry and how closeness of fit is judged, and it registers no component itself.\
 It is not a component, which is why the component body shape declared in [`SC6`](../schemas/SC6-entry-body.md) exempts it.
@@ -23,7 +23,7 @@ The implementation is not, because vendoring code into a cross-project corpus is
 
 [`A3`](../axioms/A3-sovereign-composition.md) mandates that a new capability is assembled by composing existing units rather than by modifying them, and its success signals ask that new capabilities arrive by composition.\
 The corpus asserted this and offered nothing to compose.\
-`patterns/` holds solution shapes rather than units, `bundles/` composes skills rather than substrate, and every structural definition in the repository sat inside a teaching skill as an example.
+`patterns/` holds solution shapes rather than units, `bundles/` composes skills rather than units, and every structural definition in the repository sat inside a teaching skill as an example.
 
 Without an index, the default is to rebuild.\
 Rebuilding is not merely wasted effort; it produces a second unit with the same duty and a slightly different contract, which is the coupling `A3` exists to prevent.
@@ -143,6 +143,6 @@ The shape is declared in [`SC6`](../schemas/SC6-entry-body.md) and enforced by `
 <!-- BEGIN GENERATED: entries. Run tools/generate-index.mjs; do not edit by hand. -->
 | ID | Title | Hydrate when |
 |---|---|---|
-| [C0](README.md) | Components - sovereign shareable substrates to be used rather than rebuilt | You are about to build a capability that may already exist as a unit you could depend on instead |
+| [C0](README.md) | Components - sovereign shareable units to be used rather than rebuilt | You are about to build a capability that may already exist as a unit you could depend on instead |
 | [C1](C1-agp.md) | AGP - name-addressed routing between application components | Parts of your application must reach each other and you are about to write the code that connects them |
 <!-- END GENERATED -->

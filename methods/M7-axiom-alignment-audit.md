@@ -35,7 +35,7 @@ Run an axiom alignment audit when any of these are true:
 - the work is extensive enough to require council input, Director approval, a blueprint, a verifier gate, or a closeout packet;
 - the work touches multiple roles or changes what future agents will perceive as normal procedure.
 
-A short local bugfix does not require a standalone audit unless it changes operating doctrine or a reusable substrate seam.\
+A short local bugfix does not require a standalone audit unless it changes operating doctrine or a reusable seam other work relies on.\
 When unsure, run the audit.\
 The cost is small; the missed-gate cost is compounding drift.
 
@@ -81,7 +81,7 @@ This is the first slice of the broader axiom application guide; extend it only f
 | Layer | Primary axioms | Audit questions |
 |---|---|---|
 | Umbrella / intent | A13 | Does this design help strategic intent become substrate-owned execution, or does it drag the Director into how-to? |
-| Substrate / state | A1, A5, A7 | What is the source of truth? Is any state hidden, stale, lossy, or unqueryable? What happens on restart/failure? |
+| State / truth | A1, A5, A7 | What is the source of truth? Is any state hidden, stale, lossy, or unqueryable? What happens on restart/failure? |
 | Specification / configuration | A2, A11 | Is behavior declared/configured/mechanized, or trapped in prompts and prose? Can the spec and runtime drift? |
 | Composition / boundaries | A3 | Does each module/pattern own one concern? Are surfaces earned by real consumers, not speculative reuse? |
 | Knowledge / audit | A4 | What context, rationale, raw evidence, and consequence must be durable? Is any summarization lossy? |

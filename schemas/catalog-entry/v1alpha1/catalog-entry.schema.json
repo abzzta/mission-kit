@@ -56,7 +56,7 @@
       ]
     },
     "generatable": {
-      "description": "Whether the substrate can generate this work-type from the axes, or it must be authored by hand. A capability of the type, not a lifecycle state.",
+      "description": "Whether the coordination substrate can generate this work-type from the axes, or it must be authored by hand. A capability of the type, not a lifecycle state.",
       "type": "boolean"
     },
     "hydrate-when": {

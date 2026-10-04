@@ -9,7 +9,7 @@
     "annotations": {}
   },
   "spec": {
-    "subject": "Application messaging substrate",
+    "subject": "Application messaging component",
     "purpose": "Bound the reusable communication mechanics that require architectural judgment.",
     "scope": {
       "included": [
@@ -36,7 +36,7 @@
         "text": "Core routing behaviour must not depend on a particular transport."
       }
     ],
-    "synopsis": "A transport-independent substrate for connection lifecycle, named-endpoint routing, and JSON delivery.",
+    "synopsis": "A transport-independent component for connection lifecycle, named-endpoint routing, and JSON delivery.",
     "terms": [
       {
         "term": "endpoint",

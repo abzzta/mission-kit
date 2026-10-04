@@ -14,7 +14,7 @@ related: [S2, M2, S16]
 
 Every workflow doc that drives shared infrastructure (Kubernetes, cloud APIs, etc.) must state in its prerequisites:
 
-1. Which **substrate family** is required, not which specific
+1. Which **platform family** is required, not which specific
    implementation. *Kubernetes* - not k3s. *Cloud SQL* - not
    Postgres 15.4 on Cloud SQL. The reference implementation can be
    named as context, but it must not be the requirement.
@@ -30,7 +30,7 @@ Every workflow doc that drives shared infrastructure (Kubernetes, cloud APIs, et
 ## Rationale
 
 Tying a workflow doc to a specific implementation (k3s, a specific cloud region, etc.) excludes operators on other implementations for no functional reason.\
-The patches / commands / contracts are usually substrate-generic.
+The patches / commands / contracts are usually platform-generic.
 
 Conversely, not stating the authenticated-tooling assumption invites operators to copy-paste the first command, get a cryptic auth error, and have no escalation path.\
 The doc shouldn't try to teach how to log in to AWS / configure kubeconfig / install gcloud - those are the operator's environment, not the workflow's.
@@ -70,6 +70,6 @@ The verify code block in a prerequisites section turns "is my env set up?" into 
 - Authoring any workflow doc that uses `kubectl`, `gcloud`, `aws`,
   `az`, `terraform`, or any tool whose access is environment-bound.
 - Reviewing a workflow doc PR for the first time - check that the
-  substrate-vs-implementation distinction is honored.
-- Porting docs across teams / clusters / clouds - substrate-generic
+  platform-vs-implementation distinction is honored.
+- Porting docs across teams / clusters / clouds - platform-generic
   phrasing is what makes that port mostly mechanical.

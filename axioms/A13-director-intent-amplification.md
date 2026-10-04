@@ -22,7 +22,7 @@ Where A11 Cognitive Minimalism and A12 Precision Context Engineering treat LLM t
 - **Intent-Interface Evolution** - the surfaces through which Director intent is elicited, clarified, and resolved (surveys, digests, decision pick-lists, approval gates) are themselves first-class, versioned artifacts the system continuously refines. A clumsy intent-interface is a tracked defect to be improved, never a fixed cost to be absorbed.
 - **Revealed-Preference Profiling** - the system observes the Director's actual decisions over time to build a calibrated preference profile. The profile produces recommended *leans* and nothing more; it is an input to the system's own framing, never a substitute for the Director's choice.
 - **Lean-as-Tie-Break (bounded)** - a revealed-preference lean is applied ONLY to tie-break a genuine inter-axiom divergence where the axioms themselves do not resolve it. It never reworks the option set, never narrows the choices presented, and never pre-empts the decision. The Director always sees the full, unbiased option set; the lean is surfaced as a labeled tie-break input, not as a pre-selected answer.
-- **Attention-as-the-Scarce-Resource** - Director attention is economized the way A11/A12 economize tokens: maximize strategic judgment-load per unit of attention spent. Status-chatter, ceremony, how-to, and any decision the substrate can make deterministically never reach the Director; what reaches the Director is decision-shaped and gate-aligned.
+- **Attention-as-the-Scarce-Resource** - Director attention is economized the way A11/A12 economize tokens: maximize strategic judgment-load per unit of attention spent. Status-chatter, ceremony, how-to, and any decision deterministic code can make never reach the Director; what reaches the Director is decision-shaped and gate-aligned.
 - **Economized, Non-Dark Surfacing** - the system engages the Director at gate-points rather than per-step, and surfaces in precision-engineered form (digest over dump, decision over status). Economy is bounded by a hard floor: the system never goes silently dark on an action or decision the Director is owed - under-surfacing is as much a fault as over-surfacing.
 - **Authority Non-Delegation** - the ratify / approve / decide act is structurally non-delegable. A single Director approval may execute an entire downstream chain (the autopoietic single-approval pattern), but the approval itself is never synthesized on the Director's behalf; agents pre-stage everything around the decision and stop at its threshold.
 
@@ -40,10 +40,10 @@ The deeper principle - treat the irreplaceable human principal's attention as th
 ---
 
 ## Faults
-- **Attention Leak** - the Director is dragged into status, ceremony, or how-to the substrate could have handled; scarce attention is spent on administration rather than strategic judgment.
+- **Attention Leak** - the Director is dragged into status, ceremony, or how-to that code or agents below the Director could have handled; scarce attention is spent on administration rather than strategic judgment.
 - **Preference Overreach** - a revealed-preference lean is used for more than tie-breaking: it reworks the option set, narrows the choices, or pre-empts the decision, biasing the Director toward the profiled answer.
 - **Interface Fossilization** - the intent-elicitation surfaces stop evolving; a clumsy survey, digest, or gate persists as an accepted fixed cost instead of being refined as a tracked defect.
-- **Authority Drift** - final authority erodes off the Director onto agents or the substrate; the ratify/approve/decide act gets synthesized on the Director's behalf and sovereignty silently relocates.
+- **Authority Drift** - final authority erodes off the Director onto agents or the coordination substrate; the ratify/approve/decide act gets synthesized on the Director's behalf and sovereignty silently relocates.
 - **Profile Miscalibration** - the revealed-preference profile diverges from the Director's true preferences (stale, overfit, or simply wrong), and its leans systematically mislead tie-breaks rather than serving them.
 
 ---
@@ -51,7 +51,7 @@ The deeper principle - treat the irreplaceable human principal's attention as th
 ## Success signals
 You'll know the system is nearer the limit as more of these hold, and at it when all do.\
 How an axiom binds a change is stated in [`A0`](README.md):
-1. Director attention is spent on strategic judgment and gate-point decisions, not status, ceremony, or how-to; substrate-decidable matters never reach the Director.
+1. Director attention is spent on strategic judgment and gate-point decisions, not status, ceremony, or how-to; matters deterministic code can decide never reach the Director.
 2. Every decision surfaced to the Director presents the full, unbiased option set; a revealed-preference lean appears only as a labeled tie-break input on a genuine inter-axiom divergence, never as a narrowed or pre-selected choice.
 3. The ratify/approve/decide act is always exercised by the Director; no agent synthesizes the decision on the Director's behalf, even while it scaffolds and pre-stages everything around it.
 4. Intent-elicitation interfaces (surveys, digests, gates) are tracked, versioned artifacts that measurably improve over time; a clumsy interface surfaces as a defect rather than persisting.

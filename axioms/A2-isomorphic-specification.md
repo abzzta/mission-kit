@@ -28,7 +28,7 @@ The manifest is the master - no state changes through imperative drift; declared
 
 ## Rationale
 Manual configuration is a security and fidelity fault: every hand-applied tweak is an unaudited divergence from declared intent.\
-Isomorphism lets an operator act at the speed of thought on high-level intent while automated substrates absorb the imperative toil.\
+Isomorphism lets an operator act at the speed of thought on high-level intent while deterministic automation absorbs the imperative toil.\
 Reconciliation against a single declared truth means 10,000 nodes manage as easily as one.\
 Most importantly, documentation cannot rot relative to execution - there is no second artifact to fall out of sync, because the spec and the system are one object.
 

@@ -70,7 +70,7 @@ This file described them a second time and the copy had already drifted, naming 
 | [D1](domains/D1-delivery-code.md) | delivery-code - the shipped product's codebase | You are changing the codebase of the product the organisation ships |
 | [D2](domains/D2-distribution.md) | distribution - release channels and the rollout plane | You are changing how a release reaches its consumers |
 | [D3](domains/D3-tooling-harness.md) | tooling-harness - the launch/runtime harness | You are changing the harness that launches or hosts the runtime |
-| [D4](domains/D4-authority-governance.md) | authority-governance - the governance/authority substrate | You are changing who holds authority or how governance is enforced |
+| [D4](domains/D4-authority-governance.md) | authority-governance - the governance/authority machinery | You are changing who holds authority or how governance is enforced |
 | [D5](domains/D5-coordination-substrate.md) | coordination-substrate - the WorkGraph/lifecycle/messaging machinery | You are changing the machinery that coordinates work between agents |
 | [D6](domains/D6-knowledge-methodology.md) | knowledge-methodology - the durable knowledge capital | You are changing the durable knowledge the organisation keeps |
 | [D7](domains/D7-product-data.md) | product-data - the data the product holds | You are changing the data a product holds - applying a schema change to it, or repairing, migrating or deleting its records |
@@ -175,7 +175,7 @@ This file described them a second time and the copy had already drifted, naming 
 | [S13](style/S13-plain-ascii-in-markdown.md) | Plain ASCII in markdown - typeable characters only | You are about to type a character you could not produce on a standard keyboard |
 | [S14](style/S14-hydration-triggers-state-a-condition.md) | Hydration triggers state a condition, not a topic | You are adding a catalogue entry, or reviewing one that has never routed anyone |
 | [S15](style/S15-message-to-a-human.md) | A message to a human - point first, one step, explained names, clear picks | You are about to write a message a human will read without the context you have |
-| [S16](style/S16-path-a-path-b-workflow-paths.md) | Path A / Path B - one complete path per substrate in a workflow document | You are authoring a workflow document that supports more than one execution path |
+| [S16](style/S16-path-a-path-b-workflow-paths.md) | Path A / Path B - one complete path per execution environment in a workflow document | You are authoring a workflow document that supports more than one execution path |
 
 ---
 
@@ -196,7 +196,7 @@ This file described them a second time and the copy had already drifted, naming 
 | ID | Title | Status | Hydrate when |
 |---|---|---|---|
 | [K0](skills/README.md) | Skills - executable capability, the stub-and-body split, and composition by edge | active | You are adding or invoking an executable capability, or you need to know why a skill is two files rather than one |
-| [K3](skills/K3-substrate-audit.md) | substrate-audit - code-grounded substrate audit | active | You are auditing a substrate and must ground every claim in its source |
+| [K3](skills/K3-repo-audit.md) | repo-audit - code-grounded repo audit | active | You are auditing a project and must ground every claim in its source |
 | [K4](skills/K4-research-artefacts.md) | research-artefacts - discipline for producing persistent research outputs | active | You are producing a research output that must survive the session that made it |
 | [K5](skills/K5-survey.md) | survey - stakeholder-intent capture before design commitment | active | Direction is still open and you are about to commit to a design |
 | [K6](skills/K6-arc-lifecycle.md) | arc-lifecycle - operate staged work as a sovereign FSM-gated state engine | active | You are operating staged work whose gates must hold rather than be trusted |
@@ -238,6 +238,7 @@ This file described them a second time and the copy had already drifted, naming 
 | [E6](entities/E6-component.md) | component - a system seen as a part of a containing system, with one duty at its altitude | You are deciding what a change can reach, what a part of a system owes its neighbours, or which neighbouring parts count as adjacent |
 | [E7](entities/E7-gate.md) | gate - a point past which work proceeds only if a stated condition is shown to hold, decided by a machine, an independent agent or the director | You are about to say work passed, failed or is waiting at a gate, or to decide who may judge one |
 | [E8](entities/E8-evidence.md) | evidence - something offered to show that a claim holds, which a gate's judge receives and never decides | You are about to record, cite or weigh evidence, or you have met a verdict stored where evidence goes |
+| [E9](entities/E9-substrate.md) | substrate - the coordination substrate, the system that hands out, runs and gates work, and nothing else | You are about to write or read the word substrate, or describe the system that coordinates work between agents |
 
 ---
 
@@ -245,7 +246,7 @@ This file described them a second time and the copy had already drifted, naming 
 
 | ID | Title | Hydrate when |
 |---|---|---|
-| [C0](components/README.md) | Components - sovereign shareable substrates to be used rather than rebuilt | You are about to build a capability that may already exist as a unit you could depend on instead |
+| [C0](components/README.md) | Components - sovereign shareable units to be used rather than rebuilt | You are about to build a capability that may already exist as a unit you could depend on instead |
 | [C1](components/C1-agp.md) | AGP - name-addressed routing between application components | Parts of your application must reach each other and you are about to write the code that connects them |
 
 ---

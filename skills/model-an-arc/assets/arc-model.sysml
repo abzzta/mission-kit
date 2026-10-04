@@ -32,7 +32,7 @@ package ArcModel {
 		part rungs : Rung[1..*];              // an arc OWNS its rungs (composition)
 		ref climbs : Summit;                  // the summit this arc climbs
 	}
-	part def BuildsOn { ref upstream : Arc; ref downstream : Arc; }   // rests on shipped+banked substrate
+	part def BuildsOn { ref upstream : Arc; ref downstream : Arc; }   // rests on shipped+banked work
 	part def ReCashes { ref reviver : Arc;  ref dormant : Rung; }     // revives a parked concept elsewhere
 
 	// ── invariants (model-a-constraint): the rules that keep an arc honest ──

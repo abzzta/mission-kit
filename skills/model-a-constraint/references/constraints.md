@@ -13,7 +13,7 @@ had not yet shown: **asserting a reusable constraint on a part's attributes**, a
 
 ## The one distinction that matters: a constraint is a CHECKABLE SPEC, not prose intent
 
-This is the spec/test substrate in miniature. Conflating these three is the classic mistake:
+This is the spec/test split in miniature. Conflating these three is the classic mistake:
 
 - **A constraint** — `constraint def Positive { in x : Integer; x > 0 }` — is a **decidable boolean over
   data**. Given values it is true or false. It is composable (assert two atoms into one rule) and reusable

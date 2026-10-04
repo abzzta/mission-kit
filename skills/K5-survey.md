@@ -108,7 +108,7 @@ Skip the survey when:
 
 ## Tooling
 
-If shipping an executable instance of this skill, expose every substrate-specific binding as a configuration seam rather than hardcoding it:
+If shipping an executable instance of this skill, expose every host-specific binding as a configuration seam rather than hardcoding it:
 
 - **Work-item source** - accept the item text from a file or stdin; do
   not couple to any one tracker or fetch tool.

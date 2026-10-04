@@ -29,7 +29,7 @@ An **arc-lifecycle** manages staged work as a **sovereign state engine**:
 a machine store of summits, arcs, and rungs that an operator — human or
 agent — mutates through a small set of **verbs**, never by hand-editing
 prose. It is NOT a document, NOT a kanban board, and NOT a planning
-template. It is the smallest substrate that makes a long-running,
+template. It is the smallest structure that makes a long-running,
 deferrable, interdependent body of work *machine-operable* and
 *audit-honest*.
 
@@ -145,8 +145,8 @@ Routine implementation difficulty, red CI, verifier FAIL, rate limiting, and rev
 ## Where this sits — operating vs modelling an arc
 
 An arc is a **specialist composed model**: an FSM (the lifecycle) + a dependency
-DAG (`dependsOn`) + invariants (anti-amnesia, banked-substrate) + classification
-axes (payoff, tier). Two facets, two skills, two substrates:
+DAG (`dependsOn`) + invariants (anti-amnesia, buildsOn-banked) + classification
+axes (payoff, tier). Two facets, two skills, two representations:
 
 - **Operate (this skill).** Run a *live instance* through the verb API — the
   runtime engine, not the model text. This is what you need to drive real work.

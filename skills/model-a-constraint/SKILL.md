@@ -56,7 +56,7 @@ part def Subject {
 
 - **The one distinction that matters: a constraint is a CHECKABLE boolean SPEC over data - not prose
   intent (a requirement) and not a doc/pitfall.** If you can't write it as a boolean over named
-  parameters, it is a requirement, not a constraint. This is the spec/test substrate in miniature.
+  parameters, it is a requirement, not a constraint. This is the spec/test split in miniature.
 - **The gate PARSES constraints; it does NOT evaluate them.** `syntaxErrors==0` says it is well-formed
   SysML, not that it holds - a constraint here is a *spec*, exactly like every `well-formedness.sysml`.
 - **Equality is `==`, never `=`** - `x = 0` in a body **parse-FAILS** (`=` is binding, not comparison).

@@ -60,7 +60,7 @@ The model is **axes + composition** - there is no separate overlay layer, and no
   See `roles/`.
 - **DOMAINS (N=7)** - subject-surfaces (what a node's evidence resolves
   against). Orthogonality is **bimodal**: `free` for object-level build/ship/
-  assurance work, `pinned` for meta/substrate work. See `domains/`.
+  assurance work, `pinned` for meta work. See `domains/`.
 - **WORK-TYPES (K~=26)** - verb-families carrying the *mode* + *shape* of work.
   This directory.
 

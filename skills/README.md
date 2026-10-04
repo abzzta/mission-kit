@@ -71,7 +71,7 @@ A skill whose steps a script could take should be that script, per [`A11`](../ax
 | ID | Title | Status | Hydrate when |
 |---|---|---|---|
 | [K0](README.md) | Skills - executable capability, the stub-and-body split, and composition by edge | active | You are adding or invoking an executable capability, or you need to know why a skill is two files rather than one |
-| [K3](K3-substrate-audit.md) | substrate-audit - code-grounded substrate audit | active | You are auditing a substrate and must ground every claim in its source |
+| [K3](K3-repo-audit.md) | repo-audit - code-grounded repo audit | active | You are auditing a project and must ground every claim in its source |
 | [K4](K4-research-artefacts.md) | research-artefacts - discipline for producing persistent research outputs | active | You are producing a research output that must survive the session that made it |
 | [K5](K5-survey.md) | survey - stakeholder-intent capture before design commitment | active | Direction is still open and you are about to commit to a design |
 | [K6](K6-arc-lifecycle.md) | arc-lifecycle - operate staged work as a sovereign FSM-gated state engine | active | You are operating staged work whose gates must hold rather than be trusted |

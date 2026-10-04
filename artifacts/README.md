@@ -59,7 +59,7 @@ Only a bottom-up pass can falsify the loop's own completeness, which is why `Cov
 `AR1`'s justification chain had named `north star` as a layer the whole time, with nothing owning it.
 
 The frame is the controller pattern applied to an engineering programme: observe current, diff against target, derive the work, reconcile.\
-It is deliberately isomorphic to the substrate it governs, which is [`A2`](../axioms/A2-isomorphic-specification.md) turned on the organisation itself.
+It is deliberately isomorphic to what it governs - the organisation itself - which is [`A2`](../axioms/A2-isomorphic-specification.md) turned inward.
 
 **No project observed runs the whole loop.**\
 Two audited programmes each held one half and left the other homeless, which is the evidence that the loop had never been codified rather than that either team was careless.\

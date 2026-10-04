@@ -15,7 +15,7 @@ Domains are **subject-surfaces**: a domain names *what a node's evidence resolve
 The work-*mode* is carried by the work-type, never by the domain - a mode-domain (e.g. `verification`) would double-count with the mode-encoding work-type (`verify-gate` *is* verification) and break orthogonality.
 
 A domain answers one question about a unit of work: *where does its evidence land?*\
-It is what makes two pieces of work comparable - a verification of the release channel and a verification of the governance substrate are the same kind of work on different surfaces, and the domain is what tells them apart.
+It is what makes two pieces of work comparable - a verification of the release channel and a verification of the governance machinery are the same kind of work on different surfaces, and the domain is what tells them apart.
 
 ---
 
@@ -63,10 +63,10 @@ Orthogonality of the domain axis is **partial**, and the taxonomy says so:
 - **free** - object-level build/ship/assurance work *acts on* a surface, so the
   domain is a free, discriminating choice (`verifier x audit-surface x
   distribution` != `... x authority-governance`, a role x work-type x domain triple). D1, D2, D3 and D7 are object-level surfaces, reached this way.
-- **pinned** - meta/substrate work whose *type names its own surface*: the
+- **pinned** - meta work whose *type names its own surface*: the
   domain is a constant function of the work-type (N=1), so the generator does
-  not vary it. A type that names its own surface is substrate work, so pinned
-  work lands on the substrate domains - D4, D5 and D6. Which work-types are pinned, and to which domain, is declared on
+  not vary it. A type that names its own surface is meta work, so pinned
+  work lands on the organisation's own domains - D4, D5 and D6. Which work-types are pinned, and to which domain, is declared on
   each work-type; each domain entry shows a generated view of it.
 
 D4/D5/D6 remain first-class domains (not deletions) because they are still valid **free** targets - every one of them can be audited as a surface in its own right, and built, fixed, retired and shipped, because each is an engineered product with source of its own.\
@@ -140,7 +140,7 @@ Population faults - visible across the set and invisible to any one domain.
 | [D1](D1-delivery-code.md) | delivery-code - the shipped product's codebase | You are changing the codebase of the product the organisation ships |
 | [D2](D2-distribution.md) | distribution - release channels and the rollout plane | You are changing how a release reaches its consumers |
 | [D3](D3-tooling-harness.md) | tooling-harness - the launch/runtime harness | You are changing the harness that launches or hosts the runtime |
-| [D4](D4-authority-governance.md) | authority-governance - the governance/authority substrate | You are changing who holds authority or how governance is enforced |
+| [D4](D4-authority-governance.md) | authority-governance - the governance/authority machinery | You are changing who holds authority or how governance is enforced |
 | [D5](D5-coordination-substrate.md) | coordination-substrate - the WorkGraph/lifecycle/messaging machinery | You are changing the machinery that coordinates work between agents |
 | [D6](D6-knowledge-methodology.md) | knowledge-methodology - the durable knowledge capital | You are changing the durable knowledge the organisation keeps |
 | [D7](D7-product-data.md) | product-data - the data the product holds | You are changing the data a product holds - applying a schema change to it, or repairing, migrating or deleting its records |

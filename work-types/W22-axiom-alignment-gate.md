@@ -49,5 +49,5 @@ Falsifier: speculative or laundered axiom citations - a citation that does not s
 ## Axiom alignment
 
 - **A7/A8** - this is an assurance act: it holds the design's own axiom claims
-  to the same falsifiable evidence bar the rest of the substrate is held to, so
+  to the same falsifiable evidence bar the rest of the work is held to, so
   a decorative citation cannot be laundered into ratification.

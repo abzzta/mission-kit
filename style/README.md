@@ -31,7 +31,7 @@ The claim is set by what the set is for, not by what it holds today; a medium wi
 | | line | how prose is broken into lines | [`S6`](S6-one-sentence-per-line.md) one sentence per line |
 | | code block | what goes in a block, and how it is introduced and commented | [`S2`](S2-runnable-commands-in-code-blocks.md) runnable steps in blocks, [`S7`](S7-alternative-paths-separate-blocks.md) alternative paths in separate blocks, [`S8`](S8-code-block-comments-not-prose.md) comments say what the line does, [`S12`](S12-code-block-introducer-own-paragraph.md) introducer in its own paragraph |
 | | section | how a long document is divided | [`S10`](S10-horizontal-rule-between-h2-sections.md) horizontal rule between top-level sections |
-| | document type | what one kind of document must carry or put first | [`S1`](S1-prereqs-explicit-cluster-agnostic.md) workflow prerequisites, [`S16`](S16-path-a-path-b-workflow-paths.md) one complete path per substrate, [`S4`](S4-four-journey-readme.md) four-journey README, [`S9`](S9-action-first-readme-structure.md) action-first README, [`S14`](S14-hydration-triggers-state-a-condition.md) catalogue hydration triggers |
+| | document type | what one kind of document must carry or put first | [`S1`](S1-prereqs-explicit-cluster-agnostic.md) workflow prerequisites, [`S16`](S16-path-a-path-b-workflow-paths.md) one complete path per execution environment, [`S4`](S4-four-journey-readme.md) four-journey README, [`S9`](S9-action-first-readme-structure.md) action-first README, [`S14`](S14-hydration-triggers-state-a-condition.md) catalogue hydration triggers |
 | | between documents | which content goes in which document | [`S3`](S3-producer-consumer-doc-split.md) producer and consumer docs split |
 | **Message to a human** | whole message | what comes first, how much one message carries, how names and choices are put | [`S15`](S15-message-to-a-human.md) a message to a human |
 | **Commit message** | whole message | how a commit says what problem it solves | **none - gap** |
@@ -79,7 +79,7 @@ Rules at different grains apply to the same artifact at once and do not override
 Within a grain, members divide one surface rather than compete for it.
 
 - **The code-block rules** each hold one decision: `S2` decides that a step goes in a block, `S7` that alternatives get separate blocks, `S12` how a block is introduced, and `S8` what its comments say.
-- **Alternatives span two grains:** `S16` decides that a workflow document gives each substrate one complete path, and `S7` renders those paths as separate blocks.
+- **Alternatives span two grains:** `S16` decides that a workflow document gives each execution environment one complete path, and `S7` renders those paths as separate blocks.
 - **The README rules nest.** `S9` orders the top of a README, and its action-paths slot is where `S4`'s four journeys go.
 - **`S15` composes across layers**, not within this one: with [`M10`](../methods/M10-guided-dialogue.md) it forms the explain set, [`ST1`](../sets/ST1-explain.md).
 
@@ -140,5 +140,5 @@ It falls short further where three media it claims - commit messages, code names
 | [S13](S13-plain-ascii-in-markdown.md) | Plain ASCII in markdown - typeable characters only | `tools/s13-plain-ascii.sh` | You are about to type a character you could not produce on a standard keyboard |
 | [S14](S14-hydration-triggers-state-a-condition.md) | Hydration triggers state a condition, not a topic | `tools/s14-hydration-triggers.sh` | You are adding a catalogue entry, or reviewing one that has never routed anyone |
 | [S15](S15-message-to-a-human.md) | A message to a human - point first, one step, explained names, clear picks | reading | You are about to write a message a human will read without the context you have |
-| [S16](S16-path-a-path-b-workflow-paths.md) | Path A / Path B - one complete path per substrate in a workflow document | reading | You are authoring a workflow document that supports more than one execution path |
+| [S16](S16-path-a-path-b-workflow-paths.md) | Path A / Path B - one complete path per execution environment in a workflow document | reading | You are authoring a workflow document that supports more than one execution path |
 <!-- END GENERATED -->

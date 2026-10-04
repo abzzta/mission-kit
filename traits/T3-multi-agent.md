@@ -12,7 +12,7 @@ related: [T0]
 
 ## Definition
 
-A system is **multi-agent** when two or more independent actors - agents, people, or both - coordinate over shared substrate, so that one actor's output becomes another's input.
+A system is **multi-agent** when two or more independent actors - agents, people, or both - coordinate over shared state, so that one actor's output becomes another's input.
 
 ---
 

@@ -55,7 +55,7 @@ The constraint set is authored once in the cross-axis reference and never forked
 | `P` | [`patterns/`](patterns/) | Recurring solutions. |
 | `K` | [`skills/`](skills/) | Executable operator capability. |
 | `E` | [`entities/`](entities/README.md) | What a thing is. Precise definitions, never mechanism. |
-| `C` | [`components/`](components/README.md) | Sovereign shareable substrates to be used rather than rebuilt. |
+| `C` | [`components/`](components/README.md) | Sovereign shareable units to be used rather than rebuilt. |
 | `AR` | [`artifacts/`](artifacts/README.md) | Engineering document types, each with an acceptance falsifier. |
 | `T` | [`traits/`](traits/README.md) | Characteristics of the system being worked on, which decide which axioms bind it. |
 | - | [`bundles/`](bundles/README.md) | Skills composed into operator-facing roles, by declared edge rather than by name. |

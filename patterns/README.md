@@ -30,7 +30,7 @@ The claim is set by what the set is for; a force with no pattern is a gap, not a
 | **Divergence** | two things that must agree are maintained apart and drift | [`P3`](P3-twin-parity-by-generation.md) twin-parity by generation, [`P5`](P5-verbs-as-data-surface.md) verbs-as-data surface |
 | **Duplication against premature abstraction** | a mechanism two consumers need is copied, or abstracted before a second consumer exists | [`P4`](P4-neutral-core-tenant-composition.md) neutral core and tenant composition |
 | **Ordering across a boundary** | one component runs before another it depends on is ready | [`P2`](P2-node-label-gate-cross-component-contracts.md) node-label gate |
-| **Variation in environment** | one system must run on more than one substrate | **none - gap** |
+| **Variation in environment** | one system must run in more than one execution environment | **none - gap** |
 | **Failure and recovery** | a partial failure leaves work half-done, or a retry does it twice | **none - gap** |
 | **Interface evolution** | an interface changes under consumers that adopted an earlier form | **none - gap** |
 | **Concurrent change** | two writers act on shared state at once | **none - gap** |

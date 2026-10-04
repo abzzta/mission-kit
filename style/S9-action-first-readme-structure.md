@@ -81,7 +81,7 @@ Resist the urge to front-load context.
 foo-tool is a containerised utility that solves the long-standing
 problem of bar-X by combining baz with qux, originally developed in
 response to incident-Y on hardware-class-Z. Built on framework-A,
-deployable on substrate-B, integrates with system-C through interface-D.
+deployable on platform-B, integrates with system-C through interface-D.
 The patches add E, F, G, and H.
 
 Status: in production. Tested on platforms P, Q, R.

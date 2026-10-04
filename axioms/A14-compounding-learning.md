@@ -13,7 +13,7 @@ related: [A4, A10, A11, A12, A13]
 ## Mandate
 
 The organization engineers the **path of greatest learning**, not the shortest path.\
-Learning - knowledge, insights, hardened substrate, sharpened design - is **invested capital**: captured durably at the moment of discovery, compounding into greater future velocity and returns.\
+Learning - knowledge, insights, hardened tooling, sharpened design - is **invested capital**: captured durably at the moment of discovery, compounding into greater future velocity and returns.\
 Over the long horizon, the learning path substantially surpasses shortest-path execution.\
 Two corollaries are always in force: an uncaptured insight is a wasted detour, and a friction mined to root cause never recurs.
 
@@ -52,7 +52,7 @@ Naming the economics makes the trade auditable: a day of mining is visible as in
 You'll know the system is nearer the limit as more of these hold, and at it when all do.\
 How an axiom binds a change is stated in [`A0`](README.md):
 1. Friction encountered on any path is mined to root cause or *explicitly* deferred with a filed marker - zero silent workarounds.
-2. Insights land in durable queryable state at discovery; a cold-start agent can recall every banked lesson from substrate alone, with zero reliance on session memory.
+2. Insights land in durable queryable state at discovery; a cold-start agent can recall every banked lesson from durable state alone, with zero reliance on session memory.
 3. Mined friction does not recur; recurrence of a captured lesson's failure mode is itself a fault, filed and mined.
 4. Learning investments show traceable payback - deleted future friction and avoided rework are recorded when observed.
 5. Attention metrics distinguish toil from learning: toil trends to zero; learning-attention is structurally protected and never appears as a cost to minimize.

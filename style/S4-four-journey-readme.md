@@ -46,7 +46,7 @@ If install has a doc but remove doesn't, the README itself exposes that gap.
 **Bad:**
 
 > 491-line README that opens with a system architecture diagram,
-> then has installation steps inline (covering both substrates with
+> then has installation steps inline (covering both execution environments with
 > nested conditionals), then has usage examples, then has
 > troubleshooting, then has uninstall buried near the end.
 

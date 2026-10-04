@@ -25,7 +25,7 @@ The ground rules:
    a flag to make it work, that's a doc bug - record it.
 2. **Halt on the first action that isn't in the doc.** That gap is
    the finding. Fix the doc, then resume.
-3. **Run on the real substrate**, not a synthetic stand-in. Doc
+3. **Run in the real environment**, not a synthetic stand-in. Doc
    bugs about authentication, ordering, prereqs, and state
    asymmetry only surface against the real thing.
 4. Reading-pass review precedes this (typos, structure). Execution

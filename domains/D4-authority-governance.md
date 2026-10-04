@@ -1,10 +1,10 @@
 ---
 id: D4
 category: domain
-title: authority-governance - the governance/authority substrate
+title: authority-governance - the governance/authority machinery
 status: active
 hydrate-when: You are changing who holds authority or how governance is enforced
-subjectSurface: the governance/authority substrate as subject - the source of the machinery that enforces it, and SEAL, CODEOWNERS, decisions, class-grants, axioms-as-law
+subjectSurface: the governance/authority machinery as subject - the source of the machinery that enforces it, and SEAL, CODEOWNERS, decisions, class-grants, axioms-as-law
 evidenceResolvesAgainst: the governance machinery's source files, PRs, commits and CI; Decision/Confirmation/Signal entities, class-grants, CODEOWNERS approvals, axiom-alignment records
 related: [D0]
 ---

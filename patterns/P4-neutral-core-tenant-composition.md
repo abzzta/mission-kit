@@ -79,7 +79,7 @@ The second consumer is what reveals the *actual* shared shape - which is almost 
 
 - A second domain is about to grow a mechanism the first already
   has (state machine, traversal, transactional store, cache/index).
-- Designing a substrate intended for multiple consumers - start the
+- Designing a component intended for multiple consumers - start the
   core thin + neutral and let it grow by promotion, rather than
   speccing a broad framework up front.
 - Reviewing a "shared" library that has accumulated one consumer's
