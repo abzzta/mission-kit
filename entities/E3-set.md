@@ -53,7 +53,8 @@ They are not interchangeable for the same reason a layer and a category are not:
 **The charter is resolvable from the member, without a lookup.**\
 A knowledge layer's charter is the entry whose id is that set's prefix followed by zero, held at `<directory>/README.md`.\
 So an entry read in isolation names its set in `category`, and the rules that govern its population are one hop away rather than somewhere the reader must already know about.\
-That regularity is load-bearing rather than tidy: it is what lets a member be self-describing without every member restating what its set owns.
+That regularity is load-bearing rather than tidy: it is what lets a member be self-describing without every member restating what its set owns.\
+It is an address, not knowledge: a member need not know its siblings or how its set is governed, only reach the charter that aggregates both ([`E4`](E4-charter.md)).
 
 **A member's row in a parent's index is not a member.**\
 When a set contains a set, the child appears in the parent's index carrying a purpose and a description, indistinguishable at that altitude from an entry.\
@@ -116,4 +117,4 @@ Answering *is anything missing* requires a denominator - the end state and scope
 
 The second cost compounds.\
 Where a set's naming and placement go unstated, every adopter chooses and every choice is defensible, so the population fragments while each member passes review.\
-A member read in isolation can then state what it is and not what it is called or what governs it - which is exactly the failure a portable corpus cannot afford, because isolation is the normal reading condition rather than the degraded one.
+A member read in isolation can then state what it is and not what it is called or where its governance is reached - which is exactly the failure a portable corpus cannot afford, because isolation is the normal reading condition rather than the degraded one.

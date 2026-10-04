@@ -24,12 +24,26 @@ A set with no charter is a directory listing: it can be checked for validity and
 **A charter is an asymptote for its set.**\
 Like an axiom, or a programme's [vision](../artifacts/AR6-vision.md), it describes the ideal end state of the set - a direction the population approaches and never fully reaches - and the population is measured against it.\
 It is never cut to fit what the set holds today, and it is written independently of the current population: a charter describes the ideal, not its members, which appear only in the generated index.\
-What the charter states is the end state, the scope the set claims, the growth policy by which it grows and is balanced, and the management that holds it there: what enters and where the rest goes, how the set goes wrong, and how the charter itself is changed.
+**A charter has two halves: a vision applied to its set, and the operating instructions for it.**\
+The **vision half** is the set's end state, written with the devices a [vision](../artifacts/AR6-vision.md) requires, applied to the set:
+
+- **what the set is, and what it is not;**
+- **a north star** - one statement short enough to quote whole, defining any term in it that could be read two ways;
+- **what would count as succeeding**, as dimensions rather than one score;
+- **the authority** - who holds the vision and may change it, which for every charter in this corpus is the director;
+- **what the vision does not authorise** - citing the end state admits no member and licenses no change of direction; only the operating half's tests admit.
+
+The **operating half** says how the set is run: what it covers and how it grows, what enters and where the rest goes, how members relate, how it goes wrong, and how it is analysed and changed.\
+The general procedures are methods - [`M12`](../methods/M12-investigate-a-set.md) to investigate a set, [`M11`](../methods/M11-change-a-charter.md) to change a charter - and a charter cites them and adds only what is specific to its set.
+
+**Members need not know their set.**\
+A member need not know its siblings, or how the population is governed; the charter is the one place that aggregates it.\
+Where a member names its set - a layer member's category - that is an address that reaches the charter, not knowledge of how the set is governed.
 
 **Partitions and gaps belong to investigations, not to the charter.**\
 A territory can be partitioned in more than one defensible way, and the dimensions a population is missing cannot be listed before someone has studied it and formed a hypothesis about how it could be cut.\
 So the charter states no cells and no gaps.\
-An investigation - a dated analysis of the population against the end state, scope and growth policy - proposes a partition, places the members in it, and finds the gaps; a later investigation may cut the set differently without the charter changing.\
+An investigation ([`M12`](../methods/M12-investigate-a-set.md)) - a dated analysis of the population against the vision, scope and growth policy - proposes a partition, places the members in it, and finds the gaps; a later investigation may cut the set differently without the charter changing.\
 Each gap an investigation finds becomes a backlog row with a revival trigger ([`AR5`](../artifacts/AR5-backlog.md)), and the board ([`AR3`](../artifacts/AR3-board.md)) weighs open rows for the director to select; a charter does not rank its own gaps.\
 The charter changes only when an investigation shows its end state, scope or growth policy is itself wrong.\
 The dependency runs one way: an investigation cites the charter it measures against, and a charter neither links to its investigations nor records that it is being investigated, because the ideal does not depend on any measurement of it.\
@@ -53,8 +67,9 @@ If no member could, it is a set property, and the remaining question is only whe
 
 | Concern | The question | Why a member cannot answer it | Location |
 |---|---|---|---|
-| **Purpose** | What end state does this set approach, and why does it exist? The end state comes first, because the scope, the growth policy and every judgement about the population are measured against it. | A member knows why *it* exists, never what the collection is heading towards | heading `Purpose` |
+| **Vision** | What end state does this set approach, and why does it exist? Written with the vision devices above, first, because the scope, the growth policy and every judgement about the population are measured against it. | A member knows why *it* exists, never what the collection is heading towards | heading `Vision` |
 | **Territory** | What does this set claim to cover, and by what growth policy does it grow? | Scope and growth are properties of the population; a member cannot see its siblings | heading `Territory` |
+| **Operation** | How is this set analysed, balanced and changed? It cites the methods and states what is specific to this set. | Analysing and changing a population is done across it, never from inside one member | heading `Operation` |
 | **Boundaries** | What belongs here, what does not, and where does the excluded thing go instead? | An exclusion decides a case no member holds | anywhere |
 | **Composition** | How do members relate to one another? | A relation has two ends, and a member holds one | anywhere |
 | **Faults** | What does an unhealthy population look like, as against a merely valid one? | Every member can be valid while the set is wrong | heading `Faults` |
@@ -63,9 +78,10 @@ If no member could, it is a set property, and the remaining question is only whe
 **Where the location is fixed and where it is free.**\
 The rule is derived from what thirteen charters actually do rather than chosen in advance: **where every set asks the same question and answers it in the same form, the heading is fixed; where the form of the answer varies by set, the answer is required and its heading is free.**
 
-Purpose, Territory, Faults and Index are the same question in every set and are answered in the same form, so each takes a fixed heading.\
+Vision, Territory, Operation, Faults and Index are the same question in every set and are answered in the same form, so each takes a fixed heading.\
 A fixed heading makes the answer addressable - it can be linked, checked by a script, and seen by a reader skimming the spine - which is the corpus's own reachability property applied to the charter.\
-Purpose is the clearest case: every charter answers it, nearly always in untitled opening paragraphs, and an untitled answer is invisible to everything except a full read.
+The vision is the clearest case: every charter answered why its set exists, nearly always in untitled opening paragraphs, and an untitled answer is invisible to everything except a full read; the heading was `Purpose` until the vision ruling.\
+The fixed headings are declared in the entry-body contract, [`SC6`](../schemas/SC6-entry-body.md), and checked by `tools/check-entry-body.sh`; this entry states what they mean.
 
 Boundaries and Composition vary in form, and the form carries the content.\
 Composition has been answered as a loop, as declared edges, as generative axes, as containment, and as orthogonality with no apex member; forcing one heading would flatten five different relations into one shape.\
@@ -148,38 +164,16 @@ This entry defines the document that states it.
 
 ## Changing a charter
 
-A charter is changed to make it the best version of itself in context, and its existing words may be improved where improving them advances that.\
-What is preserved is meaning, and the check on meaning is as strict as a check on words would be: **every changed or removed sentence is accounted for.**
-
-| Change | Permitted | Evidence the change carries |
-|---|---|---|
-| **move** | yes | none |
-| **re-aim** | when the end state, scope or growth policy is shown wrong, typically by an investigation | the evidence, and a director ratification |
-| **reword** | when it materially improves clarity or precision | old and new side by side, and the reason |
-| **merge** | when two passages state one thing | both originals, and why one suffices |
-| **correct** | when an error or contradiction is exposed | the error cited, and the old text kept in the record |
-| **delete** | only when the claim is wrong, unpaid, or held elsewhere | the claim, and which of the three applies |
-
-Every edit is weighed for cost against quality.\
-Changing settled text has a real cost - it invalidates a reader's memory and puts reasoning at risk - so an edit is made when it advances the document, and a marginal one is not made.\
-An added passage is held to the same test as any growth: it answers a question the charter could not, and improves what a reader can do.
-
-A change that would alter what a reader decides is tested before it is ratified, by the procedure in [`M2`](../methods/M2-test-drive-docs-by-execution.md), against the charter's probes and with the previous version as the comparison.\
-The author's own reading of old against new is not that test.\
-The previous version stays recoverable at its commit, so the record of what a charter said is never lost where the charter no longer says it.
-
-**An earlier rule preserved every original sentence character for character, and was withdrawn.**\
-It proved nothing was lost and capped every revision at the original plus an appendix.\
-Its decisive failure was a sentence it forbade fixing: the sentence was ambiguous, the rule allowed only flagging it, and the flag recorded a contradiction that did not exist.\
-Fixing the sentence removed both the ambiguity and the paragraph that had been defending a false conflict, and the charter got shorter.
+A charter is changed by [`M11`](../methods/M11-change-a-charter.md): every changed sentence is accounted for, a change that would alter what a reader decides is tested before it is ratified, and the director ratifies.\
+The procedure moved there from this entry, which states what a charter is and no longer how to change one.
 
 ---
 
 ## Boundaries
 
 It is **not a template.**\
-Four concerns take a fixed heading because every set asks them in the same form; the rest of a charter is organised as its set is organised.\
-Two conformant charters share those four headings and may share nothing else.
+Five concerns take a fixed heading because every set asks them in the same form; the rest of a charter is organised as its set is organised.\
+Two conformant charters share those five headings and may share nothing else.
 
 It is **not the enforcement.**\
 Where a concern is machine-checkable, the machine declaration holds it and the charter reads it.\
@@ -236,7 +230,7 @@ It found the heading count wrong in both directions.\
 Purpose was answered in every charter and titled in two, so a heading checker would have reported it absent eleven times.\
 Boundaries was answered in eleven, mostly as exclusions under other headings, which the earlier standard counted as missing.\
 And the two concerns genuinely absent - territory in most charters, composition in several - were ones the earlier standard either omitted or could not detect.\
-The split between fixed and free headings is the correction: it keeps the four answers that are always the same form checkable by a script, and refuses to flatten the two whose form is the content.
+The split between fixed and free headings is the correction: it keeps the four answers that are always the same form checkable by a script - five since the vision ruling added Operation - and refuses to flatten the two whose form is the content.
 
 A trial conversion of one charter then tested the standard against a real population before any other charter was touched.\
 It preserved every line of the original and was judged improved, because its territory detected a real gap - no procedure for handing work over - that had gone unrecorded.\
