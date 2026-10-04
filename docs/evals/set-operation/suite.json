@@ -1,0 +1,38 @@
+{
+  "id": "set-operation",
+  "mode": "corpus",
+  "group": "set-operation",
+  "source": "Director ruling: operating the charter (M11) is distinct from operating the set it governs (M12 analyse, M13 change membership). Keyed before M13 or any charter changes. Key reviewed before any change: O3 repairs live citations only (RU2); O4's M11 condition widened to the charter itself; O2 completed; O5 added for modify; M11's capped-set line and E4 to be amended in the landing.",
+  "probes": [
+    {
+      "id": "O1",
+      "question": "What is the difference between operating a charter and operating the set it governs, and which methods cover each?",
+      "key": "Operating the charter changes its text - vision, scope, growth policy, rules - by M11. Operating the set changes its population: analysing it by M12 and changing its membership (admit, modify, retire, rebalance) by M13.",
+      "rubric": "2 for the distinction with M11 for the charter and M12/M13 for the set. 1 for the distinction or the methods alone. 0 otherwise."
+    },
+    {
+      "id": "O2",
+      "question": "You want to add a new entry to a layer. What must you do?",
+      "key": "Follow M13's admit: check the candidate against the set's scope, admission tests and growth policy (a candidate that breaks the policy goes to the backlog and board instead); author it from a peer exemplar (PC1); mint a new id never issued before; give it the frontmatter SC1 requires, a condition-style hydration trigger, and the body sections its category declares, if any (SC6); regenerate the index; pass the gate.",
+      "rubric": "2 for M13 with at least four of the steps, including the growth-policy check. 1 for some steps without M13, or M13 alone. 0 otherwise."
+    },
+    {
+      "id": "O3",
+      "question": "An entry is no longer needed. How is it retired?",
+      "key": "By M13's retire: delete it with no stub, record where its duty went, list its id in the successor's supersedes if there is one, repair live citations (frozen records keep the old id as history), regenerate the index and pass the gate; its id is retired for good - check-id-reuse holds that from history.",
+      "rubric": "2 for M13 with deletion without stub, disposition, live citations repaired (frozen left), and the id never reused. 1 for two or three of these. 0 for rewriting frozen records, or otherwise."
+    },
+    {
+      "id": "O4",
+      "question": "An investigation finds two members of a set overlap. Who decides what to do, and how is it carried out?",
+      "key": "The finding becomes a backlog row; the board weighs splitting, merging or replacing, and the director selects; M13's rebalance carries it out. The charter does not change unless the investigation shows the charter itself wrong - its scope, admission tests or growth policy - and then by M11.",
+      "rubric": "2 for backlog/board/director then M13, with M11 only if the charter itself is wrong. 1 for part. 0 otherwise."
+    },
+    {
+      "id": "O5",
+      "question": "A member's text needs a substantive change, and separately another member is being replaced by a new one in a different layer. How is each handled?",
+      "key": "Modify in place keeps the id: the member is edited, tested by M2 if it changes what a reader decides, the index regenerated and the gate passed. A replacement or a move to another layer takes a new id, leaves no stub, and the successor lists the old id in supersedes; the old id is retired for good.",
+      "rubric": "2 for keep-id in place versus new id with supersedes and no stub. 1 for either half. 0 otherwise."
+    }
+  ]
+}
