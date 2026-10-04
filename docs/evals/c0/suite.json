@@ -1,0 +1,50 @@
+{
+  "id": "c0",
+  "mode": "corpus",
+  "group": "c0",
+  "source": "C0 conversion to E4, derived from C1, docs/ARCHITECTURE.md, tools/, P0, K0 and the current charter. Q1-Q3 are controls the current C0 answers. Key reviewed by a fresh agent before any reader ran; Q4 (exact count, territory reason, wider fallback), Q6 wording and Q1 rubric corrected.",
+  "probes": [
+    {
+      "id": "Q1",
+      "question": "A component almost fits a new need but lacks one capability. What does the corpus say to do?",
+      "key": "Adjust it (if internal), so every consumer gets the change - not fork it; if it has grown a second duty, split it into two sovereign components.",
+      "rubric": "2 for adjust, not fork (adapt at our boundary if external; split only if it has grown a second duty). 1 for adjust or not-fork alone. 0 otherwise."
+    },
+    {
+      "id": "Q2",
+      "question": "An external dependency is registered as a component. What must its entry carry, and why?",
+      "key": "An internalisation-trigger: the observable condition under which it is replaced by a sovereign internal one, so a dependency cannot become permanent by inattention.",
+      "rubric": "2 for the internalisation trigger with its purpose. 1 for the trigger alone. 0 otherwise."
+    },
+    {
+      "id": "Q3",
+      "question": "A component has eight internal parts. Does it violate the one-duty rule?",
+      "key": "No: duty is singular at the altitude where the component appears as a box in an architecture; the 'and' test applies to the box, not the implementation beneath it.",
+      "rubric": "2 for no, with the altitude reasoning. 1 for no alone. 0 otherwise."
+    },
+    {
+      "id": "Q4",
+      "question": "How complete is the components registry against what it claims to cover, and has any concrete gap been found?",
+      "key": "The territory - the duty space of the systems the organisation builds - is not yet measurable across architectures: the corpus holds one architecture. Checked gaps exist anyway: frontmatter is read by nine tools and three schema tests, each with its own code, already diverging, needed by two anchored-core boxes (tools and schemas) with no shared component; and retry/idempotency primitives that A11 says should exist once have no component (also recorded by the patterns charter).",
+      "rubric": "2 for not yet measurable plus one checked gap (frontmatter reading across tools and schemas, retry/idempotency, or another real one). 1 for one of the two. 0 for claiming coverage can be stated."
+    },
+    {
+      "id": "Q5",
+      "question": "How is a component told apart from a pattern, a skill and a bundle?",
+      "key": "A component is a unit you depend on; a pattern is a shape you reproduce in your own code; a skill is a capability an agent invokes; a bundle composes skills into an operator role.",
+      "rubric": "2 for all three distinctions. 1 for two. 0 otherwise."
+    },
+    {
+      "id": "Q6",
+      "question": "Where does the obligation to search the components registry before building something new live, and is it met?",
+      "key": "It is guidance on how work is done, not the registry's: the charter routes it to methods as a procedure; no method, rule or practice covers it yet, so it is unmet. Placing it as a rule or practice by M0's test is acceptable if argued.",
+      "rubric": "2 for outside the registry (methods, or rule/practice argued) and not yet met. 1 for either part. 0 otherwise."
+    },
+    {
+      "id": "Q7",
+      "question": "What would an unhealthy population of components look like?",
+      "key": "Population faults, e.g.: one duty drawn twice under two contracts; a fork kept as a variant; project-specific code indexed as portable; a registry nobody searches; duplication found in architectures with no component; a coverage claim with no denominator. A single component that grew a second duty is a member defect.",
+      "rubric": "2 for two population faults. 1 for one. 0 for none, or only a single component's defect."
+    }
+  ]
+}
