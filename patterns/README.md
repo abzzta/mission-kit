@@ -12,6 +12,10 @@ related: [M0, S0, C0, A3]
 
 ## Purpose
 
+**End state.**\
+Every recurring design problem in the systems the organisation engineers has a named shape, with the forces that make it right and the cost it trades, so each new occurrence is recognised rather than rediscovered.\
+Every shape has been proven in contexts that share no author, no kind of problem is crowded with shapes while another holds none, and a shape every consumer reproduces by hand has become a component instead.
+
 Recurring designs.\
 A pattern names the shape of a solution and the forces that make it the right shape, so the next occurrence is recognised rather than rediscovered.
 
@@ -22,27 +26,16 @@ It is how the organisation's design experience compounds ([`A14`](../axioms/A14-
 
 ## Territory
 
-This set covers **the recurring design problems in any system the organisation engineers**, partitioned by the force a shape resolves - the pressure that makes the naive design go wrong.\
-The claim is set by what the set is for; a force with no pattern is a gap, not a reason to narrow the claim.
+**Scope.**\
+This set covers **the recurring design problems in any system the organisation engineers**.\
+The claim is set by what the set is for, not by what it holds today.
 
-| Force | What goes wrong without a shape | Members |
-|---|---|---|
-| **Divergence** | two things that must agree are maintained apart and drift | [`P3`](P3-twin-parity-by-generation.md) twin-parity by generation, [`P5`](P5-verbs-as-data-surface.md) verbs-as-data surface |
-| **Duplication against premature abstraction** | a mechanism two consumers need is copied, or abstracted before a second consumer exists | [`P4`](P4-neutral-core-tenant-composition.md) neutral core and tenant composition |
-| **Ordering across a boundary** | one component runs before another it depends on is ready | [`P2`](P2-node-label-gate-cross-component-contracts.md) node-label gate |
-| **Variation in environment** | one system must run in more than one execution environment | **none - gap** |
-| **Failure and recovery** | a partial failure leaves work half-done, or a retry does it twice | **none - gap** |
-| **Interface evolution** | an interface changes under consumers that adopted an earlier form | **none - gap** |
-| **Concurrent change** | two writers act on shared state at once | **none - gap** |
-| **Untrusted input** | input from outside the system is acted on as if it were trusted | **none - gap** |
+**Growth policy.**\
+Uncapped.\
+A member is one solution shape resolving one force - the pressure that makes the naive design go wrong - at the grain of a structure an engineer reproduces in their own design, recurring across contexts that share no author.\
+Members are balanced on the forces they resolve, so that no force is crowded with shapes while another holds none, and admitted on recurrence, never on the elegance of one design.
 
-Every member sits in one row, and five rows hold none.
-
-**Gaps tested.**\
-A search of patterns and components for retry, idempotency, versioning, concurrency and trust boundaries finds none of these shapes; *variation in environment* held a document layout, now the style rule [`S16`](../style/S16-path-a-path-b-workflow-paths.md), and no system shape; `P2` mentions a scheduling race only as a cause of its own problem.\
-*Failure and recovery* has commitments without shapes: [`A7`](../axioms/A7-resilient-agentic-operations.md) requires work to recover, and [`A11`](../axioms/A11-cognitive-minimalism.md) names retries and idempotency as primitives that should exist once - where a reusable artifact would serve, the gap is in components as well.\
-*Interface evolution* is where a version range commits a consumer in advance, and no shape says how to change an interface under one.\
-*Untrusted input* is the axioms' own named gap, with no shape here either.
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/patterns-2026-10-04.md).
 
 ---
 
@@ -83,10 +76,10 @@ Collected separately, failure modes are read only by people already looking for 
 
 Patterns compose by citation and none overrides another; a design may apply several at once, each where its own force is present.
 
-- **`P3` and `P5` share a shape:** one master source, every other view derived from it, and a real check holding the derivation - regenerate-and-diff in `P3`, the live handler map in `P5`.
-- **`P4` holds a shared mechanism under the same discipline:** one source of the mechanism, and a gate - a scan of the core's source - that keeps it honest.
-- **All three warn against the fake check:** a gate that tests existence, imports or tokens instead of the property it claims passes while the property fails.
-- **Patterns lean on other layers:** `P2`'s label keys are part of a producer's published contract under [`S3`](../style/S3-producer-consumer-doc-split.md).
+- **Shapes that keep two things in agreement share a discipline:** one master source, every other view derived from it, and a real check holding the derivation.
+- **A shared mechanism is held the same way:** one source of the mechanism, and a gate that keeps it honest.
+- **Every gate a pattern prescribes tests the property it claims:** a gate that tests existence, imports or tokens instead passes while the property fails.
+- **Patterns lean on other layers:** a contract a pattern relies on between components is part of a producer's published contract under [`S3`](../style/S3-producer-consumer-doc-split.md).
 
 ---
 

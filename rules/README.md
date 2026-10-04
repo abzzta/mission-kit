@@ -12,6 +12,11 @@ related: [M0, PC0, S0, A0, E4]
 
 ## Purpose
 
+**End state.**\
+Every point in a unit of work where how it is done can be verified from its record is held by a rule that names its trace.\
+Every trace is read - by a tool wherever one can check it, by review where none can - so no rule is held in name only.\
+Guidance that could be held is never left merely urged.
+
 A **rule** governs how work is done, produces nothing of its own, and **leaves a trace a check could test**: something in the record of the work shows whether it was kept.
 
 The set exists because a rule that leaves a trace can be held, and one that does not can only be urged.\
@@ -28,26 +33,15 @@ A rule is what reaches the fourth question: it produces nothing of its own, does
 
 ## Territory
 
-This set covers **the points in a unit of work where how it is done can be verified afterwards from its record**, at the moments `M0` names.
+**Scope.**\
+This set covers **the points in a unit of work where how it is done can be verified afterwards from its record**.
 
-| Moment | What the rule holds | Members |
-|---|---|---|
-| **Entering** | what must be recorded or checked before work begins | **none - gap** |
-| **Committing to a design** | what a design must record before it is built | **none - gap** |
-| **Verifying** | what a claim of correctness must carry in the record | **none - gap** |
-| **Deciding what to keep** | what lands, what is cut, and that a cut is recorded with a condition for its return | [`RU1`](RU1-default-reject-honest-yield.md) default-reject and honest yield, [`RU3`](RU3-anti-amnesia-deferral.md) anti-amnesia deferral |
-| **Treating the record** | that what was recorded is not rewritten, that rewriting history is justified when it happens, and what must never enter it | [`RU2`](RU2-frozen-history-rule.md) frozen history, [`RU4`](RU4-publishing-rewritten-history.md) publishing rewritten history |
-| **Handing over** | what a handover must record | **none - gap** |
+**Growth policy.**\
+Uncapped.\
+A member is one constraint on how work is done, at the grain of a single trace in the record that shows whether it was kept.\
+Members are balanced on their traces: each declares one that a tool or a reader can check, and guidance whose trace nothing could check is a practice, in [`practices/`](../practices/README.md).
 
-Every member sits in one row, and four rows hold none.\
-The members came from `methodology/` and `skills/` in Delta-1.
-
-**Gaps tested.**\
-The empty rows are gaps, not moments where no rule can exist.\
-Guidance in the corpus that leaves a trace and has no rule entry, by moment: *Verifying:* claims record whether they were measured or inferred - stated in the vision and the standing context, and visible in every claim.\
-*Treating the record:* credentials are never committed - `M0`'s own example of a rule - and commit hygiene, no tool attribution and one concern per commit, which the standing context carries and every commit shows.\
-*Handing over:* a handover record names what is unfinished - a rule that would leave a trace, and none exists.\
-*Entering* and *committing to a design* have no checked candidate yet.
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/rules-2026-10-04.md).
 
 ---
 
@@ -63,7 +57,7 @@ It names an enforcer in `enforced-by` when a tool checks it, and `tools/check-en
 - **Against style:** style governs the artifact's form; a rule governs what the work does or records. Both may be checked by a tool.
 - **Against practices:** both govern conduct; a practice leaves nothing to check.
 - **Against methods:** a method produces a result; a rule produces nothing and constrains how other work is done.
-- **With methods:** a method's steps may be held by rules - `RU3` holds what any procedure records when it defers.
+- **With methods:** a method's steps may be held by rules - a rule on deferral holds what any procedure records when it defers.
 
 ---
 

@@ -12,6 +12,11 @@ related: [AR1, AR2, AR3, AR4, AR5, AR6, A13, A14, W0]
 
 ## Purpose
 
+**End state.**\
+Every document an engineering lifecycle produces whose shape recurs across projects has exactly one type, and the types compose into one closed control loop with a single inlet.\
+Every position in that loop, at every altitude and transition around a system, is held by a type a project instantiates rather than invents, so any two instances can be compared and no reviewer has to guess what is missing.\
+The set is measured against that loop: it approaches its end state as a programme can run more of the loop from types alone.
+
 The document types an engineering lifecycle produces, each with a schema, so a document is instantiated rather than reinvented.
 
 This entry is the layer's composition rule, in the shape [`W0`](../work-types/README.md) uses for work-types: it states how the types compose and what earns admission, and it does not restate any individual type.\
@@ -23,29 +28,15 @@ The set exists so that a programme's documents compose into one loop that can be
 
 ## Territory
 
+**Scope.**\
 This set covers **every document an engineering lifecycle produces whose shape recurs across projects** - each position in the lifecycle loop, below, at the altitude of a system, and the altitudes and transitions around it.\
 The claim is set by what the set is for; a position, altitude or transition with no type is a gap, not a reason to narrow the claim.
 
-| Position | What the document carries | Type |
-|---|---|---|
-| **Inlet** | the enduring purpose a programme is measured against | [`AR6`](AR6-vision.md) vision |
-| **State, at two instants** | where a system is, and where it is going | [`AR1`](AR1-system-architecture.md) system architecture |
-| **Selection** | the triaged legal next moves, for the director to choose | [`AR3`](AR3-board.md) board |
-| **Transition** | a declared, gated change between two states | [`AR2`](AR2-delta.md) delta - its closing half unspecified |
-| **Rulings** | what was decided, by whom, and what it affects | [`AR4`](AR4-decision-record.md) decision record |
-| **Deferrals** | what was not done, and when it returns | [`AR5`](AR5-backlog.md) backlog |
-| **Below a system** | one component's configuration and implementation detail | **none - gap, held** |
-
-Every type sits in one row, and one row holds none.
-
-**Gaps tested.**\
-*The component altitude* sits below `AR1` and above code, and has no type.\
-It was deferred, then re-triaged and **held**: a concern can recur widely, and diverge widely, while no section appears in a majority of its instances, and divergence at scale proves the need without settling the shape.\
-The two questions that would settle it - how a component specification binds upward to the duty its architecture declares, and where its boundary with code sits - are currently answered incompatibly rather than merely left open, which is a stronger reason to wait than silence would be.\
-*The closing half of a delta* - the statement of whether its to-state was reached - is left unspecified in `AR2`.\
-The only shape for it is a closeout template held inside a coordination-substrate skill, [`K23`](../skills/K23-workgraph-arc-closeout.md), which fails the cross-project test as written; that is the *template in the toolbox* fault below.\
-*Intent captured before a design* has a shape only in [`K5`](../skills/K5-survey.md)'s survey envelope; `AR4` places it as a section of a decision register, so it is an argued candidate rather than a settled gap.\
-Gaps are recorded rather than filled speculatively, which would be Speculative Surface at document scale.
+**Growth policy.**\
+Uncapped.\
+A member is a type, never an instance, and it holds one position in the loop at a stated altitude; a concern that belongs inside another document is a section of it, not a type.\
+Members are balanced on non-overlap: one position, one type, and a type enters only with its position and after passing every admission test below, never speculatively ahead of a demonstrated need.\
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/artifacts-2026-10-04.md).
 
 ---
 
@@ -55,26 +46,26 @@ The types are not a list.\
 They are one control loop, and each is load-bearing only because of its position in it.
 
 ```text
-        AR6  vision                            the inlet; nothing upstream of it
+        vision                                 the inlet; nothing upstream of it
           |
           |  shapes the target, and outlives it
           v
-   +--> AR1  @ target  <------- amend -------  AR4  decisions
-   |      |                                         ^
-   |      |  the gap                                |  execution emits
-   |      v                                         |
-   |    AR3  board  <------- open rows ------  AR5  backlog
-   |      |                                         ^
-   |      |  director selects                       |  execution defers
-   |      v                                         |
-   |    AR2  delta  --------------------------------+
+   +--> architecture @ target  <--- amend ---  decisions
+   |      |                                    ^
+   |      |  the gap                           |  execution emits
+   |      v                                    |
+   |    board  <------------ open rows ------  backlog
+   |      |                                    ^
+   |      |  director selects                  |  execution defers
+   |      v                                    |
+   |    delta  --------------------------------+
    |      |
    |      |  exit criteria, gate-checked
    |      v
-   +--- AR1  @ now                             derived, never hand-authored
+   +--- architecture @ now                     derived, never hand-authored
 ```
 
-`AR1` appears twice and is one type: the left rail is the diff between its two projections, and that diff is the only reason any of the rest exists.
+The architecture appears twice and is one type: the left rail is the diff between its two projections, and that diff is the only reason any of the rest exists.
 
 Read it as a cycle with one inlet.\
 The vision states what the programme is for and shapes the target.\
@@ -83,12 +74,12 @@ Execution emits rulings that amend the target and deferrals that return to the b
 
 **The edge that closes the loop is the one at the bottom.**\
 When a delta's exit criteria go green, the current projection is derived from them - and nothing else updates where the system is.\
-That is why `AR1`'s `current` may not be hand-authored: writing it by hand does not add a second source of truth, it *cuts the feedback path*, and a controller with no measurement is an open loop reporting on itself.
+That is why the architecture's `current` may not be hand-authored: writing it by hand does not add a second source of truth, it *cuts the feedback path*, and a controller with no measurement is an open loop reporting on itself.
 
 **The inlet was missing until it was looked for from the bottom.**\
 A pass that runs top-down from the loop can only find types the loop already predicts, and the loop as first drawn was closed.\
-Only a bottom-up pass can falsify the loop's own completeness, which is why the territory above treats a missing position as a finding rather than a gap to fill.\
-`AR1`'s justification chain had named `north star` as a layer the whole time, with nothing owning it.
+Only a bottom-up pass can falsify the loop's own completeness, which is why an investigation treats a missing position as a finding rather than a gap to fill.\
+The architecture type's justification chain had named `north star` as a layer the whole time, with nothing owning it.
 
 The frame is the controller pattern applied to an engineering programme: observe current, diff against target, derive the work, reconcile.\
 It is deliberately isomorphic to what it governs - the organisation itself - which is [`A2`](../axioms/A2-isomorphic-specification.md) turned inward.
@@ -105,12 +96,12 @@ Each position answers a question no other position can.
 
 | Position | Answers | Without it |
 | --- | --- | --- |
-| [`AR6`](AR6-vision.md) | what is this for, and what will it not become | the target is derived from nothing, and the board has no axis to rank against |
-| [`AR1`](AR1-system-architecture.md) | where we are, where we are going | drift is undetectable, because there is no target to diff against |
-| [`AR3`](AR3-board.md) | what may we do next, and what is it worth | the next move is chosen implicitly under local pressure |
-| [`AR2`](AR2-delta.md) | what exactly changes, and how do we know it landed | progress is reported rather than measured |
-| [`AR4`](AR4-decision-record.md) | what was ruled, by whom, and what it affects | rulings are re-litigated, and their reasons are gone |
-| [`AR5`](AR5-backlog.md) | what did we consciously not do, and when does it return | deferral is indistinguishable from forgetting |
+| **Vision** | what is this for, and what will it not become | the target is derived from nothing, and the board has no axis to rank against |
+| **Architecture** | where we are, where we are going | drift is undetectable, because there is no target to diff against |
+| **Board** | what may we do next, and what is it worth | the next move is chosen implicitly under local pressure |
+| **Delta** | what exactly changes, and how do we know it landed | progress is reported rather than measured |
+| **Decisions** | what was ruled, by whom, and what it affects | rulings are re-litigated, and their reasons are gone |
+| **Backlog** | what did we consciously not do, and when does it return | deferral is indistinguishable from forgetting |
 
 The board's position is the one most often missing and the least obviously load-bearing.\
 [`A14`](../axioms/A14-compounding-learning.md) requires the organisation to engineer the path of greatest learning rather than the shortest path, and names **Shortest-Path Myopia** as its fault.\

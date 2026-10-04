@@ -12,6 +12,11 @@ related: [M0, RU0, PC0, P0, SC3, A11]
 
 ## Purpose
 
+**End state.**\
+Every capability an engineering agent invokes is built once, installed, and executed the same way each time, whether or not a coordination substrate is running.\
+Each skill packages one capability that would otherwise be reconstructed, declares what it depends on as edges a script can check, and leaves to a script every step a script could take.\
+No kind of capability grows while another holds none.
+
 Operator-level capabilities and reusable tooling.\
 A skill is *invoked*, not followed: it names a procedure with inputs, steps and an output, and it is expected to be executed largely as written.
 
@@ -21,25 +26,16 @@ The set exists so that a capability built once is installed and invoked rather t
 
 ## Territory
 
-This set covers **every capability an engineering agent invokes to do its work**, partitioned by what the capability does, and including whether it can run without the coordination substrate.\
-The claim is set by what the set is for; a capability with no skill is a gap, not a reason to narrow the claim.
+**Scope.**\
+This set covers **every capability an engineering agent invokes to do its work**, whether or not the coordination substrate is running.\
+The claim is set by what the set is for, not by what it holds today.
 
-| Family | What the capability does | Members |
-|---|---|---|
-| **Investigate** | study an outside project and record what was found so it outlives the session | [`K3`](K3-repo-audit.md) repo audit, [`K4`](K4-research-artefacts.md) research artefacts |
-| **Capture intent** | find out what a stakeholder wants before a design is committed | [`K5`](K5-survey.md) survey |
-| **Model** | read and author SysML v2 models, and build and test the skills that do | [`K7`](K7-sysml-literacy.md) literacy; primitives [`K8`](K8-model-a-state-machine.md), [`K9`](K9-model-a-workflow.md), [`K10`](K10-model-a-component.md), [`K13`](K13-model-a-dependency-graph.md), [`K14`](K14-model-a-constraint.md), [`K15`](K15-model-a-classification.md); composite [`K16`](K16-model-an-arc.md); meta [`K11`](K11-sysml-skill-builder.md), [`K12`](K12-sysml-skill-tester.md), [`K17`](K17-sysml-skill-evaluator.md) |
-| **Operate staged work** | run work as a gated state engine, and act inside an arc on the coordination substrate | [`K6`](K6-arc-lifecycle.md) arc lifecycle; on the coordination substrate [`K18`](K18-workgraph-arc-operator.md)-[`K26`](K26-workgraph-arc-planning.md) |
-| **Write** | hold what is written to a discipline a reader relies on | [`K27`](K27-write-discoverable-code.md) discoverable code, [`K28`](K28-asd-ste100-verifier.md) simplified technical English |
-| **Verify and deliver without the coordination substrate** | gate a change independently, ship it, and close out the work, where no coordination substrate runs | **none - gap** |
-| **Evaluate a document** | test a document with blind cold readers, before and after a change | **none - gap** |
+**Growth policy.**\
+Uncapped.\
+A member is one executable, repeatable capability, invoked and run largely as written, at the grain of a procedure with inputs, steps and an output that would otherwise be reconstructed by whoever needs it next.\
+Members are balanced on what the capability does, so that no family grows while whole kinds of capability hold none, and none exists only for one coordination system without a counterpart for work done without it.
 
-Every member sits in one row, and two rows hold none.
-
-**Gaps tested.**\
-Verifying, delivering and closing out exist only on the coordination substrate: [`K21`](K21-workgraph-verification-gates.md), [`K22`](K22-workgraph-pr-delivery.md), [`K23`](K23-workgraph-arc-closeout.md) and [`K24`](K24-workgraph-recovery.md) each require it, and `K6`'s engine checks only its own store; an agent working without it has the method [`M1`](../methods/M1-triangulated-review.md) and the gate rules of [`E7`](../entities/E7-gate.md), and no skill.\
-Blind evaluation of a document has a method, [`M2`](../methods/M2-test-drive-docs-by-execution.md), and a tool, `tools/eval.mjs`, and no skill; `K17` is a blind with-and-without comparison limited to SysML skills, the nearest member.\
-The modelling family holds eleven members while two kinds of capability hold none, which is the uneven growth the faults below name.
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/skills-2026-10-04.md).
 
 ---
 
@@ -88,11 +84,6 @@ Depth is **derived** from those edges as the longest path from a root, and is ne
 Encoding hierarchy into a name freezes it, and it rots on the first change to the graph.
 
 [`tools/skill-graph.mjs`](../tools/skill-graph.mjs) makes the edges load-bearing rather than narrative: every target must resolve, the graph must be acyclic, each composed primitive's construct family must actually appear in the skill's assets, and every bundle's `skills` entry must name a real skill.
-
-The population has two roots.\
-`K7` is the prerequisite of every modelling skill, and `K16` and `K11` compose its primitives.\
-`K18` is the prerequisite of `K19`-`K24`; `K25` and `K26` declare none.\
-`K3` depends on `K4` in its prose and its bundle, with no declared edge, so the graph cannot see it.
 
 Skills compose into operator-facing roles through bundles.
 

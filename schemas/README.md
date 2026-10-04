@@ -12,6 +12,11 @@ related: [SC1, SC6, A2, A8, E4]
 
 ## Purpose
 
+**End state.**\
+Every structured document the organisation relies on, or defines a type for, is governed by exactly one contract a machine checks, so a malformed instance is refused wherever it is written.\
+No structured file's shape is whatever its last writer chose, no tool re-implements a contract by hand, and every contract has both a check and a consumer.\
+It is a direction approached and never reached, because every new kind of document is ungoverned until it is.
+
 This set holds **cross-project contracts a machine can check**: each a schema that says what a valid instance of one kind of document looks like, validatable without importing a skill or a project's runtime.\
 Prose states intent; a contract holds the part of it a machine can hold, so a malformed document is refused rather than read and believed.
 
@@ -19,21 +24,16 @@ Prose states intent; a contract holds the part of it a machine can hold, so a ma
 
 ## Territory
 
-The contracts divide by **whose instances they govern**, and that is the denominator.
+**Scope.**\
+Every kind of structured document whose shape a machine can check and that this corpus relies on or defines, wherever its instances are written - in this corpus, by a process, or by a project using a type this corpus defines.\
+A structured file the corpus relies on is in scope whether or not a contract governs it yet.
 
-| Kind | Instances | Checked by | Members |
-|---|---|---|---|
-| **The corpus's own files** | documents this corpus is made of, held to their shape on every change | the gate, `tools/check-all.sh` | `SC1` catalogue frontmatter, `SC2` standing context, `SC3` skill bodies, `SC6` entry bodies |
-| **Process resources** | documents a process writes - a question, the context it is answered against - neutral of any one process | their semantic validators, and the schema suite | `SC4` Question, `SC5` ContextFrame |
-| **Lifecycle documents** | documents a project writes using a type this corpus defines - a board, a backlog, a decision record, a delta, a system architecture | none | **none - gap** |
-
-Every contract sits in one row, and one row holds none.\
-`SC2` and `SC3` are portable too - a standing context or a skill body can live anywhere - but their instances are documents of the kind this corpus is made of.
-
-**Gaps the territory exposes.**\
-Structured files this corpus relies on that no contract governs, each checked only by hand-written code in a tool or not at all: the evaluation suites and their results, the human-evaluation suites, `catalog.json` itself, and `bundles/*.yaml`.\
-Lifecycle documents have no contract at all: the artifact types carry prose templates, and this corpus's own board and backlog are checked only by code in `tools/check-board.mjs`, so neither here nor in a consuming project can a machine refuse a malformed instance.\
-`SC4` and `SC5` have no consumer yet; they are contracts ahead of their process.
+**Growth policy.**\
+Uncapped.\
+A member is one contract for one kind of document, validatable without importing a skill or a project's runtime; a concern that varies by category is one contract with conditions, not a contract per layer.\
+Members are balanced on non-overlap - one concern, one contract - and contracts that must agree are held together by a test rather than by care.\
+A contract is admitted with the check that validates against it and a consumer that uses it, never ahead of either.\
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/schemas-2026-10-04.md).
 
 ---
 
@@ -120,9 +120,9 @@ JSON Schema `default` annotations do not mutate resource instances, so this cont
 ## Boundaries and composition
 
 - **Against `entities/`:** an entity defines a term in prose; a contract makes a shape machine-checkable. A contract may enforce an entity's definition, and never replaces it.
-- **Against `tools/`:** a tool runs a check; a contract is what the check holds a document to. Where a tool re-implements a contract by hand - `check-standing-context.sh` against `SC2` - the two can drift, and the contract is authoritative.
+- **Against `tools/`:** a tool runs a check; a contract is what the check holds a document to. Where a tool re-implements a contract by hand, the two can drift, and the contract is authoritative.
 - **With entries:** a member entry carries the contract's catalogue placement only; the canonical contract is the schema file it names.
-- **Between contracts:** one concern, one contract - catalogue frontmatter is one schema with per-category conditions, not a schema per layer. Contracts that must agree, such as `SC6`'s categories and `SC1`'s category list, are held together by a test.
+- **Between contracts:** one concern, one contract - a concern that varies by category is one schema with per-category conditions, not a schema per layer. Contracts that must agree are held together by a test.
 
 ---
 
@@ -131,8 +131,8 @@ JSON Schema `default` annotations do not mutate resource instances, so this cont
 - **The unchecked contract.** A schema no check validates against; it reads as enforced and holds nothing.
 - **Two contracts for one concern.** Two schemas for one kind of document, each authoritative, free to drift.
 - **The drifting pair.** Two contracts that must agree, with nothing holding them together.
-- **The unmapped resource.** A resource kind missing from `catalog.json`, so a consumer preloading the catalogue cannot resolve it. `EntryBody` is one today.
-- **The contract ahead of its consumer.** A resource contract no process uses, maintained on speculation (`A3`'s earned exposure). `SC4` and `SC5` today.
+- **The unmapped resource.** A resource kind missing from `catalog.json`, so a consumer preloading the catalogue cannot resolve it.
+- **The contract ahead of its consumer.** A resource contract no process uses, maintained on speculation (`A3`'s earned exposure).
 - **The ungoverned file.** A structured file the corpus relies on that no contract governs, so its shape is whatever the last writer chose.
 
 ---
@@ -142,14 +142,10 @@ JSON Schema `default` annotations do not mutate resource instances, so this cont
 ```text
 schemas/
 ├── catalog.json
-├── catalog-entry/v1alpha1/     SC1 - catalogue frontmatter
-├── standing-context/v1alpha1/  SC2 - standing context
-├── skill/v1alpha1/             SC3 - skill bodies
-├── question/v1alpha1/          SC4 - Question, its Choice response, validator, examples
-├── context-frame/v1alpha1/     SC5 - ContextFrame, validator, examples
-├── entry-body/v1alpha1/        SC6 - entry body shapes, and the declaration it governs
-├── common/v1alpha1/            shared resource metadata
-└── tests/                      one directory per contract, and shared support
+├── <contract>/<version>/      one directory per contract: its schema, and any validator and examples
+├── common/<version>/          shared resource metadata
+├── tests/                     one directory per contract, and shared support
+└── SC<n>-<name>.md            each member entry, naming the schema file that is canonical
 ```
 
 ---

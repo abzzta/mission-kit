@@ -12,6 +12,10 @@ related: [E3, E4, E2]
 
 ## Purpose
 
+**End state.**\
+Every situation whose guidance spans layers has one set gathering it, so an agent that recognises its situation reaches every entry that applies, whatever layer each lives in.\
+No such concern is left for a reader to assemble from several layers alone, and no set gathers what one layer already holds.
+
 A **set** here is a population whose members live in several layers and govern one concern between them.\
 Each layer holds one kind of guidance; a situation often needs several kinds at once, and this layer is where they are gathered, so an agent finds them by recognising its situation.
 
@@ -19,31 +23,28 @@ Each layer holds one kind of guidance; a situation often needs several kinds at 
 
 ## Territory
 
+**Scope.**\
 Every concern whose guidance spans two or more layers and has rules of its own.
 
-| Set | Concern |
-|---|---|
-| `ST1` | an agent leading a human of limited context to understand and decide |
-| *none - gap* | treating history: what may be removed from a record, and how a rewrite is justified and published - `RU2`, `RU4`, `M9` |
-| *none - gap* | deferring without forgetting: what is cut, and how it returns - `RU1`, `RU3`, `AR5` |
-| *none - gap* | independent verification: who may check work, how, and what a gate must prove - `M1`, `W8`, `K21`, `R3`, `A8` |
-
-One row holds a set; three are concerns whose guidance already spans layers and that no set gathers.\
-Each is a gap, named with the entries it would gather; a set is drafted for one when readers in that situation are shown to miss guidance that applies.
+**Growth policy.**\
+Uncapped.\
+A member is one set gathering one concern, with members in two or more layers and an end state, scope and faults of its own; a topic that fits one layer is that layer's concern.\
+Members are balanced on non-overlap of concern - one concern, one set - and a set is drafted only when readers in its situation are shown to miss guidance that applies, never because a concern could be gathered.\
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/sets-2026-10-04.md).
 
 ---
 
 ## Member shape
 
 A set's charter declares its members in a `members` list.\
-Membership is declared by the set because the set's territory gives it its meaning; a member's own frontmatter is not what makes it a member; it may name the set in `related`, and reaches it through the ledger.\
+Membership is declared by the set because the set's scope gives it its meaning; a member's own frontmatter is not what makes it a member; it may name the set in `related`, and reaches it through the ledger.\
 The generator refuses a member that does not exist or is not active, and writes the set's index from the list.
 
 ---
 
 ## What earns an entry
 
-Members in two or more layers, governing one concern, with a territory and faults of their own (`E3`).\
+Members in two or more layers, governing one concern, with an end state, scope and faults of their own (`E3`).\
 A topic that would fit one layer is that layer's concern, not a set.
 
 ---

@@ -12,6 +12,11 @@ related: [E1, M0, SC6, A4]
 
 ## Purpose
 
+**End state.**\
+Every term the corpus leans on across layers, where two competent readers could act differently on the same sentence, resolves to one definition in one home.\
+Each definition states what its term is and what it is not, is cited wherever the term carries weight, and leaves no load-bearing noun for a cold reader to reconstruct.\
+No word carries two meanings, and no concept answers to two words.
+
 What a thing **is**, never how it is done.
 
 An entity entry fixes the meaning of one term that an engineering organisation cannot afford to leave imprecise.\
@@ -43,23 +48,16 @@ That is the mandate failing on vocabulary rather than on content.
 
 ## Territory
 
-This set covers **every term the corpus leans on across layers where two competent readers could act differently on the same sentence**, partitioned by the kind of thing the term names.\
-The claim is set by what the set is for; a kind of term with no entry is a gap, not a reason to narrow the claim.
+**Scope.**\
+This set covers **every term the corpus leans on across layers where two competent readers could act differently on the same sentence**.\
+The claim is set by what the set is for, not by what it holds today.
 
-| Kind | What the terms name | Members | Undefined, load-bearing |
-|---|---|---|---|
-| **Authority** | who may decide what | [`E1`](E1-sovereign-hierarchy.md) sovereign-hierarchy | `sovereign` on its own, as axiom titles and tools use it |
-| **The corpus's own structure** | how this knowledge is organised | [`E2`](E2-layer.md) layer, [`E3`](E3-set.md) set, [`E4`](E4-charter.md) charter | - |
-| **What is engineered** | the things work is done on, and their parts | [`E5`](E5-system.md) system, [`E6`](E6-component.md) component | - |
-| **Work and its proof** | a unit of work, what shows it was done, and what lets it pass | [`E7`](E7-gate.md) gate, [`E8`](E8-evidence.md) evidence | `unit of work`, `seal`, `closeout` |
-| **Coordination** | how work is run across units and agents | [`E9`](E9-substrate.md) substrate | `arc`, `lease` |
+**Growth policy.**\
+Uncapped.\
+A member is one term, defined at the grain of a single meaning, earned by what imprecision about it would cost rather than by how often it appears.\
+Members are balanced on one home per term - no term defined here and in a charter or member, and no two entries for one concept - and on being cited, so that each definition is reached where its term carries weight.
 
-Every member sits in one row, and every row holds at least one.
-
-**Gaps tested.**\
-A search of the entries, charters, skills, the vision and the standing context found no definition of `gate`, `evidence` or `substrate` - since defined, [`E7`](E7-gate.md), [`E8`](E8-evidence.md) and [`E9`](E9-substrate.md) - nor of `seal`, `closeout`, `lease` or `unit of work`; [`A8`](../axioms/A8-gated-recursive-integrity.md) described gates without defining one, and [`W0`](../work-types/README.md) names evidence fields, not the word.\
-`arc` is defined in the skills layer - a tree of rungs climbing one summit, in [`K6`](../skills/K6-arc-lifecycle.md) - while the coordination skills use it for a graph of work items seeded from a blueprint, so it carries two meanings and no entry fixes either.\
-The rows where work is gated and run are where a misread term costs most, and they hold three entries between them; five load-bearing terms in them remain undefined.
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/entities-2026-10-04.md).
 
 ---
 
@@ -77,8 +75,8 @@ If they could, define it.
 
 | Neighbour | The question that separates them |
 |---|---|
-| A layer's own charter | Does the term name one layer's members, or is it leaned on across layers? A charter states what its members are; an entity for the same word is earned only by the two-readers test across layers, and then it fixes the word's meaning and cites the charter, as `E2` cites the root charter's admission rule rather than restating it. |
-| [Schemas](../schemas/README.md) | Is it what a term means, or the machine-checkable shape of an instance? `E2` fixes what a layer is; [`SC1`](../schemas/SC1-catalog-entry.md)'s `category` field carries which layer an entry is in. |
+| A layer's own charter | Does the term name one layer's members, or is it leaned on across layers? A charter states what its members are; an entity for the same word is earned only by the two-readers test across layers, and then it fixes the word's meaning and cites the charter's admission rule rather than restating it. |
+| [Schemas](../schemas/README.md) | Is it what a term means, or the machine-checkable shape of an instance? An entity fixes what a word means; a schema field such as [`SC1`](../schemas/SC1-catalog-entry.md)'s `category` carries the value one instance holds. |
 | [Methods](../methods/README.md) and [skills](../skills/README.md) | Does it say what a thing is, or how to do something? A procedure belongs in a method, or a skill if it is executable. |
 | [Traits](../traits/README.md) | Is it a term the corpus leans on, or a characteristic of a system that decides which axioms bind it? |
 | [Artifacts](../artifacts/README.md) | Is it a term, or a document type a lifecycle produces? |
@@ -103,12 +101,11 @@ A definition that only says what a thing is leaves every adjacent case undecided
 
 ## Composition
 
-Entities compose through the typed edges in each member's `Relations`, and the population forms two chains and one apex.
+Entities compose through the typed edges in each member's `Relations`, and form chains and terms that stand apart.
 
-- **Structure:** a layer (`E2`) is a set (`E3`), and every set speaks through its charter (`E4`); not every set is a layer.
-- **What is engineered:** a component (`E6`) is a system (`E5`) seen as a part of a containing system.
-- **Authority:** `E1` stands apart from both chains; it is ordered by altitude where layers are peers, and `E2` says so as a relation, *not to be read as*.
-- The chains meet the rest of the corpus by citation: systems to traits and axioms, charters to every layer's `0` entry, the sovereign hierarchy to roles.
+- **A chain** runs from a term to the one it is a kind of, or a part of; not every instance of the broader term is one of the narrower.
+- **A term that stands apart** is ordered by a different relation, and a member a reader could confuse with it says so as a relation, *not to be read as*.
+- Entities meet the rest of the corpus by citation, from the layers whose vocabulary they fix.
 
 ---
 

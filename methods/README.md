@@ -12,6 +12,11 @@ related: [S0, P0, K0, W0, E4, RU0, PC0]
 
 ## Purpose
 
+**End state.**\
+Every point in a unit of engineering work where a result is produced, and how it is produced decides whether it can be trusted, has a named procedure proportionate to it.\
+Each procedure has been run and shown to change the work, and the set is a few primitives from which most situations are met by composition.\
+No divergence between reliable and merely adequate conduct is left to be discovered after it has cost something.
+
 Procedures.\
 Named steps that **produce a result of their own** - a verdict, an artifact, a record - each applying only in the situation it names and binding once you are in it.
 
@@ -28,29 +33,16 @@ Without a named procedure the difference is discovered only after it has cost so
 
 ## Territory
 
-This set covers **the procedures inside a unit of engineering work** - the points where a result is produced, and how it is produced decides whether it can be trusted.
+**Scope.**\
+This set covers **the procedures inside a unit of engineering work** - the points where a result is produced, and how it is produced decides whether it can be trusted.\
+The claim is set by that purpose and not by what the set holds: a point no procedure yet covers is still inside it.
 
-A unit of work has six moments, and they are the denominator for this set and for `rules/` and `practices/`, which use the same names: **entering**, **committing to a design**, **verifying**, **deciding what to keep**, **treating the record**, and **handing over**.\
-Every member is placed by its own trigger, in exactly one moment; procedures sit at five of the six, and the sixth is a named gap.
+**Growth policy.**\
+Uncapped.\
+A member is one procedure at the grain of the situation its trigger names, producing a result of its own.\
+Members are balanced on distinct situations and on composition: a candidate differing from a member only in the situation it names strengthens that member instead, and a new situation is met by composing existing procedures before a primitive is added, as *What earns an entry* states.
 
-| Moment | The decision | Members |
-|---|---|---|
-| **Entering** | how to begin in an unfamiliar collection or system | [`M8`](M8-artifact-bootstrap.md) |
-| **Committing to a design** | whether a design is anchored before it is built | [`M7`](M7-axiom-alignment-audit.md) |
-| **Verifying** | what evidence is enough to believe the work is correct | [`M1`](M1-triangulated-review.md), [`M2`](M2-test-drive-docs-by-execution.md) |
-| **Deciding what to keep** | what lands, what is cut, and how the verdict is reached | **none - gap** |
-| **Treating the record** | how a record that is wrong is put right - content that must not remain removed with proof, a record that has drifted reconciled against the truth | [`M9`](M9-history-content-scrub.md) removes content; reconciling a drifted record has no procedure |
-| **Handing over** | how a human of limited context is led to understand the work and decide on it | [`M10`](M10-guided-dialogue.md) |
-
-Delta-1 moved the rules that sat here to [`rules/`](../rules/README.md) and a practice to [`practices/`](../practices/README.md), and brought `M9` in from `skills/`; each successor records the id it replaces in `supersedes`, and no stub remains.
-
-**One empty moment and three thin ones, recorded rather than filled.**\
-*Deciding what to keep* holds no procedure: [`RU1`](../rules/RU1-default-reject-honest-yield.md) and [`RU3`](../rules/RU3-anti-amnesia-deferral.md) constrain what is kept and what a cut must record, but no method produces the verdict itself.\
-*Treating the record* holds `M9`, which removes; reconciling a record that has drifted from the truth is a work-type, [`W20`](../work-types/W20-reconcile-ledger.md), with no method conducting it.\
-*Handing over* holds `M10`, which hands understanding and decisions to a human; handing work in progress to another agent or a later session has no procedure at all.\
-Every reader of this corpus starts cold, so handover is the moment that condition bites hardest, and it applies to an agent working alone as much as to many: a lone agent hands over to its own next session.\
-*Committing to a design* holds only `M7`, which is scoped to extensive design and excludes a short local fix; a decision between those two has nothing proportionate.\
-None is a defect until something fails there, and each is where to look first when something does.
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/methods-2026-10-04.md).
 
 ---
 
@@ -98,12 +90,9 @@ Before adding one, ask whether it is a new primitive or a new composition of exi
 
 Members cite each other and the rules and practices around them.
 
-**One primitive carries the set.**\
-[`M1`](M1-triangulated-review.md) - independent inputs before a verdict - is the independence the verifying procedures specialise.
-
-**Two members are compound.**\
-[`M7`](M7-axiom-alignment-audit.md) and [`M8`](M8-artifact-bootstrap.md) cite primitives and are cited by none.\
-They are assembled from other procedures rather than new primitives.
+**Primitives and compounds.**\
+A member is either a primitive, a step no other member supplies, or a compound assembled from primitives for a situation they do not name alone.\
+Each member declares what it cites, so which members are primitives and which compounds is read from the citation graph, and an investigation places them.
 
 **Rules hold what procedures record.**\
 The discipline about work that does not land - reject it deliberately, record it with a condition for its return, and never rewrite the record - was a cluster here, and is now rules: [`RU1`](../rules/RU1-default-reject-honest-yield.md), [`RU3`](../rules/RU3-anti-amnesia-deferral.md) and [`RU2`](../rules/RU2-frozen-history-rule.md).\
@@ -120,7 +109,7 @@ A failure mode of one procedure belongs in that procedure.
 - **The procedure that is really a skill.** A named capability with inputs and outputs, filed as a way of working. It belongs in `skills/`, where it can be invoked.
 - **The ceremony.** A step retained because it is in the procedure, after the failure it guarded against became impossible. Procedures accrete; nothing prunes them unless the entry says what it is protecting against.
 - **The orphaned primitive.** A procedure that composes with nothing and is cited by nothing. It may be load-bearing and unrecognised, or a habit wearing a methodology's name; the graph cannot tell which, and the absence of edges is the prompt to ask.
-- **The unguarded moment.** A recurring failure at a point in the work no procedure covers. It is this set's characteristic gap, and it stays invisible until the territory is read against what actually went wrong.
+- **The unguarded moment.** A recurring failure at a point in the work no procedure covers. It is this set's characteristic gap, and it stays invisible until an investigation reads the population against what actually went wrong.
 
 ---
 

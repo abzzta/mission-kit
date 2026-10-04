@@ -11,6 +11,11 @@ related: [R0, D0, T0, E5, A3, A6, A7, A11]
 
 ## Purpose
 
+**End state.**\
+Every recurring kind of work an engineering organisation does is named by exactly one work-type, and none is stretched to cover a neighbour's work.\
+Each compiles to a closeable claimable node with a complete evidence contract, so any unit of work is generated from a role, a work-type and a domain, and closed on evidence, without anyone routing it by hand.\
+The kinds of work grow as the organisation does, so the set is approached and never finished.
+
 This is the **canonical** cross-axis reference for the work-taxonomy.\
 Every `work-types/W*.md` entry references this file for its composition rule and its closeability preflight - **the constraint set is authored here once and never forked per entry** (M7 guardrail #2).\
 Read `roles/README.md` (the M role axis) and `domains/README.md` (the N domain axis) alongside this.
@@ -21,33 +26,18 @@ The taxonomy exists to let strategic intent compile into self-fed WorkGraph exec
 
 ## Territory
 
+**Scope.**\
 This set covers **the kinds of work an engineering organisation does**, each a verb-family that compiles to a closeable claimable node.\
-The kinds group by what the work does, and the groups are the denominator.
+Work that cannot compile to a node - no trigger, nothing to close - is outside it, and is recorded as a routing note instead, as incident recovery is below.\
+Work on the organisation's own machinery and knowledge is in scope like any other: it uses the same build, fix, retire and land work-types on that part's domain, and retiring an entry deletes it with its disposition recorded.
 
-| Group | What the work does | Members |
-|---|---|---|
-| **Build** | changes a system - the product, the harness, or the organisation's own machinery and knowledge | `W1` build a slice, `W2` fix a bug, `W3` retire or hard-cut, `W5` author guard or falsifier tests |
-| **Check** | produces evidence about work, its own or another's | `W4` validate locally, `W8` verify gate, `W9` audit a surface, `W10` adversarial design review, `W11` live probe, `W12` meta-validate by dogfooding, `W22` axiom-alignment gate |
-| **Land and ship** | moves a change to where it runs or is read | `W6` merge and land, `W7` publish or deploy, `W26` reset or converge the fleet |
-| **Approve and decide** | exercises authority over work | `W13` code-owner approve, `W23` capture and ratify a decision, `W24` director walkthrough |
-| **Design** | shapes work before it is built | `W14` design a contract or invariant, `W15` convene a council |
-| **Keep knowledge** | captures what work taught | `W16` bank an idea, `W17` author a closeout packet |
-| **Coordinate** | runs the arcs work happens inside | `W18` seed an arc, `W19` drive an arc, `W20` reconcile a ledger, `W21` repair an arc, `W25` backstop a production window |
+**Growth policy.**\
+Uncapped.\
+A member sits at the grain of a verb-family: one mode and shape of work, compiling to one closeable claimable node with one evidence contract.\
+Members are balanced on non-overlap, one act to one work-type: a recurring kind of work that fits no work-type is closed by adding one, not by stretching a neighbour, because a stretched work-type carries two evidence contracts under one name, and until it exists the work is recorded as a row in the project's backlog ([`AR5`](../artifacts/AR5-backlog.md)).\
+A new work-type is authored like any entry, from a peer exemplar ([`PC1`](../practices/PC1-author-from-exemplar.md)), against the entry schema below, landing through the gate; adding one changes how work is generated, so it is ratified by the director.
 
-Every work-type sits in one row.
-
-**The set grows when the territory finds a gap.**\
-This set is not complete and is not expected to be.\
-A recurring kind of work that compiles to a closeable claimable node and fits no work-type is closed by adding one, not by stretching a neighbour to cover it, because a stretched work-type carries two evidence contracts under one name; until it exists, the work is recorded against the gap, as a row in the project's backlog ([`AR5`](../artifacts/AR5-backlog.md)).\
-Work that cannot compile to a node - no trigger, nothing to close - is recorded as a routing note instead, as incident recovery is below.\
-A new work-type is authored like any entry: from a peer exemplar ([`PC1`](../practices/PC1-author-from-exemplar.md)), against the entry schema below, landing through the gate; adding one changes how work is generated, so it is ratified by the director.
-
-**Gaps recorded.**\
-*Work on the knowledge corpus* is building on its domain, and has no work-type of its own.\
-Adding or revising an entry or a tool is a build slice, `W1`, or a fix, `W2`, where a defect has been filed.\
-Retiring an entry, a tool or a whole layer deletes it with no stub and records where its duty went, which is a hard cut, `W3`.\
-Extending the corpus - adding or retiring a layer - recurs often enough that a work-type of its own may earn its place.\
-Procedures that conduct work are cited by only some work-types, and artifacts by fewer; a work-type cites what it can name, and the rest are recorded rather than guessed.
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/work-types-2026-10-04.md).
 
 ---
 

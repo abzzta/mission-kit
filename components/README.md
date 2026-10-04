@@ -12,6 +12,11 @@ related: [P0, M0, A3]
 
 ## Purpose
 
+**End state.**\
+A managed set of orthogonal duties - a few dozen - covering most of what a system needs, with configuration and glue as the remainder.\
+Every one is internal, a sovereign unit under our own authority, and each is found and used rather than rebuilt, so no duty is implemented twice.\
+That is a direction the registry approaches and never reaches, and adoption outranks tidiness on the way: a registry of perfectly orthogonal components that no project assembles from has failed.
+
 Sovereign, shareable units that should be **used** rather than rebuilt.
 
 This entry is the layer's composition rule: it states what earns a component entry and how closeness of fit is judged, and it registers no component itself.\
@@ -32,34 +37,16 @@ Rebuilding is not merely wasted effort; it produces a second unit with the same 
 
 ## Territory
 
-What this population claims to cover, stated so that a gap in it is a finding rather than a silence.\
-Required of any [`set`](../entities/E3-set.md), and this is the corpus's first.
+**Scope.**\
+**The scope is the duty space of the systems this organisation builds** - every concern that appears as a box in an architecture's anchored core, at the altitude where a box has one duty.\
+Its extent is derivable rather than invented: the union of anchored cores across the architectures this organisation holds.
 
-**The territory is the duty space of the systems this organisation builds** - every concern that appears as a box in an architecture's anchored core, at the altitude where a box has one duty.
-
-The denominator is therefore **derivable rather than invented**: it is the union of anchored cores across the architectures this organisation holds.\
-A duty declared in one architecture is a candidate; a duty declared in several and filled by no component is a gap with a name, a count, and somewhere to put it.
-
-**Three properties follow, and none of them can be held by a member.**
-
-- **Coverage.** The fraction of declared duties that a component fills. A miss is information only once this has a denominator, which is why `C0`'s admission rule could not previously be run.
-- **Orthogonality.** No two components' duties intersect, and none is a composition of others already present. Every entry can pass the one-duty test individually while the population overlaps, so this is checked across the set or not at all.
-- **Duplication.** One duty implemented in several projects with no component. Found by reading architectures rather than components, which is why no entry can surface it.
-
-**The intended end state is a managed set of orthogonal duties - a few dozen - covering most of what a system needs, with configuration and glue as the remainder.**\
-That is a target rather than a rule, and the distinction matters: a registry of forty perfectly orthogonal components that no project assembles from has failed, where ten overlapping ones everybody uses has not.\
-Orthogonality serves adoption; where they conflict, adoption wins and the overlap becomes a finding rather than a refusal.
-
-**This territory is not yet measurable.**\
-It needs several architectures carrying declared anchored cores to join against, and this corpus currently holds one.\
-The denominator is identified and not yet computable, which is a gap in the evidence rather than in the definition.
-
-**Gaps found without the denominator.**\
-The registry holds one component, [`C1`](C1-agp.md), routing between application components; two duties are known to have none.\
-*Reading frontmatter* - nine of this corpus's tools and three of its schema tests each read entry frontmatter with code of their own, in two languages, and the copies already differ: some check the opening delimiter and some do not, and only one reads a list spread over several lines.\
-Two boxes of this corpus's own anchored core, the tools and the schemas, need the duty, and the organisation's machinery is a system like any other, so this is duplication inside the territory.\
-*Retrying and idempotency* - [`A11`](../axioms/A11-cognitive-minimalism.md) names them as primitives that should exist once, and neither a component nor a pattern holds them.\
-Both are recorded, not built: a component is admitted when a consumer needs it, not because a gap was named.
+**Growth policy.**\
+Uncapped.\
+A member sits at architecture altitude, as one box with one duty; below that altitude a component is many concerns, and they are not members.\
+Members are balanced on orthogonality: no two duties intersect and none is a composition of others already present; where orthogonality and adoption conflict, adoption wins and the overlap becomes a finding rather than a refusal.\
+A component is admitted when a consumer needs it, not because a gap was named.\
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/components-2026-10-04.md).
 
 ---
 
@@ -150,7 +137,7 @@ The shape is declared in [`SC6`](../schemas/SC6-entry-body.md) and enforced by `
 ## Composition
 
 Components compose by the `composes` and `composed-by` edges each declares, so depth is derived rather than named.\
-With one member the graph has no edge yet; the properties the territory names - coverage, orthogonality, duplication - are how members relate, and they are checked across the set because no member can hold them.
+Coverage of the duty space, orthogonality between duties, and duplication of one duty across projects with no component are how members relate, and they are checked across the set because no member can hold them.
 
 ---
 

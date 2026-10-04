@@ -12,6 +12,10 @@ related: [M0, RU0, S0, A0, E4]
 
 ## Purpose
 
+**End state.**\
+Wherever judgement about how to proceed changes the result of a unit of work and leaves no record, the guidance that makes the difference is named as a practice.\
+Each practice is backed by observed evidence that following it produces measurably different work, and none could be checked, because guidance that could is a rule.
+
 A **practice** governs how work is done, produces nothing of its own, and **leaves no trace**: nothing in the record afterwards shows whether it was followed.
 
 The set exists because some of the guidance that most changes work cannot be checked, and filing it beside rules would make every rule look as unverifiable as it is.\
@@ -28,24 +32,15 @@ A practice is what is left: it produces nothing of its own, does not govern an a
 
 ## Territory
 
-This set covers **the points in a unit of work where judgement about how to proceed changes the result and leaves no record**, at the moments `M0` names.
+**Scope.**\
+This set covers **the points in a unit of work where judgement about how to proceed changes the result and leaves no record**.
 
-| Moment | What the practice guides | Members |
-|---|---|---|
-| **Entering** | how to begin in an unfamiliar collection | [`PC1`](PC1-author-from-exemplar.md) author from exemplar |
-| **Committing to a design** | how to weigh a design before committing to it | **none - gap** |
-| **Verifying** | how to judge whether evidence in hand is worth anything | **none - gap** |
-| **Deciding what to keep** | how to judge what is worth keeping | **none - gap** |
-| **Treating the record** | how to handle a record before changing it | **none - gap** |
-| **Handing over** | how to leave work so the next reader can pick it up | **none - gap** |
+**Growth policy.**\
+Uncapped.\
+A member is one piece of guidance at the grain of one situation, carrying the evidence that following it changes the work.\
+Members are balanced on evidence and on leaving no trace: a practice is admitted only once a difference in the work has been observed, one that acquires a trace moves to [`rules/`](../rules/README.md), and one whose situation recurs while it is never applied is revised or retired.
 
-`PC1` came from `methodology/` in Delta-1.\
-Every member sits in one row, and five rows hold none.
-
-**Gaps tested.**\
-Each empty row is a gap, not a moment where no practice can exist.\
-*Verifying* and *treating the record* have candidates in the standing context that leave no trace: *distrust corroboration you produced*, *check the splits that favour you*, and *read before you overwrite*.\
-*Committing to a design*, *deciding what to keep* and *handing over* have no checked candidate yet.
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/practices-2026-10-04.md).
 
 ---
 
@@ -54,7 +49,7 @@ Each empty row is a gap, not a moment where no practice can exist.\
 A practice states the situation, the guidance, and the evidence that following it changes the work.\
 It declares no `trace`; if it acquires one, it is a rule and moves.\
 Placement and admission are separate questions: placement says guidance *is* a practice; admission says whether it has earned an entry, which takes observed evidence.\
-A practice is not minted to fill an empty moment: it is admitted when a difference in the work has been observed, and until then the moment stays named as a gap.
+A practice is not minted to fill a gap: it is admitted when a difference in the work has been observed, and until then the gap stays recorded as a backlog row.
 
 ---
 

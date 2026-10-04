@@ -12,6 +12,11 @@ related: [A0, D0, E3, E4, E5]
 
 ## Purpose
 
+**End state.**\
+One trait for every architectural characteristic that changes what a system owes to stay aligned with its intent, each an observable test any reader can apply to their own system.\
+Every axiom's binding is decided by these traits alone, so two readers holding the same system reach the same axioms in force.\
+No trait binds nothing, and no condition that brings an obligation goes uncaptured, its absence included.
+
 A **trait** is a characteristic of the [system](../entities/E5-system.md) an organisation is working on - stateful, declarative, autonomous - that brings a set of axioms into force.\
 An axiom names the traits it governs in its `applies-to` field, and it binds a system that has at least one of them.
 
@@ -23,32 +28,18 @@ Two readers could reasonably disagree on whether a system was `autonomous`, and 
 
 ## Territory
 
-This set covers **the architectural characteristics of a system that change what must hold for it to stay aligned with its intent.**
-
+**Scope.**\
+This set covers **the architectural characteristics of a system that change what must hold for it to stay aligned with its intent.**\
 A characteristic belongs here when its presence brings an obligation that its absence does not - a system with persistent state owes transparency about it, and a system without one owes nothing.\
 A characteristic that changes no obligation is not a trait, however real it is.
 
-The members partition by what kind of characteristic they are, and the partition is the denominator.
+**Growth policy.**\
+Uncapped.\
+A member sits at the grain of one characteristic of the whole system, stated as an observable test, that an axiom binds on or would.\
+Members are balanced on non-overlap of the question each settles: traits do not exclude one another on a system, no two settle the same question, and a condition whose absence brings an obligation is as eligible as one whose presence does.\
+A characteristic that would bring an obligation no trait captures is closed by adding a trait, as `domains/` and `work-types/` grow.
 
-| Concerns | The question it settles | Members |
-|---|---|---|
-| **State** | does the system hold truth that persists? | [`T1`](T1-stateful.md) stateful |
-| **Specification** | is the system's behaviour declared rather than scripted? | [`T2`](T2-declarative.md) declarative |
-| **Actors** | how many independent actors does the work involve? | [`T3`](T3-multi-agent.md) multi-agent |
-| **Supervision** | is a human in the synchronous loop? | [`T4`](T4-autonomous.md) autonomous |
-| **Cognition** | does a model reason on the critical path? | [`T5`](T5-llm-in-the-loop.md) llm-in-the-loop |
-
-Every trait sits in exactly one row.
-
-**A gap the territory exposes: no trait captures work that nobody independently checks.**\
-The *Actors* row has one member, `multi-agent`, and it is defined by the presence of collaborators.\
-Its complement - an organisation of one, with no second actor to verify its work - is not a trait, though it is the condition under which an agent's own error goes uncaught.\
-Every axiom that defends against that error needs a second actor, and no trait lets an axiom bind specifically when there is none.\
-That is the trait an axiom protecting an agent against its own uncaught error would need, and it is recorded here rather than added, because a trait earns its place by bringing an obligation, and until an axiom states that obligation the trait would bind nothing.
-
-**Gaps tested and not found.**\
-*Distribution* - a system spanning machines - looks absent and is not obviously a trait: its obligations are held by `T1` for shared state and `T3` where actors coordinate, and no axiom binds on distribution alone.\
-*Safety-criticality* looks absent and is a property of the domain the work acts on rather than of the system, so it belongs on the domain axis.
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/traits-2026-10-04.md).
 
 ---
 
@@ -87,11 +78,6 @@ A trait states an observable test, not a description.\
 
 ---
 
-**The set grows when a gap is found.**\
-A characteristic that would bring an obligation no trait captures is closed by adding a trait, as `domains/` and `work-types/` grow on a gap; the missing complement recorded above is one.
-
----
-
 ## How traits compose
 
 **A system has as many traits as it has, and they do not exclude one another.**\
@@ -117,7 +103,7 @@ Population faults - visible across the set and invisible to any one trait.
 - **The trait that binds nothing.** A characteristic no axiom names. It reads as an obligation and imposes none.
 - **The untestable trait.** A characteristic stated so vaguely that a reader cannot tell whether their system has it. It turns every binding decision into an argument.
 - **The domain wearing a trait's name.** A surface or subject promoted into this set, coupling a stable obligation to a mutable taxonomy.
-- **The missing complement.** A trait defined by the presence of something, whose absence is itself a condition with obligations, and which no trait captures. The *Actors* row has one today.
+- **The missing complement.** A trait defined by the presence of something, whose absence is itself a condition with obligations, and which no trait captures.
 
 ---
 

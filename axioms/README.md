@@ -12,10 +12,15 @@ related: [SC6, W0, R0, D0, E1, E5, E6, T0]
 
 ## Purpose
 
+**End state.**\
+The fewest orthogonal limits that together leave no way for a system to drift from its own intent unforbidden, each forbidding a failure no other forbids.\
+Every limit binds exactly the systems whose traits bring it into force, and every change within its scope moves toward all of them at once.\
+No axiom restates another, and none is admitted for importance rather than for being always in force.
+
 Foundational, always-in-force principles for aligned systems.\
 The layer that states the limits a system is built toward, beneath the tactical entries.
 
-This entry is the layer's composition rule, in the shape [`AR0`](../artifacts/README.md) and [`W0`](../work-types/README.md) use: it states what an axiom is, what brings one into force, and how the set composes, and it does not restate any individual axiom - its territory characterises what each protects without repeating any mandate.\
+This entry is the layer's composition rule, in the shape [`AR0`](../artifacts/README.md) and [`W0`](../work-types/README.md) use: it states what an axiom is, what brings one into force, and how the set composes, and it does not restate any individual axiom.\
 It is not itself an axiom, which is why the axiom body shape declared in [`SC6`](../schemas/SC6-entry-body.md) exempts it, and why the frontmatter contract does not ask it for `applies-to`.
 
 **On the `A0` slot.**\
@@ -30,40 +35,16 @@ This is recorded so the next reader does not rediscover the question: reclaiming
 
 ## Territory
 
+**Scope.**\
 This set covers **the limits a system is built toward to stay aligned with its own intent** - the ones where moving away makes a system wrong in a way more effort elsewhere cannot repair.
 
-The applicability tags below say *when* an axiom binds.\
-They do not say *what it protects*, and a set can be fully tagged while leaving a whole kind of failure unforbidden.\
-So the territory is partitioned by what each axiom protects, read from the mandates themselves.
+**Growth policy.**\
+Uncapped.\
+A member sits at the altitude of a standing commitment: a limit always in force for every system whose traits it names, never a situated move reached for when a task touches it.\
+Members are balanced on orthogonality: each earns its place by forbidding something the others permit, none is derivable from another, and no apex member summarises the rest.\
+A candidate is read against the whole set at admission, so a contradiction or a restatement is caught before it is accepted.
 
-| Protects | The failure it forbids | Axioms |
-|---|---|---|
-| **Truth** | a system whose state, specification or view of itself is false or unknowable | [`A1`](A1-sovereign-state-transparency.md) [`A2`](A2-isomorphic-specification.md) [`A5`](A5-perceptual-parity.md) |
-| **Structure** | boundaries that leak, and layers promoted before they hold | [`A3`](A3-sovereign-composition.md) [`A8`](A8-gated-recursive-integrity.md) [`A9`](A9-chaos-validated-deployment.md) |
-| **Knowledge** | reasoning lost in transfer, compression or forgetting | [`A4`](A4-zero-loss-knowledge.md) [`A12`](A12-precision-context-engineering.md) [`A14`](A14-compounding-learning.md) |
-| **Operation** | work that stalls, fails silently, or cannot repair itself | [`A6`](A6-frictionless-agentic-collaboration.md) [`A7`](A7-resilient-agentic-operations.md) [`A10`](A10-autopoietic-evolution.md) |
-| **Cognition and authority** | judgement spent where a script would do, or exercised without the authority to hold it | [`A11`](A11-cognitive-minimalism.md) [`A13`](A13-director-intent-amplification.md) |
-
-Every axiom sits in exactly one row.\
-The partition is derived rather than imposed: of the thirty-five relations axioms declare to one another, fifteen fall within a row, about three times the five an arbitrary split into rows of these sizes would place there.
-
-**A gap the territory exposes: nothing protects an agent against its own error.**\
-Collaborating agents are assumed to act in good faith, and that assumption is about collaborators only.\
-Accidental misalignment is not, and an organisation of one has no second actor: the agent most likely to be wrong is the agent doing the work.\
-A confident inference reported as measured, a claim corroborated because it was wanted, an instrument checking its own output - each is defended in this corpus by standing doctrine and by independence that needs a second actor.\
-Neither is an axiom, so the protection most load-bearing for an agent working alone has no first principle.\
-Thirteen of the fourteen axioms can bind a lone agent - every one except `A6`, which concerns collaboration itself - and none states it.
-
-That is recorded as a gap, not filled.\
-An axiom earns its place by forbidding something the others permit, and whether this is a new axiom or a property one of the existing fourteen should state - [`A8`](A8-gated-recursive-integrity.md)'s refusal to promote unproven work and [`A4`](A4-zero-loss-knowledge.md)'s refusal to lose reasoning are nearest - is a question for the set.
-
-**A second gap: nothing protects a system against a hostile actor or untrusted input.**\
-The good-faith assumption does not reach an outsider, or input no collaborator vouches for, and a subverted system is not aligned with its own intent, so this is inside the territory.\
-[`A2`](A2-isomorphic-specification.md) names manual configuration a security fault, but no axiom has protection against hostility as its mandate.\
-It is recorded, not filled, on the same terms as the first.
-
-**A gap tested and not found.**\
-Cost looks absent from the row titles and is not: it is the whole mandate of [`A11`](A11-cognitive-minimalism.md) and [`A12`](A12-precision-context-engineering.md), and five more axioms cite it.
+Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/axioms-2026-10-04.md).
 
 ---
 
@@ -85,11 +66,11 @@ Inside the scope, build at the limit or nearer to it than what was there: new wo
 *As much as the touch allows* means the part the change already alters to do its own work; restructuring beyond that, even inside the same component, is the encouraged improvement below, not a requirement.\
 **Beyond the scope, improvement is encouraged, never mandated.**\
 An agent that sees how to bring an adjacent component nearer its limit, within that component's duty, is expected to weigh doing it, not merely permitted to.\
-A gap or friction in a component [adjacent](../entities/E6-component.md) to what the change touches - one it stands on, or one that stands on it, through a declared interface - may be closed opportunistically when compounding learning supports it ([`A14`](A14-compounding-learning.md), *tangent discipline*): the payback is near, strongest where the work stands on the component; the yield is captured; and the cost does not significantly distract from the change's own goal.\
+A gap or friction in a component [adjacent](../entities/E6-component.md) to what the change touches - one it stands on, or one that stands on it, through a declared interface - may be closed opportunistically when compounding learning supports it (its *tangent discipline*): the payback is near, strongest where the work stands on the component; the yield is captured; and the cost does not significantly distract from the change's own goal.\
 A gap that fails that test - not adjacent, too little payback, or large enough to displace the goal - is recorded with its evidence and a revival trigger ([`RU3`](../rules/RU3-anti-amnesia-deferral.md)) rather than closed, because larger choices of what work happens next are the director's ([`R4`](../roles/R4-director.md), [`AR3`](../artifacts/AR3-board.md)).\
 An opportunistic improvement is made as a change of its own, so its yield is captured and its cost is visible, and like any change it answers to every system it alters - if it changes a component's interface, its consumers are altered too, or for a versioned interface those that adopt it ([`E5`](../entities/E5-system.md)).\
 Either way the gap is recorded.\
-Passing it silently is what the axiom forbids; chasing the limit far from the change's goal is the *tangent sprawl* `A14` names.
+Passing it silently is what the axiom forbids; chasing the limit far from the change's goal is the *tangent sprawl* compounding learning names.
 
 A gate that passes or fails a change is consistent with this, not in tension with it.\
 The gate's question is binary - may this change be promoted - and the direction rule is what it can check: that the change moved the system no further from any limit in force, and repeated no gap it touched.
@@ -114,7 +95,7 @@ The vocabulary is defined in [`traits/`](../traits/README.md), one entry per tra
 `any-system` is the floor rather than a trait: an axiom tagged with it binds every system.\
 The contract accepts only these values, so an undefined tag is refused rather than silently binding nothing.
 
-`applies-to` answers *whether* an axiom binds, and it is the only field that does.\
+`applies-to` answers *whether* an axiom binds, and it is the only field that does; the index below shows each axiom's value in its *Binds* column, generated from the axiom.\
 What the axiom then demands on a particular subject surface is a question for the [`domains/`](../domains/README.md) axis.\
 The two stack rather than compete, and the direction is one-way: a domain entry cites the axioms it must satisfy, and no axiom names a domain.\
 An axiom that named domains would couple a stable invariant to a mutable taxonomy.
@@ -122,26 +103,8 @@ An axiom that named domains would couple a stable invariant to a mutable taxonom
 **An axiom binds a system, and a change answers to every system it alters.**\
 That is the system it modifies, every system containing it, and any system whose contract with it the change alters.\
 A system it only composes with, through a contract the change leaves as it was, is not altered, and its axioms do not bind.\
-Where one unit depends on another and no boundary between them is declared and honoured - none written, or one written and reached past - nothing shows the change is contained, so the two are one system with the traits of both, and the axioms either unit would bring all bind - and the undeclared dependency is itself a fault under [`A3`](A3-sovereign-composition.md).\
+Where one unit depends on another and no boundary between them is declared and honoured - none written, or one written and reached past - nothing shows the change is contained, so the two are one system with the traits of both, and the axioms either unit would bring all bind - and the undeclared dependency is itself a fault of sovereign composition.\
 *System*, *contain* and *compose* are defined in [`E5`](../entities/E5-system.md).
-
----
-
-## Applicability matrix
-
-Axioms grouped by `applies-to` tag, broad to narrow.\
-An axiom with multiple tags appears under each tag it carries.
-
-| Tag | Axioms in force |
-|---|---|
-| `any-system` | A3 Sovereign Composition - A4 Zero-Loss Knowledge - A8 Gated Recursive Integrity - A9 Chaos-Validated Deployment - A14 Compounding Learning |
-| `stateful` | A1 Sovereign State Transparency |
-| `declarative` | A2 Isomorphic Specification |
-| `multi-agent` | A5 Perceptual Parity - A6 Frictionless Agentic Collaboration - A7 Resilient Agentic Operations - A10 Autopoietic Evolution - A13 Director Intent Amplification |
-| `autonomous` | A7 Resilient Agentic Operations - A10 Autopoietic Evolution - A13 Director Intent Amplification |
-| `llm-in-the-loop` | A5 Perceptual Parity - A11 Cognitive Minimalism - A12 Precision Context Engineering |
-
-Adopt the rows your architecture satisfies: a plain library takes `any-system`; a system carrying every tag takes all fourteen.
 
 ---
 
@@ -163,17 +126,8 @@ A single umbrella under which the others are sub-conditions reads as a synthesis
 The set's coherence is a property to be checked rather than an entry to be written, and [`M7`](../methods/M7-axiom-alignment-audit.md) is where that check lives.
 
 **Weight is uneven, and the unevenness is information.**\
-Measured across the corpus, the most-cited axiom is referenced from about six times as many files as the least.
-
-| Most cited | Files | | Least cited | Files |
-|---|---|---|---|---|
-| `A8` Gated Recursive Integrity | 31 | | `A9` Chaos-Validated Deployment | 5 |
-| `A3` Sovereign Composition | 26 | | `A5` Perceptual Parity | 8 |
-| `A11` Cognitive Minimalism | 23 | | `A10` Autopoietic Evolution | 9 |
-
 Citation count is not importance, and both readings of a low count are legitimate.\
-An axiom cited by nothing may be dead weight, or may be holding a boundary nobody tests; one cited by everything may be load-bearing, or too vague to fail.\
-The pointed case is `A9`: tagged `any-system`, so binding every system unconditionally, and the least exercised axiom in the set.
+An axiom cited by nothing may be dead weight, or may be holding a boundary nobody tests; one cited by everything may be load-bearing, or too vague to fail.
 
 What a whole-design question needs is a *procedure* that walks the set, not a *principle* that claims to summarise it.
 
@@ -208,21 +162,21 @@ Axioms carry this shape rather than the `S`/`M`/`P`/`K` skeleton because an axio
 ## Index
 
 <!-- BEGIN GENERATED: entries. Run tools/generate-index.mjs; do not edit by hand. -->
-| ID | Title | Hydrate when |
-|---|---|---|
-| [A0](README.md) | Axioms - standing commitments, what brings one into force, and how they compose | You are deciding whether a principle is a standing commitment or a situated move, or which axioms bind the system in front of you |
-| [A1](A1-sovereign-state-transparency.md) | Sovereign State Transparency | You cannot see the current state of the system from one place and are about to infer it |
-| [A2](A2-isomorphic-specification.md) | Isomorphic Specification | Declared intent and running reality have drifted, or you are about to change one without the other |
-| [A3](A3-sovereign-composition.md) | Sovereign Composition | You are deciding whether a concern belongs behind a new boundary or an existing one |
-| [A4](A4-zero-loss-knowledge.md) | Zero-Loss Knowledge | You are about to summarise an artifact rather than carry it forward whole |
-| [A5](A5-perceptual-parity.md) | Perceptual Parity | An agent is about to act on state it derived rather than state it was given |
-| [A6](A6-frictionless-agentic-collaboration.md) | Frictionless Agentic Collaboration | You are designing a seam between two agents that must collaborate without a human relay |
-| [A7](A7-resilient-agentic-operations.md) | Resilient Agentic Operations | You are deciding how the system should behave when a unit of work fails or a thread stalls |
-| [A8](A8-gated-recursive-integrity.md) | Gated Recursive Integrity | You are about to promote something past a gate, or deciding what the gate must prove |
-| [A9](A9-chaos-validated-deployment.md) | Chaos-Validated Deployment | You are about to trust a deployment you have not seen survive failure |
-| [A10](A10-autopoietic-evolution.md) | Autopoietic Evolution | Friction has surfaced during work and you are deciding whether to route around it or fix its cause |
-| [A11](A11-cognitive-minimalism.md) | Cognitive Minimalism | You are about to have an agent do work that deterministic code could do instead |
-| [A12](A12-precision-context-engineering.md) | Precision Context Engineering | You are assembling the context for an invocation and deciding what earns its place |
-| [A13](A13-director-intent-amplification.md) | Director Intent Amplification | You are about to consume the director's attention, or to decide something in their absence |
-| [A14](A14-compounding-learning.md) | Compounding Learning | You have learned something during work and are deciding whether to capture it |
+| ID | Title | Binds | Hydrate when |
+|---|---|---|---|
+| [A0](README.md) | Axioms - standing commitments, what brings one into force, and how they compose |  | You are deciding whether a principle is a standing commitment or a situated move, or which axioms bind the system in front of you |
+| [A1](A1-sovereign-state-transparency.md) | Sovereign State Transparency | stateful | You cannot see the current state of the system from one place and are about to infer it |
+| [A2](A2-isomorphic-specification.md) | Isomorphic Specification | declarative | Declared intent and running reality have drifted, or you are about to change one without the other |
+| [A3](A3-sovereign-composition.md) | Sovereign Composition | any-system | You are deciding whether a concern belongs behind a new boundary or an existing one |
+| [A4](A4-zero-loss-knowledge.md) | Zero-Loss Knowledge | any-system | You are about to summarise an artifact rather than carry it forward whole |
+| [A5](A5-perceptual-parity.md) | Perceptual Parity | multi-agent, llm-in-the-loop | An agent is about to act on state it derived rather than state it was given |
+| [A6](A6-frictionless-agentic-collaboration.md) | Frictionless Agentic Collaboration | multi-agent | You are designing a seam between two agents that must collaborate without a human relay |
+| [A7](A7-resilient-agentic-operations.md) | Resilient Agentic Operations | multi-agent, autonomous | You are deciding how the system should behave when a unit of work fails or a thread stalls |
+| [A8](A8-gated-recursive-integrity.md) | Gated Recursive Integrity | any-system | You are about to promote something past a gate, or deciding what the gate must prove |
+| [A9](A9-chaos-validated-deployment.md) | Chaos-Validated Deployment | any-system | You are about to trust a deployment you have not seen survive failure |
+| [A10](A10-autopoietic-evolution.md) | Autopoietic Evolution | multi-agent, autonomous | Friction has surfaced during work and you are deciding whether to route around it or fix its cause |
+| [A11](A11-cognitive-minimalism.md) | Cognitive Minimalism | llm-in-the-loop | You are about to have an agent do work that deterministic code could do instead |
+| [A12](A12-precision-context-engineering.md) | Precision Context Engineering | llm-in-the-loop | You are assembling the context for an invocation and deciding what earns its place |
+| [A13](A13-director-intent-amplification.md) | Director Intent Amplification | multi-agent, autonomous | You are about to consume the director's attention, or to decide something in their absence |
+| [A14](A14-compounding-learning.md) | Compounding Learning | any-system | You have learned something during work and are deciding whether to capture it |
 <!-- END GENERATED -->
