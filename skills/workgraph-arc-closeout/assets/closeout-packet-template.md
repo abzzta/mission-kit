@@ -1,6 +1,6 @@
-# WorkGraph Arc Closeout Packet — `<arc-or-mission>`
+# WorkGraph Arc Closeout Packet - `<arc-or-mission>`
 
-Fill this before completing the closeout WorkItem or driver.
+Fill this before completing the closeout WorkItem or driver.\
 Every material claim needs a ref or an explicit `not observed` / `not applicable` rationale.
 
 ## Identity and authority
@@ -19,6 +19,8 @@ Every material claim needs a ref or an explicit `not observed` / `not applicable
 | Canonical lifecycle manifest | `skills/arc-lifecycle/assets/workgraph-lifecycle-v1.json` |
 | Evidence-derived stage / control state | `substrate-closing / running` |
 
+---
+
 ## Lifecycle transition proof
 
 | Transition | Required exact proof | Observed ref/result | Valid? |
@@ -27,36 +29,36 @@ Every material claim needs a ref or an explicit `not observed` / `not applicable
 | `substrate-closing -> substrate-closed` | all required children dispositioned, active-valid closeout PASS, closeout WorkItem done, driver completed last | `TBD` | `yes/no` |
 | `substrate-closed -> director-closing -> closed` | trigger evaluation plus progressive transcript, explicit waiver, or valid point-in-time not-applicable; decision state | `TBD` | `yes/no` |
 
+---
+
 ## Final verdict
 
 Verdict: `<complete | complete-with-limitation | blocked | abandoned>`
 
 Honesty statement:
 
-> `TBD — what is proved, what is not proved, and what limitation remains.`
+> `TBD - what is proved, what is not proved, and what limitation remains.`
+
+---
 
 ## Director qualitative walkthrough
 
-Required? `<yes/no>`
-Trigger/rationale: `<Director-requested | procedure/tooling/skill/template/methodology change | material residual/caveat | operating-guidance artifact | not-required rationale>`
-Tier: `<0 evidence-only | 1 sensemaking capsule | 2 full walkthrough | 3 M7 + full walkthrough>`
-Live Director walkthrough status: `<not applicable | required-not-yet-performed | performed | waived>`
-Live trigger/ref: `<Director requested live walkthrough | live terminal/chat closeout | interactive closeout implied | not applicable>`
-Waiver/ref if any: `<explicit Director waiver or n-a>`
-Transcript/message refs: `<required when performed; refs or n-a>`
-Live proof gate valid? `<yes/no/not-applicable>`
+Required?\
+`<yes/no>` Trigger/rationale: `<Director-requested | procedure/tooling/skill/template/methodology change | material residual/caveat | operating-guidance artifact | not-required rationale>` Tier: `<0 evidence-only | 1 sensemaking capsule | 2 full walkthrough | 3 M7 + full walkthrough>` Live Director walkthrough status: `<not applicable | required-not-yet-performed | performed | waived>` Live trigger/ref: `<Director requested live walkthrough | live terminal/chat closeout | interactive closeout implied | not applicable>` Waiver/ref if any: `<explicit Director waiver or n-a>` Transcript/message refs: `<required when performed; refs or n-a>` Live proof gate valid?\
+`<yes/no/not-applicable>`
 
 Use this section when the Director/operator requested or authorized the arc, the arc changes org operating procedure/tooling/skill/template/methodology/governance/coordination/lifecycle/delivery/verification/authority patterns, future agents/operators will treat the result as operating guidance, material limitations or residuals remain, or this packet is the organizational memory artifact.
 
-If the closeout is delivered live to the Director, do **not** dump this whole section unless the Director requests it or explicitly waives progressive mode. Walk the Director one step at a time and pause after each step for `Questions, or proceed?`.
+If the closeout is delivered live to the Director, do **not** dump this whole section unless the Director requests it or explicitly waives progressive mode.\
+Walk the Director one step at a time and pause after each step for `Questions, or proceed?`.
 
 ### What shipped / changed
 
-- `TBD — concrete delivered artifact, behavior, process, or decision, with evidence refs.`
+- `TBD - concrete delivered artifact, behavior, process, or decision, with evidence refs.`
 
 ### Why it matters
 
-- `TBD — rationale and consequence in strategic/operator terms.`
+- `TBD - rationale and consequence in strategic/operator terms.`
 
 ### Target-state delta
 
@@ -66,7 +68,9 @@ If the closeout is delivered live to the Director, do **not** dump this whole se
 
 ### Axiom / principle mapping
 
-Closeout-level axiom mapping is not a full M7 audit. It translates delivered work into constitutional meaning and records material tensions. Full M7 remains required before implementation for extensive methodology/design arcs.
+Closeout-level axiom mapping is not a full M7 audit.\
+It translates delivered work into constitutional meaning and records material tensions.\
+Full M7 remains required before implementation for extensive methodology/design arcs.
 
 | Axiom/principle | Load (`load-bearing/supporting/tension`) | How the arc served or strained it |
 |---|---|---|
@@ -74,11 +78,12 @@ Closeout-level axiom mapping is not a full M7 audit. It translates delivered wor
 
 ### Caveats / non-claims
 
-- `TBD — proof boundary, live-not-observed, scope not delivered, authority downgrade, or other material caveat.`
+- `TBD - proof boundary, live-not-observed, scope not delivered, authority downgrade, or other material caveat.`
 
 ### Friction assessment and related-friction triage
 
-This is a dedicated section, not a residual footnote. Summarize observed friction, no-friction credibility, accepted residual friction, by-construction opportunities, and which related friction was included in this arc or the next arc and why.
+This is a dedicated section, not a residual footnote.\
+Summarize observed friction, no-friction credibility, accepted residual friction, by-construction opportunities, and which related friction was included in this arc or the next arc and why.
 
 | Theme | Source/ref | Disposition (`included/companion/deferred/separate-arc/no-action/accepted-residual/by-construction`) | Follow-up id or no-file rationale |
 |---|---|---|---|
@@ -86,9 +91,11 @@ This is a dedicated section, not a residual footnote. Summarize observed frictio
 
 ### Entity disposition ledger
 
-Record both positive closure and non-completion boundaries. Do not list only residuals.
+Record both positive closure and non-completion boundaries.\
+Do not list only residuals.
 
-For every Bug/Idea marked `fully-in-scope` by the planning packet or scope fence, choose exactly one explicit closeout disposition: `closed/resolved/incorporated`, `accepted-deferred`, `blocked`, or `reclassified`. A fully-in-scope item left open because realization gates were omitted is a closeout failure, not a normal residual.
+For every Bug/Idea marked `fully-in-scope` by the planning packet or scope fence, choose exactly one explicit closeout disposition: `closed/resolved/incorporated`, `accepted-deferred`, `blocked`, or `reclassified`.\
+A fully-in-scope item left open because realization gates were omitted is a closeout failure, not a normal residual.
 
 | Entity / obligation | Scope role (`fully-in-scope/partial/deferred/related-only`) | Disposition (`closed-or-incorporated/partially-satisfied/accepted-deferred/blocked/reclassified/superseded-no-action/not-claimed`) | Evidence/ref | What would close it if not closed |
 |---|---|---|---|---|
@@ -102,7 +109,8 @@ For every Bug/Idea marked `fully-in-scope` by the planning packet or scope fence
 
 ### Decision state
 
-Decision required? `<no | awareness-only | yes>`
+Decision required?\
+`<no | awareness-only | yes>`
 
 If yes:
 
@@ -110,11 +118,12 @@ If yes:
 |---|---|---|
 | `TBD` | `TBD` | `TBD` |
 
-If no or awareness-only: `TBD — why no Director action is required, or why awareness alone is sufficient.`
+If no or awareness-only: `TBD - why no Director action is required, or why awareness alone is sufficient.`
 
 ### Live walkthrough protocol record
 
-Fill this when live Director delivery was requested/triggered. If not applicable, write `n-a` in the table.
+Fill this when live Director delivery was requested/triggered.\
+If not applicable, write `n-a` in the table.
 
 | Step | Delivered? (`yes/no/waived/n-a`) | Pause prompt issued? | Director response/ref | Notes |
 |---|---|---|---|---|
@@ -128,19 +137,23 @@ Fill this when live Director delivery was requested/triggered. If not applicable
 | 8. Residuals / revival triggers | `TBD` | `TBD` | `TBD` | `TBD` |
 | 9. Decision state and final verdict | `TBD` | `TBD` | `TBD` | `TBD` |
 
-Live walkthrough satisfied? `<yes/no/not-applicable>`
+Live walkthrough satisfied?\
+`<yes/no/not-applicable>`
 
 If `no`, do not complete closeout/driver unless the Director explicitly accepts the limitation.
 
 ### Live walkthrough proof gate (`bug-281`)
 
-Exactly one row must be valid when live walkthrough discipline is in scope. A compact summary or full packet dump cannot be marked `performed`; use `waived` only with an explicit Director waiver/ref.
+Exactly one row must be valid when live walkthrough discipline is in scope.\
+A compact summary or full packet dump cannot be marked `performed`; use `waived` only with an explicit Director waiver/ref.
 
 | Status | Required proof | Ref/rationale | Gate valid? | Notes |
 |---|---|---|---|---|
 | `performed` | Transcript/message refs showing progressive steps, pause prompts, and Director responses | `TBD` | `yes/no/n-a` | `TBD` |
 | `waived` | Explicit Director waiver/ref for progressive mode | `TBD` | `yes/no/n-a` | `TBD` |
 | `not applicable` | Rationale that no live Director delivery was requested, triggered, or implied | `TBD` | `yes/no/n-a` | `TBD` |
+
+---
 
 ## Scope fence
 
@@ -157,6 +170,8 @@ Scope additions with authority:
 | Addition | Authority/ref | Status |
 |---|---|---|
 | `TBD` | `TBD` | `TBD` |
+
+---
 
 ## WorkGraph final state
 
@@ -191,9 +206,12 @@ Every PASS is consumed only after fresh `verify_attestation`; every FAIL remains
 |---|---|---|---|
 | `TBD` | `TBD` | `TBD` | `TBD` |
 
+---
+
 ## Axiom alignment audit
 
-Required for extensive planning/design? `yes/no`
+Required for extensive planning/design?\
+`yes/no`
 
 | Field | Value |
 |---|---|
@@ -202,6 +220,8 @@ Required for extensive planning/design? `yes/no`
 | Implementation started after audit? | `yes/no/n-a` |
 | Guardrails carried into validation/closeout | `TBD` |
 | Follow-up methodology/work ids | `TBD` |
+
+---
 
 ## Delivered artifacts and proof strength
 
@@ -215,6 +235,8 @@ Required for extensive planning/design? `yes/no`
 | Deploy/live | `TBD` | `observed/not-observed/n-a` | `deployed/live-observed/not-observed` | `TBD` |
 | Verifier gate | `TBD` | `PASS/FAIL/CHANGES_REQUESTED` | `verifier-attested/reviewed` | `TBD` |
 
+---
+
 ## Active surfaces
 
 | Surface | Ref/path | Status (`updated/unaffected/historical/residual`) | Notes |
@@ -226,7 +248,8 @@ Required for extensive planning/design? `yes/no`
 
 ### Active skill availability proof chain
 
-Fill this table before claiming any active skill/fleet-seat availability. If a layer is out of scope, write `not applicable`; if it was not observed, write the exact non-claim.
+Fill this table before claiming any active skill/fleet-seat availability.\
+If a layer is out of scope, write `not applicable`; if it was not observed, write the exact non-claim.
 
 | Layer | Ref/path/command | Observed state | Proof strength | Limits / exemptions |
 |---|---|---|---|---|
@@ -247,6 +270,8 @@ Stale surfaces intentionally left historical:
 | Surface | Reason safe | Follow-up id if needed |
 |---|---|---|
 | `TBD` | `TBD` | `TBD` |
+
+---
 
 ## Hub entities, backlog, and residuals
 
@@ -275,6 +300,8 @@ Revival/reopen triggers:
 
 - `TBD`
 
+---
+
 ## Stakeholder / Director / org obligations
 
 | Lane | Required? | Status (`satisfied/not-required/deferred/blocked`) | Ref/rationale |
@@ -284,30 +311,39 @@ Revival/reopen triggers:
 | Verifier | `yes/no` | `TBD` | `TBD` |
 | Director/operator | `yes/no` | `TBD` | `TBD` |
 
-Director qualitative walkthrough required? `yes/no`
+Director qualitative walkthrough required?\
+`yes/no`
 
-Rationale/ref: `TBD — if yes, the dedicated walkthrough section above is complete; if no, explain why the trigger did not apply.`
+Rationale/ref: `TBD - if yes, the dedicated walkthrough section above is complete; if no, explain why the trigger did not apply.`
 
-Live Director walkthrough required/performed/waived? `<not-required | performed | waived | blocked>`
+Live Director walkthrough required/performed/waived?\
+`<not-required | performed | waived | blocked>`
 
-Live rationale/ref: `TBD — when live Director delivery was requested/triggered, cite the progressive walkthrough record above or the explicit waiver.`
+Live rationale/ref: `TBD - when live Director delivery was requested/triggered, cite the progressive walkthrough record above or the explicit waiver.`
+
+---
 
 ## Stale FYIs / messages
 
-Were stale or crossed messages observed? `yes/no`
+Were stale or crossed messages observed?\
+`yes/no`
 
 | Message/ref | How handled | Substrate truth used |
 |---|---|---|
 | `TBD` | `acked/ignored/replied/routed` | `TBD` |
 
+---
+
 ## Post-terminal audit / correction ledger
 
-Leave this section empty at first close except for `none as of <time>`.
+Leave this section empty at first close except for `none as of <time>`.\
 If later evidence corrects a terminal claim, append a row and a `post-terminal-correction.md.tmpl` artifact; never edit the original claim as though it was always correct.
 
 | Correction id/time | Original terminal record | Corrected claim + fresh evidence | Original preserved? | Distinct follow-up/entity effect | Director walkthrough reopened? |
 |---|---|---|---|---|---|
 | `none as of TBD` | `n-a` | `n-a` | `yes` | `none` | `no` |
+
+---
 
 ## Final close actions
 
@@ -321,7 +357,6 @@ If later evidence corrects a terminal claim, append a row and a `post-terminal-c
 | Live Director walkthrough performed or waived when triggered | `TBD` | `yes/no/n-a` |
 
 Driver completion evidence:
-
 ```text
 Closeout packet: <path>
 Final child progress: <N/N>, pending: <none or explicit dispositions>
@@ -332,6 +367,8 @@ Live Director walkthrough: <not-required | performed stepwise | waived; ref/summ
 Entity updates: <mission/ideas/bugs/follow-ups>
 Limitations: <none or accepted limitations>
 ```
+
+---
 
 ## Stop-condition checklist
 
