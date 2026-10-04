@@ -1,14 +1,14 @@
 ---
-name: substrate-audit
-description: "Use when you need a deep, code-grounded, evidence-triangulated audit of a single open-source repository — the per-repo descriptive pass that feeds later cross-substrate analysis. Produces a self-contained per-substrate folder with summary, architecture map, goal mapping, prober assessment, sources, and one file per feature, each feature triangulated across claim, doc, and source. Enforces a three-tier knowledge discipline (Tier 1 claim / Tier 2 source / Tier 3 analysis) so future readers can reuse the output without re-probing."
+name: repo-audit
+description: "Use when you need a deep, code-grounded, evidence-triangulated audit of a single open-source repository — the per-repo descriptive pass that feeds later cross-project analysis. Produces a self-contained per-project folder with summary, architecture map, goal mapping, prober assessment, sources, and one file per feature, each feature triangulated across claim, doc, and source. Enforces a three-tier knowledge discipline (Tier 1 claim / Tier 2 source / Tier 3 analysis) so future readers can reuse the output without re-probing."
 when_to_use:
-  - User asks for a deep evaluation of a single OSS project (substrate, library, framework, service)
-  - You are building a substrate corpus where each entry will later be compared across a domain
+  - User asks for a deep evaluation of a single OSS project (memory layer, library, framework, service)
+  - You are building a project corpus where each entry will later be compared across a domain
   - L1 survey-level information (stars, README one-liner) is insufficient and you need to know what the code actually does
   - Output is intended to live in a documentation repo (e.g. apnex/kate) as a reusable evidence corpus
 when_not_to_use:
   - You only need a one-line summary or feature comparison → use survey/landscape-style notes
-  - You are doing cross-substrate analysis across multiple already-probed substrates → that is a separate downstream pass (crossprobe / TBD), not nanoprobe
+  - You are doing cross-project analysis across multiple already-probed projects → that is a separate downstream pass (crossprobe / TBD), not nanoprobe
   - You are evaluating a deployment, not a project → use operational runbook patterns instead
   - The brief is forward-looking ("what should we build") → use writing-plans / plan / spike
 related_skills: [research-artefacts, brief-driven-research, codebase-inspection, writing-plans]
@@ -26,13 +26,13 @@ related_skills: [research-artefacts, brief-driven-research, codebase-inspection,
 ## Overview
 
 `nanoprobe` is the **descriptive, per-repo pass** of a multi-stage OSS research
-methodology. One nanoprobe = one repository = one substrate's own feature list,
+methodology. One nanoprobe = one repository = one project's own feature list,
 characterised on its own terms with evidence triangulated across **claim** (what
 the project says about itself), **doc** (how it's documented), and **source**
 (what the code actually does).
 
-A nanoprobe output is **self-contained and substrate-scoped**. It does NOT
-compare against other substrates, does NOT reconcile feature names against an
+A nanoprobe output is **self-contained and project-scoped**. It does NOT
+compare against other projects, does NOT reconcile feature names against an
 abstract taxonomy, and does NOT attempt to map features to other projects'
 vocabulary. That cross-cutting analysis is a separate downstream pass
 (`crossprobe` — TBD) that consumes N nanoprobe outputs and produces
@@ -44,19 +44,19 @@ Keep the boundary clean: **describe here, compare elsewhere.**
 
 1. **One repo per probe.** Pick the canonical upstream repository. Satellite
    repos (client SDKs, docs sites, examples) are cited in `sources.md` only —
-   never code-traced. Monorepo exception: if the substrate lives as one
+   never code-traced. Monorepo exception: if the project lives as one
    package inside a monorepo, scope the probe to that package's directory.
-2. **Substrate-native vocabulary.** Name features what the project itself calls
+2. **Project-native vocabulary.** Name features what the project itself calls
    them. If the project calls it "dialectic", the file is `dialectic.md`, not
    `derived-memory.md`. Renaming is crossprobe's job.
-3. **No cross-substrate references.** A nanoprobe output cannot say "similar
+3. **No cross-project references.** A nanoprobe output cannot say "similar
    to X" or "Y does this differently" — **anywhere, including in Tier 3
    assessment**. Even caveated comparisons contaminate the descriptive pass
    and pre-empt crossprobe's job. The rule applies uniformly across all
    artefacts in the nanoprobe output. When you spot a comparison creeping
-   in (especially in Tier 3 entries phrased as "most substrates of this
+   in (especially in Tier 3 entries phrased as "most projects of this
    kind…" or "this is unusual because most projects…"), park it as a
-   crossprobe TODO and rewrite the entry in pure substrate-scoped terms.
+   crossprobe TODO and rewrite the entry in pure project-scoped terms.
 4. **Triangulation required for every feature.** Each feature spec must cite
    claim + doc + source. Mismatches between the three are *findings*, not
    failures — write them up.
@@ -68,7 +68,7 @@ Keep the boundary clean: **describe here, compare elsewhere.**
 
 ## Rung definitions (where nanoprobe sits)
 
-| Rung | Action | Per-substrate output |
+| Rung | Action | Per-project output |
 |---|---|---|
 | L1 | Triage / survey | row in domain-level landscape doc |
 | L2 | Doc walk — enumerate advertised features | (folded into L3 for nanoprobe) |
@@ -86,7 +86,7 @@ See `references/rung-definitions.md` for full criteria.
 
 User input must include:
 
-- **Substrate name** (slug — lowercase, hyphens; matches the folder name)
+- **Project name** (slug — lowercase, hyphens; matches the folder name)
 - **Canonical repository URL** and the **commit SHA / tag** to probe (pin a
   specific commit; "main" is not reproducible)
 - **Domain folder** where the output lives (e.g. `kate/docs/memory/`)
@@ -100,10 +100,10 @@ If any of these is missing, ask before probing. Do not guess.
 Every nanoprobe produces this exact tree:
 
 ```
-<domain>/<substrate>/
+<domain>/<project>/
 ├── 00-summary.md          ← Tier 3 abstract — distilled findings, written LAST
-├── 02-architecture.md     ← Tier 1+2 — substrate-shaped descriptive map
-├── 03-mapping.md          ← Tier 3 — how this substrate addresses domain goals
+├── 02-architecture.md     ← Tier 1+2 — project-shaped descriptive map
+├── 03-mapping.md          ← Tier 3 — how this project addresses domain goals
 ├── 04-assessment.md       ← Tier 3 — probe analysis: trade-offs, gotchas, gaps
 ├── sources.md             ← reproducibility — every URL, SHA, path, date
 └── features/              ← Tier 1+2 — one file per feature
@@ -114,11 +114,11 @@ Every nanoprobe produces this exact tree:
 
 There is no `01-features.md`. Features live one-per-file in `features/`. This
 is the critical unit of comparison for later analysis — keep each file
-substrate-scoped, self-contained, and named in the substrate's own vocabulary.
+project-scoped, self-contained, and named in the project's own vocabulary.
 
 **Tier discipline (load-bearing — see `references/tier-discipline.md`):**
 
-- **Tier 1 (claim)** — the substrate's own self-description; cited from
+- **Tier 1 (claim)** — the project's own self-description; cited from
   README / docs / maintainer-authored guides
 - **Tier 2 (source)** — file:line citations at the pinned SHA; verifiable
   facts about the code
@@ -132,8 +132,8 @@ or `00-summary.md` (final synthesis). When Tier 3 appears inside a Tier 1+2
 artefact (e.g. "Behaviour notes" in a feature spec), label it explicitly.
 
 **Why `02-architecture.md`, not `02-code-trace.md`:** the artefact is for
-future readers, not the prober's reading journal. Document the substrate as
-the substrate organises itself (subsystems, primitives, runtime topology,
+future readers, not the prober's reading journal. Document the project as
+the project organises itself (subsystems, primitives, runtime topology,
 storage tiers, pluggable surfaces) — not as you happened to traverse it. The
 3-5 code paths from the probe plan are EXECUTION SCAFFOLDING; the
 ARCHITECTURE MAP is the persistent knowledge. Code paths drive your reading
@@ -144,18 +144,18 @@ See `templates/` for fillable templates of each file.
 ## Per-feature spec format
 
 Every file in `features/` follows this shape (OpenSpec-inspired
-Requirement+Scenario format, adapted for substrate description):
+Requirement+Scenario format, adapted for project description):
 
 ```markdown
-# Feature: <substrate-native-name>
+# Feature: <project-native-name>
 
-**Substrate:** <substrate> <version-or-sha>
+**Project:** <project> <version-or-sha>
 **Category:** <Storage | Derivation | Retrieval | Lifecycle | Surface | Identity | Ops | Extensibility | Other>
 **Triangulation:** ✓ Triangulated | ⚠ Partial | ✗ Single-source
 **Last probed:** YYYY-MM-DD
 
 ## What it is
-One paragraph in the substrate's own terms. No comparison to other substrates.
+One paragraph in the project's own terms. No comparison to other projects.
 
 ## Requirement
 The system SHALL <observable behaviour, present-tense, single sentence>.
@@ -199,7 +199,7 @@ feature spec. Its scope is **strictly limited to behaviour of THIS feature**:
   behaviour the source reveals
 - **Forbidden:** cross-cutting interpretation ("implications for our system",
   "this affects how we should…"), strategic recommendations, comparisons to
-  other features in the substrate, anything that reads as broader analysis
+  other features in the project, anything that reads as broader analysis
 
 **Cross-cutting interpretation lives in `04-assessment.md` with a back-
 reference from the feature spec** — e.g. `See 04-assessment.md §A8 for the
@@ -208,13 +208,13 @@ implications of this finding for downstream usage`.
 The behaviour-notes section is a tightly-scoped Tier 3 sidecar to feature
 description, not a mini-essay. If a note is longer than 2-3 sentences, ask:
 does this describe behaviour of this feature, or am I analysing the
-substrate? If the latter — move it.
+project? If the latter — move it.
 
 ## Scenarios — observable behaviour, not implementation
 
 Scenarios describe what an OBSERVER of the running system would see — not
 what the code does step-by-step internally. The distinction matters for
-artefact longevity: implementation-detail scenarios rot when the substrate
+artefact longevity: implementation-detail scenarios rot when the project
 refactors; observable-behaviour scenarios survive.
 
 **Good (observable):**
@@ -263,7 +263,7 @@ published claims that need context to be fair.
 See `research-artefacts` §"Rule 2: Signal density" for the full discipline
 including phrases to strip.
 
-For the memory-substrate domain, the working categories are:
+For the memory-layer domain, the working categories are:
 
 - **Storage** — vector, graph, KV, tiered, hybrid
 - **Derivation** — none, extract, reflect, dialectic, consolidate
@@ -274,8 +274,8 @@ For the memory-substrate domain, the working categories are:
 - **Ops** — deploy, scale, backup, observability
 - **Extensibility** — plugins, hooks, custom embedders, model swap
 
-Categories are **labels for in-substrate organisation**, not abstractions.
-Two substrates having a feature in the same category does NOT mean they
+Categories are **labels for in-project organisation**, not abstractions.
+Two projects having a feature in the same category does NOT mean they
 implement the same thing — only crossprobe is allowed to assert equivalence.
 
 For non-memory domains, define a new domain-appropriate taxonomy at the start
@@ -329,7 +329,7 @@ level. The taxonomy is fixed; severity lives in the prose.
 
 3. **Read README + docs in one pass.** Don't summarise yet — note every claim
    that smells like a feature. Capture URLs + section anchors as you go for
-   `sources.md`. Also capture: substrate-native vocabulary (primitive names,
+   `sources.md`. Also capture: project-native vocabulary (primitive names,
    subsystem names, anything that's an internal term of art) — you will use
    this vocabulary for feature names in step 6.
 
@@ -350,13 +350,13 @@ level. The taxonomy is fixed; severity lives in the prose.
        infrastructure layers like LLM/embedding clients, cache layer,
        telemetry, web framework routers, auth, generic utilities). The
        rationale is usually \"this probe answers 'what is X conceptually
-       as a substrate' — infrastructure layers are uniform-ish across
-       Python web services and don't shape the substrate's identity\".
+       as a project' — infrastructure layers are uniform-ish across
+       Python web services and don't shape the project's identity\".
        Without this declaration, the probe drifts: every directory the
        prober opens becomes an implicit obligation. With it, the prober
        (and any reader) can tell whether a missing topic was a deliberate
        skip or an oversight.
-     - **Substrate-native vocabulary lock** — the terms you'll preserve
+     - **Project-native vocabulary lock** — the terms you'll preserve
      - **Notable absences to look for** — explicit list of things you
        expect to find but haven't yet
      - **TODOs for crossprobe** — comparison temptations parked here
@@ -367,7 +367,7 @@ level. The taxonomy is fixed; severity lives in the prose.
 
 5. **Read code along your 3-5 paths and produce `02-architecture.md`.** The
    code paths are your READING ORDER, not the output structure. As you read,
-   write the substrate's architecture as the substrate organises itself:
+   write the project's architecture as the project organises itself:
    runtime topology, named subsystems, data primitives, configuration, storage
    tiers, pluggable surfaces. Cite every claim — either Tier 1 (`[claim: ...]`,
    `[doc: ...]`) or Tier 2 (`[code: file:line]`). **Strip all Tier 3
@@ -391,7 +391,7 @@ level. The taxonomy is fixed; severity lives in the prose.
 6. **For each discovered feature, write a `features/<name>.md` file.** Use
    the template. Triangulate as you go. Fill the Evidence table with concrete
    references, not "see docs". If you can't triangulate, document why in
-   "Behaviour notes" and set status to ⚠ or ✗. Use the substrate-native
+   "Behaviour notes" and set status to ⚠ or ✗. Use the project-native
    vocabulary locked in step 3. **"Behaviour notes" is the only section
    where Tier 3 commentary is allowed inside a feature spec — label it as
    such if it veers into interpretation rather than observation.**
@@ -427,7 +427,7 @@ level. The taxonomy is fixed; severity lives in the prose.
      toggle). Initially filed as a dreamer sub-component; promoted to
      `features/surprisal.md` after user-driven scope check.
    - **Defer to crossprobe** — the gap is infrastructure that doesn't
-     shape the substrate's identity (LLM client, cache, telemetry). Note
+     shape the project's identity (LLM client, cache, telemetry). Note
      it as out-of-scope per the Step 4 scope declaration; cross-reference
      the declaration.
    - **Open assessment** — the gap is something you can't decide yet.
@@ -456,14 +456,14 @@ level. The taxonomy is fixed; severity lives in the prose.
    during feature-spec writing) are also captured here; resolve them as
    evidence accumulates. See `references/tier-discipline.md` for the full
    contract. **At end of each batch and during the closing pass, apply
-   the analytical lenses from `references/substrate-analysis-lenses.md`
+   the analytical lenses from `references/project-analysis-lenses.md`
    to surface load-bearing Tier 3 findings that the descriptive pass
    misses (writer-cadence, provenance chain, abstraction completeness,
    classification smells, aspirational-vs-implemented gaps, cost
    asymmetries).**
 
 8. **Write `03-mapping.md`.** For each goal in the domain's goals doc, write
-   one paragraph: how this substrate addresses (or fails to address) that
+   one paragraph: how this project addresses (or fails to address) that
    goal. Cite specific feature files. This is the only artefact that
    references the goals doc; feature files do not. This is Tier 3 — it is
    interpretation of source-anchored facts against the goals — but bounded
@@ -498,7 +498,7 @@ level. The taxonomy is fixed; severity lives in the prose.
         `04-assessment.md` that the probe could not resolve, with what
         evidence would resolve them.
       - **Coverage caveat** — explicit statement of what kind of map this
-        probe produces (typically: "conceptual substrate map" — the named
+        probe produces (typically: "conceptual project map" — the named
         subsystems, primary data flows, pluggable surfaces) vs what it
         does not (typically: "complete codebase inventory" — every file,
         every helper, every framework integration).
@@ -516,14 +516,14 @@ level. The taxonomy is fixed; severity lives in the prose.
     than restating them.
 
 12. **Commit and push from the host where the repo lives.** Commit message:
-    `<domain>: nanoprobe <substrate> @ <short-sha>`.
+    `<domain>: nanoprobe <project> @ <short-sha>`.
 
 ## Multi-pass meta-process (load-bearing — read this section)
 
 The probe workflow above describes a linear sequence, but a real nanoprobe
-of a non-trivial substrate is NEVER single-pass. Treating the workflow as
+of a non-trivial project is NEVER single-pass. Treating the workflow as
 "do steps 1-12 once and you're done" produces under-promoted features,
-stale Tier 3 framing, and missed cross-feature lenses. The substrate is
+stale Tier 3 framing, and missed cross-feature lenses. The project is
 larger than your working memory; depth-of-understanding builds in waves;
 each wave reveals what the previous wave couldn't see.
 
@@ -532,7 +532,7 @@ Codify the probe as **five explicit passes**, each with a distinct purpose:
 ### Pass 1 — Sweep (descriptive coverage)
 
 Steps 1-6 of the workflow, executed in batches. Produces the bulk of the
-feature specs: substrate-native vocabulary, claim+doc+source triangulation,
+feature specs: project-native vocabulary, claim+doc+source triangulation,
 behaviour notes scoped to each feature. Goal is **coverage** — every
 advertised feature has a spec, every code path has been read at least once.
 
@@ -569,7 +569,7 @@ promotion heuristic from step 6.5:
 nearly missed it is itself a finding worth recording. This pass is what
 catches the "I cited `src/big_file.py` in three different feature specs but
 never made it its own spec" failure mode (pitfall #22). It typically
-promotes 2-4 hidden features per substrate; for substrates above 5k LOC
+promotes 2-4 hidden features per project; for projects above 5k LOC
 expect 3-5 promotions.
 
 **Critical: this pass enumerates EVERY Source row in EVERY Evidence
@@ -591,7 +591,7 @@ overlap and keeps each spec single-purpose.
 ### Pass 4 — Synthesis (cross-feature lenses)
 
 For each feature spec, apply the analytical lenses from
-`references/substrate-analysis-lenses.md` (writer-cadence, provenance
+`references/project-analysis-lenses.md` (writer-cadence, provenance
 chain, abstraction completeness, classification smells, aspirational-vs-
 implemented gaps, cost asymmetries, plus the locus-of-enforcement,
 operator-impact, failure-mode, structural-criticality, and cross-feature-
@@ -600,7 +600,7 @@ invariant lenses).
 For each lens, ask: does this feature spec have at least one Tier 3 bullet
 that uses this lens? If a spec has thin Tier 3 (≤3 bullets, all narrowly
 scoped to in-feature behaviour), add one cross-feature lens bullet that
-connects this feature to other features in the substrate. The output of
+connects this feature to other features in the project. The output of
 this pass is **denser cross-feature linkage in Tier 3** — readers can
 navigate from any spec to related specs via the analytical bullets, not
 just via the Evidence table.
@@ -688,7 +688,7 @@ compressed, scenarios preserved, format drift accepted.
   file:line that demonstrates it. "The system uses Postgres" needs a citation.
 - **Mark assumptions explicitly.** "ASSUMED default — verify by running X"
   is acceptable; silently asserting a value you didn't verify is not.
-- **Preserve substrate vocabulary.** If the project calls something "the
+- **Preserve project vocabulary.** If the project calls something "the
   deriver", call it "the deriver" in your output. Don't translate to
   "the background worker" — translation is loss.
 
@@ -698,12 +698,12 @@ compressed, scenarios preserved, format drift accepted.
    every feature, every probe. Docs lie, omit, or lag. Source is the only
    load-bearing evidence for behaviour.
 
-2. **Naming features with abstract / cross-substrate language.** Tempting,
+2. **Naming features with abstract / cross-project language.** Tempting,
    especially after the first few probes when patterns emerge — DON'T.
-   Substrate vocabulary keeps the output substrate-scoped. Abstraction is
+   Project vocabulary keeps the output project-scoped. Abstraction is
    crossprobe's job.
 
-3. **Comparing across substrates.** No "unlike X" or "similar to Y" sentences
+3. **Comparing across projects.** No "unlike X" or "similar to Y" sentences
    anywhere in nanoprobe output. Such sentences contaminate the descriptive
    pass with comparative bias and pre-empt crossprobe.
 
@@ -712,12 +712,12 @@ compressed, scenarios preserved, format drift accepted.
    record it in `00-summary.md` AND every Evidence row.
 
 5. **Probing multiple repos in one nanoprobe.** One repo per probe. If the
-   substrate spans an ecosystem, pick the canonical one and cite satellites
+   project spans an ecosystem, pick the canonical one and cite satellites
    in `sources.md` without code-tracing them.
 
 6. **Skipping the goals mapping.** `03-mapping.md` is what makes the probe
    useful for the user's specific deployment. Don't skip it because the
-   substrate looks irrelevant — explicit "does not address G4" findings are
+   project looks irrelevant — explicit "does not address G4" findings are
    valuable.
 
 7. **Writing the summary first.** The summary is a distillation of what
@@ -727,9 +727,9 @@ compressed, scenarios preserved, format drift accepted.
 8. **Subagent delegation that loses context.** If you delegate the probe to a
    subagent, pass: the canonical repo URL + pinned SHA, the domain folder
    path, the goals doc content (or path + verified-readable), the output
-   templates, the substrate vocabulary you want preserved, the probe plan
+   templates, the project vocabulary you want preserved, the probe plan
    from step 4 (or instruct the subagent to produce one first), and an
-   explicit "no cross-substrate references" constraint. Subagents currently
+   explicit "no cross-project references" constraint. Subagents currently
    don't inherit memory, so any of these omitted = contaminated output.
 
 9. **Skill loader is cached at session start — including for subagents
@@ -750,7 +750,7 @@ compressed, scenarios preserved, format drift accepted.
     by reading `LICENSE` and `pyproject.toml`/`package.json`/equivalent at
     the pinned SHA in step 2. Surveys lie; SHAs don't.
 
-12. **Treating absence of a feature as absence of evidence.** If a substrate
+12. **Treating absence of a feature as absence of evidence.** If a project
     does NOT have derivation, record that finding in `00-summary.md` under
     "Notable absences". Crossprobe relies on knowing what's absent, not just
     what's present.
@@ -760,7 +760,7 @@ compressed, scenarios preserved, format drift accepted.
     it; don't pick 3 because it sounds tidy. **Paths trace architectural
     SEAMS — places where data crosses a boundary between subsystems
     (queue → worker, sync → async, write → read, foreground → background).
-    Pick the natural seam count for THIS substrate.** For a substrate
+    Pick the natural seam count for THIS project.** For a project
     with N major subsystems, paths are usually N-1 (when two subsystems
     share one seam) or N (when each subsystem owns one seam), rarely
     N+1. If your paths overlap (Path A and Path B end up reading the
@@ -771,7 +771,7 @@ compressed, scenarios preserved, format drift accepted.
     behaviour; everything else is feature-spec evidence (cite file:line
     in the feature file, no narrative needed).
 
-14. **Treating large substrates as single-shot work.** Substrates above
+14. **Treating large projects as single-shot work.** Projects above
     ~5k LOC or ~10 subsystems don't fit a single subagent budget. Decompose
     along the 3-5 code paths from step 4 — scaffolding shot, parallel
     path shots, synthesis shot. See `references/execution-strategy.md`.
@@ -779,9 +779,9 @@ compressed, scenarios preserved, format drift accepted.
 15. **Conflating Tier 1+2 (descriptive) with Tier 3 (analytical) in the
     same artefact.** This is the most insidious failure mode. The original
     `02-code-trace.md` design mixed "here's the code path I read" (Tier 3
-    journal of the prober) with "here's what the substrate is" (Tier 1+2
+    journal of the prober) with "here's what the project is" (Tier 1+2
     description) — readers couldn't tell what was fact vs interpretation.
-    Fixes: (a) `02-architecture.md` is descriptive ONLY — substrate-shaped,
+    Fixes: (a) `02-architecture.md` is descriptive ONLY — project-shaped,
     source-cited, no interpretation; (b) `04-assessment.md` carries ALL
     open-ended prober commentary, signed and dated; (c) when Tier 3 appears
     inside a Tier 1+2 artefact (e.g. feature spec Behaviour notes), label
@@ -789,11 +789,11 @@ compressed, scenarios preserved, format drift accepted.
 
 16. **Letting the architecture map become a path-walk.** The order in
     which you read code is not the order a future reader needs to learn
-    the substrate. Path order is execution scaffolding (from the probe
-    plan); architecture order is substrate-shaped (subsystems, primitives,
+    the project. Path order is execution scaffolding (from the probe
+    plan); architecture order is project-shaped (subsystems, primitives,
     topology). If your `02-architecture.md` reads like "first I looked at
     X, then I followed it to Y", you've written the wrong artefact —
-    rewrite it as "the substrate consists of A, B, C, here is how they
+    rewrite it as "the project consists of A, B, C, here is how they
     relate".
 
 17. **Behaviour notes drifting into mini-essays.** "Implications for our
@@ -803,7 +803,7 @@ compressed, scenarios preserved, format drift accepted.
     with a back-reference from the feature spec. Behaviour notes are
     tightly scoped to behaviour of THIS feature only. If a note is longer
     than 2-3 sentences, ask: am I describing behaviour, or am I analysing
-    the substrate? If the latter — move it.
+    the project? If the latter — move it.
 
 18. **Scenarios that read the source back at you.** "WHEN function_x is
     invoked THEN messages are sorted by id and formatted via helper_y AND
@@ -812,7 +812,7 @@ compressed, scenarios preserved, format drift accepted.
     observer of the running system sees — telemetry events, side effects,
     return values, persisted state changes. Implementation details go in
     the Evidence table, not in Scenario lines. The artefact ages better:
-    if the substrate renames `helper_y`, the implementation-narration
+    if the project renames `helper_y`, the implementation-narration
     scenario breaks but the actual behaviour didn't change.
 
 19. **Verbose prose where structured single-line entries would do.**
@@ -823,13 +823,13 @@ compressed, scenarios preserved, format drift accepted.
     14x larger than needed; readers skim and miss the signal. Write terse
     first; expand only entries that demand it.
 
-20. **Cross-substrate language creeping into Tier 3 entries.** Even with
+20. **Cross-project language creeping into Tier 3 entries.** Even with
     the "kept abstract here, will inform crossprobe" caveat, phrases like
-    "most substrates we surveyed do X" or "this is unusual compared to
+    "most projects we surveyed do X" or "this is unusual compared to
     other projects" are forbidden in nanoprobe output. The no-cross-
-    substrate rule applies uniformly — Tier 1+2 AND Tier 3. If you spot
+    project rule applies uniformly — Tier 1+2 AND Tier 3. If you spot
     the temptation, park it as a crossprobe TODO and rewrite in pure
-    substrate-scoped terms. See `references/tier-discipline.md` and the
+    project-scoped terms. See `references/tier-discipline.md` and the
     `research-artefacts` skill §"Rule 4: Two-pass discipline".
 
 21. **Line-by-line reading of large files instead of docstring-first
@@ -886,7 +886,7 @@ Before declaring a probe complete:
 - [ ] Probe plan (step 4) existed before any code-trace work began
 - [ ] License verified by reading `LICENSE` at the pinned SHA (recorded
       in `00-summary.md` and `04-assessment.md` if corrects a prior survey)
-- [ ] Output folder exists at `<domain>/<substrate>/` with all five files
+- [ ] Output folder exists at `<domain>/<project>/` with all five files
       (`00-summary.md`, `02-architecture.md`, `03-mapping.md`,
       `04-assessment.md`, `sources.md`) + `features/` directory
 - [ ] Every feature has its own file in `features/`
@@ -895,7 +895,7 @@ Before declaring a probe complete:
 - [ ] Every Evidence row cites concrete refs (URL+date for claim/doc,
       file:line@SHA for source) — no "see docs"
 - [ ] Triangulation status set on every feature (✓ / ⚠ / ✗)
-- [ ] `02-architecture.md` describes substrate-as-substrate-organises-itself
+- [ ] `02-architecture.md` describes project-as-project-organises-itself
       (subsystems, primitives, topology, storage, pluggable surfaces) — NOT
       a path-walk in reading order
 - [ ] `02-architecture.md` contains zero Tier 3 interpretation (no
@@ -907,9 +907,9 @@ Before declaring a probe complete:
 - [ ] `sources.md` is complete: all URLs, SHAs, paths, dates
 - [ ] `00-summary.md` exists, written LAST, distils findings + verified
       license + notable absences + triangulation gaps + crossprobe TODOs
-- [ ] No cross-substrate references anywhere in the output (including
+- [ ] No cross-project references anywhere in the output (including
       Tier 3 assessment entries)
-- [ ] All feature names use substrate-native vocabulary
+- [ ] All feature names use project-native vocabulary
 - [ ] Behaviour notes in feature specs are tightly scoped to behaviour of
       THIS feature — no "implications for our system" / strategic analysis
       (those live in `04-assessment.md` with back-references)
@@ -919,7 +919,7 @@ Before declaring a probe complete:
 - [ ] Assessment and summary entries use terse structured single-line
       format by default; paragraph form only for entries that need
       structural argument
-- [ ] Commit pushed with message `<domain>: nanoprobe <substrate> @ <short-sha>`
+- [ ] Commit pushed with message `<domain>: nanoprobe <project> @ <short-sha>`
 
 ## Support files
 
@@ -930,15 +930,15 @@ Before declaring a probe complete:
 - `references/source-citation.md` — citation format rules + reproducibility
 - `references/execution-strategy.md` — when to single-shot vs decompose;
   scaffolding-shot + parallel-path-shots + synthesis-shot pattern for large
-  substrates; subagent context-passing checklist
+  projects; subagent context-passing checklist
 - `references/closing-pass-exemplars.md` — known-good section shapes for
   `05-coverage.md`, `03-mapping.md`, `00-summary.md`, drawn from the
   honcho v3.0.7 probe. Read before writing the closing pass.
 - `references/tier-discipline.md` — the three-tier knowledge model
   (claim / source / analytical) and how it maps to the output artefacts;
   the load-bearing principle that keeps probe outputs reusable
-- `templates/00-summary.md.tmpl` — substrate summary template (written LAST)
-- `templates/02-architecture.md.tmpl` — substrate-shaped architecture map
+- `templates/00-summary.md.tmpl` — project summary template (written LAST)
+- `templates/02-architecture.md.tmpl` — project-shaped architecture map
   (Tier 1+2, descriptive only)
 - `templates/03-mapping.md.tmpl` — goal-mapping template
 - `templates/04-assessment.md.tmpl` — probe assessment template (Tier 3,
@@ -954,13 +954,13 @@ Before declaring a probe complete:
 Crossprobe (TBD, separate skill) consumes N nanoprobe outputs as input and
 produces:
 
-- Feature taxonomy reconciliation across substrates (e.g. "Honcho's dialectic
+- Feature taxonomy reconciliation across projects (e.g. "Honcho's dialectic
   and mem0's fact-extraction are both members of the abstract concept
   *background-derived-memory*")
-- Cross-substrate comparison matrices
+- Cross-project comparison matrices
 - Capability gap analysis (features present in some, absent in others)
-- Abstract-concept-to-goal mapping across the full substrate set
+- Abstract-concept-to-goal mapping across the full project set
 
 If you find yourself wanting to do any of the above inside a nanoprobe — stop.
 Note the temptation in a TODO at the bottom of `00-summary.md` for crossprobe
-to pick up. Then go back to describing the substrate in its own terms.
+to pick up. Then go back to describing the project in its own terms.

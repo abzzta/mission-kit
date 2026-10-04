@@ -12,7 +12,7 @@ when_not_to_use:
   - The work is a trivial bug fix or a mechanical change with one obvious correct outcome
   - You need a deep technical evaluation of an existing system -> use a code-grounded audit skill instead
   - The decision-authority is unavailable and cannot answer two short rounds of questions -- the survey is interactive by design and degrades to a guess without them
-related_skills: [arc-lifecycle, workgraph-arc-planning, substrate-audit, research-artefacts]
+related_skills: [arc-lifecycle, workgraph-arc-planning, repo-audit, research-artefacts]
 ---
 
 # survey -- stakeholder-intent capture before design

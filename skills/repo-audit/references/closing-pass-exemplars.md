@@ -27,14 +27,14 @@ mechanic:
 
 Section shape that worked:
 
-1. **Substrate in one paragraph** — single dense paragraph naming all the
+1. **Project in one paragraph** — single dense paragraph naming all the
    major subsystems and their cadence relationship; reads as the abstract
-2. **Cadence/writers table** — for substrates with multiple async writers,
+2. **Cadence/writers table** — for projects with multiple async writers,
    a compact table (writer / cadence / output / cost) anchors the
    architectural commitment in one place
 3. **Pluggable surfaces** — one sentence listing what's swappable; details
    live in `02-architecture.md` §6
-4. **Key capabilities discovered** — 5-8 bullets, each one substrate-native
+4. **Key capabilities discovered** — 5-8 bullets, each one project-native
    capability + one-line significance + cross-ref to feature spec
 5. **Capabilities NOT present (negative findings)** — equally important;
    crossprobe relies on knowing what's absent. Cite the assessment entry
@@ -58,13 +58,13 @@ Section shape that worked:
 - One H2 per goal (G1, G2, …Gn)
 - **Fit: strong | partial | absent** as the first line under the H2 —
   the reader scans these
-- **Substrate feature → how it addresses Gx** table per goal — one row
+- **Project feature → how it addresses Gx** table per goal — one row
   per cited feature spec, no prose paragraph unless the fit needs an
   argument
 - For partial fits, an **Absent** row in the table calling out what
-  the substrate does NOT provide (e.g. "no TTL / decay" for G3)
+  the project does NOT provide (e.g. "no TTL / decay" for G3)
 - **Summary table at the bottom** — Goal / Fit / Note — one row per
-  goal; lets the operator answer "does this substrate fit?" in 30 seconds
+  goal; lets the operator answer "does this project fit?" in 30 seconds
 
 Pitfalls the honcho mapping avoided:
 
@@ -105,12 +105,12 @@ Section shape that worked:
 Follow the section ORDER (summary last, mapping after coverage, etc.) — it's
 the discipline that prevents anchor-on-conclusions writing.
 
-Adapt the section SHAPES — your substrate may not have multiple writers, may
+Adapt the section SHAPES — your project may not have multiple writers, may
 not have negative findings worth a section, may have only one goal-fit
 column. Don't pad to match the exemplar; cut sections that don't earn
 their place.
 
-The substrate vocabulary in these exemplars is honcho-specific
+The project vocabulary in these exemplars is honcho-specific
 ("perspectival peer-pairs", "dreamer", "dialectic agent", "explicit/
 deductive/inductive observations"). Your closing pass must use YOUR
-substrate's native vocabulary — these shapes show structure, not wording.
+project's native vocabulary — these shapes show structure, not wording.

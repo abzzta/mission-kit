@@ -30,13 +30,13 @@ In feature specs, the Evidence table uses fully-qualified references:
 
 ### sources.md format
 
-The substrate's `sources.md` is a complete index of every touched URL and
+The project's `sources.md` is a complete index of every touched URL and
 path. Format:
 
 ```markdown
 # Sources
 
-**Substrate:** <substrate-name>
+**Project:** <project-name>
 **Pinned SHA:** <full-sha>
 **Probe date:** YYYY-MM-DD
 

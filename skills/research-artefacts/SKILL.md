@@ -1,6 +1,6 @@
 ---
 name: research-artefacts
-description: "Use when producing any research artefact intended for future reuse — OSS audits, technical investigations, vendor evaluations, architecture reviews, comparative analyses. Enforces four discipline rules that keep research outputs durable, reusable, and free of common contamination patterns: three-tier knowledge separation (claim / source / analytical), signal-density-first writing, scaffolding-before-execution for large tasks, and descriptive-before-comparative two-pass discipline. This is a generic methodology skill that other research skills (substrate-audit, brief-driven-research, vendor-evaluation, etc.) build on top of."
+description: "Use when producing any research artefact intended for future reuse — OSS audits, technical investigations, vendor evaluations, architecture reviews, comparative analyses. Enforces four discipline rules that keep research outputs durable, reusable, and free of common contamination patterns: three-tier knowledge separation (claim / source / analytical), signal-density-first writing, scaffolding-before-execution for large tasks, and descriptive-before-comparative two-pass discipline. This is a generic methodology skill that other research skills (repo-audit, brief-driven-research, vendor-evaluation, etc.) build on top of."
 when_to_use:
   - You are producing a research artefact that future operators (you, the user, or others) will need to reason with later — without redoing the underlying research
   - You are evaluating, auditing, investigating, or comparing things and the output will live in a documentation repo
@@ -12,7 +12,7 @@ when_not_to_use:
   - Pure implementation work (writing code, configuring systems) — use task-specific skills
   - Creative writing where signal density and tier separation actively hurt the output
   - Short factual lookups where the answer is one sentence
-related_skills: [substrate-audit, brief-driven-research, writing-plans, plan]
+related_skills: [repo-audit, brief-driven-research, writing-plans, plan]
 ---
 
 # research-artefacts — generic methodology for durable research outputs
@@ -109,7 +109,7 @@ Id (Date) — Severity — Claim in one sentence [citation]. Implication. Action
 Example:
 ```
 A1 (2026-05-24) — License is AGPLv3, not Apache-2 [LICENSE@7470866].
-Network-use copyleft. Substrate-landscape row wrong — fix separately.
+Network-use copyleft. Project-landscape row wrong — fix separately.
 ```
 
 Same information as a 350-char paragraph version, 4x denser, faster to
@@ -185,13 +185,13 @@ comparison.
 
 ### The contamination pattern
 
-When you're describing Substrate A and you know Substrate B does something
-similar, the temptation is to say "Substrate A's foo is like Substrate B's
+When you're describing Project A and you know Project B does something
+similar, the temptation is to say "Project A's foo is like Project B's
 bar, but…". This:
-- Frames Substrate A in Substrate B's vocabulary (loss of native terms)
+- Frames Project A in Project B's vocabulary (loss of native terms)
 - Anchors the reader to one comparison axis (the one you happened to pick)
 - Pre-empts the comparative pass with cherry-picked comparisons
-- Locks in your current understanding of Substrate B, which may shift
+- Locks in your current understanding of Project B, which may shift
 
 The discipline: **finish the descriptive pass in the subject's own terms
 first. Then, in a separate pass, do the comparative work that consumes the
@@ -199,8 +199,8 @@ descriptive outputs as inputs.**
 
 ### What this looks like in practice
 
-**Descriptive pass output:** N substrate-scoped artefacts, each in that
-substrate's native vocabulary, with no cross-substrate references anywhere
+**Descriptive pass output:** N project-scoped artefacts, each in that
+project's native vocabulary, with no cross-project references anywhere
 — not in the descriptive content, not in the Tier 3 assessment.
 
 **Comparative pass output:** an artefact that consumes the N descriptive
@@ -214,7 +214,7 @@ gap analysis. This is the only place comparative language appears.
 - **Park comparative temptations explicitly.** Drop them as TODOs at the
   bottom of the descriptive artefact for the comparative pass to pick up.
 - **The comparative pass must wait until ≥2 descriptive passes are
-  complete.** Comparative work on one substrate is just description with
+  complete.** Comparative work on one project is just description with
   comparison contamination.
 
 ## Multi-session research collaboration
@@ -223,7 +223,7 @@ When research spans multiple sessions with a steering human collaborator,
 the four rules above are necessary but not sufficient — folder layout,
 append-only design-journal discipline, open-questions as the primary
 steering mechanism, and a layered evidence model for auditing another
-substrate become load-bearing. That protocol is out of scope for this
+project become load-bearing. That protocol is out of scope for this
 skill's current codification.
 
 ## How this skill interacts with other research skills
@@ -231,7 +231,7 @@ skill's current codification.
 Other research skills inherit these four rules. They add domain-specific
 shape on top:
 
-- **`substrate-audit`** — applies these rules to deep audits of individual OSS
+- **`repo-audit`** — applies these rules to deep audits of individual OSS
   repositories. Domain-specific additions: code-as-source-tier, triangulation
   status taxonomy, feature-spec shape with OpenSpec scenarios, architectural-
   seams principle for code-path selection.
@@ -423,7 +423,7 @@ load-bearing failure mode caught during real work:
 - **Scaffolding** — first subagent delegation read source for 10 minutes
   and wrote nothing; methodology had no "produce a plan first" step
 - **Two-pass discipline** — early architecture map drifted toward
-  "trade-offs" language; cross-substrate comparison crept into Tier 3
+  "trade-offs" language; cross-project comparison crept into Tier 3
   assessment as "most agent-memory systems we surveyed…"
 
 The methodology is grounded in real failure, not theory.

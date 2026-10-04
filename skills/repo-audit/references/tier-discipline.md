@@ -7,9 +7,9 @@ looking at*.
 
 ## The three tiers
 
-### Tier 1 — Substrate's claim (what it says about itself)
+### Tier 1 — Project's claim (what it says about itself)
 
-**Source of truth:** the substrate's maintainers.
+**Source of truth:** the project's maintainers.
 **Where you find it:** README, official docs site, CLAUDE.md, AGENTS.md,
 maintainer blog posts, conference talks, marketing copy.
 **Authority:** the project. Whoever shipped the code shipped the framing.
@@ -23,7 +23,7 @@ Examples:
 - "Honcho extracts all latent information by reasoning about everything"
   (reasoning.mdx)
 
-### Tier 2 — Substrate's source (what the code actually shows)
+### Tier 2 — Project's source (what the code actually shows)
 
 **Source of truth:** the code at the pinned SHA.
 **Where you find it:** `src/`, configuration files, schemas, migrations,
@@ -45,13 +45,13 @@ Examples:
 "Behaviour notes" section of feature specs (when interpretive), `03-mapping.md`,
 `00-summary.md`.
 **Authority:** the prober, signed and dated. A future operator can disagree
-with Tier 3 without disagreeing with the substrate.
+with Tier 3 without disagreeing with the project.
 **Ages with:** the prober's understanding. May be refuted by later evidence
-or by the substrate evolving.
+or by the project evolving.
 
 Examples:
 - "Postgres-backed queue trades throughput for durability — this is unusual
-  for a substrate of this scale" (interpretation, not stated by the project)
+  for a project of this scale" (interpretation, not stated by the project)
 - "The Summarizer-in-utils asymmetry suggests it was retro-fitted" (the
   prober's reading of structural facts)
 - "AGPL license is sovereignty-relevant for managed-service futures, moot
@@ -60,7 +60,7 @@ Examples:
 ## Why this discipline matters
 
 **The failure mode it prevents:** a future operator reads the architecture
-map and can't tell which sentences are facts about the substrate (durable,
+map and can't tell which sentences are facts about the project (durable,
 re-verifiable via the SHA) and which are the prober's opinion at a moment
 in time (potentially wrong, definitely dated). Without tier discipline,
 the entire document gets demoted to "vibes" — the operator either trusts
@@ -154,14 +154,14 @@ specs surface the evidence.
 
 ## Anti-patterns
 
-1. **"This is unusual for a substrate of this scale."** Pure Tier 3. If
+1. **"This is unusual for a project of this scale."** Pure Tier 3. If
    it's in `02-architecture.md`, move it to `04-assessment.md`.
 2. **"The maintainers chose to..."** — speculation about intent. Tier 3.
 3. **"This design trades X for Y."** Trade-off framing is interpretation
    unless the maintainers themselves named it as a trade-off (in which
    case quote them and cite as Tier 1).
 4. **"Common misconception: ..."** — useful, but it's prober commentary
-   about how OTHER people interpret the substrate. Tier 3.
+   about how OTHER people interpret the project. Tier 3.
 5. **"The right way to think about this is..."** — Tier 3 with extra
    evangelism. Belongs in assessment with the prober's name on it.
 

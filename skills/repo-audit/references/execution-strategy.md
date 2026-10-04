@@ -53,14 +53,14 @@ gets:
 - ITS assigned code path (file list — used as READING ORDER, not output
   structure)
 - ITS assigned features (subset of features/<name>.md to populate)
-- ITS assigned section(s) of the substrate-architecture (e.g. shot 2
+- ITS assigned section(s) of the project-architecture (e.g. shot 2
   owns subsystems A+B in `02-architecture.md`, shot 3 owns C+D, etc.)
-- The same "no cross-substrate references" + substrate-native vocabulary
+- The same "no cross-project references" + project-native vocabulary
   constraints
 - The output templates inlined (not by skill_view reference)
 
 **Deliverables per shot:**
-- Its assigned sections of `02-architecture.md` — substrate-shaped
+- Its assigned sections of `02-architecture.md` — project-shaped
   (subsystems / primitives / topology), NOT a path-walk. Use section
   markers like `<!-- BEGIN SUBSYSTEM:deriver -->` ...
   `<!-- END SUBSYSTEM:deriver -->` so synthesis can reassemble.
@@ -72,7 +72,7 @@ gets:
 - Appended rows to sources.md (or its own section to be merged)
 
 The code path is the shot's READING ORDER. The deliverable shape is
-the substrate's architecture. See pitfall #16 in SKILL.md.
+the project's architecture. See pitfall #16 in SKILL.md.
 
 ### Shot 5 — Synthesis (sequential, blocking)
 
@@ -80,8 +80,8 @@ the substrate's architecture. See pitfall #16 in SKILL.md.
 `_shot-N-assessments.md` fragments.
 
 **Work:**
-- Reassemble `02-architecture.md` sections in substrate-architectural
-  order (NOT shot order — the substrate's own organisation: runtime
+- Reassemble `02-architecture.md` sections in project-architectural
+  order (NOT shot order — the project's own organisation: runtime
   topology → subsystems → primitives → storage → pluggable surfaces).
   Strip any Tier 3 interpretation that leaked through; move it to
   `04-assessment.md`.
@@ -103,9 +103,9 @@ When delegating a probe shot (any tier), the context block MUST include:
 - [ ] Local clone path (already prepared by parent)
 - [ ] Domain folder absolute path + output destination absolute path
 - [ ] Goals doc content **inlined verbatim** — not "read from path X"
-- [ ] Substrate-native vocabulary lock (terms to preserve)
+- [ ] Project-native vocabulary lock (terms to preserve)
 - [ ] OUT-OF-SCOPE directories list (with reason)
-- [ ] OUT-OF-SCOPE constraints (no commits, no cross-substrate refs, etc.)
+- [ ] OUT-OF-SCOPE constraints (no commits, no cross-project refs, etc.)
 - [ ] Expected deliverables with absolute paths
 - [ ] Per-shot: the slice of work it owns (path N + features X,Y,Z)
 - [ ] Templates inlined verbatim (NOT by skill_view reference — see below)
@@ -159,7 +159,7 @@ load-bearing.
 
 ## When NOT to decompose
 
-- Substrate is small enough for inline (small tier)
+- Project is small enough for inline (small tier)
 - You haven't done a probe in this domain before — single inline pass
   surfaces methodology friction better than parallelised subagents
 - The goals doc is still in flux — decomposition assumes stable

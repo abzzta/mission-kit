@@ -1,13 +1,13 @@
 # Feature taxonomy
 
-Categories used to organise features within a substrate. They are **labels for
-in-substrate organisation**, NOT abstractions across substrates. Two features
-in the same category in two different substrates are NOT necessarily the same
+Categories used to organise features within a project. They are **labels for
+in-project organisation**, NOT abstractions across projects. Two features
+in the same category in two different projects are NOT necessarily the same
 feature — only crossprobe is allowed to assert equivalence.
 
-## Memory-substrate domain taxonomy
+## Memory-layer domain taxonomy
 
-Initial taxonomy for the memory-substrate domain (`kate/docs/memory/`):
+Initial taxonomy for the memory-layer domain (`kate/docs/memory/`):
 
 | Category | Includes |
 |---|---|
@@ -25,15 +25,15 @@ Initial taxonomy for the memory-substrate domain (`kate/docs/memory/`):
 Add a new category when:
 
 - You discover a feature that genuinely doesn't fit any existing category
-  AND it's the kind of capability you expect to see in other substrates too
+  AND it's the kind of capability you expect to see in other projects too
 - A category is becoming a junk drawer (>5 features all called "Other") —
   split it
 
 Don't add a category when:
 
-- You're tempted to name it after the substrate ("HonchoCategory") — that's
+- You're tempted to name it after the project ("HonchoCategory") — that's
   vocabulary contamination
-- You only have one substrate's feature in it — wait until a second probe
+- You only have one project's feature in it — wait until a second probe
   confirms the category is general
 
 ## Defining taxonomy for a new domain
@@ -56,7 +56,7 @@ frameworks) needs a taxonomy decision up front. Process:
 
 - **Naming a category after a feature** ("DialecticDerivation" instead of
   "Derivation"). Categories are buckets; features go in buckets.
-- **Reusing the wrong domain's taxonomy.** Memory-substrate categories don't
+- **Reusing the wrong domain's taxonomy.** Memory-layer categories don't
   apply to inference engines. Don't copy-paste; design per-domain.
 - **Sub-categories.** Keep it flat. If you want sub-classification, use the
   "Behaviour notes" section in the feature spec, not nested categories.

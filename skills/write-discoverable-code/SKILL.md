@@ -11,7 +11,7 @@ description: |
 license: MIT
 metadata:
   source: https://github.com/modem-dev/skills/tree/main/write-discoverable-code
-  related-skills: research-artefacts, substrate-audit
+  related-skills: research-artefacts, repo-audit
 ---
 
 # Write discoverable code

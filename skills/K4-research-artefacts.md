@@ -29,14 +29,14 @@ When producing any research artefact intended for future re-reading (by humans o
    writing the first entry. Retro-fitting structure onto an
    accumulated pile of prose is strictly more work than starting
    structured.
-4. **Two-pass discipline** - descriptive work (what the substrate is,
+4. **Two-pass discipline** - descriptive work (what the project is,
    in its own vocabulary) and comparative work (how it stacks up
    against alternatives) are **strictly separate passes**. Mixing
    them contaminates the descriptive pass with comparison bias and
    makes the artefact unreusable for any reader with a different
    comparison frame.
 
-These four rules apply regardless of substrate, audience, or output format.\
+These four rules apply regardless of project, audience, or output format.\
 They are necessary preconditions for any research output that will be re-consulted; without them, artefacts decay into write-only prose within weeks.
 
 ---
@@ -64,7 +64,7 @@ A research artefact that follows all four rules is reusable by future investigat
 
 ## When to apply
 
-- Any persistent research output: substrate audits, vendor
+- Any persistent research output: repo audits, vendor
   evaluations, design journals, technical briefs, comparison
   matrices.
 - Any artefact that will be re-read after the session that produced
@@ -86,5 +86,5 @@ Skip the discipline only when:
 Full discipline, including foundational vocabulary and worked examples, lives in the skill tree at [`research-artefacts/`](research-artefacts/).\
 The SKILL.md is the canonical source; this entry is the mission-kit index handle.
 
-This skill is referenced as a **foundational dependency** by `K3` (`substrate-audit`) - every substrate audit must obey the four rules above before its findings can be considered well-formed.\
-It is included in the `nanoprobe` bundle alongside `substrate-audit` (see [`bundles/nanoprobe.yaml`](../bundles/nanoprobe.yaml)).
+This skill is referenced as a **foundational dependency** by `K3` (`repo-audit`) - every repo audit must obey the four rules above before its findings can be considered well-formed.\
+It is included in the `nanoprobe` bundle alongside `repo-audit` (see [`bundles/nanoprobe.yaml`](../bundles/nanoprobe.yaml)).

@@ -1,4 +1,4 @@
-# Substrate analysis lenses
+# Project analysis lenses
 
 A catalogue of reusable analytical questions that surface load-bearing
 findings during a nanoprobe. Each lens is a question shape proven to
@@ -11,10 +11,10 @@ Use them in `04-assessment.md` reasoning, not in feature specs.
 
 ## Lens 1 — The writer-cadence model
 
-**Question:** How many distinct producers write to the substrate's
+**Question:** How many distinct producers write to the project's
 primary store, and on what cadence?
 
-For any system that accumulates state (memory substrates, event stores,
+For any system that accumulates state (memory layers, event stores,
 caches, aggregations), enumerate every code path that *writes* and
 classify each by cadence:
 
@@ -133,7 +133,7 @@ probe outputs.
 - **Partially implemented** — some code paths support, others don't
 
 **Why this matters:**
-- Honest assessment of substrate maturity
+- Honest assessment of project maturity
 - Tells operators what they can build on (implemented) vs what they
   should not commit to (aspirational)
 
@@ -145,7 +145,7 @@ honestly rather than echoing the doc claim.
 
 ## Lens 6 — The cadence/cost asymmetry
 
-**Question:** Where does the substrate's primary cost come from — and is
+**Question:** Where does the project's primary cost come from — and is
 it where the operator would expect?
 
 Map each cost vector (LLM tokens, embedding tokens, database storage,
@@ -171,7 +171,7 @@ operator must understand.
 
 ## Lens 7 — Locus of enforcement
 
-**Question:** Where in the substrate is a given invariant actually
+**Question:** Where in the project is a given invariant actually
 enforced — at the storage layer, at the API/ABI, at the application
 layer, or by convention only?
 
@@ -204,7 +204,7 @@ the three-level model from `explicit-deductive.md`.
 ## Lens 8 — Operator impact
 
 **Question:** What does this feature mean for an operator running the
-substrate in production — what knobs do they touch, what failure modes
+project in production — what knobs do they touch, what failure modes
 do they observe, what scaling cliffs do they hit?
 
 Every Tier 3 bullet should answer "so what?" for the operator. Bullets
@@ -219,12 +219,12 @@ incomplete.
   N-observer write amplification, queue depth thresholds)?
 
 **Why this matters:**
-- Distinguishes "what does the substrate do" from "what does running
-  the substrate require"
+- Distinguishes "what does the project do" from "what does running
+  the project require"
 - Forces the probe to be operationally useful, not just academically
   descriptive
 
-**Worked example (Honcho probe):** Token-batching is the substrate's
+**Worked example (Honcho probe):** Token-batching is the project's
 primary cost lever for derivation — 10x batch size = ~10x reduction in
 LLM calls. Without the operator-impact lens, this would sit as "batch
 cap is 1024 tokens" with no actionable framing.
@@ -270,9 +270,9 @@ load-bearing feature is one whose removal cascades.
 
 **Why this matters:**
 - Tells future maintainers what they cannot remove without re-architecting
-- Identifies the "spine" features that drive the rest of the substrate
+- Identifies the "spine" features that drive the rest of the project
 
-**Worked example (Honcho probe):** The ABI is the substrate's load-
+**Worked example (Honcho probe):** The ABI is the project's load-
 bearing reuse seam (`dialectic-tool-abi.md`). The `(observer, observed)`
 triple is load-bearing for the entire memory model (`peer-representation.md`).
 `can_update_peer_card=False` for induction is a load-bearing policy
@@ -281,10 +281,10 @@ decision (`specialist-contract.md`).
 ## Lens 11 — Cross-feature invariant
 
 **Question:** Does this feature share a structural pattern with another
-feature in the substrate — and if so, is the pattern made explicit
+feature in the project — and if so, is the pattern made explicit
 anywhere?
 
-Recurring patterns inside a substrate are typically:
+Recurring patterns inside a project are typically:
 - The same abstract base class used in multiple subsystems
 - The same threading/concurrency pattern (e.g. DB-connection-free LLM
   execution in both deriver and dialectic)
@@ -295,13 +295,13 @@ Recurring patterns inside a substrate are typically:
 
 **Why this matters:**
 - Pattern-spotting in nanoprobe seeds crossprobe's later work
-- Identifies "this is how this substrate does things" idioms that future
+- Identifies "this is how this project does things" idioms that future
   maintainers must preserve
 
 **Worked example (Honcho probe):** DB-connection-free LLM execution is
 the same scalability pattern in dialectic (A24) and specialist (A6).
 Pre-try telemetry initialization is a recurring discipline (specialist
-A8). Both are substrate idioms, not feature-specific quirks.
+A8). Both are project idioms, not feature-specific quirks.
 
 ## When to apply
 
@@ -320,9 +320,9 @@ A8). Both are substrate idioms, not feature-specific quirks.
 When a probe surfaces an analytical question shape that recurs (not just
 a one-off finding), add it here as Lens N+1. Each lens should have:
 the question, why it matters, the typical answer shapes (with a small
-table if applicable), and one worked example with substrate name + the
+table if applicable), and one worked example with project name + the
 assessment entry it produced.
 
-Lenses are domain-portable — most apply to any substrate that accumulates
-state. If a lens is genuinely substrate-specific (e.g. only applies to
+Lenses are domain-portable — most apply to any project that accumulates
+state. If a lens is genuinely project-specific (e.g. only applies to
 LLM-derived artefacts), label it as such.

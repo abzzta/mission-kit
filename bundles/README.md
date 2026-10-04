@@ -36,6 +36,6 @@ Encoding depth into a name freezes it, and it rots on the first change to the gr
 
 | Bundle | Composes |
 | --- | --- |
-| [`nanoprobe.yaml`](nanoprobe.yaml) | Code-grounded substrate research. |
+| [`nanoprobe.yaml`](nanoprobe.yaml) | Code-grounded research into one open-source project. |
 | [`sysml-modelling.yaml`](sysml-modelling.yaml) | Reading and authoring SysML v2 models. |
 | [`workgraph-arc.yaml`](workgraph-arc.yaml) | Operating a staged arc against a coordination substrate. |
