@@ -39,12 +39,6 @@
       "question": "Give the order of questions an agent asks to decide whether a piece of guidance is an axiom, a method, a style rule, a rule or a practice.",
       "key": "In order, stopping at the first yes: is it in force regardless of situation (axiom); does following it produce a result of its own (method); does it govern how an artifact is written - its form, whatever the work was (style); does it leave a trace in the record of the work that a check could test (rule); otherwise practice.",
       "rubric": "2 for all five steps in this order with these tests. 1 for an order or tests that would still file M1 as a method, M3, M4, M5 and K2 as rules, and M6 as a practice; or four of the five steps. 0 otherwise."
-    },
-    {
-      "id": "H7",
-      "question": "Which kind of work does the corpus record as having nothing at all governing it - no procedure, rule or practice?",
-      "key": "Handing work in progress over to another agent or a later session, including a lone agent's own next session. Handing over to a human is governed (M10); handing work to an agent or session is not.",
-      "rubric": "2 for handing over, recorded as a gap. 1 for handing over without its being recorded as a gap. 0 otherwise."
     }
   ]
 }

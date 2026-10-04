@@ -23,18 +23,6 @@
       "rubric": "2 for no, routed to method (or rule/practice). 1 for no alone. 0 otherwise."
     },
     {
-      "id": "Q5",
-      "question": "Is there a skill for running a blind before-and-after evaluation of a document with cold readers?",
-      "key": "No general skill: M2 is the method and tools/eval.mjs the tool, but no skill packages before-and-after blind evaluation for an agent to invoke - a gap within the skills set's claim. K17 is the nearest: a blind with-and-without comparison, limited to SysML skills.",
-      "rubric": "2 for no general skill, with M2 and/or eval.mjs placed, as a gap (K17 placed as SysML-only or not mentioned). 1 for no alone. 0 for naming a skill as the general answer."
-    },
-    {
-      "id": "Q6",
-      "question": "Group the skills into families and say how members of a family relate.",
-      "key": "Research (K3, K4 - K4 is a dependency of K3 stated in prose, not a declared edge); intent capture (K5); modelling in SysML (K7 literacy as every member's prerequisite; primitives K8, K9, K10, K13, K14, K15; K16 composes the primitives; meta K11, K12, K17); operating staged work (K6; K18 operator as prerequisite of K19-K24; K25, K26); writing discipline (K27, K28).",
-      "rubric": "2 for at least four families with the SysML prerequisite or the operator prerequisite edge stated. 1 for families without any edge. 0 otherwise."
-    },
-    {
       "id": "Q7",
       "question": "What would an unhealthy population of skills look like?",
       "key": "Any two population faults: a stub without a body or a body without a stub; levels encoded in names; one family growing while whole kinds of capability have none; two skills packaging one procedure; skills that only work inside one host's coordination system with no neutral counterpart; descriptive guidance filed as skills. A single skill's narrated body is a member defect.",
