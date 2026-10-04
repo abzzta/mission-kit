@@ -4,7 +4,7 @@
 status:       complete - human check 6 of 6; docs/audits/delta-2/
 row:          B38, B42
 intent:       docs/surveys/b38-director-communication-requirements.md
-evidence:     docs/evals/human/runs/moves-2-*, guidance-1-*; docs/evals/human/MATRIX.md
+evidence:     human run moves-2-*, guidance-1-*; docs/evals/human/MATRIX.md
 guidance:     docs/evals/human/guidance-1/guidance-as-tested.txt - the text the director preferred 4 of 4
 from-state:   docs/ARCHITECTURE.md, at d39808e
 ```

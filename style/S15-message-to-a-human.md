@@ -33,7 +33,7 @@ When the message asks for a decision, the options are the picks: each option is 
 ## Rationale
 
 **Evidence.**\
-Preferred by the director 4 of 4 as part of the guidance tested in `docs/evals/human/runs/guidance-1-*`; an earlier rewrite to the same limits won another 4 of 4.\
+Preferred by the director 4 of 4 as part of the guidance tested in the human evaluation recorded in `docs/evals/human/MATRIX.md`; an earlier rewrite to the same limits won another 4 of 4.\
 The rule bundles moves whose individual worth is unknown.\
 A move earns its own entry when a pair differing in that move alone shows it helps, and leaves this one when a pair shows it does not; the evidence for each is in `docs/evals/human/MATRIX.md`.
 

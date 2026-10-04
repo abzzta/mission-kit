@@ -2,7 +2,7 @@
 
 Which moves, at which moments, have what evidence of helping the human they are for.\
 Seeded from the human sessions on 2026-10-03; grown one isolated test at a time.\
-The landed guidance (`M10`, `S15`) won 6 of 6 in the Delta-2 check, `docs/evals/human/runs/delta2-check-*` - still package evidence.
+The landed guidance (`M10`, `S15`) won 6 of 6 in the Delta-2 check, human run `delta2-check-*` - still package evidence.
 
 ---
 

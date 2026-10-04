@@ -9,7 +9,7 @@ A fresh agent given only the landed `M10` and `S15`, and a fresh agent given not
 Shown to the director in chat, unaltered, one pair per turn, positions random.\
 **The director preferred the guided message in all six.**\
 The bar was five of six, ties against; by chance six of six is about one in sixty-four.\
-Run: `docs/evals/human/runs/delta2-check-2026-10-03-66f8fb`.
+Run: human run `delta2-check-2026-10-03-66f8fb`.
 
 ---
 
@@ -22,7 +22,7 @@ A cold agent with the corpus, given each of the six moments, named `M10` or `S15
 
 ## Criterion 7 - regression: none caused by the change
 
-Every standing suite on the after-corpus, `docs/evals/runs/2026-10-03-delta2-routing`, 84.34 of 88.\
+Every standing suite on the after-corpus, run `2026-10-03-delta2-routing`, 84.34 of 88.\
 Against the Delta-1 layer run, no drop.\
 Against the Delta-1 regression run, three drops, each on text unchanged since that run (`git diff c002a9c HEAD` touches no axiom, `E5`, `E6` or `components/`), so classified as noise under the rule:
 

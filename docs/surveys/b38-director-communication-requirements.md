@@ -47,7 +47,7 @@ Confirmed by the director.
 
 ## Learned in the human evaluation
 
-- **Session 2 result:** the director chose the restructured message over the agent's real message in 4 of 4 pairs - two asking for understanding, two for a decision (`docs/evals/human/runs/moves-2-2026-10-03-6d6f1f`).
+- **Session 2 result:** the director chose the restructured message over the agent's real message in 4 of 4 pairs - two asking for understanding, two for a decision (human run `moves-2-2026-10-03-6d6f1f`).
 - **What the rewrites changed, measured:** about two thirds shorter; no internal IDs or commit hashes, against 43; one question per message, at the end; three follow-on picks each; the point or decision first.
 - **What they dropped that matters: traceability.** Keep the body plain, and say once, in a line or a pick, where the thing is recorded.
 - **A defect in one rewrite:** a request for the director to act sat inside an optional pick. A request for action is never optional depth.

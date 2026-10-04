@@ -10,8 +10,8 @@ Scored blind by agents who did not author the change; mapping sealed in each run
 
 | Run | Before | After |
 |---|---|---|
-| `work-layers` + `layer-charters`, `docs/evals/runs/2026-10-03-delta1-layers` | 21.66 / 28 | 27.00 / 28 |
-| every other standing suite, after only, `docs/evals/runs/2026-10-03-delta1-regression` | - | 45.67 / 48 |
+| `work-layers` + `layer-charters`, run `2026-10-03-delta1-layers` | 21.66 / 28 | 27.00 / 28 |
+| every other standing suite, after only, run `2026-10-03-delta1-regression` | - | 45.67 / 48 |
 
 `layer-charters` - placing a rule, a practice and a procedure, and the placement sequence - rose from 7.66 to 14 of 14.
 
@@ -45,7 +45,7 @@ Whether that is the change working or the change regressing is a question about 
 ## Director ruling, after the scores
 
 The director ruled `L5`'s drop the change working as intended: on the after corpus, an answer that the layer depends on the guidance's kind, mapping each kind to its layer with the recorded gap, is correct.\
-The rubric was corrected and the same answers re-scored blind, `docs/evals/runs/2026-10-03-delta1-layers-L5-rescored`: **21.66 before, 28 of 28 after, no regressions.**\
+The rubric was corrected and the same answers re-scored blind, run `2026-10-03-delta1-layers-L5-rescored`: **21.66 before, 28 of 28 after, no regressions.**\
 The key changed after the scores were seen; that is recorded here and in the suite's `source`, so a reader can weigh it.
 
 `docs/ARCHITECTURE.md` brought to the to-state: `methods/`, `rules/`, `practices/` and the missing `traits/` row in the anchored core; layer counts corrected; checker counts replaced by a reference to the gate, since a count recorded in a second place rots.

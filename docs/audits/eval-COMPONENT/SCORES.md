@@ -45,6 +45,6 @@ Round 5's application answers agreed in every run; what it found were edge seman
 > All three after-runs scored 2 here.\
 > Each of those answers hedged the decisive point - whether the rest of the accretion is this change's duty - as the reader's own inference, which the rubric caps at 1.\
 > The author, scoring his own change and knowing which version each answer came from, scored them 2.\
-> The first blind-scored run, `docs/evals/runs/2026-10-03-baseline-4f768e5`, holding the same `A3` text, scored equivalent answers 1, 1, 1 with that reason.\
+> The first blind-scored run, run `2026-10-03-baseline-4f768e5`, holding the same `A3` text, scored equivalent answers 1, 1, 1 with that reason.\
 > Corrected C5 after: **1 / 1 / 1**, so the round-1 after-total is **9 / 10**, not 10.\
 > The other probes are not re-scored here; the baseline run measures the current corpus on all of them, blind.

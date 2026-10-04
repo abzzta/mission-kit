@@ -30,7 +30,7 @@ Key committed and independently reviewed before any draft: `docs/evals/layer-cha
 
 | Run | Before | After |
 |---|---|---|
-| round 1, `docs/evals/runs/2026-10-03-layer-charters` | 9.67 / 14 | 13.33 / 14 |
+| round 1, run `2026-10-03-layer-charters` | 9.67 / 14 | 13.33 / 14 |
 | round 2, after corrections, `...-layer-charters-r2` | 10.34 / 14 | 13.67 / 14 |
 
 No regression within either run.\

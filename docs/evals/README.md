@@ -23,6 +23,10 @@ Suites are under `docs/` because they are about this corpus, and because `eval.m
 
 ## A run
 
+Runs are written under `docs/evals/runs/`, which git ignores: they are working material, kept on local disk and never published.\
+An audit quotes each run's name and the scores it found, and that quotation is the published record.
+
+
 ```sh
 c=$(node tools/eval.mjs export --out /tmp/eval | cut -f1)
 node tools/eval.mjs prepare --suites composition,system-boundary,axiom-direction,component,component-a3 \

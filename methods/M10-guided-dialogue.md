@@ -37,7 +37,7 @@ The director stated the need and left the implementation to the agent; the agent
 The director confirmed the understand limit in words, and proceeded from the decide limit without confirming it in words.
 
 **Evidence.**\
-A fresh agent given this guidance, against one without it, on four new scenarios: preferred 4 of 4 (`docs/evals/human/runs/guidance-1-*`).\
+A fresh agent given this guidance, against one without it, on four new scenarios: preferred 4 of 4, recorded in this corpus's human-evaluation matrix, `docs/evals/human/MATRIX.md`.\
 The evidence is for the guidance as a whole, from one human; no single step's share is known (`docs/evals/human/MATRIX.md`).
 
 ---

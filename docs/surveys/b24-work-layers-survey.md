@@ -208,7 +208,7 @@ The design answers to `VISION.md`'s single home for each judgement and the direc
 ## S7 Sequencing / cross-work considerations
 
 - **Vision first.** The amendment is recorded as a ruling and absorbed into `VISION.md` before any layer change, per its authority clause.
-- **Measure before moving.** The work-layer baseline exists (`docs/evals/runs/2026-10-03-regression-bypass`); the design is evaluated against it with the harness, and new probes cover the four kinds.
+- **Measure before moving.** The work-layer baseline exists (run `2026-10-03-regression-bypass`); the design is evaluated against it with the harness, and new probes cover the four kinds.
 - **Composes with the `W0` conversion** (`B24`, `B33`, `B37`'s `W22` and `generatable` defects), which edits work-types anyway; the procedure citation from work-types belongs there.
 - **Composes with `B36`'s remaining questions**, which touch entities and axioms, not these layers.
 
@@ -235,6 +235,6 @@ Design anchor: separate them if their populations need different rules - differe
 ## S8 Cross-references
 
 - Work item: `docs/BACKLOG.md` `B24`, with the director direction recorded under it.
-- Baseline: `docs/audits/M5.5h-01-bypassed-interface.md` section 4; run `docs/evals/runs/2026-10-03-regression-bypass`.
+- Baseline: `docs/audits/M5.5h-01-bypassed-interface.md` section 4; run run `2026-10-03-regression-bypass`.
 - Related rows: `B33`, `B37`.
 - Feeds: the design for the procedure, practice, rule and work-type layers, and the `VISION.md` amendment.
