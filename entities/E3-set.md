@@ -19,7 +19,7 @@ The split that makes the term useful is between **member** and **set**, and it i
 A member states what it is, why it exists, and how to apply it.\
 It has no standing to describe its siblings, and no way to know whether the population is complete.
 
-A set states what a member cannot: the territory the population claims to cover, how members relate to one another, what admits a new member and what retires one, where members live and what they are called, and what a healthy population looks like as against a merely valid one.
+A set states what a member cannot: the end state it approaches, the scope it claims and the growth policy by which it grows, how members relate to one another, what admits a new member and what retires one, where members live and what they are called, and what a healthy population looks like as against a merely valid one.
 
 A charter is a set's only voice.\
 A set with no charter is a directory listing, because nothing states what the collection is for or when it is wrong.
@@ -41,7 +41,7 @@ Where a set happens to be a layer, both terms apply and neither is redundant: `l
 **Set against collection.**\
 A collection is items in one place.\
 A set is a collection with a charter, which means it can be asked a question a collection cannot answer: *is anything missing?*\
-Without a stated territory a gap is invisible, so an uncharted population can be audited for validity and never for completeness.
+Without a stated end state and scope a gap is invisible, so an uncharted population can be audited for validity and never for completeness; an investigation against them is what finds the gap.
 
 **Set against category.**\
 `category` is the member-side declaration of set membership - the value an entry writes to name the population that governs it.\
@@ -93,7 +93,7 @@ A concern earns a charter by being one population with its own rules, and a sub-
 
 **To [`A14`](../axioms/A14-compounding-learning.md).**\
 A stated territory is what converts a miss into a finding.\
-Searching an uncharted population and finding nothing says nothing; searching a charted one and finding nothing is a gap with a location.
+Searching an uncharted population and finding nothing says nothing; searching a charted one and finding nothing is a gap against a stated end state, which an investigation can place.
 
 **To [`C0`](../components/README.md).**\
 The components registry is the clearest case of a set whose value is entirely set-level - orthogonality and coverage are properties no single component can hold or assess.
@@ -112,7 +112,7 @@ That divergence is not carelessness: each author reasonably invented what a char
 The cost is not untidiness.\
 It is that **no population here can currently be asked whether it is complete.**\
 Orthogonality tells you whether members overlap and never whether they span, so a set can be perfectly non-redundant and still leave whole territories unaddressed with nothing to detect it.\
-Answering *is anything missing* requires a denominator, and a denominator is a set property that no member can supply.
+Answering *is anything missing* requires a denominator - the end state and scope, against which an investigation partitions the population - and that is a set property no member can supply.
 
 The second cost compounds.\
 Where a set's naming and placement go unstated, every adopter chooses and every choice is defensible, so the population fragments while each member passes review.\

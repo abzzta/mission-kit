@@ -21,10 +21,18 @@ A charter answers *what is this population for, what belongs in it, how do its m
 Every knowledge layer's charter is its `<prefix>0` entry, held at `<directory>/README.md`.\
 A set with no charter is a directory listing: it can be checked for validity and never for completeness, because nothing states what the collection is for.
 
-**A charter holds the set's vision, and manages the set against it.**\
-The vision is what the set is for and what it claims to cover; the population is measured against it, as a programme is measured against its [vision](../artifacts/AR6-vision.md), and it is never cut to fit what the set holds today.\
-The rest of the charter is management: the territory shows where the population stands against the claim, the boundaries decide what enters and where the rest goes, the faults say how the set goes wrong, and changes to any of it are made under *Changing a charter*, below.\
-A claim no member yet fills is a gap - the distance between the population and its charter - and naming it is how gaps are found.
+**A charter is an asymptote for its set.**\
+Like an axiom, or a programme's [vision](../artifacts/AR6-vision.md), it describes the ideal end state of the set - a direction the population approaches and never fully reaches - and the population is measured against it.\
+It is never cut to fit what the set holds today, and it is written independently of the current population: a charter describes the ideal, not its members, which appear only in the generated index.\
+What the charter states is the end state, the scope the set claims, the growth policy by which it grows and is balanced, and the management that holds it there: what enters and where the rest goes, how the set goes wrong, and how the charter itself is changed.
+
+**Partitions and gaps belong to investigations, not to the charter.**\
+A territory can be partitioned in more than one defensible way, and the dimensions a population is missing cannot be listed before someone has studied it and formed a hypothesis about how it could be cut.\
+So the charter states no cells and no gaps.\
+An investigation - a dated analysis of the population against the end state, scope and growth policy - proposes a partition, places the members in it, and finds the gaps; a later investigation may cut the set differently without the charter changing.\
+Each gap an investigation finds becomes a backlog row with a revival trigger ([`AR5`](../artifacts/AR5-backlog.md)), and the board ([`AR3`](../artifacts/AR3-board.md)) weighs open rows for the director to select; a charter does not rank its own gaps.\
+The charter changes only when an investigation shows its end state, scope or growth policy is itself wrong.\
+The exception to naming members is a set spanning layers, whose charter declares its members in a `members` list because each member's category names its own layer; its index is still generated, from that list.
 
 A charter's content falls into three classes, and the classes are the point of this entry.
 
@@ -44,8 +52,8 @@ If no member could, it is a set property, and the remaining question is only whe
 
 | Concern | The question | Why a member cannot answer it | Location |
 |---|---|---|---|
-| **Purpose** | Why does this set exist, and what goes wrong without it? | A member knows why *it* exists, never why the collection does | heading `Purpose` |
-| **Territory** | What does this set claim to cover? | Completeness is a property of the population; a member cannot see its siblings' absence | heading `Territory` |
+| **Purpose** | What end state does this set approach, and why does it exist? The end state comes first. | A member knows why *it* exists, never what the collection is heading towards | heading `Purpose` |
+| **Territory** | What does this set claim to cover, and by what growth policy does it grow? | Scope and growth are properties of the population; a member cannot see its siblings | heading `Territory` |
 | **Boundaries** | What belongs here, what does not, and where does the excluded thing go instead? | An exclusion decides a case no member holds | anywhere |
 | **Composition** | How do members relate to one another? | A relation has two ends, and a member holds one | anywhere |
 | **Faults** | What does an unhealthy population look like, as against a merely valid one? | Every member can be valid while the set is wrong | heading `Faults` |
@@ -82,20 +90,20 @@ A **member fault** is a failure mode of one member's invariant, and belongs in t
 Collected in a charter, member faults are read only by people already looking for them.\
 The `Faults` concern is for population faults alone.
 
-**A territory must earn itself.**\
-Requiring a territory is checkable; requiring a *good* one is not, and a poorly chosen territory passes every check while hiding the gaps it exists to expose.\
-So a territory carries two obligations beyond being present.
+**What a territory states.**\
+Two things, and no partition.
 
-- **Its partition is derived from the population; its extent is set by purpose.** The axes should be readable from the members themselves - their triggers, their subjects, the moments or risks they address - so that every existing member lands in it and lands in exactly one place. A member that fits nowhere, or fits everywhere, is evidence the partition is wrong. How far the territory reaches is set by what the set is for, not by what it holds: a cell no member fills is kept and named as a gap, and removing it to match the population erases the gap it exposes.
-- **It shows a gap or argues that there is none.** A territory that names at least one real, checked absence has demonstrated that it can detect one. A territory that names none must say why the population is complete against it. A territory that can do neither is decoration, however complete it sounds.
+- **Scope** - what the set claims to cover, set by what the set is for and never by what it holds. A claim no member fills is not narrowed to fit; an investigation finds the gap.
+- **Growth policy** - the rules by which the set grows and is balanced: whether it is capped at a number or uncapped, the altitude a member sits at, and what members are balanced on. *Capped at five, balanced in cognitive weight* and *uncapped - as many as fit the altitude without diluting each* are both growth policies, and they make different sets. A candidate that would break the policy is not simply admitted; it is recorded as a backlog row, and the board weighs replacing a member, changing the policy, or declining it.
 
-More than one partition is usually defensible, and choosing among them is a judgement this entry cannot make.\
-The two obligations do not pick the right partition; they rule out the ones that cannot do the job.
+> **Correction.** This entry previously required a territory to carry a partition derived from the population and to show a gap or argue there was none:
+> *Its partition is derived from the population; its extent is set by purpose* - and - *It shows a gap or argues that there is none.*
+> The director ruled that a charter is an asymptote: it states end state, scope and growth policy, and partitions and gaps are found by investigation. The obligation to show a checked gap moved with them; it did not disappear.
 
 **Growth must be paid for.**\
 Conforming a charter usually lengthens it, because the concerns most often missing - territory and composition - are the ones that need authoring rather than moving.\
 Length is acceptable when it is paid for, and only then.\
-An added passage is paid for when it **answers a question the charter could not previously answer**, and when that answer **improves what a reader can do with the charter** - route an item, find a gap, choose a member, or see a relation they would otherwise have had to reconstruct from the members.\
+An added passage is paid for when it **answers a question the charter could not previously answer**, and when that answer **improves what a reader can do with the charter** - route an item, see where the set is heading, choose a member, or see a relation they would otherwise have had to reconstruct from the members.\
 A passage that restates, introduces, or summarises what is already present is unpaid, and is removed.
 
 ### Conditional - when the property is present
@@ -112,7 +120,7 @@ A passage that restates, introduces, or summarises what is already present is un
 
 **Probes are what makes a charter's purpose testable.**\
 They are questions a fresh reader holding only the charter must be able to answer, each with the answer it should reach.\
-They belong here rather than in the procedure that runs them, because what good looks like is specific to each set: a good axiom charter lets a reader find which kind of failure has no protector, and a good methodology charter lets a reader choose the procedure for the moment they are in.\
+They belong here rather than in the procedure that runs them, because what good looks like is specific to each set: a good axiom charter lets a reader judge whether a proposed principle belongs, and a good methodology charter lets a reader choose the procedure for the moment they are in.\
 No member can state them, so they are a set property.\
 [`M2`](../methods/M2-test-drive-docs-by-execution.md) holds the procedure that runs them; this concern holds what they ask.
 
@@ -145,6 +153,7 @@ What is preserved is meaning, and the check on meaning is as strict as a check o
 | Change | Permitted | Evidence the change carries |
 |---|---|---|
 | **move** | yes | none |
+| **re-aim** | when the end state, scope or growth policy is shown wrong, typically by an investigation | the evidence, and a director ratification |
 | **reword** | when it materially improves clarity or precision | old and new side by side, and the reason |
 | **merge** | when two passages state one thing | both originals, and why one suffices |
 | **correct** | when an error or contradiction is exposed | the error cited, and the old text kept in the record |
@@ -187,7 +196,7 @@ The child charter governs its own population, and inherits nothing.
 ## Relations
 
 **To [`E3`](E3-set.md).**\
-`E3` names what a set owns: territory, member relations, admission and retirement, placement and naming, and the health of the population.\
+`E3` names what a set owns: its end state, scope and growth policy, member relations, admission and retirement, placement and naming, and the health of the population.\
 Each maps to a required or conditional concern here, and a set property `E3` names that this entry does not place is a defect in one of the two.
 
 **To [`E2`](E2-layer.md).**\
@@ -232,3 +241,4 @@ A trial conversion of one charter then tested the standard against a real popula
 It preserved every line of the original and was judged improved, because its territory detected a real gap - no procedure for handing work over - that had gone unrecorded.\
 It also showed the standard's weakest point: nothing stopped a territory from being well-formed and useless.\
 The obligation that a territory be derived from its population and show a gap, or argue there is none, is the correction that trial made necessary.
+**Since corrected:** the gap that trial found is held as a backlog row, and finding gaps is now the work of investigations; see *What a territory states*.
