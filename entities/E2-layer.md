@@ -30,7 +30,7 @@ This entry fixes what the word denotes; the charter governs when one may be mint
 Every category names a knowledge layer, and no category names a mechanism layer.\
 `category` is the entry-side projection of a knowledge layer: the value an entry writes in its own frontmatter to declare which layer owns it.\
 A layer is a place; a category is an entry's claim about that place.\
-The three mechanism layers are layers with no category, which is why the terms cannot be swapped.
+The three mechanism layers - `tools/`, `bundles/` and `plugins/` - and the instance layer, `docs/`, are layers with no category, which is why the terms cannot be swapped.
 
 **Layer against prefix.**\
 The prefix is the layer's identity inside an ID.\

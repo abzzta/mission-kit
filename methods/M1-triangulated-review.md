@@ -42,7 +42,8 @@ None of those is a correctness audit; each one feels like one.
 Four genuinely independent inputs - none of which were produced by the reviewer in the loop being audited - force the reviewer to reconcile multiple framings of the same surface.\
 The reconciliation is where real bugs surface.
 
-The number isn't sacred (sometimes 3 is enough; sometimes 5 is needed) but the floor matters because below 3 the failure mode is predictable: you write a confident review that's a restatement of the author's confident intent, and the bug class lives on undetected.
+Four is the floor for work that ships to production or upstream, which is when this method applies; a smaller review may stand on three, and some need five.\
+The floor matters because below three the failure mode is predictable: you write a confident review that's a restatement of the author's confident intent, and the bug class lives on undetected.
 
 ---
 
