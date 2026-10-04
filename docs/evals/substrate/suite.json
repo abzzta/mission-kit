@@ -1,0 +1,38 @@
+{
+  "id": "substrate",
+  "mode": "corpus",
+  "group": "substrate",
+  "source": "Director ruling A on the term substrate: the coordination system only; every other sense replaced, the audit skill renamed. Keyed before the entry and rewording; new names (deterministic-first, system-audit) are the drafter's choice, to be confirmed by the review. Key reviewed before any reader ran: U1 scoped to D5 with governance as D4, identifiers exempted; environment made 'execution environment' to avoid collisions; the skill named repo-audit, since 'system audit' reads as auditing the organisation's own system; U5 kept to A13's strategic-judgement line.",
+  "probes": [
+    {
+      "id": "U1",
+      "question": "What does 'substrate' mean in this corpus?",
+      "key": "The coordination substrate only: the system that hands out and runs work - the work graph and its lifecycle and messaging: blueprints, work items, gates and their completion state, leases, the queue. Governance machinery (SEAL, decisions, class-grants) is D4's, not the coordination substrate. A few identifiers of that system keep the bare word (stage names substrate-closing, the bindingSource discover-from-substrate). No other meaning is in use in the live corpus.",
+      "rubric": "2 for the coordination system only (identifiers noted or not). 1 for the coordination system among other meanings. 0 otherwise."
+    },
+    {
+      "id": "U2",
+      "question": "Axiom A11 says work that deterministic code can do should be done by code. What is that principle called, and does it concern the coordination substrate?",
+      "key": "Deterministic-first (formerly substrate-first): if deterministic code can do it, code does it. It contrasts code with the language model, not the coordination system with agents; the coordination substrate is one deterministic system among many.",
+      "rubric": "2 for the code-versus-model contrast, not the coordination system. 1 for the principle without the distinction. 0 for reading it as the coordination system."
+    },
+    {
+      "id": "U3",
+      "question": "A workflow document supports Docker Compose and Kubernetes. What does the style corpus call each of those, and which rule applies?",
+      "key": "Execution environments; S16 gives each execution environment one complete path.",
+      "rubric": "2 for execution environment (or environment) and S16. 1 for one. 0 otherwise."
+    },
+    {
+      "id": "U4",
+      "question": "Which skill produces a code-grounded audit of a single open-source repository, and what does it call the thing it audits?",
+      "key": "K3 repo-audit (formerly substrate-audit); it audits a project - one open-source repository, such as a memory layer, framework, runtime or queue.",
+      "rubric": "2 for K3 repo-audit and a project or repository. 1 for one part, or the old name with the right object. 0 otherwise."
+    },
+    {
+      "id": "U5",
+      "question": "A13 says matters the substrate can decide should never reach the director. What can decide them?",
+      "key": "Deterministic code: matters decidable deterministically are decided by code, the coordination substrate's rules being one instance; what reaches the director is strategic and decision-shaped, with how-to handled below the director by code or agents.",
+      "rubric": "2 for deterministic code, with the coordination substrate as one instance. 1 for either alone. 0 otherwise."
+    }
+  ]
+}

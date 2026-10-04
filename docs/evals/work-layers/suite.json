@@ -13,7 +13,7 @@
     {
       "id": "L2",
       "question": "Someone wants to add a repeatable capability that, given a repository, works through a fixed sequence of passes and emits a set of audit documents in a fixed layout. Which layer does it belong in, and why?",
-      "key": "skills/ - it is executable and invoked with inputs, steps and an output, rather than followed during conduct; K3 substrate-audit is an existing example.",
+      "key": "skills/ - it is executable and invoked with inputs, steps and an output, rather than followed during conduct; K3 repo-audit is an existing example.",
       "rubric": "2 for skills with the invoked-capability reason. 1 for skills without a reason, or methodology with a grounded argument. 0 otherwise."
     },
     {
