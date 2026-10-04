@@ -25,8 +25,8 @@
     {
       "id": "Q4",
       "question": "Does any entity entry define 'gate', 'evidence' or 'arc'? Where, if anywhere, is each defined?",
-      "key": "No entity entry defines any of the three. Gate and evidence are defined nowhere (A8 describes gates, W0 names evidence fields, but neither defines the word). Arc is defined in the skills layer (arc-lifecycle: a tree of rungs climbing one summit), while the workgraph skills use it for a WorkItem graph seeded from a blueprint - two meanings. All three are load-bearing across layers and so are gaps within the entity set's claim.",
-      "rubric": "2 for no entity defining any, gate and evidence undefined, and arc's skill-layer definition or its second meaning noted, with the gap reading. 1 for no entity alone, or two of the three placed correctly. 0 for naming an entity entry that defines one."
+      "key": "Gate is defined by E7. No entity defines evidence or arc. Evidence is defined nowhere (W0 names evidence fields, not the word). Arc is defined in the skills layer (arc-lifecycle: a tree of rungs climbing one summit), while the workgraph skills use it for a WorkItem graph seeded from a blueprint - two meanings. Evidence and arc are load-bearing across layers and so gaps within the entity set's claim.",
+      "rubric": "2 for E7 defining gate, evidence undefined, and arc's skill-layer definition or second meaning noted, with the gap reading. 1 for two of the three placed correctly. 0 for naming an entity entry that defines evidence or arc."
     },
     {
       "id": "Q5",
