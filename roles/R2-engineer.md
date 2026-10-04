@@ -29,7 +29,7 @@ One engineer routinely spans a dozen work-types across an arc via `roleEligibili
 ## Evidence-authorities
 `executor-evidence` for build/ship work.\
 `executor-evidence-provisional` when an idle-pool node is not bracketed by an independent gate (constraint 7).\
-Non-author independence-evidence (verifier-class) when performing `code-owner-approve`.
+A non-author's verdict (verifier-class) when performing `code-owner-approve`.
 
 ---
 

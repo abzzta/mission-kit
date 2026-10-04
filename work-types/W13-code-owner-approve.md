@@ -30,7 +30,7 @@ A code-owner (non-author) grants the independence approval a governed change req
 
 ## Evidence & closeability
 
-The evidence contract is a single `kind: review` - a review ID produced by a non-author / code-owner.\
+The evidence contract is a single `kind: review` slot holding the approval - a non-author code owner's verdict, recorded there by review ID.\
 Authority is `verifier-attestation`.\
 Closeability is governed by the canonical constraint set / closeability preflight in `work-types/README.md` (do not restate it here).\
 Load-bearing here: constraint 8 (author != approver for independence gates) - the eligible-approver set must contain >=1 identity distinct from the bracketed change's author; if the live roster collapses to a sole code-owner who is the author, the seed fails and surfaces the **director-ratification** path (the only authority that can unblock a self-approval).

@@ -46,7 +46,7 @@ intent envelope
 
 A design memo, completed dependency, architect instruction, or planning driver completion is not an independent design PASS.\
 The design gate is mechanically staged by the architect and judged by a non-claiming independent verifier through `attest_evidence` plus `verify_attestation`.\
-An immutable FAIL requires a distinct repair candidate/gate/runId and remains negative evidence forever.
+An immutable FAIL requires a distinct repair candidate/gate/runId and remains a recorded verdict forever.
 
 ---
 

@@ -30,8 +30,8 @@ Bring a fleet/estate of live seats back to a healthy, converged state after drif
 
 ## Evidence & closeability
 
-`evidenceContract`: a single `freeform` entry capturing fleet health before/after, the exact commands run, and an explicit no-kill-server-class-hazard attestation.\
-`evidenceAuthority` is `executor-evidence` (the operator running the convergence is the authority).\
+`evidenceContract`: a single `freeform` entry capturing fleet health before/after, the exact commands run, and an explicit record that no kill-server-class hazard was present.\
+`evidenceAuthority` is `executor-evidence` (the operator running the convergence closes the requirement on their own evidence; that is not a gate).\
 Closeability is governed by the canonical constraint set and seed-time preflight in `work-types/README.md` - this entry satisfies it, it does not restate it.\
 Narrow/context-gated: tag the trigger that fired it.
 

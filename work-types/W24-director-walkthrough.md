@@ -30,7 +30,7 @@ It is a director-mode ceremony, not an agent-executable task.
 ## Evidence & closeability
 
 Evidence contract: a single `freeform` record capturing the walkthrough plus the Director's disposition, satisfied only via `evidenceAuthority: director-ratification`
-- the disposition IS the closing evidence. The node compiles to a closeable
+- the disposition is the verdict, recorded in the evidence slot. The node compiles to a closeable
 claimable node only against the canonical closeability preflight in `work-types/README.md` (the nine-constraint set authored there once, not restated here).\
 `domainFreedom: pinned` to `authority-governance`: the generator never varies the domain, and the `target` parameter's `provided-by-trigger` binding resolves `targetRef` to a real arc/decision entity (no vacuous walkthrough).
 

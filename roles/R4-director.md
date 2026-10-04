@@ -36,7 +36,7 @@ Director-mode work-types carry `generationMode: externally-triggered`.
 
 ## Evidence-authorities
 `director-ratification` only - and it **cannot be satisfied by architect narrative**.\
-The evidence path is a `DirectorSignal` / `Decision` / `Confirmation` or explicitly documented ratified delegation (M7 guardrail #8).
+The director's verdict is recorded as a `DirectorSignal` / `Decision` / `Confirmation`, or an explicitly documented ratified delegation (M7 guardrail #8).
 
 ---
 

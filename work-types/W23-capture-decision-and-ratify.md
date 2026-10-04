@@ -31,7 +31,7 @@ Record a decision and ratify it under authority - the merged capture+decide act 
 
 ## Evidence & closeability
 
-The evidence contract is a single `kind: freeform` - a DirectorSignal/Confirmation/Decision proof, **or** a documented ratified delegation.\
+The evidence contract is a single `kind: freeform` slot holding the director's verdict - a DirectorSignal/Confirmation/Decision, **or** a documented ratified delegation.\
 Authority is `director-ratification`.\
 Closeability is governed by the canonical constraint set / closeability preflight in `work-types/README.md` (do not restate it here).\
 Load-bearing here: constraint 8 (the director-ratification path is the sanctioned authority) plus the M7 guardrail - **`director-ratification` cannot be satisfied by architect narrative**; only a director signal or a documented ratified delegation held by the `authority-holder` closes it.

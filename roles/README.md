@@ -56,7 +56,7 @@ No trait yet lets an axiom bind on this condition - work no second agent indepen
 ## Purity is on ESSENCE only
 
 A role's **essence** - its lens, its stance, and the kind of authority it holds - is invariant across every instance; that is the purity test.\
-But the **evidence** its engagement produces is a function of the *work-type*, not the role: `engineer x build-a-slice` produces `executor-evidence`, while `engineer x code-owner-approve` produces non-author independence-evidence.\
+But the **evidence** its engagement produces is a function of the *work-type*, not the role: `engineer x build-a-slice` produces `executor-evidence`, while `engineer x code-owner-approve` produces a non-author's verdict - an approval, not evidence ([`E8`](../entities/E8-evidence.md)).\
 That is why each role frontmatter carries `evidenceAuthorities` as a **set**.\
 Do NOT treat "engineer => executor-evidence" as a generation invariant - the authority is composed from `(role x work-type)`.
 

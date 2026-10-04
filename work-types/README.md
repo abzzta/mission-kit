@@ -89,7 +89,7 @@ Adding method or system as a fourth axis would multiply every combination into t
 **The order a cold agent assembles one unit of work in:**
 
 1. **The systems the change alters** give the traits, and so the axioms in force; the organisation doing the work is a system too, and its axioms govern how the work is done and recorded.
-2. **The work-type** gives the eligible roles and domains, and its `evidenceAuthority` says who may satisfy the evidence.
+2. **The work-type** gives the eligible roles and domains, and its `evidenceAuthority` says who may close the evidence requirement - the gate's judge, or the author where no gate is held here ([`E8`](../entities/E8-evidence.md)).
 3. **The domain** is the surface the work's evidence lands on ([`D0`](../domains/README.md)).
 4. **The role** is who performs it; what it may attest is set by role and work-type together ([`R0`](../roles/README.md)).
 5. **The method and artifact** are the ones the work-type cites.
@@ -103,7 +103,7 @@ The **`closeabilityPreflight` of a work-type is exactly the seed-time projection
 A generated node that cannot pass this preflight at seed is not admitted (this is what makes the catalog safe for autonomous generation - A7, A8).
 
 1. **RoleEligibility permissive, authority strict.** Many roles may perform a
-   type; only the `evidenceAuthority` path may *satisfy* its evidence.
+   type; only the `evidenceAuthority` path may *close* its evidence requirement.
 2. **Independence is structural + roster-aware.** `evidenceAuthority:
    verifier-attestation` requires the attesting role-set to contain an identity
    that **cannot be the executor given the LIVE roster** (single-agent-per-role
@@ -159,7 +159,7 @@ status:               active    # see schemas/catalog-entry for the vocabulary
 generatable:          false     # optional; set only when the type must be authored by hand
 roleEligibility:      [<pure role union>]
 evidenceContract:     [{kind, description}, ...]      # the evidenceRequirements[] template - the compile-target
-evidenceAuthority:    executor-evidence | executor-evidence-provisional | verifier-attestation | director-ratification
+evidenceAuthority:    executor-evidence | executor-evidence-provisional | verifier-attestation | director-ratification   # who may close the requirement - see E8
 domainEligibility:    [<subject-surfaces>]            # a single value when pinned
 domainFreedom:        free | pinned
 parameters:           [{name, fills, bindingSource, predicate}]   # bindingSource: discover-from-substrate | provided-by-trigger | operator-supplied
@@ -211,7 +211,7 @@ It is recorded as a **posture / routing note**: an incident routes through `fix-
 
 ## Backstop is a work-type, not a layer
 
-`backstop-a-prod-window` (W-series) is an ordinary `arc-seeded` work-type with a `backstop:true` flag, a `roleEligibility` union, final-disposition evidence, and a "stands-down-last" `compositionHook` (`completionDependsOn` on the bracketed nodes).\
+`backstop-a-prod-window` (W-series) is an ordinary `arc-seeded` work-type with a `backstop:true` flag, a `roleEligibility` union, a final disposition recorded as its evidence, and a "stands-down-last" `compositionHook` (`completionDependsOn` on the bracketed nodes).\
 There is **no `overlays/` directory**.
 
 ---

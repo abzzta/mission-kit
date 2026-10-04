@@ -33,7 +33,7 @@ Not a role and not an overlay layer - an ordinary `arc-seeded` work-type carryin
 ## Evidence & closeability
 
 Closes on a single `freeform` lease-held backstop node recording abort criteria, the rollback plan, and the final disposition of the window.\
-The `roleEligibility` union (architect/verifier/director) is permissive; authority is `executor-evidence` - the backstop holder attests its own disposition.\
+The `roleEligibility` union (architect/verifier/director) is permissive; authority is `executor-evidence` - the backstop holder records its own disposition as evidence, which closes the node and is not a gate.\
 It satisfies (does not restate) the canonical constraint set and closeability preflight in `work-types/README.md`; the load-bearing constraint here is #6 (repair-path / declared disposition) reached via the stands-down-last `completionDependsOn`, so the node cannot self-close ahead of the window.
 
 ---

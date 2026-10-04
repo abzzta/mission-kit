@@ -7,7 +7,7 @@ hydrate-when: You are gating a build or change that you did not author
 roleEligibility: [verifier]
 evidenceContract:
   - kind: review
-    description: verifier-authored review doc (or SEAL attestation when structurally valid)
+    description: the verifier's verdict, recorded in the evidence slot as a review doc citing the evidence examined (or a SEAL attestation when structurally valid)
 evidenceAuthority: verifier-attestation
 domainEligibility: [delivery-code, distribution, tooling-harness, authority-governance, coordination-substrate, knowledge-methodology, product-data]
 domainFreedom: free
@@ -16,7 +16,7 @@ parameters:
     fills: the build/change to gate
     bindingSource: provided-by-trigger
 generationMode: reactive-triggered
-falsifier: self-attestation, targetRef null with attestation-only evidence, or no load-bearing ref
+falsifier: self-attestation, targetRef null with an attestation citing no evidence, or no load-bearing ref
 compositionHooks: brackets the target node; generative-on-FAIL - a FAIL grows a repair subgraph routing through arc-repair's supersession path (never bare-abandon a completion-gated child)
 methods: [M1]
 ---
@@ -32,7 +32,7 @@ Reactive to a substrate trigger (a completed build, an approved PR, a FAILed/tra
 
 ## Evidence & closeability
 
-The evidence contract is a single `kind: review` - a verifier-authored review doc (or a structurally-valid SEAL attestation).\
+The evidence contract is a single `kind: review` slot holding the verifier's verdict - a review doc citing the evidence examined, or a structurally-valid SEAL attestation; the verdict is not itself evidence ([`E8`](../entities/E8-evidence.md)).\
 Authority is `verifier-attestation`.\
 Closeability is governed by the canonical constraint set / closeability preflight in `work-types/README.md` (do not restate it here).\
 Load-bearing here: constraint 2 (independence is structural + roster-aware) - a verifier-*held* gate uses **plain `kind:review`, never verifier-attestation-on-its-own-work** (the bug-249 fix); if the live roster collapses attester and executor, the seed fails or downgrades to `kind:review`.
@@ -42,7 +42,7 @@ Load-bearing here: constraint 2 (independence is structural + roster-aware) - a 
 ## Generation
 
 `generationMode: reactive-triggered` - instantiated by a substrate trigger, never idle-pooled or auto-minted against a bare surface. idea-425/451/403 instantiate it as the bracketing gate an executor node's completion depends on: idea-451's conditional-edge primitive makes it generative-on-FAIL (a FAIL grows a repair subgraph via `arc-repair`), while idea-403's idle engine relies on this gate to consume executor-evidence-provisional closures before they count as assurance.\
-Falsifier: self-attestation, a null `targetRef` carrying attestation-only evidence, or no load-bearing ref - any of these fails the seed, the generator's machine check, and the gate itself is never validly run.
+Falsifier: self-attestation, a null `targetRef` with an attestation citing no evidence, or no load-bearing ref - any of these fails the seed, the generator's machine check, and the gate itself is never validly run.
 
 ---
 

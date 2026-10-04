@@ -28,7 +28,7 @@ Land an already-approved PR onto canonical `main` - the git-plane act of integra
 
 ## Evidence & closeability
 
-The evidenceContract is a `commit` (the merge commit) plus a `freeform` attestation of branch-protection / review status at merge time.\
+The evidenceContract is a `commit` (the merge commit) plus a `freeform` record of branch-protection / review status at merge time.\
 Authority is `executor-evidence`: the engineer who merges produces the closing evidence.\
 Closeability is governed by the canonical constraint set / closeability preflight in `work-types/README.md` - not restated here.\
 Because this is `executor-evidence`, the trigger is a *pre-approved* PR (the independent review gate is upstream of the merge, satisfying separation-of-duties before W6 fires), so W6 does not itself carry an independence attestation.

@@ -31,7 +31,7 @@ Test a design or a set of items against the constitution axioms one item at a ti
 
 ## Evidence & closeability
 
-`evidenceContract`: one `review` input - a per-item axiom-alignment record whose citations are each load-bearing.\
+`evidenceContract`: one `review` slot holding the verifier's verdict - a per-item axiom-alignment record whose citations, each load-bearing, are the evidence.\
 `evidenceAuthority: verifier-attestation`, held by the verifier.\
 Because this is a verifier-*held* gate, it seeds as a plain `kind:review` node, never a self-attestation (README constraint 2, the bug-249 fix).\
 `domainFreedom: pinned` to `authority-governance`; the sole parameter `target` binds `provided-by-trigger`.\

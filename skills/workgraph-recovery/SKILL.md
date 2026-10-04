@@ -125,7 +125,7 @@ For an active verifier FAIL:
 - author a distinct candidate and distinct repair gate;
 - use a distinct runId/WorkItem IDs/downstream tail when graph structure changes;
 - re-run the same or stronger independent checks;
-- cite old FAIL as negative evidence in the repair gate;
+- cite the old FAIL in the repair gate as the earlier gate's recorded verdict, not as evidence;
 - never call the old FAIL superseded in the sense of no longer true.
 
 A later PASS means the distinct repair passed.\
