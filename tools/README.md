@@ -383,25 +383,9 @@ Each was mutation-tested.
 
 ---
 
-## check-moves.sh
-
-Holds every superseded entry to a live successor, and every live entry away from superseded ids.
-
-```sh
-tools/check-moves.sh
-```
-
-**Why it exists.**\
-Delta-1 moved seven entries to new ids, keeping each old one as a superseded pointer.\
-A move is only safe if each pointer reaches a successor that claims it, and no live guidance still cites the old id - otherwise a reader follows a citation to a dead end.
-
-**Run it when** an entry is superseded or moved; the gate runs it on every change.
-
----
-
 ## check-id-reuse.mjs
 
-Holds that an id, once retired, is never issued again.
+Holds that an id, once retired, is never issued again, and that every `supersedes` value names a retired id.
 
 ```sh
 node tools/check-id-reuse.mjs
@@ -411,6 +395,7 @@ node tools/check-id-reuse.mjs
 Frozen records keep citing an id after its entry moves or goes, so a reissued id makes every such citation point at the wrong entry.\
 A moved entry leaves no stub in the tree, so the retired ids are derived from git history rather than kept by hand: an id is retired when a file holding it was deleted, or renamed to a file holding a different id, and no file added in the same commit kept it.\
 Two reuses predate the check and are named in it as history, not permission.\
+A successor's `supersedes` records the ids it replaces; with no stub left, that lineage is what a reader holding an old citation finds by searching for it, so the check holds it to ids history shows retired.\
 Mutation-tested: an entry reissuing a retired id fails the gate.
 
 **Run it when** you mint an id; the gate runs it on every change.

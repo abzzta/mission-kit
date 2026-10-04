@@ -45,7 +45,7 @@ A new work-type is authored like any entry: from a peer exemplar ([`PC1`](../pra
 **Gaps recorded.**\
 *Work on the knowledge corpus* is building on its domain, and has no work-type of its own.\
 Adding or revising an entry or a tool is a build slice, `W1`, or a fix, `W2`, where a defect has been filed.\
-Retiring an entry supersedes it - the entry keeps its ID as a stub - which is also a build slice; only deleting a surface outright, such as a whole layer or a tool, is a hard cut, `W3`.\
+Retiring an entry, a tool or a whole layer deletes it with no stub and records where its duty went, which is a hard cut, `W3`.\
 Extending the corpus - adding or retiring a layer - recurs often enough that a work-type of its own may earn its place.\
 Procedures that conduct work are cited by only some work-types, and artifacts by fewer; a work-type cites what it can name, and the rest are recorded rather than guessed.
 

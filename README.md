@@ -67,7 +67,7 @@ The constraint set is authored once in the cross-axis reference and never forked
 **Identity is stable and never reused.**\
 An entry that moves to another layer takes a new ID there, and the old file is removed rather than kept as a stub; live guidance cites the new ID, and frozen records keep the old one as history.\
 A retired ID is therefore never issued again, which [`tools/check-id-reuse.mjs`](tools/check-id-reuse.mjs) holds from git history.\
-Entries moved before this rule still carry superseded stubs, which keep their ID and point to the replacement through `supersedes`.\
+The successor records the ids it replaces in `supersedes`, so a reader holding an old citation finds the live entry by searching for it.\
 [`INDEX.md`](INDEX.md) is the flat ledger across every category.
 
 **Composition is expressed as edges, not as names.**\
@@ -183,7 +183,7 @@ The charter records the decision so it is not rediscovered, not to add a step.
 **Retiring one.**\
 A layer leaves the same way it arrived and in the same commit: contents relocated or converted to entries, the table row removed, and any pointer to it repaired.\
 An empty directory left behind is worse than the layer was, because it reads as a place things belong.\
-Identity rules are unchanged - a relocated entry keeps its ID, and only a replaced one is superseded.
+Identity rules are unchanged - entries relocated with their layer keep their IDs, and an entry that moves to another layer or is replaced takes a new ID, leaving no stub.
 
 **Faults.**
 

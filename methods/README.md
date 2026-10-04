@@ -42,7 +42,7 @@ Every member is placed by its own trigger, in exactly one moment; procedures sit
 | **Treating the record** | how a record that is wrong is put right - content that must not remain removed with proof, a record that has drifted reconciled against the truth | [`M9`](M9-history-content-scrub.md) removes content; reconciling a drifted record has no procedure |
 | **Handing over** | how a human of limited context is led to understand the work and decide on it | [`M10`](M10-guided-dialogue.md) |
 
-Delta-1 moved the rules that sat here to [`rules/`](../rules/README.md) and a practice to [`practices/`](../practices/README.md), and brought `M9` in from `skills/`; the entries that moved remain here as superseded entries pointing to their successors.
+Delta-1 moved the rules that sat here to [`rules/`](../rules/README.md) and a practice to [`practices/`](../practices/README.md), and brought `M9` in from `skills/`; each successor records the id it replaces in `supersedes`, and no stub remains.
 
 **One empty moment and three thin ones, recorded rather than filled.**\
 *Deciding what to keep* holds no procedure: [`RU1`](../rules/RU1-default-reject-honest-yield.md) and [`RU3`](../rules/RU3-anti-amnesia-deferral.md) constrain what is kept and what a cut must record, but no method produces the verdict itself.\
@@ -127,17 +127,13 @@ A failure mode of one procedure belongs in that procedure.
 ## Index
 
 <!-- BEGIN GENERATED: entries. Run tools/generate-index.mjs; do not edit by hand. -->
-| ID | Title | Status | Hydrate when |
-|---|---|---|---|
-| [M0](README.md) | Methods - procedures that produce a result of their own | active | You are choosing how to run a review, an audit or another procedure, or deciding whether guidance is a procedure, a rule, a practice or style |
-| [M1](M1-triangulated-review.md) | Triangulated review - minimum 4 independent inputs | active | You are reviewing a patch or design that ships to production or upstream |
-| [M2](M2-test-drive-docs-by-execution.md) | Test-drive docs by execution - run the steps, or have a cold reader reason with it | active | You are about to ship a document someone will act on - an operator workflow, or a charter, axiom or other reasoning document an agent will rely on |
-| [M3](M3-default-reject-honest-yield.md) | Default-reject discipline + honest yield reporting | superseded | You have arrived by an old reference to M3, which has moved and is superseded by RU1 |
-| [M4](M4-frozen-history-rule.md) | Frozen-history rule | superseded | You have arrived by an old reference to M4, which has moved and is superseded by RU2 |
-| [M5](M5-anti-amnesia-deferral.md) | Anti-amnesia deferral - every parked or cut item carries a revival trigger | superseded | You have arrived by an old reference to M5, which has moved and is superseded by RU3 |
-| [M6](M6-author-from-exemplar.md) | Author from exemplar - read a peer instance before adding to a collection | superseded | You have arrived by an old reference to M6, which has moved and is superseded by PC1 |
-| [M7](M7-axiom-alignment-audit.md) | Axiom alignment audit - required gate for extensive planning/design | active | You are judging whether a design decision is anchored to a first principle |
-| [M8](M8-artifact-bootstrap.md) | Artifact bootstrap - enter the loop at its inlet, one ratified type at a time | active | You are adopting the artifact document set in a project that does not use it yet |
-| [M9](M9-history-content-scrub.md) | History content scrub | active | You must remove content from history that is already committed |
-| [M10](M10-guided-dialogue.md) | Guided dialogue - lead a human to understanding, then to a recorded decision | active | You need a human with limited context to understand something or decide something |
+| ID | Title | Hydrate when |
+|---|---|---|
+| [M0](README.md) | Methods - procedures that produce a result of their own | You are choosing how to run a review, an audit or another procedure, or deciding whether guidance is a procedure, a rule, a practice or style |
+| [M1](M1-triangulated-review.md) | Triangulated review - minimum 4 independent inputs | You are reviewing a patch or design that ships to production or upstream |
+| [M2](M2-test-drive-docs-by-execution.md) | Test-drive docs by execution - run the steps, or have a cold reader reason with it | You are about to ship a document someone will act on - an operator workflow, or a charter, axiom or other reasoning document an agent will rely on |
+| [M7](M7-axiom-alignment-audit.md) | Axiom alignment audit - required gate for extensive planning/design | You are judging whether a design decision is anchored to a first principle |
+| [M8](M8-artifact-bootstrap.md) | Artifact bootstrap - enter the loop at its inlet, one ratified type at a time | You are adopting the artifact document set in a project that does not use it yet |
+| [M9](M9-history-content-scrub.md) | History content scrub | You must remove content from history that is already committed |
+| [M10](M10-guided-dialogue.md) | Guided dialogue - lead a human to understanding, then to a recorded decision | You need a human with limited context to understand something or decide something |
 <!-- END GENERATED -->

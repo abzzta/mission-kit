@@ -71,8 +71,6 @@ A skill whose steps a script could take should be that script, per [`A11`](../ax
 | ID | Title | Status | Hydrate when |
 |---|---|---|---|
 | [K0](README.md) | Skills - executable capability, the stub-and-body split, and composition by edge | active | You are adding or invoking an executable capability, or you need to know why a skill is two files rather than one |
-| [K1](K1-history-content-scrub.md) | History content scrub | superseded | You have arrived by an old reference to K1, which has moved and is superseded by M9 |
-| [K2](K2-publishing-rewritten-history.md) | Publishing rewritten history | superseded | You have arrived by an old reference to K2, which has moved and is superseded by RU4 |
 | [K3](K3-substrate-audit.md) | substrate-audit - code-grounded substrate audit | active | You are auditing a substrate and must ground every claim in its source |
 | [K4](K4-research-artefacts.md) | research-artefacts - discipline for producing persistent research outputs | active | You are producing a research output that must survive the session that made it |
 | [K5](K5-survey.md) | survey - stakeholder-intent capture before design commitment | active | Direction is still open and you are about to commit to a design |

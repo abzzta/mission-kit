@@ -71,7 +71,7 @@
       "pattern": "^tools/"
     },
     "supersedes": {
-      "description": "Entries this one replaces. Following a superseded entry is an error, and only this field says so.",
+      "description": "Ids this entry replaces, each retired: a moved or replaced entry leaves no stub, so this lineage is what a reader holding an old citation finds. tools/check-id-reuse.mjs holds each value to an id retired in history.",
       "type": "array",
       "items": {
         "type": "string"

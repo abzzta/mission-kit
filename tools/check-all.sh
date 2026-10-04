@@ -64,7 +64,6 @@ run "entry bodies match their category" ./tools/check-entry-body.sh
 # when rebuilt against E4 - tracked as B17.
 run "the board and the backlog agree" node tools/check-board.mjs
 run "applies-to names exactly the declared traits" node tools/check-traits.mjs
-run "superseded entries point at live successors" ./tools/check-moves.sh
 run "a retired id is never issued again" node tools/check-id-reuse.mjs
 run "the tested communication guidance landed unreworded" ./tools/check-guidance-placement.sh
 run "index is derived, not typed" node tools/generate-index.mjs --check

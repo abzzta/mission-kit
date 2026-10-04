@@ -10,7 +10,8 @@
 // renamed or edited so that it holds a different id. It is reused when a current entry holds a retired id.
 // A relocation that keeps its id - a directory renamed - retires nothing.
 //
-// Exit non-zero if any current entry holds a retired id.
+// Exit non-zero if any current entry holds a retired id, or a supersedes value names an id that
+// is not retired.
 //
 // Usage:  tools/check-id-reuse.mjs
 
@@ -74,6 +75,14 @@ for (const [c, changes] of byCommit) {
 	}
 }
 
+// The working tree is the newest point in history: an entry at HEAD whose id no current file holds
+// is retired by the uncommitted change, so the gate run before a commit agrees with the one after.
+const headIds = new Set([...current.keys()]);
+for (const f of git('ls-tree', '-r', '--name-only', 'HEAD').split('\n').filter(isEntryPath)) {
+	const id = idOf(show('HEAD', f));
+	if (id && !headIds.has(id) && !retired.has(id)) retired.set(id, { path: f, commit: 'working-tree', to: null });
+}
+
 // Reuses that happened before this check existed. Each is a fact of history, not a permission:
 // frozen records citing these ids before the date given mean the earlier entry.
 const BEFORE_THIS_CHECK = {
@@ -90,6 +99,23 @@ for (const [id, where] of retired) {
 	reused++;
 }
 
+// supersedes records lineage: the ids an entry replaces. A moved entry leaves no stub, so this is
+// what a reader holding an old citation finds by searching for it. Each must name an id that
+// history shows retired - neither a live id nor one never issued.
+const ROOTS = readdirSync(ROOT, { withFileTypes: true }).filter((d) => d.isDirectory() && !d.name.startsWith('.') && d.name !== 'docs' && d.name !== 'node_modules');
+let badLineage = 0;
+for (const d of ROOTS) for (const f of readdirSync(path.join(ROOT, d.name))) {
+	if (!f.endsWith('.md')) continue;
+	const fm = /^---\n([\s\S]*?)\n---/.exec(readFileSync(path.join(ROOT, d.name, f), 'utf8'));
+	const sup = fm && /^supersedes:\s*\[(.*)\]\s*$/m.exec(fm[1]);
+	for (const id of (sup ? sup[1].split(',').map((s) => s.trim()).filter(Boolean) : [])) {
+		if (retired.has(id) && !current.has(id)) continue;
+		console.log(`FAIL  lineage  ${d.name}/${f} supersedes ${id}, which is ${current.has(id) ? 'a live entry' : 'not retired in history'}`);
+		badLineage++;
+	}
+}
+
 console.log(`${current.size} current ids, ${retired.size} retired in history.`);
+if (badLineage) { console.log(`${badLineage} supersedes value(s) do not name a retired id.`); process.exit(1); }
 if (reused) { console.log(`${reused} retired id(s) reissued; a retired id is never issued again.`); process.exit(1); }
 console.log('no retired id is reissued.');

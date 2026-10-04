@@ -210,7 +210,9 @@ if (duplicated.length) {
 // cross-file reference is outside what any single-file contract can see. Checked here because
 // collect() is already the only inventory of which ids exist. Blocking is not onerous: the root
 // charter already requires a retired entry's pointers to be repaired in the same commit.
-const EDGE_FIELDS = ['related', 'supersedes', 'related-axioms', 'methods', 'produces'];
+// supersedes is not here: it names retired ids, which by design are not entries, and
+// check-id-reuse holds it to naming ids that history shows retired.
+const EDGE_FIELDS = ['related', 'related-axioms', 'methods', 'produces'];
 function danglingEdges(entries) {
 	const known = new Set(entries.map((e) => e.id));
 	const out = [];
