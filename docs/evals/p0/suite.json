@@ -25,8 +25,8 @@
     {
       "id": "Q4",
       "question": "Which patterns address two things that must agree drifting apart?",
-      "key": "P3 twin-parity by generation (two representations) and P5 verbs-as-data (several surfaces of one operation). P4 neutral core is acceptable as a third (copied mechanisms drift). P1 and P2 are not.",
-      "rubric": "2 for P3 and P5, with or without P4, and not P1. 1 for one of P3/P5 without a wrong member. P2 cited for version skew is neutral, neither credited nor penalised; P2 for readiness, or P1, is wrong. 0 otherwise."
+      "key": "P3 twin-parity by generation (two representations) and P5 verbs-as-data (several surfaces of one operation). P4 neutral core is acceptable as a third (copied mechanisms drift). P2 is not.",
+      "rubric": "2 for P3 and P5, with or without P4. 1 for one of P3/P5 without a wrong member. P2 cited for version skew is neutral, neither credited nor penalised; P2 for readiness is wrong. 0 otherwise."
     },
     {
       "id": "Q5",
@@ -37,8 +37,8 @@
     {
       "id": "Q6",
       "question": "A team proposes a convention for laying out alternative installation paths in a markdown document. Is that a pattern or a style rule?",
-      "key": "Style: M0's placement asks at its third question whether guidance governs an artifact's form, and M0's routing table sends the artifact you produce to style and the shape of a solution to patterns. Faithful alternative: the convention already exists as P1 (Path A / Path B), filed as a pattern, with S7 rendering it; strengthen those rather than add, and P1 is arguably a style rule filed as a pattern.",
-      "rubric": "2 for style with form-of-an-artifact reasoning, or for P1/S7 already covering it with P1 noted as arguably style. 1 for style alone, or P1 cited without noticing the boundary. 0 otherwise."
+      "key": "Style: M0's placement asks at its third question whether guidance governs an artifact's form, and M0's routing table sends the artifact you produce to style and the shape of a solution to patterns. The convention already exists as S16 (Path A / Path B), with S7 rendering its paths; strengthen those rather than add.",
+      "rubric": "2 for style with form-of-an-artifact reasoning, or for S16/S7 already covering it. 1 for style alone. 0 otherwise."
     },
     {
       "id": "Q7",
