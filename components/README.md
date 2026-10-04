@@ -10,6 +10,8 @@ related: [P0, M0, A3]
 
 # Components
 
+## Purpose
+
 Sovereign, shareable units that should be **used** rather than rebuilt.
 
 This entry is the layer's composition rule: it states what earns a component entry and how closeness of fit is judged, and it registers no component itself.\
@@ -19,11 +21,9 @@ A component entry is a portable definition and a reference: what the component's
 The definition is held here so it is citable and comparable.\
 The implementation is not, because vendoring code into a cross-project corpus is how a knowledge base becomes a monorepo.
 
-## Why the layer exists
-
+**Why the layer exists.**\
 [`A3`](../axioms/A3-sovereign-composition.md) mandates that a new capability is assembled by composing existing units rather than by modifying them, and its success signals ask that new capabilities arrive by composition.\
-The corpus asserted this and offered nothing to compose.\
-`patterns/` holds solution shapes rather than units, `bundles/` composes skills rather than units, and every structural definition in the repository sat inside a teaching skill as an example.
+The corpus asserted this and offered nothing to compose; every structural definition in the repository sat inside a teaching skill as an example.
 
 Without an index, the default is to rebuild.\
 Rebuilding is not merely wasted effort; it produces a second unit with the same duty and a slightly different contract, which is the coupling `A3` exists to prevent.
@@ -53,6 +53,13 @@ Orthogonality serves adoption; where they conflict, adoption wins and the overla
 **This territory is not yet measurable.**\
 It needs several architectures carrying declared anchored cores to join against, and this corpus currently holds one.\
 The denominator is identified and not yet computable, which is a gap in the evidence rather than in the definition.
+
+**Gaps found without the denominator.**\
+The registry holds one component, [`C1`](C1-agp.md), routing between application components; two duties are known to have none.\
+*Reading frontmatter* - nine of this corpus's tools and three of its schema tests each read entry frontmatter with code of their own, in two languages, and the copies already differ: some check the opening delimiter and some do not, and only one reads a list spread over several lines.\
+Two boxes of this corpus's own anchored core, the tools and the schemas, need the duty, and the organisation's machinery is a system like any other, so this is duplication inside the territory.\
+*Retrying and idempotency* - [`A11`](../axioms/A11-cognitive-minimalism.md) names them as primitives that should exist once, and neither a component nor a pattern holds them.\
+Both are recorded, not built: a component is admitted when a consumer needs it, not because a gap was named.
 
 ---
 
@@ -115,7 +122,7 @@ A managed set of orthogonal duties is a claim about architecture altitude; below
 
 ---
 
-## Body shape
+## Member shape
 
 The shape is declared in [`SC6`](../schemas/SC6-entry-body.md) and enforced by `tools/check-entry-body.sh`, so this list is a reading of the contract rather than a second copy of it.
 
@@ -128,11 +135,29 @@ The shape is declared in [`SC6`](../schemas/SC6-entry-body.md) and enforced by `
 
 ---
 
+## Neighbours
+
+| Neighbour | The question that separates them |
+|---|---|
+| [Patterns](../patterns/README.md) | Is there an artifact to depend on, or a structure you reproduce in your own code? |
+| [Skills](../skills/README.md) | Is it a unit a system depends on, or a capability an agent invokes? |
+| [Bundles](../bundles/README.md) | Is it a unit, or a composition of skills into an operator role? |
+| [Methods](../methods/README.md) | Is it the registry, or the obligation to search it before building? The obligation is a procedure, and no method holds it yet. |
+| [Entities](../entities/README.md) | Is it a registered unit, or the definition of what a component is? [`E6`](../entities/E6-component.md) defines the term; this set registers instances. |
+
+---
+
+## Composition
+
+Components compose by the `composes` and `composed-by` edges each declares, so depth is derived rather than named.\
+With one member the graph has no edge yet; the properties the territory names - coverage, orthogonality, duplication - are how members relate, and they are checked across the set because no member can hold them.
+
+---
+
 ## Faults
 
 - **The reinvented unit.** The same boundary drawn again because nothing named it the first time. Two implementations, two contracts, one duty.
 - **The fork disguised as a variant.** A copy adjusted locally instead of the original being adjusted centrally. Both copies read as authoritative and they drift apart silently.
-- **The dual-duty component.** A unit that accreted a second concern and was never split, so consumers depend on it for unrelated reasons and it can no longer change.
 - **The squatting project.** Project-specific code indexed as a portable component. It fails the first time another team reaches for it.
 - **The index nobody searches.** A registry that exists while work still starts from scratch. The catalogue is necessary and is not sufficient.
 
