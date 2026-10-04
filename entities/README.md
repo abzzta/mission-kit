@@ -10,17 +10,15 @@ related: [E1, M0, SC6, A4]
 
 # Entities
 
+## Purpose
+
 What a thing **is**, never how it is done.
 
-This entry is the layer's composition rule: it states what earns a definition and what shape one takes, and it defines no term itself.\
+An entity entry fixes the meaning of one term that an engineering organisation cannot afford to leave imprecise.\
+This entry is the layer's charter: it states what earns a definition and what shape one takes, and it defines no term itself.\
 It is not an entity, which is why the entity body shape declared in [`SC6`](../schemas/SC6-entry-body.md) exempts it.
 
-An entity entry fixes the meaning of one term that an engineering organisation cannot afford to leave imprecise.\
-Every other layer in this corpus answers *how*: methodology how work is conducted, style how artifacts are written, skills how a capability is executed, patterns how a problem is shaped.\
-This layer answers *what*, and it is the only one that does.
-
-## Why the layer exists
-
+**Why the layer exists.**\
 The corpus runs on terms it has never defined.\
 Measured across the entries and skill bodies at the time this layer was created:
 
@@ -43,6 +41,28 @@ That is the mandate failing on vocabulary rather than on content.
 
 ---
 
+## Territory
+
+This set covers **every term the corpus leans on across layers where two competent readers could act differently on the same sentence**, partitioned by the kind of thing the term names.\
+The claim is set by what the set is for; a kind of term with no entry is a gap, not a reason to narrow the claim.
+
+| Kind | What the terms name | Members | Undefined, load-bearing |
+|---|---|---|---|
+| **Authority** | who may decide what | [`E1`](E1-sovereign-hierarchy.md) sovereign-hierarchy | `sovereign` on its own, as axiom titles and tools use it |
+| **The corpus's own structure** | how this knowledge is organised | [`E2`](E2-layer.md) layer, [`E3`](E3-set.md) set, [`E4`](E4-charter.md) charter | - |
+| **What is engineered** | the things work is done on, and their parts | [`E5`](E5-system.md) system, [`E6`](E6-component.md) component | `substrate` |
+| **Work and its proof** | a unit of work, what shows it was done, and what lets it pass | **none - gap** | `unit of work`, `evidence`, `gate`, `seal`, `closeout` |
+| **Coordination** | how work is run across units and agents | **none - gap** | `arc`, `lease` |
+
+Every member sits in one row, and two rows hold none.
+
+**Gaps tested.**\
+A search of the entries, charters, skills, the vision and the standing context finds no definition of `gate`, `evidence`, `seal`, `closeout`, `lease`, `substrate` or `unit of work`; [`A8`](../axioms/A8-gated-recursive-integrity.md) describes gates without defining one, and [`W0`](../work-types/README.md) names evidence fields, not the word.\
+`arc` is defined in the skills layer - a tree of rungs climbing one summit, in [`K6`](../skills/K6-arc-lifecycle.md) - while the coordination skills use it for a graph of work items seeded from a blueprint, so it carries two meanings and no entry fixes either.\
+The two empty rows are where an organisation's work is gated and run, which is where a misread term costs most.
+
+---
+
 ## What earns an entry
 
 A term earns one when imprecision about it would cost something real: a wrong gate, a mis-scoped claim, two people building to different meanings of the same word.\
@@ -53,7 +73,19 @@ If they could, define it.
 
 ---
 
-## Body shape
+## Neighbours
+
+| Neighbour | The question that separates them |
+|---|---|
+| A layer's own charter | Does the term name one layer's members, or is it leaned on across layers? A charter states what its members are; an entity for the same word is earned only by the two-readers test across layers, and then it fixes the word's meaning and cites the charter, as `E2` cites the root charter's admission rule rather than restating it. |
+| [Schemas](../schemas/README.md) | Is it what a term means, or the machine-checkable shape of an instance? `E2` fixes what a layer is; [`SC1`](../schemas/SC1-catalog-entry.md)'s `category` field carries which layer an entry is in. |
+| [Methods](../methods/README.md) and [skills](../skills/README.md) | Does it say what a thing is, or how to do something? A procedure belongs in a method, or a skill if it is executable. |
+| [Traits](../traits/README.md) | Is it a term the corpus leans on, or a characteristic of a system that decides which axioms bind it? |
+| [Artifacts](../artifacts/README.md) | Is it a term, or a document type a lifecycle produces? |
+
+---
+
+## Member shape
 
 Fixed, so definitions can be compared and evaluated rather than merely read.\
 The shape is declared in [`SC6`](../schemas/SC6-entry-body.md) and enforced by `tools/check-entry-body.sh`, so this list is a reading of the contract rather than a second copy of it.
@@ -69,12 +101,24 @@ A definition that only says what a thing is leaves every adjacent case undecided
 
 ---
 
+## Composition
+
+Entities compose through the typed edges in each member's `Relations`, and the population forms two chains and one apex.
+
+- **Structure:** a layer (`E2`) is a set (`E3`), and every set speaks through its charter (`E4`); not every set is a layer.
+- **What is engineered:** a component (`E6`) is a system (`E5`) seen as a part of a containing system.
+- **Authority:** `E1` stands apart from both chains; it is ordered by altitude where layers are peers, and `E2` says so as a relation, *not to be read as*.
+- The chains meet the rest of the corpus by citation: systems to traits and axioms, charters to every layer's `0` entry, the sovereign hierarchy to roles.
+
+---
+
 ## Faults
 
 - **The undefined noun.** A term load-bearing in dozens of documents and defined in none, so each reader reconstructs it slightly differently and no two reconstructions are compared.
 - **The drifted synonym.** Two words for one concept, or one word for two, discovered only when a decision made under one reading is executed under the other.
-- **The definition that is a procedure.** An entry that answers how instead of what. It belongs in methodology or skills, and it hides the absence of a real definition.
+- **The procedure filed as a definition.** An entry here that answers how instead of what; it belongs in methods or skills, and it hides the absence of a real definition.
 - **The glossary nobody cites.** Definitions written once and referenced nowhere, so drift resumes immediately and the layer becomes decoration.
+- **The double home.** A term defined both here and in a charter or member, free to disagree.
 
 ---
 
