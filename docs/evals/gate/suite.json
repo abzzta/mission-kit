@@ -1,0 +1,44 @@
+{
+  "id": "gate",
+  "mode": "corpus",
+  "group": "gate",
+  "source": "Director rulings on the term gate: one meaning in three kinds by who decides (A); verdict binary, extra results mapped, no-verdict an absence, exception an override (A). Keyed from the rulings before the entry is written. Third ruling (A): director ratification in place of an absent independent agent is the gate decided by the director, a recorded change of kind. Key reviewed by a fresh agent before any reader ran.",
+  "probes": [
+    {
+      "id": "G1",
+      "question": "What is a gate, in this corpus?",
+      "key": "A point past which work proceeds only if a stated condition is shown to hold. It has three kinds, by who decides: a machine (a check or validator), an independent agent who did not author the work (a verifier or code owner), or the director (ratification). A gate's kind can change only one way: where an independent agent is required and none exists, the director may decide it instead, recorded as a change of kind; an architect holding a documented delegation counts as the director.",
+      "rubric": "2 for the core meaning plus the three kinds by who decides. 1 for either. 0 otherwise."
+    },
+    {
+      "id": "G2",
+      "question": "The audit for a design returns 'pass with guardrails'. Did it pass the gate? And what if it returns 'revise before implementation'?",
+      "key": "A gate's verdict is binary. 'Pass with guardrails' is a pass, with its conditions recorded; 'revise before implementation' (like blocked, or changes requested) is a fail, with its reason recorded.",
+      "rubric": "2 for both mapped correctly with the binary rule. 1 for one of the two. 0 otherwise."
+    },
+    {
+      "id": "G3",
+      "question": "A verifier cannot attest because the evidence they were given is for an older revision. What is the gate's verdict?",
+      "key": "There is none: no verdict is not a third outcome but the absence of one - the gate has not been validly run, so the work waits until it is.",
+      "rubric": "2 for no verdict, with the work waiting and no-verdict not a third result; 'waiting for a verifier' counts. 1 for no verdict alone. 0 for pass or fail, including calling it blocked as a fail."
+    },
+    {
+      "id": "G4",
+      "question": "The director lets work proceed although its gate failed. Has the gate passed?",
+      "key": "No: an authorised exception is not a pass; it is the director overriding the gate, recorded as such. The verdict stays a fail.",
+      "rubric": "2 for no, an override recorded as the director's decision. 1 for no alone. 0 for yes."
+    },
+    {
+      "id": "G5",
+      "question": "The repository's build check fails on a change. Which kind of gate is that, and could the change's author satisfy an independent-agent gate on the same change?",
+      "key": "A machine gate. No: an independent-agent gate must be judged by someone who did not author the work; the author's own check never stands in for it.",
+      "rubric": "2 for machine gate and no with the non-author reason; mentioning that the gate waits or the director decides it instead is neither required nor penalised. 1 for one part. 0 otherwise."
+    },
+    {
+      "id": "G6",
+      "question": "A one-agent organisation reaches a gate that needs an independent verifier. The director reviews the work and ratifies it. Did the gate pass, and what kind of gate was it?",
+      "key": "Yes, if the director ratified: the gate's kind changed from independent agent to director, recorded as such, and it passed on the director's decision. It is not an override - nothing had failed.",
+      "rubric": "2 for passed, with the change of kind recorded and not an override. 1 for passed alone. 0 for an override or no verdict."
+    }
+  ]
+}
