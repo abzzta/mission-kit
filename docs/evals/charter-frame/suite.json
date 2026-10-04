@@ -1,0 +1,38 @@
+{
+  "id": "charter-frame",
+  "mode": "corpus",
+  "group": "charter-frame",
+  "source": "Director ruling: a charter is a vision applied to a set plus operating instructions; members need not know the set. Keyed before E4, SC6, the methods or any charter changes. Key reviewed before any change: F6 (nesting of visions) dropped - not ruled, and E3 states nesting is delegation without precedence; F2's non-authority device reworded so it does not contradict VISION.md; F3 ratifier fixed as the director; F5 requires amending E3, recorded.",
+  "probes": [
+    {
+      "id": "F1",
+      "question": "What are the two halves of a charter, and what does each answer?",
+      "key": "A vision half - the set's ideal end state, written with the devices a vision artifact (AR6) requires, applied to the set - and an operating half: what the set covers and how it grows, what enters and what goes wrong, and how the set is analysed, balanced and changed.",
+      "rubric": "2 for both halves with what each answers. 1 for one. 0 otherwise."
+    },
+    {
+      "id": "F2",
+      "question": "What must the vision half of a charter contain?",
+      "key": "The AR6 devices applied to the set: what the set is and is not; a north star short enough to quote whole; what would count as succeeding, as dimensions rather than one score; who holds the vision and may change it; and what the vision does not authorise - citing the end state admits no member and licenses no change of direction, because only the operating half's tests admit.",
+      "rubric": "2 for at least four of the five devices. 1 for two or three. 0 otherwise."
+    },
+    {
+      "id": "F3",
+      "question": "Where is the procedure for changing a charter, and where is the procedure for investigating a set? What does an individual charter say about them?",
+      "key": "Each is a method (M11 changing a charter; M12 investigating a set). A charter's operating half cites them and states only what is specific to its set - its growth policy and what members are balanced on; the director ratifies changes to any charter.",
+      "rubric": "2 for both methods and the charter citing them with its set-specific parts. 1 for the methods alone. 0 otherwise."
+    },
+    {
+      "id": "F4",
+      "question": "Which headings must every charter carry, and what checks them?",
+      "key": "Vision, Territory, Operation, Faults and Index, in any order; the entry-body contract (SC6) declares them and tools/check-entry-body.sh enforces them. Boundaries and Composition must be answered but under any heading.",
+      "rubric": "2 for the five headings and SC6 with its checker. 1 for the headings or the checker alone. 0 otherwise."
+    },
+    {
+      "id": "F5",
+      "question": "Do a set's members need to know they belong to the set, or how it is governed?",
+      "key": "No: members need not know each other or the set's governance; the charter is the aggregation point. A layer member naming its layer in its category is an address that reaches the charter, not knowledge of governance.",
+      "rubric": "2 for no, with the charter as the aggregation point. 1 for no alone. 0 for yes."
+    }
+  ]
+}
