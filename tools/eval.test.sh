@@ -33,14 +33,20 @@ EOF
 echo "# index" > "$tmp/oldc/INDEX.md"
 echo "# index" > "$tmp/newc/INDEX.md"
 
-# export never carries docs/, so no reader can reach a key.
+# export carries no key: docs/ is dropped except docs/investigations/, which charters link to.
 exp=$(node "$tool" export --out "$tmp/exp" --ref HEAD | cut -f1)
-if [ -f "$exp/INDEX.md" ] && [ ! -e "$exp/docs" ]; then ok "export copies the corpus and drops docs/"; else no "export copies the corpus and drops docs/"; fi
+extra=$( [ -d "$exp/docs" ] && ls "$exp/docs" | grep -v '^investigations$' )
+if [ -f "$exp/INDEX.md" ] && [ ! -e "$exp/docs/evals" ] && [ -z "$extra" ]; then ok "export copies the corpus and drops docs/ but investigations"; else no "export copies the corpus and drops docs/ but investigations"; fi
+wt=$(node "$tool" export --out "$tmp/exp2" | cut -f1)
+extra2=$( [ -d "$wt/docs" ] && ls "$wt/docs" | grep -v '^investigations$' )
+if [ ! -e "$wt/docs/evals" ] && [ -z "$extra2" ]; then ok "a working-tree export drops docs/ but investigations"; else no "a working-tree export drops docs/ but investigations"; fi
 case "$(basename "$exp")" in *base*|*after*|*before*|*old*|*new*) no "export path carries no version word" ;; *) ok "export path carries no version word" ;; esac
 
 # prepare refuses a corpus that still holds docs/.
-mkdir -p "$tmp/leaky/docs"; echo x > "$tmp/leaky/INDEX.md"
+mkdir -p "$tmp/leaky/docs/evals"; echo x > "$tmp/leaky/INDEX.md"
 if node "$tool" prepare --suites alpha --corpus x="$tmp/leaky" --readers 1 --out "$tmp/r0" 2>/dev/null; then no "prepare refuses a corpus containing docs/"; else ok "prepare refuses a corpus containing docs/"; fi
+mkdir -p "$tmp/inv/docs/investigations"; echo x > "$tmp/inv/INDEX.md"
+if node "$tool" prepare --suites alpha --corpus x="$tmp/inv" --readers 1 --out "$tmp/r00" >/dev/null 2>&1; then ok "prepare accepts a corpus whose docs/ holds only investigations"; else no "prepare accepts a corpus whose docs/ holds only investigations"; fi
 
 run="$tmp/run"
 node "$tool" prepare --suites alpha --corpus OLDLABEL="$tmp/oldc" --corpus NEWLABEL="$tmp/newc" --readers 2 --out "$run" >/dev/null

@@ -85,6 +85,16 @@ function loadSuite(id) {
 // --- export ------------------------------------------------------------------------------------
 // The directory name is random, so the path a reader is handed says nothing about which version it
 // holds. Earlier hand runs named corpora mk-base and mk-after, and every reader saw the word.
+// docs/ holds the keys, so export strips it - except docs/investigations/, which charters link to
+// as the record of their partitions and gaps. It holds no key, and a reader following a charter's
+// link in real use reaches it, so withholding it would measure a corpus nobody reads.
+const READABLE_DOCS = "docs/investigations/";
+function docsHoldNoKeys(dir) {
+	const d = path.join(dir, "docs");
+	if (!fs.existsSync(d)) return true;
+	return fs.readdirSync(d).every((n) => n === "investigations");
+}
+
 function cmdExport(o) {
 	if (!o.out) die("export needs --out DIR");
 	const dir = path.join(path.resolve(String(o.out)), "c-" + randomBytes(4).toString("hex"));
@@ -94,15 +104,18 @@ function cmdExport(o) {
 		const ref = String(o.ref);
 		const tar = execFileSync("git", ["-C", root, "archive", ref], { maxBuffer: 1 << 30 });
 		execFileSync("tar", ["-x", "-C", dir], { input: tar });
+		const inv = path.join(dir, "docs", "investigations"), keep = path.join(dir, ".keep-investigations");
+		if (fs.existsSync(inv)) fs.renameSync(inv, keep);
 		fs.rmSync(path.join(dir, "docs"), { recursive: true, force: true });
+		if (fs.existsSync(keep)) { fs.mkdirSync(path.join(dir, "docs")); fs.renameSync(keep, inv); }
 		files = "git archive " + execFileSync("git", ["-C", root, "rev-parse", "--short", ref]).toString().trim();
 	} else {
 		const tracked = execFileSync("git", ["-C", root, "ls-files", "-co", "--exclude-standard"]).toString()
-			.split("\n").filter((f) => f && !f.startsWith("docs/") && fs.existsSync(path.join(root, f)));
+			.split("\n").filter((f) => f && (!f.startsWith("docs/") || f.startsWith(READABLE_DOCS)) && fs.existsSync(path.join(root, f)));
 		for (const f of tracked) { fs.mkdirSync(path.dirname(path.join(dir, f)), { recursive: true }); fs.copyFileSync(path.join(root, f), path.join(dir, f)); }
 		files = "working tree at " + execFileSync("git", ["-C", root, "rev-parse", "--short", "HEAD"]).toString().trim() + (execFileSync("git", ["-C", root, "status", "--porcelain"]).toString().trim() ? " plus uncommitted changes" : "");
 	}
-	if (fs.existsSync(path.join(dir, "docs"))) die("export left docs/ in place");
+	if (!docsHoldNoKeys(dir)) die("export left docs/ in place beyond docs/investigations/");
 	process.stdout.write(`${dir}\t${files}\n`);
 }
 
@@ -139,7 +152,7 @@ function cmdPrepare(o) {
 	if (!suites.length || !corpora.length || !o.out || !(readers > 0)) die("prepare needs --suites, --corpus, --readers and --out");
 	for (const c of corpora) {
 		if (!fs.existsSync(path.join(c.path, "INDEX.md"))) die(`corpus ${c.label} has no INDEX.md`);
-		if (fs.existsSync(path.join(c.path, "docs"))) die(`corpus ${c.label} contains docs/ - keys would be reachable; use export`);
+		if (!docsHoldNoKeys(c.path)) die(`corpus ${c.label} contains docs/ beyond docs/investigations/ - keys would be reachable; use export`);
 	}
 	const run = path.resolve(String(o.out));
 	for (const d of ["prompts", "answers", "scorers", "scores", "sealed"]) fs.mkdirSync(path.join(run, d), { recursive: true });
