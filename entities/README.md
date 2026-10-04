@@ -50,16 +50,16 @@ The claim is set by what the set is for; a kind of term with no entry is a gap, 
 |---|---|---|---|
 | **Authority** | who may decide what | [`E1`](E1-sovereign-hierarchy.md) sovereign-hierarchy | `sovereign` on its own, as axiom titles and tools use it |
 | **The corpus's own structure** | how this knowledge is organised | [`E2`](E2-layer.md) layer, [`E3`](E3-set.md) set, [`E4`](E4-charter.md) charter | - |
-| **What is engineered** | the things work is done on, and their parts | [`E5`](E5-system.md) system, [`E6`](E6-component.md) component | `substrate` |
+| **What is engineered** | the things work is done on, and their parts | [`E5`](E5-system.md) system, [`E6`](E6-component.md) component | - |
 | **Work and its proof** | a unit of work, what shows it was done, and what lets it pass | [`E7`](E7-gate.md) gate, [`E8`](E8-evidence.md) evidence | `unit of work`, `seal`, `closeout` |
-| **Coordination** | how work is run across units and agents | **none - gap** | `arc`, `lease` |
+| **Coordination** | how work is run across units and agents | [`E9`](E9-substrate.md) substrate | `arc`, `lease` |
 
-Every member sits in one row, and one row holds none.
+Every member sits in one row, and every row holds at least one.
 
 **Gaps tested.**\
-A search of the entries, charters, skills, the vision and the standing context found no definition of `gate` or `evidence` - since defined, [`E7`](E7-gate.md) and [`E8`](E8-evidence.md) - nor of `seal`, `closeout`, `lease`, `substrate` or `unit of work`; [`A8`](../axioms/A8-gated-recursive-integrity.md) described gates without defining one, and [`W0`](../work-types/README.md) names evidence fields, not the word.\
+A search of the entries, charters, skills, the vision and the standing context found no definition of `gate`, `evidence` or `substrate` - since defined, [`E7`](E7-gate.md), [`E8`](E8-evidence.md) and [`E9`](E9-substrate.md) - nor of `seal`, `closeout`, `lease` or `unit of work`; [`A8`](../axioms/A8-gated-recursive-integrity.md) described gates without defining one, and [`W0`](../work-types/README.md) names evidence fields, not the word.\
 `arc` is defined in the skills layer - a tree of rungs climbing one summit, in [`K6`](../skills/K6-arc-lifecycle.md) - while the coordination skills use it for a graph of work items seeded from a blueprint, so it carries two meanings and no entry fixes either.\
-The rows where work is gated and run are where a misread term costs most, and they hold two entries between them.
+The rows where work is gated and run are where a misread term costs most, and they hold three entries between them; five load-bearing terms in them remain undefined.
 
 ---
 
@@ -136,4 +136,5 @@ Entities compose through the typed edges in each member's `Relations`, and the p
 | [E6](E6-component.md) | component - a system seen as a part of a containing system, with one duty at its altitude | You are deciding what a change can reach, what a part of a system owes its neighbours, or which neighbouring parts count as adjacent |
 | [E7](E7-gate.md) | gate - a point past which work proceeds only if a stated condition is shown to hold, decided by a machine, an independent agent or the director | You are about to say work passed, failed or is waiting at a gate, or to decide who may judge one |
 | [E8](E8-evidence.md) | evidence - something offered to show that a claim holds, which a gate's judge receives and never decides | You are about to record, cite or weigh evidence, or you have met a verdict stored where evidence goes |
+| [E9](E9-substrate.md) | substrate - the coordination substrate, the system that hands out, runs and gates work, and nothing else | You are about to write or read the word substrate, or describe the system that coordinates work between agents |
 <!-- END GENERATED -->
