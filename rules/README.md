@@ -41,8 +41,6 @@ Uncapped.\
 A member is one constraint on how work is done, at the grain of a single trace in the record that shows whether it was kept.\
 Members are balanced on their traces: each declares one that a tool or a reader can check, and guidance whose trace nothing could check is a practice, in [`practices/`](../practices/README.md).
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/rules-2026-10-04.md).
-
 ---
 
 ## Member shape

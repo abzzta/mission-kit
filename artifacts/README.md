@@ -35,8 +35,7 @@ The claim is set by what the set is for; a position, altitude or transition with
 **Growth policy.**\
 Uncapped.\
 A member is a type, never an instance, and it holds one position in the loop at a stated altitude; a concern that belongs inside another document is a section of it, not a type.\
-Members are balanced on non-overlap: one position, one type, and a type enters only with its position and after passing every admission test below, never speculatively ahead of a demonstrated need.\
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/artifacts-2026-10-04.md).
+Members are balanced on non-overlap: one position, one type, and a type enters only with its position and after passing every admission test below, never speculatively ahead of a demonstrated need.
 
 ---
 
@@ -78,7 +77,7 @@ That is why the architecture's `current` may not be hand-authored: writing it by
 
 **The inlet was missing until it was looked for from the bottom.**\
 A pass that runs top-down from the loop can only find types the loop already predicts, and the loop as first drawn was closed.\
-Only a bottom-up pass can falsify the loop's own completeness, which is why an investigation treats a missing position as a finding rather than a gap to fill.\
+Only a bottom-up pass can falsify the loop's own completeness, which is why a missing position is a finding rather than a gap to fill.\
 The architecture type's justification chain had named `north star` as a layer the whole time, with nothing owning it.
 
 The frame is the controller pattern applied to an engineering programme: observe current, diff against target, derive the work, reconcile.\

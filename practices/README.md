@@ -40,8 +40,6 @@ Uncapped.\
 A member is one piece of guidance at the grain of one situation, carrying the evidence that following it changes the work.\
 Members are balanced on evidence and on leaving no trace: a practice is admitted only once a difference in the work has been observed, one that acquires a trace moves to [`rules/`](../rules/README.md), and one whose situation recurs while it is never applied is revised or retired.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/practices-2026-10-04.md).
-
 ---
 
 ## Member shape

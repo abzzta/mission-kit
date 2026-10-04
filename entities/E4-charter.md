@@ -32,6 +32,7 @@ So the charter states no cells and no gaps.\
 An investigation - a dated analysis of the population against the end state, scope and growth policy - proposes a partition, places the members in it, and finds the gaps; a later investigation may cut the set differently without the charter changing.\
 Each gap an investigation finds becomes a backlog row with a revival trigger ([`AR5`](../artifacts/AR5-backlog.md)), and the board ([`AR3`](../artifacts/AR3-board.md)) weighs open rows for the director to select; a charter does not rank its own gaps.\
 The charter changes only when an investigation shows its end state, scope or growth policy is itself wrong.\
+The dependency runs one way: an investigation cites the charter it measures against, and a charter neither links to its investigations nor records that it is being investigated, because the ideal does not depend on any measurement of it.\
 The exception to naming members is a set spanning layers, whose charter declares its members in a `members` list because each member's category names its own layer; its index is still generated, from that list.
 
 A charter's content falls into three classes, and the classes are the point of this entry.

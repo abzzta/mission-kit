@@ -35,8 +35,6 @@ Uncapped.\
 A member is one executable, repeatable capability, invoked and run largely as written, at the grain of a procedure with inputs, steps and an output that would otherwise be reconstructed by whoever needs it next.\
 Members are balanced on what the capability does, so that no family grows while whole kinds of capability hold none, and none exists only for one coordination system without a counterpart for work done without it.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/skills-2026-10-04.md).
-
 ---
 
 ## What earns an entry

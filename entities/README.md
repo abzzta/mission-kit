@@ -57,8 +57,6 @@ Uncapped.\
 A member is one term, defined at the grain of a single meaning, earned by what imprecision about it would cost rather than by how often it appears.\
 Members are balanced on one home per term - no term defined here and in a charter or member, and no two entries for one concept - and on being cited, so that each definition is reached where its term carries weight.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/entities-2026-10-04.md).
-
 ---
 
 ## What earns an entry

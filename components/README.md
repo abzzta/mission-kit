@@ -45,8 +45,7 @@ Its extent is derivable rather than invented: the union of anchored cores across
 Uncapped.\
 A member sits at architecture altitude, as one box with one duty; below that altitude a component is many concerns, and they are not members.\
 Members are balanced on orthogonality: no two duties intersect and none is a composition of others already present; where orthogonality and adoption conflict, adoption wins and the overlap becomes a finding rather than a refusal.\
-A component is admitted when a consumer needs it, not because a gap was named.\
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/components-2026-10-04.md).
+A component is admitted when a consumer needs it, not because a gap was named.
 
 ---
 

@@ -34,8 +34,6 @@ Uncapped: the count of roles follows the authorities the work needs rather than 
 A member sits at the grain of one kind of authority over work - pure in essence, independent of domain and work-type - never a person, a mode of work, or a flag carried by a work-type.\
 Members are balanced on independence of mandates: no two roles hold the same authority, and work done after release is the existing authorities applied again, not a new one.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/roles-2026-10-04.md).
-
 ---
 
 ## Purity is on ESSENCE only
@@ -113,7 +111,7 @@ Population faults - visible across the set and invisible to any one role.
 - **The self-attesting identity.** One identity exercising both executor and verifier authority on the same work, so that a self-check is presented as independent assurance. Every role can be correctly held while this happens, which is why it is a population fault.
 - **The director by narrative.** Ratification inferred from an architect's account rather than from a director signal or a documented delegation. It reads as authority and carries none.
 - **The concentrated position.** In a thin organisation every independence check falls to the director, so the scarcest attention becomes the bottleneck for every gate. The degradation rule is correct; its cost is real, and it is the cost to plan for.
-- **The authority with no role.** A decision the work needs that falls outside every role, so it is made by whoever happens to be acting. An investigation of this set is what finds one.
+- **The authority with no role.** A decision the work needs that falls outside every role, so it is made by whoever happens to be acting.
 
 ---
 

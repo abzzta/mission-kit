@@ -44,8 +44,6 @@ A member sits at the altitude of a standing commitment: a limit always in force 
 Members are balanced on orthogonality: each earns its place by forbidding something the others permit, none is derivable from another, and no apex member summarises the rest.\
 A candidate is read against the whole set at admission, so a contradiction or a restatement is caught before it is accepted.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/axioms-2026-10-04.md).
-
 ---
 
 ## Standing commitment, not situated move

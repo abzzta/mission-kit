@@ -35,8 +35,6 @@ Uncapped.\
 A member is one solution shape resolving one force - the pressure that makes the naive design go wrong - at the grain of a structure an engineer reproduces in their own design, recurring across contexts that share no author.\
 Members are balanced on the forces they resolve, so that no force is crowded with shapes while another holds none, and admitted on recurrence, never on the elegance of one design.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/patterns-2026-10-04.md).
-
 ---
 
 ## What earns an entry

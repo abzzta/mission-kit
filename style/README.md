@@ -37,8 +37,6 @@ A member is one convention about the form of one medium at one grain, judged in 
 Members are balanced on non-overlap: one rule holds one decision on one surface, and an enforced rule names exactly one tool.\
 Rules for a medium other than documents are grouped as a sub-set once that medium holds a second rule.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/style-2026-10-04.md).
-
 ---
 
 ## What earns an entry

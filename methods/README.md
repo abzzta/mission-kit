@@ -42,8 +42,6 @@ Uncapped.\
 A member is one procedure at the grain of the situation its trigger names, producing a result of its own.\
 Members are balanced on distinct situations and on composition: a candidate differing from a member only in the situation it names strengthens that member instead, and a new situation is met by composing existing procedures before a primitive is added, as *What earns an entry* states.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/methods-2026-10-04.md).
-
 ---
 
 ## What belongs here, and what does not
@@ -92,7 +90,7 @@ Members cite each other and the rules and practices around them.
 
 **Primitives and compounds.**\
 A member is either a primitive, a step no other member supplies, or a compound assembled from primitives for a situation they do not name alone.\
-Each member declares what it cites, so which members are primitives and which compounds is read from the citation graph, and an investigation places them.
+Each member declares what it cites, so which members are primitives and which compounds is read from the citation graph.
 
 **Rules hold what procedures record.**\
 The discipline about work that does not land - reject it deliberately, record it with a condition for its return, and never rewrite the record - was a cluster here, and is now rules: [`RU1`](../rules/RU1-default-reject-honest-yield.md), [`RU3`](../rules/RU3-anti-amnesia-deferral.md) and [`RU2`](../rules/RU2-frozen-history-rule.md).\
@@ -109,7 +107,7 @@ A failure mode of one procedure belongs in that procedure.
 - **The procedure that is really a skill.** A named capability with inputs and outputs, filed as a way of working. It belongs in `skills/`, where it can be invoked.
 - **The ceremony.** A step retained because it is in the procedure, after the failure it guarded against became impossible. Procedures accrete; nothing prunes them unless the entry says what it is protecting against.
 - **The orphaned primitive.** A procedure that composes with nothing and is cited by nothing. It may be load-bearing and unrecognised, or a habit wearing a methodology's name; the graph cannot tell which, and the absence of edges is the prompt to ask.
-- **The unguarded moment.** A recurring failure at a point in the work no procedure covers. It is this set's characteristic gap, and it stays invisible until an investigation reads the population against what actually went wrong.
+- **The unguarded moment.** A recurring failure at a point in the work no procedure covers. It is this set's characteristic gap, and it stays invisible until the population is read against what actually went wrong.
 
 ---
 

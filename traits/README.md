@@ -39,8 +39,6 @@ A member sits at the grain of one characteristic of the whole system, stated as 
 Members are balanced on non-overlap of the question each settles: traits do not exclude one another on a system, no two settle the same question, and a condition whose absence brings an obligation is as eligible as one whose presence does.\
 A characteristic that would bring an obligation no trait captures is closed by adding a trait, as `domains/` and `work-types/` grow.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/traits-2026-10-04.md).
-
 ---
 
 ## The floor

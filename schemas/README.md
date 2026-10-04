@@ -32,8 +32,7 @@ A structured file the corpus relies on is in scope whether or not a contract gov
 Uncapped.\
 A member is one contract for one kind of document, validatable without importing a skill or a project's runtime; a concern that varies by category is one contract with conditions, not a contract per layer.\
 Members are balanced on non-overlap - one concern, one contract - and contracts that must agree are held together by a test rather than by care.\
-A contract is admitted with the check that validates against it and a consumer that uses it, never ahead of either.\
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/schemas-2026-10-04.md).
+A contract is admitted with the check that validates against it and a consumer that uses it, never ahead of either.
 
 ---
 

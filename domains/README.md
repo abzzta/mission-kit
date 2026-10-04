@@ -36,8 +36,6 @@ This set is not complete and is not expected to be.\
 A member sits at the grain of one evidence contract: one product's source and live state are one domain's evidence, and a product splits into more than one domain only where work on one portion is proved differently and the split has been found needed.\
 Members are balanced on distinct evidence contracts, never on modes of work: a surface no domain resolves is closed by adding a domain with its own contract, not by stretching a neighbour, and until then the work is recorded against the gap rather than forced into the nearest domain.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/domains-2026-10-04.md).
-
 ---
 
 ## Bimodal freedom (stated, not hidden)
@@ -111,7 +109,7 @@ Population faults - visible across the set and invisible to any one domain.
 - **The indistinct pair.** Two domains with no difference in what their evidence resolves against. A domain earns its place by a distinct evidence contract, and without one the generator produces two names for the same work.
 - **The doubly-declared pairing.** The same pairing stated on both the work-type and the domain by hand, free to disagree. It once existed here - the two sides disagreed in 23 places - and the domain side is now generated from the work-types.
 - **The domain named after a tool.** A surface described by one organisation's particular tools rather than by what it is, so a different team cannot place its own work. Five of the seven current members do this in their own entries - every one but `delivery-code` and `product-data` names tools in its subject surface - and it is recorded rather than corrected here.
-- **The unresolved surface.** Work whose evidence lands somewhere no domain names, so two people place it differently. An investigation makes these visible, and a visible one is closed by adding a domain.
+- **The unresolved surface.** Work whose evidence lands somewhere no domain names, so two people place it differently. Once visible, one is closed by adding a domain.
 
 ---
 

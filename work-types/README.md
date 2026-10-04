@@ -37,8 +37,6 @@ A member sits at the grain of a verb-family: one mode and shape of work, compili
 Members are balanced on non-overlap, one act to one work-type: a recurring kind of work that fits no work-type is closed by adding one, not by stretching a neighbour, because a stretched work-type carries two evidence contracts under one name, and until it exists the work is recorded as a row in the project's backlog ([`AR5`](../artifacts/AR5-backlog.md)).\
 A new work-type is authored like any entry, from a peer exemplar ([`PC1`](../practices/PC1-author-from-exemplar.md)), against the entry schema below, landing through the gate; adding one changes how work is generated, so it is ratified by the director.
 
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/work-types-2026-10-04.md).
-
 ---
 
 ## Two structural concepts, three pure axes

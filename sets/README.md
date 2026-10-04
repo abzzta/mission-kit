@@ -29,8 +29,7 @@ Every concern whose guidance spans two or more layers and has rules of its own.
 **Growth policy.**\
 Uncapped.\
 A member is one set gathering one concern, with members in two or more layers and an end state, scope and faults of its own; a topic that fits one layer is that layer's concern.\
-Members are balanced on non-overlap of concern - one concern, one set - and a set is drafted only when readers in its situation are shown to miss guidance that applies, never because a concern could be gathered.\
-Partitions of this set, and the gaps they show, are kept in investigations: [the latest](../docs/investigations/sets-2026-10-04.md).
+Members are balanced on non-overlap of concern - one concern, one set - and a set is drafted only when readers in its situation are shown to miss guidance that applies, never because a concern could be gathered.
 
 ---
 
