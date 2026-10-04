@@ -1,0 +1,56 @@
+{
+  "id": "p0",
+  "mode": "corpus",
+  "group": "p0",
+  "source": "P0 conversion to E4, derived from P1-P5, C0, S0, M0 and the current charter. Q1-Q3 are controls the current P0 answers. Key reviewed by a fresh agent before any reader ran; Q4 rubric, Q5 and Q6 corrected (patterns are not in M0's placement order).",
+  "probes": [
+    {
+      "id": "Q1",
+      "question": "An engineer built an elegant design in one project and wants it added as a pattern. Does it earn an entry?",
+      "key": "No, not yet: a pattern needs recurrence across at least two contexts that share no author or codebase, plus named forces and a stated cost. One occurrence is a design; promoting it is the pattern-of-one fault.",
+      "rubric": "2 for no with the recurrence-across-contexts test. 1 for no alone. 0 otherwise."
+    },
+    {
+      "id": "Q2",
+      "question": "A shared library that every service imports solves a recurring problem. Is it a pattern?",
+      "key": "No: if there is an artifact to depend on it is a component (components/); a pattern is a structure you reproduce in your own code.",
+      "rubric": "2 for no, component, with the depend-on-an-artifact test. 1 for component alone. 0 otherwise."
+    },
+    {
+      "id": "Q3",
+      "question": "Someone wants to add an anti-pattern - a shape to avoid - to the patterns layer. Where does it go?",
+      "key": "Not in patterns: a failure mode goes in the Faults section of the entry that owns the invariant it breaks, where the reader meets it while doing the risky thing.",
+      "rubric": "2 for not patterns, plus the owning entry's Faults. 1 for not patterns alone. 0 otherwise."
+    },
+    {
+      "id": "Q4",
+      "question": "Which patterns address two things that must agree drifting apart?",
+      "key": "P3 twin-parity by generation (two representations) and P5 verbs-as-data (several surfaces of one operation). P4 neutral core is acceptable as a third (copied mechanisms drift). P1 and P2 are not.",
+      "rubric": "2 for P3 and P5, with or without P4, and not P1. 1 for one of P3/P5 without a wrong member. P2 cited for version skew is neutral, neither credited nor penalised; P2 for readiness, or P1, is wrong. 0 otherwise."
+    },
+    {
+      "id": "Q5",
+      "question": "Is there a pattern in this corpus for making an operation safe to retry after a partial failure?",
+      "key": "No pattern covers failure and recovery (retry, idempotency, compensation). Recurring designs for it are within what the patterns set is for, so it is a gap; where a reusable artifact would serve, A11 points to a component instead, and that is a gap there too. Acceptable mentions, none of them a pattern: A7 states the commitment; C1 excludes retry; K22 and K24 are skills with arc-specific retry rules.",
+      "rubric": "2 for no pattern, plus that it is a gap within the set's scope (patterns and/or components, A11 cited). 1 for no pattern alone. 0 for naming a pattern, or naming K22/K24/C1 as the pattern."
+    },
+    {
+      "id": "Q6",
+      "question": "A team proposes a convention for laying out alternative installation paths in a markdown document. Is that a pattern or a style rule?",
+      "key": "Style: M0's placement asks at its third question whether guidance governs an artifact's form, and M0's routing table sends the artifact you produce to style and the shape of a solution to patterns. Faithful alternative: the convention already exists as P1 (Path A / Path B), filed as a pattern, with S7 rendering it; strengthen those rather than add, and P1 is arguably a style rule filed as a pattern.",
+      "rubric": "2 for style with form-of-an-artifact reasoning, or for P1/S7 already covering it with P1 noted as arguably style. 1 for style alone, or P1 cited without noticing the boundary. 0 otherwise."
+    },
+    {
+      "id": "Q7",
+      "question": "What would an unhealthy population of patterns look like?",
+      "key": "Any two population faults: a single project's design promoted; shapes reproduced by hand where a component could be depended on; patterns that duplicate one shape under two names; document conventions filed as patterns; a whole kind of recurring problem with no pattern while one kind has many. A single entry missing its forces or cost is a member defect.",
+      "rubric": "2 for two population faults. 1 for one. 0 for none, or only a single entry's own defect."
+    },
+    {
+      "id": "Q8",
+      "question": "Name two patterns that share a shape, and say what they share.",
+      "key": "P3 and P5: one master source, the other views derived from it, and a real gate (regenerate-and-diff; live handler map) holding the derivation. Also acceptable: P3 or P5 with P4 - one shared source held honest by a gate (P4's source scan).",
+      "rubric": "2 for a correct pair with the shared shape named. 1 for a correct pair without the shape. 0 otherwise."
+    }
+  ]
+}
