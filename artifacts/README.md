@@ -10,10 +10,42 @@ related: [AR1, AR2, AR3, AR4, AR5, AR6, A13, A14, W0]
 
 # Artifacts - the lifecycle loop and the admission rule
 
+## Purpose
+
 The document types an engineering lifecycle produces, each with a schema, so a document is instantiated rather than reinvented.
 
 This entry is the layer's composition rule, in the shape [`W0`](../work-types/README.md) uses for work-types: it states how the types compose and what earns admission, and it does not restate any individual type.\
 It is not itself an artifact type, which is why the artifact body shape declared in [`SC6`](../schemas/SC6-entry-body.md) exempts it.
+
+The set exists so that a programme's documents compose into one loop that can be checked, instead of each team inventing shapes that cannot be compared.
+
+---
+
+## Territory
+
+This set covers **every document an engineering lifecycle produces whose shape recurs across projects** - each position in the lifecycle loop, below, at the altitude of a system, and the altitudes and transitions around it.\
+The claim is set by what the set is for; a position, altitude or transition with no type is a gap, not a reason to narrow the claim.
+
+| Position | What the document carries | Type |
+|---|---|---|
+| **Inlet** | the enduring purpose a programme is measured against | [`AR6`](AR6-vision.md) vision |
+| **State, at two instants** | where a system is, and where it is going | [`AR1`](AR1-system-architecture.md) system architecture |
+| **Selection** | the triaged legal next moves, for the director to choose | [`AR3`](AR3-board.md) board |
+| **Transition** | a declared, gated change between two states | [`AR2`](AR2-delta.md) delta - its closing half unspecified |
+| **Rulings** | what was decided, by whom, and what it affects | [`AR4`](AR4-decision-record.md) decision record |
+| **Deferrals** | what was not done, and when it returns | [`AR5`](AR5-backlog.md) backlog |
+| **Below a system** | one component's configuration and implementation detail | **none - gap, held** |
+
+Every type sits in one row, and one row holds none.
+
+**Gaps tested.**\
+*The component altitude* sits below `AR1` and above code, and has no type.\
+It was deferred, then re-triaged and **held**: a concern can recur widely, and diverge widely, while no section appears in a majority of its instances, and divergence at scale proves the need without settling the shape.\
+The two questions that would settle it - how a component specification binds upward to the duty its architecture declares, and where its boundary with code sits - are currently answered incompatibly rather than merely left open, which is a stronger reason to wait than silence would be.\
+*The closing half of a delta* - the statement of whether its to-state was reached - is left unspecified in `AR2`.\
+The only shape for it is a closeout template held inside a coordination-substrate skill, [`K23`](../skills/K23-workgraph-arc-closeout.md), which fails the cross-project test as written; that is the *template in the toolbox* fault below.\
+*Intent captured before a design* has a shape only in [`K5`](../skills/K5-survey.md)'s survey envelope; `AR4` places it as a section of a decision register, so it is an argued candidate rather than a settled gap.\
+Gaps are recorded rather than filled speculatively, which would be Speculative Surface at document scale.
 
 ---
 
@@ -55,7 +87,7 @@ That is why `AR1`'s `current` may not be hand-authored: writing it by hand does 
 
 **The inlet was missing until it was looked for from the bottom.**\
 A pass that runs top-down from the loop can only find types the loop already predicts, and the loop as first drawn was closed.\
-Only a bottom-up pass can falsify the loop's own completeness, which is why `Coverage` below treats a missing position as a finding rather than a gap to fill.\
+Only a bottom-up pass can falsify the loop's own completeness, which is why the territory above treats a missing position as a finding rather than a gap to fill.\
 `AR1`'s justification chain had named `north star` as a layer the whole time, with nothing owning it.
 
 The frame is the controller pattern applied to an engineering programme: observe current, diff against target, derive the work, reconcile.\
@@ -178,21 +210,14 @@ Given a box in an anchored core, a reader reaches that component's vision by con
 
 ---
 
-## Coverage
+## Neighbours
 
-The layer is complete when every position in the loop has a type and no author must invent a shape.\
-Gaps are recorded as gaps rather than filled speculatively, which would be Speculative Surface at document scale.
-
-**Known gap: the component altitude.**\
-`AR1` is one system at one instant.\
-The configuration and implementation detail of a single component or duty inside it sits below that altitude and above code, and has no type.\
-It is deferred rather than guessed.
-
-That deferral has since been re-triaged and **held**, which is the more instructive outcome.\
-**Instance count is not shape evidence.**\
-A concern can recur widely, and diverge widely, while no section appears in a majority of its instances - and divergence at scale proves the need without settling the shape, because it is the same observation read two ways.\
-The two questions that would settle this type - how a component specification binds upward to the duty its architecture declares, and where its boundary with code sits - are currently answered *incompatibly* rather than merely left open, and that is a stronger reason to wait than silence would be.\
-Abundant evidence of a need is routinely mistaken for evidence of a shape.
+| Neighbour | The question that separates them |
+|---|---|
+| [Schemas](../schemas/README.md) | Is it the machine-checkable contract for a shape, or the shape a lifecycle document takes? A type here must not fork a contract there. |
+| [Style](../style/README.md) | Does it govern how a document is written, or which document a lifecycle produces and what it must carry to do its job in the loop? |
+| [Skills](../skills/README.md) | Is it a capability, or a deliverable? A skill may use a template, but a deliverable shape held only inside one skill is a type waiting to be admitted here. |
+| [Work-types](../work-types/README.md) | Is it a kind of work, or the document a kind of work produces? A work-type may name the artifact it produces. |
 
 ---
 
@@ -202,7 +227,6 @@ Abundant evidence of a need is routinely mistaken for evidence of a shape.
 - **The style rule wearing an architecture.** Document structure enforced as a writing convention, invisible to anyone choosing what to produce.
 - **The reinvented deliverable.** The same document authored from nothing each time, so no two instances can be compared and no reviewer knows what is missing.
 - **The instance in the type layer.** A completed project document admitted as though it were a shape.
-- **The unacceptable acceptance.** A type whose acceptance criterion is prose about quality rather than an observation, so nothing can fail it.
 - **The broken loop.** A type admitted without its position, so it composes with nothing and the loop it belonged to stays unclosed.
 
 ---
