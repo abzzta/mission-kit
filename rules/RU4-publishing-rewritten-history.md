@@ -17,7 +17,7 @@ Force-push of rewritten history is **forbidden by default**.\
 It is acceptable only when a named justification, a clean harm test, and the mechanical safeguards all hold.
 
 The test is **blast radius, not branch name**.\
-A solo `master` with no forks and no consumers is safe to rewrite; a shared `feature/x` that CI pins by SHA is not.\
+A solo `master` whose forks hold none of the rewritten commits, with no consumers, is safe to rewrite; a shared `feature/x` that CI pins by SHA is not.\
 Judge the branch you have, not the branch its name suggests.
 
 ### Justification
@@ -27,7 +27,7 @@ Judge the branch you have, not the branch its name suggests.
 ### Harm test - all four
 
 2. **No competing work on the branch.** No other contributor has commits on it outside the rewrite, and nobody has unpushed work based on it.
-3. **No forks, or every fork owner notified** with the pre- and post-rewrite tips, before the push.
+3. **No fork holds a rewritten commit.** A fork whose tip is an ancestor of the first rewritten commit, or whose history otherwise contains none of them, is untouched by the rewrite; check each fork's tip against the rewrite's range. A fork that does hold a rewritten commit is a reason to defer, not to contact its owner.
 4. **No open PRs targeting the branch.** Open PRs would have to be closed and re-opened against new commits, losing review history. Defer until they merge or close.
 5. **No external references to the affected SHAs.** CI configs, deployment manifests, release notes, published links, another repo's docs. Where any exist, update them in the same change or defer.
 
@@ -79,7 +79,7 @@ Condition 8 turns *"this seemed fine at the time"* into an auditable record.
 
 **Good:**
 
-> Logged in the project's catalog: *"Force-pushed `master` 2026-MM-DD. Justification - [[M9]] identifier scrub, condition 1. Harm test - sole contributor, 0 forks, 0 open PRs, no external SHA references, evidence in the linked run. Safeguards - range-diff shows only the target substitution, filesystem backup retained at `<path>`, pre-tip `<sha>`, post-tip `<sha>`."*
+> Logged in the project's catalog: *"Force-pushed `master` 2026-MM-DD. Justification - [[M9]] identifier scrub, condition 1. Harm test - sole contributor, no fork holding a rewritten commit, 0 open PRs, no external SHA references, evidence in the linked run. Safeguards - range-diff shows only the target substitution, filesystem backup retained at `<path>`, pre-tip `<sha>`, post-tip `<sha>`."*
 >
 > Then publish with an explicit lease:
 > ```bash
