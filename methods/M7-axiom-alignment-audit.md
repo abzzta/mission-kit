@@ -13,8 +13,8 @@ related: [M1, RU3, PC1, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, 
 
 Every **extensive planning or design exercise** must undergo a dedicated axiom alignment audit before implementation approval.
 
-The audit is a gate, not decoration.\
-It maps the proposed plan/design to the active charter axioms, names load-bearing alignments, exposes tensions, and records whether implementation may proceed as-is, proceed with guardrails, or must revise the design.
+The audit is a [gate](../entities/E7-gate.md), not decoration.\
+It maps the proposed plan/design to the active charter axioms, names load-bearing alignments, exposes tensions, and records a verdict: a pass, with any guardrails implementation must keep, or a fail, with what the design must change.
 
 Do not use axioms to generate a preferred answer from an unverified story.\
 Establish reality first, design from evidence, then use axioms to interrogate the near-final artifact.
@@ -46,8 +46,8 @@ The cost is small; the missed-gate cost is compounding drift.
 1. **Establish reality.** Read the real code, entities, prior decisions, WorkGraph state, and observed incidents before invoking axioms.
 2. **Produce the plan/design.** Let evidence and stakeholder intent shape the proposed mechanism, and the axioms in force set the direction it moves the system.
 3. **Audit the near-final artifact.** Map it to axioms and look for gaps, contradictions, overreach, and missing proof.
-4. **Record deltas.** If the audit finds a flaw, either update the design or record an explicit authority-accepted deviation.
-5. **Gate implementation.** Do not start implementation until the audit verdict is `pass`, `pass-with-guardrails`, or an authorized exception.
+4. **Record deltas.** If the audit finds a flaw, either update the design or have the director accept the deviation, recorded as an override.
+5. **Gate implementation.** Do not start implementation until the audit passes, or the director overrides a fail, recorded as an override and never as a pass.
 6. **Carry guardrails into validation and closeout.** Tests, verifier gates, delivery claims, and closeout packets must reference unresolved guardrails.
 
 ---
@@ -59,7 +59,7 @@ The audit artifact must include:
 | Section | Required content |
 |---|---|
 | Identity | mission/arc/work id, source plan/design refs, constitution snapshot/provenance |
-| Verdict | `pass`, `pass-with-guardrails`, `revise-before-implementation`, or `blocked` |
+| Verdict | `pass`, with any guardrails recorded; or `fail`, recorded as `revise-before-implementation` or `blocked` with the reason |
 | Axiom mapping | active axioms considered, with load-bearing alignments and risks |
 | Layered application | how the design behaves at each relevant layer/altitude |
 | Tensions | inter-axiom or design-vs-axiom tensions and their resolutions |
@@ -99,7 +99,7 @@ This is the first slice of the broader axiom application guide; extend it only f
 |---|---|---|
 | Axiom-first generation | A confident axiom story can bless an unverified false premise | Establish reality by evidence; axioms set the direction and audit the result, and never supply the facts |
 | Decorative mapping | Every axiom gets a vague paragraph but none changes the design | Mark load-bearing mappings and remove filler |
-| Hidden exception | The design violates an axiom but calls it a pragmatic shortcut | Record an explicit guardrail, follow-up, or authority-accepted deviation |
+| Hidden exception | The design violates an axiom but calls it a pragmatic shortcut | Record an explicit guardrail, a follow-up, or a deviation the director accepts as an override |
 | Prompt-only enforcement | A recurring deterministic rule is left for the LLM to remember | Mechanize or file a primitive/config follow-up |
 | Director markdown gate | The Director is asked to read a long doc to approve | Present one decision at a time; markdown is the durable record |
 | Audit after implementation | The audit becomes a post-hoc justification | Gate implementation before code or record a process fault |

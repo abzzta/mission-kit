@@ -25,7 +25,7 @@ Every material claim needs a ref or an explicit `not observed` / `not applicable
 
 | Transition | Required exact proof | Observed ref/result | Valid? |
 |---|---|---|---|
-| `live-qualified -> substrate-closing` | live/postproduction PASS or independent exemption; closeout/entity/friction/stakeholder/active-surface ledgers | `TBD` | `yes/no` |
+| `live-qualified -> substrate-closing` | live/postproduction PASS, or a director override recorded as such; closeout/entity/friction/stakeholder/active-surface ledgers | `TBD` | `yes/no` |
 | `substrate-closing -> substrate-closed` | all required children dispositioned, active-valid closeout PASS, closeout WorkItem done, driver completed last | `TBD` | `yes/no` |
 | `substrate-closed -> director-closing -> closed` | trigger evaluation plus progressive transcript, explicit waiver, or valid point-in-time not-applicable; decision state | `TBD` | `yes/no` |
 
@@ -192,7 +192,7 @@ Latest `get_current_stint(driver)` observed at: `TBD`
 
 | Failed gate/review | Verdict | Repair/rerun ref | Final disposition |
 |---|---|---|---|
-| `TBD` | `PASS/FAIL/CHANGES_REQUESTED` | `TBD` | `TBD` |
+| `TBD` | `PASS/FAIL` | `TBD` | `TBD` |
 
 ### Exact verifier-gate register
 
@@ -233,7 +233,7 @@ Required for extensive planning/design?\
 | CI/checks | `TBD` | `green/red/not-run/n-a` | `ci-green` | `TBD` |
 | Release/publish | `TBD` | `published/not-published/n-a` | `published` | `TBD` |
 | Deploy/live | `TBD` | `observed/not-observed/n-a` | `deployed/live-observed/not-observed` | `TBD` |
-| Verifier gate | `TBD` | `PASS/FAIL/CHANGES_REQUESTED` | `verifier-attested/reviewed` | `TBD` |
+| Verifier gate | `TBD` | `PASS/FAIL` | `verifier-attested/reviewed` | `TBD` |
 
 ---
 

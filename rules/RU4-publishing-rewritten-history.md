@@ -16,7 +16,7 @@ related: [M9, RU2]
 Force-push of rewritten history is **forbidden by default**.\
 It is acceptable only when a named justification, a clean harm test, and the mechanical safeguards all hold.
 
-The gate is on **blast radius, not branch name**.\
+The test is **blast radius, not branch name**.\
 A solo `master` with no forks and no consumers is safe to rewrite; a shared `feature/x` that CI pins by SHA is not.\
 Judge the branch you have, not the branch its name suggests.
 

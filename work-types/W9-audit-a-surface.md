@@ -33,7 +33,7 @@ The value is the falsifiable scope and the ref-bound findings, not a "looks clea
 
 The evidence contract is a single `review`: **scope statement + findings table + follow-up bugs/ideas**.\
 The closeability preflight is the canonical constraint set in `work-types/README.md` - satisfied, not restated.\
-The load-bearing gate is **constraint 2** (independence): `verifier-attestation` requires the attesting verifier to be roster-distinct from any executor of the audited surface; a thin roster that collapses attester and executor to one agent fails the seed or downgrades to plain `kind:review`.\
+The load-bearing constraint is **constraint 2** (independence): `verifier-attestation` requires the attesting verifier to be roster-distinct from any executor of the audited surface; a thin roster that collapses attester and executor to one agent fails the seed or downgrades to plain `kind:review`.\
 **Constraint 5** binds via the falsifier, and **constraint 3** binds the `target` param's `discover-from-substrate` bindingSource so the audited surface resolves to a real entity (no vacuous sweep).
 
 ---

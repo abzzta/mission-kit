@@ -33,7 +33,7 @@ The value is the failing observation the test is capable of producing, not the g
 
 The evidence contract is a single `test-run`: **failing-before / passing-after, or a mutation proof** that the test discriminates.\
 The closeability preflight is the canonical constraint set in `work-types/README.md` - satisfied, not restated.\
-The load-bearing gate here is **constraint 7**: an executor-evidence idle node may not reach terminal `done` on self-produced evidence with an unevaluated falsifier.\
+The load-bearing constraint here is **constraint 7**: an executor-evidence idle node may not reach terminal `done` on self-produced evidence with an unevaluated falsifier.\
 W5 satisfies this via `executor-evidence-provisional` - its closure is provisional until an independent gate consumes it (or a bracketing verify-gate is instantiated alongside it).\
 Constraint 5 (named falsifier) and constraint 3 (the `target` param carries a `discover-from-substrate` bindingSource, so no vacuous node) also bind at seed.
 

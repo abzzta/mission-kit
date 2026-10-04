@@ -38,7 +38,7 @@ claimable node only against the canonical closeability preflight in `work-types/
 
 ## Generation
 
-`generationMode: externally-triggered` - gated on out-of-band Director availability the engine cannot schedule; never idle-pooled or auto-minted, it waits for the external signal. idea-425/451/403 instantiate work-types by compiling a `role x work-type x domain` triple into a claimable node with a complete evidence contract; here that triple resolves to `director x director-walkthrough x authority-governance`, minted only when the Director signals availability against a named target.\
+`generationMode: externally-triggered` - waits on out-of-band Director availability the engine cannot schedule; never idle-pooled or auto-minted, it waits for the external signal. idea-425/451/403 instantiate work-types by compiling a `role x work-type x domain` triple into a claimable node with a complete evidence contract; here that triple resolves to `director x director-walkthrough x authority-governance`, minted only when the Director signals availability against a named target.\
 Falsifier: **Director authority inferred from architect prose only** - if the disposition is reconstructed from an architect's narration rather than ratified live by the Director, the node is FAIL, not done.
 
 ---

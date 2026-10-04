@@ -42,7 +42,7 @@ Load-bearing here: constraint 2 (independence is structural + roster-aware) - a 
 ## Generation
 
 `generationMode: reactive-triggered` - instantiated by a substrate trigger, never idle-pooled or auto-minted against a bare surface. idea-425/451/403 instantiate it as the bracketing gate an executor node's completion depends on: idea-451's conditional-edge primitive makes it generative-on-FAIL (a FAIL grows a repair subgraph via `arc-repair`), while idea-403's idle engine relies on this gate to consume executor-evidence-provisional closures before they count as assurance.\
-Falsifier: self-attestation, a null `targetRef` carrying attestation-only evidence, or no load-bearing ref - any of these turns the node FAIL at seed.
+Falsifier: self-attestation, a null `targetRef` carrying attestation-only evidence, or no load-bearing ref - any of these fails the seed, the generator's machine check, and the gate itself is never validly run.
 
 ---
 

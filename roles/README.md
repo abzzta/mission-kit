@@ -47,7 +47,7 @@ Operation is implementation and assurance applied after release, not a sixth aut
 **One position is a gap for an organisation of one: assurance.**\
 Assurance is the only authority defined by being exercised by someone *other* than the agent who did the work.\
 An organisation of a single agent may hold every role, under a director who holds intent and ratification - and the one it can never exercise is assurance, because there is no work but its own to exercise it on.\
-The independence a gate requires waits for a second agent, or is met by the director's ratification instead, which concentrates every assurance decision on the scarcest attention the organisation has.\
+The independence a gate requires waits for a second agent, or the director decides the gate instead - a recorded change of kind - which concentrates every assurance decision on the scarcest attention the organisation has.\
 What the organisation lacks is the authority to let its own check stand as assurance - never the obligation to check, which it holds in full.\
 No trait yet lets an axiom bind on this condition - work no second agent independently checks - and [`T0`](../traits/README.md) records that absence as a gap.
 
@@ -91,7 +91,7 @@ That is the strongest check available to an agent alone, and it is still a self-
 These checks produce the author's own evidence, and they are mandatory; they do not seal a gate that requires independence.
 
 **When there is no second agent, the independence a gate requires never falls to the same agent.**\
-It waits for a second agent, or the gate is met by the director's ratification instead of a verifier's attestation; the director does not become a verifier.\
+It waits for a second agent, or the director decides the gate instead of a verifier - a recorded change of kind under [`E7`](../entities/E7-gate.md); the director does not become a verifier.\
 The agent's own check happens regardless; only its standing as assurance changes.\
 The rule is constraint 9 of the canonical constraint set, authored once in [`W0`](../work-types/README.md) and cited here rather than restated.
 

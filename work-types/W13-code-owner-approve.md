@@ -16,7 +16,7 @@ parameters:
     fills: the change needing approval
     bindingSource: provided-by-trigger
 generationMode: reactive-triggered
-falsifier: author approves own change (author == approver)
+falsifier: the author's own approval counted as the approval (author == approver)
 compositionHooks: brackets the PR node; approval gate whose eligible-approver set must contain an identity != the change author, else routes to the director-ratification path
 ---
 
@@ -40,7 +40,7 @@ Load-bearing here: constraint 8 (author != approver for independence gates) - th
 ## Generation
 
 `generationMode: reactive-triggered` - instantiated by a substrate trigger (an opened PR needing code-owner approval on a governed surface), never idle-pooled or auto-minted. idea-425/451/403 instantiate it as the approval gate an author-distinct code-owner satisfies before the PR lands: idea-451's conditional edge routes a sole-owner self-approval to the director-ratification fallback rather than admitting it.\
-Falsifier: the author approves their own change (author == approver) - that turns the node FAIL.
+Falsifier: the author's own approval counted as the approval (author == approver) - that is no valid verdict, and the gate waits for a distinct code owner or is decided by the director instead.
 
 ---
 

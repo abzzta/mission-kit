@@ -120,7 +120,7 @@ A generated node that cannot pass this preflight at seed is not admitted (this i
 4. **TargetRef / references required for relatedness gates.** If the authority
    needs related refs, seed them or fail the blueprint.
 5. **Falsifier required.** Every generated node names the concrete observation
-   that turns it FAIL/blocked rather than prose.
+   that turns it FAIL rather than prose.
 6. **Repair-path required for completion-gated seeds.** Any node seeded inside a
    `completionDependsOn` gate MUST carry a declared supersession/disposition
    `compositionHook`. Never bare-abandon a completion-gate child as a repair
@@ -137,8 +137,8 @@ A generated node that cannot pass this preflight at seed is not admitted (this i
 8. **Author != approver for independence gates.** For `code-owner-approve` (and
    any independence gate), the eligible-approver set must contain >=1 identity
    distinct from the bracketed node's author; else fail the seed and surface a
-   **director-ratification** path (the only authority that can unblock a
-   sole-code-owner self-approval).
+   **director-ratification** path (the only authority that can decide the gate in
+   place of a distinct code owner; the author's own approval never counts).
 9. **Degradation is bounded.** In a thin roster, an own-seat independence check
    may degrade to **defer-until-independent-seat** or **director-ratification**
    ONLY. It may **never route to the architect when the architect is (or is
@@ -184,7 +184,7 @@ Body sections (PC1 exemplar): `## Definition`, `## Evidence & closeability` (ref
   build, an approved PR, a director signal, a FAILed/trapped completion child).
 - **`arc-seeded`** - minted by a driver inside a blueprint (seed, drive,
   closeout, council, backstop).
-- **`externally-triggered`** - gated on out-of-band human/Director availability
+- **`externally-triggered`** - waits on out-of-band human/Director availability
   the engine cannot schedule (director-mode ceremonies). Never idle-pooled or
   auto-minted; waits for the external signal.
 

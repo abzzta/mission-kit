@@ -112,7 +112,9 @@ A PASS over V1 cannot authorize V2 bytes or a larger scope.
 
 ## Verifier independence and non-vacuity
 
-Reject or FAIL when any is true:
+Return no verdict when the run is not valid - the verifier appears in the target's history or authored it, evidence refs do not resolve, or the target identity moved - and the gate waits for a valid run.\
+Return FAIL when a valid run finds the claim unsupported - any other condition below.\
+The conditions:
 
 - verifier appears in creator, holder, or executor history for the target work;
 - the verifier authored the source/PR under review or shares the actual GitHub author identity where independence matters;
@@ -179,7 +181,7 @@ Record the authority downgrade at closeout.\
 Do not describe advisory feedback as `PASS`, `sealed`, or independently authorized.
 
 Use verifier-attestation when the gate controls seed, merge, publication, deployment, live qualification, entity disposition, or driver completion.\
-If verifier capacity is unavailable, the correct result is blocked/awaiting-verifier unless exact authority explicitly accepts a weaker path.\
+If verifier capacity is unavailable, the gate has no verdict and waits for a verifier, unless the director decides it instead, recorded as a change of kind.\
 Controller self-review never silently upgrades itself.
 
 ---
@@ -204,10 +206,10 @@ Before issuing a verdict, confirm:
 
 ## Output
 
-A correct gate leaves one unambiguous result:
+A correct gate leaves one unambiguous state:
 
 - active-valid exact `PASS` with a bounded unlock;
 - immutable exact `FAIL` with a distinct repair path; or
-- no verdict because evidence, independence, target currentness, or authority is invalid.
+- no verdict yet, because evidence, independence, target currentness, or authority is invalid - not a third result: the work waits until a valid run.
 
 It never leaves a prose verdict that downstream effects must interpret from memory.

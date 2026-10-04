@@ -32,7 +32,7 @@ Capture a reusable insight - an idea, a friction, a durable lesson - as a first-
 
 The evidence contract is a single `freeform` item: an **idea/doc created with source + revival trigger** - a durable substrate entity, not a claim that the insight was noted.\
 Closeability is governed by the canonical constraint set / closeability preflight in `work-types/README.md` (referenced, not restated).\
-The load-bearing gate is **constraint 5**: the falsifier below is the concrete observation that FAILs the seed.\
+The load-bearing constraint is **constraint 5**: the falsifier below is the concrete observation that FAILs the seed.\
 Constraint 3 also binds - the `target` param carries a `discover-from-substrate` bindingSource, so the banked entry resolves to a real insight rather than a vacuous node.
 
 ---
