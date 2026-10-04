@@ -10,38 +10,36 @@ related: [M0, RU0, PC0, P0, SC3, A11]
 
 # Skills - the how-you-do-it layer
 
+## Purpose
+
 Operator-level capabilities and reusable tooling.\
 A skill is *invoked*, not followed: it names a procedure with inputs, steps and an output, and it is expected to be executed largely as written.
 
-That is the boundary against [`M0`](../methods/README.md).\
-A method is a procedure held as guidance, the single source of its content; a skill packages a procedure so an agent can install and invoke it, and earns its packaging where scripts or assets make it necessary.\
-Guidance that governs how work is done without producing anything is a rule or a practice, never a skill.
+The set exists so that a capability built once is installed and invoked rather than reconstructed by whoever needs it next, and executed the same way each time.
 
 ---
 
-## A skill is two files, on purpose
+## Territory
 
-Each skill is a directory holding a portable `SKILL.md`, with a `K*` stub beside it in this layer.
+This set covers **every capability an engineering agent invokes to do its work**, partitioned by what the capability does, and including whether it can run without the coordination substrate.\
+The claim is set by what the set is for; a capability with no skill is a gap, not a reason to narrow the claim.
 
-The stub is the catalogue entry.\
-It carries the `id`, `status`, ledger title and hydration trigger, and it points at the body.
+| Family | What the capability does | Members |
+|---|---|---|
+| **Investigate** | study an outside project and record what was found so it outlives the session | [`K3`](K3-repo-audit.md) repo audit, [`K4`](K4-research-artefacts.md) research artefacts |
+| **Capture intent** | find out what a stakeholder wants before a design is committed | [`K5`](K5-survey.md) survey |
+| **Model** | read and author SysML v2 models, and build and test the skills that do | [`K7`](K7-sysml-literacy.md) literacy; primitives [`K8`](K8-model-a-state-machine.md), [`K9`](K9-model-a-workflow.md), [`K10`](K10-model-a-component.md), [`K13`](K13-model-a-dependency-graph.md), [`K14`](K14-model-a-constraint.md), [`K15`](K15-model-a-classification.md); composite [`K16`](K16-model-an-arc.md); meta [`K11`](K11-sysml-skill-builder.md), [`K12`](K12-sysml-skill-tester.md), [`K17`](K17-sysml-skill-evaluator.md) |
+| **Operate staged work** | run work as a gated state engine, and act inside an arc on the coordination substrate | [`K6`](K6-arc-lifecycle.md) arc lifecycle; on the coordination substrate [`K18`](K18-workgraph-arc-operator.md)-[`K26`](K26-workgraph-arc-planning.md) |
+| **Write** | hold what is written to a discipline a reader relies on | [`K27`](K27-write-discoverable-code.md) discoverable code, [`K28`](K28-asd-ste100-verifier.md) simplified technical English |
+| **Verify and deliver without the coordination substrate** | gate a change independently, ship it, and close out the work, where no coordination substrate runs | **none - gap** |
+| **Evaluate a document** | test a document with blind cold readers, before and after a change | **none - gap** |
 
-The body carries none of those.\
-A catalogue placement is meaningless once the skill is lifted into another repository, and a skill that arrives carrying a foreign corpus's ID is unusable without editing.\
-The split is what makes a skill portable and addressable at the same time, and it is why [`SC3`](../schemas/SC3-skill.md) governs the body's frontmatter separately from [`SC1`](../schemas/SC1-catalog-entry.md) governing the stub's.
+Every member sits in one row, and two rows hold none.
 
----
-
-## Composition is expressed as edges, not as names
-
-A skill declares `prerequisite` for what must be read first, and `composes` for the primitives a specialist system is built from.
-
-Depth is **derived** from those edges as the longest path from a root, and is never stored in a name.\
-Encoding hierarchy into a name freezes it, and it rots on the first change to the graph.
-
-[`tools/skill-graph.mjs`](../tools/skill-graph.mjs) makes the edges load-bearing rather than narrative: every target must resolve, the graph must be acyclic, each composed primitive's construct family must actually appear in the skill's assets, and every bundle's `skills` entry must name a real skill.
-
-Skills compose into operator-facing roles through [`bundles/`](../bundles/README.md), which hold deployment composition rather than knowledge and therefore take no ID and appear in no ledger.
+**Gaps tested.**\
+Verifying, delivering and closing out exist only on the coordination substrate: [`K21`](K21-workgraph-verification-gates.md), [`K22`](K22-workgraph-pr-delivery.md), [`K23`](K23-workgraph-arc-closeout.md) and [`K24`](K24-workgraph-recovery.md) each require it, and `K6`'s engine checks only its own store; an agent working without it has the method [`M1`](../methods/M1-triangulated-review.md) and the gate rules of [`E7`](../entities/E7-gate.md), and no skill.\
+Blind evaluation of a document has a method, [`M2`](../methods/M2-test-drive-docs-by-execution.md), and a tool, `tools/eval.mjs`, and no skill; `K17` is a blind with-and-without comparison limited to SysML skills, the nearest member.\
+The modelling family holds eleven members while two kinds of capability hold none, which is the uneven growth the faults below name.
 
 ---
 
@@ -55,12 +53,58 @@ A skill whose steps a script could take should be that script, per [`A11`](../ax
 
 ---
 
+## Neighbours
+
+| Neighbour | The question that separates them |
+|---|---|
+| [Methods](../methods/README.md) | Is it packaged to be installed and invoked, or held as guidance a reader follows? A method is the single source of a procedure's content; a skill packages a procedure and earns its packaging where scripts or assets make it necessary. |
+| [Rules](../rules/README.md) and [practices](../practices/README.md) | Does it produce anything? Guidance that governs how work is done without producing anything is a rule or a practice, never a skill. |
+| [Tools](../tools/README.md) | Could a script take every step? Then it is a tool, and a skill at most says when to run it. |
+| [Bundles](../bundles/README.md) | Is it a capability, or a composition of capabilities into an operator role? Bundles hold deployment composition, take no ID and appear in no ledger. |
+| [Work-types](../work-types/README.md) | Is it how a capability is executed, or a kind of work that can be claimed and closed? A work-type may be performed using a skill. |
+
+---
+
+## Member shape
+
+**A skill is two files, on purpose.**\
+Each skill is a directory holding a portable `SKILL.md`, with a `K*` stub beside it in this layer.
+
+The stub is the catalogue entry.\
+It carries the `id`, `status`, ledger title and hydration trigger, and it points at the body.
+
+The body carries none of those.\
+A catalogue placement is meaningless once the skill is lifted into another repository, and a skill that arrives carrying a foreign corpus's ID is unusable without editing.\
+The split is what makes a skill portable and addressable at the same time, and it is why [`SC3`](../schemas/SC3-skill.md) governs the body's frontmatter separately from [`SC1`](../schemas/SC1-catalog-entry.md) governing the stub's.
+
+---
+
+## Composition
+
+**Composition is expressed as edges, not as names.**\
+A skill declares `prerequisite` for what must be read first, and `composes` for the primitives a specialist system is built from.
+
+Depth is **derived** from those edges as the longest path from a root, and is never stored in a name.\
+Encoding hierarchy into a name freezes it, and it rots on the first change to the graph.
+
+[`tools/skill-graph.mjs`](../tools/skill-graph.mjs) makes the edges load-bearing rather than narrative: every target must resolve, the graph must be acyclic, each composed primitive's construct family must actually appear in the skill's assets, and every bundle's `skills` entry must name a real skill.
+
+The population has two roots.\
+`K7` is the prerequisite of every modelling skill, and `K16` and `K11` compose its primitives.\
+`K18` is the prerequisite of `K19`-`K24`; `K25` and `K26` declare none.\
+`K3` depends on `K4` in its prose and its bundle, with no declared edge, so the graph cannot see it.
+
+Skills compose into operator-facing roles through bundles.
+
+---
+
 ## Faults
 
 - **The stub without a body, or a body without a stub.** One is a citation resolving to nothing; the other is a capability nothing routes to.
-- **The unportable skill.** A body carrying host-specific paths, catalogue IDs or tool names, so it cannot be lifted without editing.
 - **The level in the name.** Hierarchy encoded into a filename, which freezes a graph that is expected to change.
-- **The narrated skill.** A body that explains rather than instructs, so two operators executing it produce different work and neither has departed from it.
+- **The dependency in prose.** One skill relying on another without a declared edge, so the graph and the bundles disagree about what must be installed together.
+- **The host-bound family.** A family of capabilities that exists only for one coordination system, with no counterpart for work done without it.
+- **The crowded family.** One family growing while whole kinds of capability hold none, so the set reads as complete to anyone who only meets the crowded kind.
 - **The skill that should be a tool.** A deterministic procedure written for a model to follow, spending judgement on work a script would do identically and cheaper.
 
 ---
