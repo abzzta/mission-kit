@@ -399,6 +399,24 @@ A move is only safe if each pointer reaches a successor that claims it, and no l
 
 ---
 
+## check-id-reuse.mjs
+
+Holds that an id, once retired, is never issued again.
+
+```sh
+node tools/check-id-reuse.mjs
+```
+
+**Why it exists.**\
+Frozen records keep citing an id after its entry moves or goes, so a reissued id makes every such citation point at the wrong entry.\
+A moved entry leaves no stub in the tree, so the retired ids are derived from git history rather than kept by hand: an id is retired when a file holding it was deleted, or renamed to a file holding a different id, and no file added in the same commit kept it.\
+Two reuses predate the check and are named in it as history, not permission.\
+Mutation-tested: an entry reissuing a retired id fails the gate.
+
+**Run it when** you mint an id; the gate runs it on every change.
+
+---
+
 ## check-landed.sh
 
 Says whether local work has reached the remote, from git rather than from memory.
