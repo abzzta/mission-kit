@@ -15,12 +15,16 @@ The distinction is deliberate, and it is the reason bundles sit outside the ID s
 Bundles therefore take no ID and appear in no ledger.\
 They are managed by convention on filename: `bundles/<role>.yaml`.
 
+---
+
 ## Agent-agnostic by construction
 
 A bundle must carry no harness-specific field and no tool name.\
 Any agent that consumes `SKILL.md` trees from a directory must be able to resolve a bundle by reading its `skills:` list alone.
 
 A harness-specific field in a bundle makes the capability unportable, which fails the admission test in the root charter.
+
+---
 
 ## Composition is expressed as edges
 
@@ -31,6 +35,8 @@ Level is derived from those edges, never stored in a name.\
 Encoding depth into a name freezes it, and it rots on the first change to the graph.
 
 [`tools/skill-graph.mjs`](../tools/skill-graph.mjs) lints the graph: every edge must resolve, the graph must be acyclic, and every bundle's `skills:` entry must name a real skill.
+
+---
 
 ## Current bundles
 

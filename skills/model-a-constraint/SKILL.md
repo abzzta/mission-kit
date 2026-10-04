@@ -74,7 +74,8 @@ part def Subject {
 
 ## Validate
 
-Authoring SysML is the error-prone direction - **always validate before you trust the model.** The discipline is shared across all model-a-X skills: **[`sysml-literacy/references/validating-sysml.md`](../sysml-literacy/references/validating-sysml.md)**.\
+Authoring SysML is the error-prone direction - **always validate before you trust the model.**\
+The discipline is shared across all model-a-X skills: **[`sysml-literacy/references/validating-sysml.md`](../sysml-literacy/references/validating-sysml.md)**.\
 In short: run a SysML v2 parser, require **`syntaxErrors == 0`** (necessary, not sufficient), then scan the semantics by hand - the parser will *not* catch a body-less rule, an unused/unbound parameter, an always-false rule, or a missing `import ScalarValues::*;`, and it will *not* evaluate whether the rule holds (it is parse-only).\
 The decidable constraint rules are written as a checkable spec in **[`assets/well-formedness.sysml`](assets/well-formedness.sysml)** - which also dogfoods the construct (the rules *about* constraints are themselves `constraint def`s).\
 (`compatibility`: requires a SysML v2 parser to validate; it parses but does not evaluate constraints.)

@@ -1,9 +1,8 @@
 # Feature taxonomy
 
-Categories used to organise features within a project. They are **labels for
-in-project organisation**, NOT abstractions across projects. Two features
-in the same category in two different projects are NOT necessarily the same
-feature — only crossprobe is allowed to assert equivalence.
+Categories used to organise features within a project.\
+They are **labels for in-project organisation**, NOT abstractions across projects.\
+Two features in the same category in two different projects are NOT necessarily the same feature - only crossprobe is allowed to assert equivalence.
 
 ## Memory-layer domain taxonomy
 
@@ -20,26 +19,30 @@ Initial taxonomy for the memory-layer domain (`kate/docs/memory/`):
 | **Ops** | Deploy story, scale axis, backup, observability, migration |
 | **Extensibility** | Plugins, hooks, custom embedders, model swap, custom retrievers |
 
+---
+
 ## When to add a category
 
 Add a new category when:
 
 - You discover a feature that genuinely doesn't fit any existing category
   AND it's the kind of capability you expect to see in other projects too
-- A category is becoming a junk drawer (>5 features all called "Other") —
+- A category is becoming a junk drawer (>5 features all called "Other") -
   split it
 
 Don't add a category when:
 
-- You're tempted to name it after the project ("HonchoCategory") — that's
+- You're tempted to name it after the project ("HonchoCategory") - that's
   vocabulary contamination
-- You only have one project's feature in it — wait until a second probe
+- You only have one project's feature in it - wait until a second probe
   confirms the category is general
+
+---
 
 ## Defining taxonomy for a new domain
 
-The first nanoprobe in a new domain (e.g. inference engines, agent
-frameworks) needs a taxonomy decision up front. Process:
+The first nanoprobe in a new domain (e.g. inference engines, agent frameworks) needs a taxonomy decision up front.\
+Process:
 
 1. **Survey the L1 landscape doc** for the domain. What axes do projects
    advertise? (e.g. for inference: model formats, quantization, batching,
@@ -51,6 +54,8 @@ frameworks) needs a taxonomy decision up front. Process:
    `kate/docs/inference/00-goals.md` or a sibling).
 4. **Evolve as needed.** New categories added during subsequent probes get
    noted in the same index doc with a retrocompat note for the first probe.
+
+---
 
 ## Anti-patterns
 
