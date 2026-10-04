@@ -33,7 +33,13 @@ If yes, it is declarative.
 
 ## Axioms it brings into force
 
-[`A2`](../axioms/A2-isomorphic-specification.md) Isomorphic Specification
+Generated from each axiom's `applies-to`, the field that decides binding.
+
+<!-- BEGIN GENERATED: entries. Run tools/generate-index.mjs; do not edit by hand. -->
+| ID | Title | Hydrate when |
+|---|---|---|
+| [A2](../axioms/A2-isomorphic-specification.md) | Isomorphic Specification | Declared intent and running reality have drifted, or you are about to change one without the other |
+<!-- END GENERATED -->
 
 An axiom binds a system that has *any one* of its traits, so each axiom above also binds systems that have none of this trait but one of its others.
 

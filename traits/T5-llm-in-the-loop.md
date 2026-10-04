@@ -33,7 +33,15 @@ If yes, it is llm-in-the-loop.
 
 ## Axioms it brings into force
 
-[`A5`](../axioms/A5-perceptual-parity.md) Perceptual Parity, [`A11`](../axioms/A11-cognitive-minimalism.md) Cognitive Minimalism, [`A12`](../axioms/A12-precision-context-engineering.md) Precision Context Engineering
+Generated from each axiom's `applies-to`, the field that decides binding.
+
+<!-- BEGIN GENERATED: entries. Run tools/generate-index.mjs; do not edit by hand. -->
+| ID | Title | Hydrate when |
+|---|---|---|
+| [A5](../axioms/A5-perceptual-parity.md) | Perceptual Parity | An agent is about to act on state it derived rather than state it was given |
+| [A11](../axioms/A11-cognitive-minimalism.md) | Cognitive Minimalism | You are about to have an agent do work that deterministic code could do instead |
+| [A12](../axioms/A12-precision-context-engineering.md) | Precision Context Engineering | You are assembling the context for an invocation and deciding what earns its place |
+<!-- END GENERATED -->
 
 An axiom binds a system that has *any one* of its traits, so each axiom above also binds systems that have none of this trait but one of its others.
 

@@ -315,6 +315,14 @@ for (const d of entries.filter((x) => x.category === 'domain' && /^D[1-9][0-9]*$
 	const acting = entries.filter((w) => w.category === 'work-type' && /^W[1-9][0-9]*$/.test(w.id) && listOf(w.domainEligibility).includes(slug));
 	targets.push([d.rel, table(ordered(acting), path.dirname(d.rel))]);
 }
+// Each trait entry carries the axioms it brings into force, generated from the axioms' applies-to -
+// the only field that decides binding. A hand-kept copy on the trait was a second declaration of
+// one relationship, checked by nothing; readers found it and could not tell which governed.
+for (const t of entries.filter((x) => x.category === 'trait' && /^T[1-9][0-9]*$/.test(x.id))) {
+	const slug = String(t.title).split(' - ')[0].trim();
+	const binding = entries.filter((a) => a.category === 'axiom' && /^A[1-9][0-9]*$/.test(a.id) && listOf(a['applies-to']).includes(slug));
+	targets.push([t.rel, table(ordered(binding), path.dirname(t.rel))]);
+}
 // Each spanning set's own file carries a generated table of its members, from its members list.
 for (const e of entries.filter((x) => x.category === 'set' && !/^ST0$/.test(x.id)))
 	targets.push([e.rel, table(ordered(listOf(e.members).map((id) => byIdAll.get(id))), path.dirname(e.rel))]);

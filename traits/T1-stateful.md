@@ -33,7 +33,13 @@ If both are yes, it is stateful.
 
 ## Axioms it brings into force
 
-[`A1`](../axioms/A1-sovereign-state-transparency.md) Sovereign State Transparency
+Generated from each axiom's `applies-to`, the field that decides binding.
+
+<!-- BEGIN GENERATED: entries. Run tools/generate-index.mjs; do not edit by hand. -->
+| ID | Title | Hydrate when |
+|---|---|---|
+| [A1](../axioms/A1-sovereign-state-transparency.md) | Sovereign State Transparency | You cannot see the current state of the system from one place and are about to infer it |
+<!-- END GENERATED -->
 
 An axiom binds a system that has *any one* of its traits, so each axiom above also binds systems that have none of this trait but one of its others.
 

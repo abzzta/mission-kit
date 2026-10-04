@@ -34,7 +34,17 @@ One actor using several tools is not multi-agent; the tools are not independent 
 
 ## Axioms it brings into force
 
-[`A5`](../axioms/A5-perceptual-parity.md) Perceptual Parity, [`A6`](../axioms/A6-frictionless-agentic-collaboration.md) Frictionless Agentic Collaboration, [`A7`](../axioms/A7-resilient-agentic-operations.md) Resilient Agentic Operations, [`A10`](../axioms/A10-autopoietic-evolution.md) Autopoietic Evolution, [`A13`](../axioms/A13-director-intent-amplification.md) Director Intent Amplification
+Generated from each axiom's `applies-to`, the field that decides binding.
+
+<!-- BEGIN GENERATED: entries. Run tools/generate-index.mjs; do not edit by hand. -->
+| ID | Title | Hydrate when |
+|---|---|---|
+| [A5](../axioms/A5-perceptual-parity.md) | Perceptual Parity | An agent is about to act on state it derived rather than state it was given |
+| [A6](../axioms/A6-frictionless-agentic-collaboration.md) | Frictionless Agentic Collaboration | You are designing a seam between two agents that must collaborate without a human relay |
+| [A7](../axioms/A7-resilient-agentic-operations.md) | Resilient Agentic Operations | You are deciding how the system should behave when a unit of work fails or a thread stalls |
+| [A10](../axioms/A10-autopoietic-evolution.md) | Autopoietic Evolution | Friction has surfaced during work and you are deciding whether to route around it or fix its cause |
+| [A13](../axioms/A13-director-intent-amplification.md) | Director Intent Amplification | You are about to consume the director's attention, or to decide something in their absence |
+<!-- END GENERATED -->
 
 An axiom binds a system that has *any one* of its traits, so each axiom above also binds systems that have none of this trait but one of its others.
 
