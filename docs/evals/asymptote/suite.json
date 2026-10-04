@@ -1,0 +1,44 @@
+{
+  "id": "asymptote",
+  "mode": "corpus",
+  "group": "asymptote",
+  "source": "Director ruling: a charter is an asymptote - end state, scope and composition policy; partitions and gaps live in dated investigations; weighting on the board. Keyed before E4 or any charter changes. Key reviewed before any change: Z5 gaps go to backlog rows first (AR3 board items cite rows); Z4 decided on the board; Z6's reason corrected; 'composition policy' renamed growth policy and 'bounded/open' capped/uncapped, to avoid collisions with E4's Composition and E3's bounded population; Z1 placed under Purpose.",
+  "probes": [
+    {
+      "id": "Z1",
+      "question": "What does a charter's Purpose state first, and why does it come first?",
+      "key": "The set's end state: the ideal the set approaches, like an axiom or the vision - a direction, never reached. Why the set exists follows it. It comes first because the scope, the growth policy and every judgement about the population are measured against it.",
+      "rubric": "2 for the end state, as an asymptote the population is measured against. 1 for end state without the reason, or for why-it-exists alone. 0 otherwise."
+    },
+    {
+      "id": "Z2",
+      "question": "Does a charter list the cells its territory divides into, and which of them are empty?",
+      "key": "No: a charter states its scope and its composition policy, not a partition. A partition, and the gaps it shows, come from an investigation - a dated analysis of the population against the end state - because one territory can be partitioned several ways, and no one can list the missing dimensions before investigating.",
+      "rubric": "2 for no, with partitions and gaps in investigations and the reason (several valid partitions, or not knowable in advance). 1 for no alone. 0 for yes."
+    },
+    {
+      "id": "Z3",
+      "question": "What is a set's growth policy, and give an example of two different policies.",
+      "key": "The rules by which the set grows and is balanced: whether it is capped at a number or uncapped, the altitude a member sits at, and what members are balanced on. E.g. 'capped at five, balanced in cognitive weight' against 'uncapped - as many as fit the altitude without diluting each'. It is distinct from Composition, which says how members relate.",
+      "rubric": "2 for the policy's parts and two contrasting examples. 1 for one. 0 otherwise."
+    },
+    {
+      "id": "Z4",
+      "question": "A set's growth policy caps it at five members, balanced in cognitive weight. A sixth good candidate arrives. What happens?",
+      "key": "It is not simply added. It is recorded as a backlog row, and the board weighs the options: replace a member or merge two (the one replaced retired with its disposition), change the growth policy (a director-ratified change to the charter, tested before it lands), or decline the candidate with a revival trigger. The director selects.",
+      "rubric": "2 for not simply added, at least two of the options, and the choice made on the board by the director. 1 for not simply added with one option. 0 for adding it."
+    },
+    {
+      "id": "Z5",
+      "question": "An investigation of a set proposes a different partition from the previous one and finds new gaps. Does the charter change? Where do the gaps go, and who decides which to close?",
+      "key": "The charter does not change, unless the investigation shows its end state, scope or growth policy is itself wrong: partitions belong to investigations. Each gap becomes a backlog row with a revival trigger; the board scores open rows, and the director selects - a charter does not rank its own gaps.",
+      "rubric": "2 for charter unchanged, gaps as backlog rows, and the board/director deciding. 1 for two of the three. 0 otherwise."
+    },
+    {
+      "id": "Z6",
+      "question": "Does a charter name its members?",
+      "key": "Not in its scope or growth policy: it describes the ideal, independent of the current population. Members appear in the generated index. A set spanning layers is the exception: its charter declares its members in a members list, because each member's category names its own layer and membership takes its meaning from the set; the index is still generated from that list.",
+      "rubric": "2 for no (index generated), with the cross-layer set exception. 1 for no alone. 0 for yes."
+    }
+  ]
+}
