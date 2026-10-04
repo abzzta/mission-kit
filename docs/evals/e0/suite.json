@@ -30,9 +30,9 @@
     },
     {
       "id": "Q5",
-      "question": "The entity entries define several terms. Group them by what kind of thing they define, and name a kind of term the corpus relies on that has no entity at all.",
-      "key": "Authority: E1 sovereign-hierarchy. The corpus's own structure: E2 layer, E3 set, E4 charter. What is engineered: E5 system, E6 component. No entity: work and its proof - gate, evidence, seal, closeout, unit of work - or coordination - arc, lease; substrate is also undefined.",
-      "rubric": "2 for a grouping in which E2-E4 sit together and E5-E6 sit together, plus one undefined kind with an example term. 1 for one of the two parts. 0 otherwise."
+      "question": "The entity entries define several terms. Group them by what kind of thing they define, and name a load-bearing term the corpus relies on that has no entity yet.",
+      "key": "Authority: E1 sovereign-hierarchy. The corpus's own structure: E2 layer, E3 set, E4 charter. What is engineered: E5 system, E6 component. Work and its proof: E7 gate, E8 evidence. Coordination: E9 substrate. Undefined load-bearing terms: unit of work, seal, closeout, arc, lease (or bare sovereign).",
+      "rubric": "2 for a grouping in which E2-E4 sit together and E5-E6 sit together, plus one undefined load-bearing term from the key. 1 for one of the two parts. 0 otherwise."
     },
     {
       "id": "Q6",
