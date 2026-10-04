@@ -35,18 +35,18 @@ The thread of the current conversation, so a reader can see how the active work 
 Updated whenever the thread moves; the milestones below remain the plan.
 
 ```text
-M5  bring the charters to E4                     all charters applied; frame approved  <- HERE
+M5  bring the charters to E4                     DONE
  +- charters: E4, then asymptote, then frame     done - vision + operation, M11 M12 M13
  +- terms defined: gate, evidence, substrate     done - E7 E8 E9
  +- eval runs purged from published history      done
- +- still open in M5                             M5.5d composition record, M5.5i baseline defects,
-                                                 M5.5l always-on confound, M5.5m moves matrix
+ +- open items                                   d, i, l closed; m held for a director session
+next: M2 hold what we prescribe (WIP), then M3, M4  <- HERE
 ```
 
-**Charter branch complete.**\
-M5 cannot close while four items remain open in it; whether to finish them or move them is the next decision.
+**M5 complete.**\
+The next milestone in plan order is M2, already in progress.
 
-**To return to:** the four open M5 items above; Delta-2 stays withdrawn until it has a real metric.
+**To return to:** the communication-moves matrix (`B42`), when the director has a session; Delta-2 stays withdrawn until it has a real metric.
 
 ---
 
@@ -219,7 +219,7 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 
 ---
 
-## M5 - bring the charters to `E4` - `WIP`
+## M5 - bring the charters to `E4` - `DONE`
 
 [`E4`](../entities/E4-charter.md) defines what a charter is: six required concerns - four at fixed headings, two answered anywhere - six conditional ones, and the rest free.
 
@@ -233,16 +233,15 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | M5.5 | Convert all thirteen, one per change - draft, audit, evaluate, director review, apply | `B4` | `DONE` - `M0`, `A0`, `R0`, `D0` **applied** - [M0](audits/M5.5-01-M0.md), [A0](audits/M5.5-02-A0.md), [R0](audits/M5.5-03-R0.md), [D0](audits/M5.5-04-D0.md); `SC0` **applied**, approved - [SC0](audits/M5.5-05-SC0.md); `MREQ-0` retired with its layer; `W0` **applied**, approved - [W0](audits/M5.5-06-W0.md); `S0` **applied**, approved - [S0](audits/M5.5-07-S0.md); the ten applied charters rechecked against the vision ruling, approved - [recheck](audits/M5.5-07a-vision-recheck.md); ruling A, the organisation's machinery is its own domains, approved - [machinery](audits/M5.5-07b-machinery-domain.md); `P0` **applied**, approved, with `P1` moved to style as `S16` and the six earlier stubs removed - [P0](audits/M5.5-08-P0.md); `E0` **applied**, approved - [E0](audits/M5.5-09-E0.md); terms defined before `K0`, approved: `gate` as `E7` - [gate](audits/M5.5-09a-gate.md), `evidence` as `E8` - [evidence](audits/M5.5-09b-evidence.md), `substrate` as `E9` - [substrate](audits/M5.5-09c-substrate.md); `K0` **applied**, approved - [K0](audits/M5.5-10-K0.md); `AR0` **applied**, approved - [AR0](audits/M5.5-11-AR0.md); `C0` **applied**, approved - [C0](audits/M5.5-12-C0.md); charters as asymptotes applied to all sixteen, approved - [asymptote](audits/M5.5-13-charter-asymptote.md); eval runs purged from history - [purge](audits/history-purge-2026-10-04.md); then the charter frame - vision and operating halves, `M11`, `M12` and `M13`, the charter shape in `SC6` - approved - [frame](audits/M5.5-14-charter-frame.md) |
 | M5.5b | Revisit the compositional split behind the work axes when conversion reaches `R0`, `D0` and `W0` | `B24` | `DONE` - in the `W0` conversion |
 | M5.5c | Carry the duty to expand a set on a found gap into `W0` and `T0`, or state it once in `E3` | `B31` | `DONE` - in the `W0` conversion |
-| M5.5d | **Composition record**: measure a context-less agent's composition of the axis layers against the current corpus, author one declared record of how they compose and the order to read them, re-measure | `B32` | `WIP` - baseline **14 / 14** in three runs: correctness is already met, so the record is unearned on these probes. Two questions every run had to guess - whose traits count, and what an axiom alignment refers to - are the measured gap. [scores](audits/eval-COMP/SCORES.md) |
+| M5.5d | **Composition record**: measure a context-less agent's composition of the axis layers against the current corpus, author one declared record of how they compose and the order to read them, re-measure | `B32` | `DONE` - see `B32` |
 | M5.5e | Resolve the constraint 2 / constraint 9 contradiction in the `W0` conversion | `B33` | `DONE` - in the `W0` conversion |
 | M5.5f | **Axioms as asymptotes, and `system` defined** - amend `A0`, scope `M7`, add the entity; evaluate before and after | `B34` | `DONE` - **8.3 to 16.0 / 16**, approved - [audit](audits/M5.5f-asymptote-and-system.md) |
 | M5.5g | **Component defined, opportunistic improvement, axiom wording pass** - evaluate before and after | `B35` | `DONE` - **7 to 10 / 10**, approved; open questions to `B36` - [audit](audits/M5.5g-component-opportunistic-wording.md) |
 | M5.5h | Rule on the six open design questions, one at a time, and amend `E5`, `E6`, `A0`, `A3` or `T0` as each ruling requires | `B36` | `DONE` - six of six ruled and applied - [audit](audits/M5.5h-02-design-rulings.md) |
-| M5.5i | Measure and correct the incidental defects the baseline readers found | `B37` | `TODO` |
+| M5.5i | Measure and correct the incidental defects the baseline readers found | `B37` | `DONE` - see `B37` |
 | M5.5j | **Delta-1, the work layers** - procedures stay in `methodology/`, practices and rules to a new `practices/`, prose skill `K1` in; packaged skills, WorkGraph skills and the `W0` citation deferred | `B24` | `DONE` - all four stages; 21.66 to 28 / 28 - [delta](deltas/delta-1-work-layers.md), [audits](audits/delta-1/) |
 | M5.5k | **The explain set** - communication with a human of limited context, measured with live agents first, then designed as a set spanning layers | `B38` | `DONE` - Delta-2: `M10`, `S15`, `ST1`; human check 6 of 6 - [audits](audits/delta-2/) |
-| M5.5l | State the always-on-context confound in every evaluation result, and take after-runs before a change reaches `main` | `B40` | `WIP` - stated in `docs/evals/README.md` |
-| M5.5m | Grow the communication-moves matrix: isolated pairs in short sessions, and the live friction log | `B42` | `TODO` |
+| M5.5l | State the always-on-context confound in every evaluation result, and take after-runs before a change reaches `main` | `B40` | `DONE` - see `B40` |
 | M5.6 | Rebuild the charter checker - fixed headings by name, free concerns by a declared location - and re-enable it | `B17` | `DONE` - fixed headings held by `check-entry-body.sh` from `SC6`; free concerns held by review |
 | M5.7 | **Add a key review to `M2`** - a fresh reader audits the answer key against the population before any evaluator runs. Trigger fired at `D0`: three of seven answers wrong, caught before use | `B29` | `DONE` - in `M2` rule 1 |
 
@@ -302,6 +301,9 @@ Neither is blocked on effort.
 | **B67** | S4 | A14 signal | Territory gaps moved out of the `S0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
 | **B68** | S4 | A14 signal | Territory gaps moved out of the `T0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
 | **B69** | S4 | A14 signal | Territory gaps moved out of the `W0` charter by the charter-as-asymptote ruling; none has a consumer yet, and a charter does not rank its own gaps. | **any one gap's trigger in the investigation, or the next investigation of this set** |
+
+| **B42** | S4 | A14 signal | Needs short live sessions with the director; not something an agent can finish alone. Moved out of M5 when it closed. | **the director schedules a human-evaluation session** |
+| **B70** | S3 | A8 signal | Two readings survive and the corpus cannot separate them. | **bug-249 or the attestation check is documented, or a gate is refused on the distinction** |
 ---
 
 ## Decisions required
