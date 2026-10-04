@@ -51,15 +51,15 @@ The claim is set by what the set is for; a kind of term with no entry is a gap, 
 | **Authority** | who may decide what | [`E1`](E1-sovereign-hierarchy.md) sovereign-hierarchy | `sovereign` on its own, as axiom titles and tools use it |
 | **The corpus's own structure** | how this knowledge is organised | [`E2`](E2-layer.md) layer, [`E3`](E3-set.md) set, [`E4`](E4-charter.md) charter | - |
 | **What is engineered** | the things work is done on, and their parts | [`E5`](E5-system.md) system, [`E6`](E6-component.md) component | `substrate` |
-| **Work and its proof** | a unit of work, what shows it was done, and what lets it pass | **none - gap** | `unit of work`, `evidence`, `gate`, `seal`, `closeout` |
+| **Work and its proof** | a unit of work, what shows it was done, and what lets it pass | [`E7`](E7-gate.md) gate | `unit of work`, `evidence`, `seal`, `closeout` |
 | **Coordination** | how work is run across units and agents | **none - gap** | `arc`, `lease` |
 
-Every member sits in one row, and two rows hold none.
+Every member sits in one row, and one row holds none.
 
 **Gaps tested.**\
-A search of the entries, charters, skills, the vision and the standing context finds no definition of `gate`, `evidence`, `seal`, `closeout`, `lease`, `substrate` or `unit of work`; [`A8`](../axioms/A8-gated-recursive-integrity.md) describes gates without defining one, and [`W0`](../work-types/README.md) names evidence fields, not the word.\
+A search of the entries, charters, skills, the vision and the standing context found no definition of `gate` - since defined, [`E7`](E7-gate.md) - nor of `evidence`, `seal`, `closeout`, `lease`, `substrate` or `unit of work`; [`A8`](../axioms/A8-gated-recursive-integrity.md) described gates without defining one, and [`W0`](../work-types/README.md) names evidence fields, not the word.\
 `arc` is defined in the skills layer - a tree of rungs climbing one summit, in [`K6`](../skills/K6-arc-lifecycle.md) - while the coordination skills use it for a graph of work items seeded from a blueprint, so it carries two meanings and no entry fixes either.\
-The two empty rows are where an organisation's work is gated and run, which is where a misread term costs most.
+The rows where work is gated and run are where a misread term costs most, and they hold one entry between them.
 
 ---
 
@@ -134,4 +134,5 @@ Entities compose through the typed edges in each member's `Relations`, and the p
 | [E4](E4-charter.md) | charter - the document that voices a set, and the questions only it can answer | You are writing or revising a charter, or deciding whether a section belongs in one |
 | [E5](E5-system.md) | system - a unit with a boundary, which traits describe and axioms bind | You are deciding which systems' axioms a change answers to, or what counts as the system you are working on |
 | [E6](E6-component.md) | component - a system seen as a part of a containing system, with one duty at its altitude | You are deciding what a change can reach, what a part of a system owes its neighbours, or which neighbouring parts count as adjacent |
+| [E7](E7-gate.md) | gate - a point past which work proceeds only if a stated condition is shown to hold, decided by a machine, an independent agent or the director | You are about to say work passed, failed or is waiting at a gate, or to decide who may judge one |
 <!-- END GENERATED -->

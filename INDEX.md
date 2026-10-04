@@ -236,6 +236,7 @@ This file described them a second time and the copy had already drifted, naming 
 | [E4](entities/E4-charter.md) | charter - the document that voices a set, and the questions only it can answer | You are writing or revising a charter, or deciding whether a section belongs in one |
 | [E5](entities/E5-system.md) | system - a unit with a boundary, which traits describe and axioms bind | You are deciding which systems' axioms a change answers to, or what counts as the system you are working on |
 | [E6](entities/E6-component.md) | component - a system seen as a part of a containing system, with one duty at its altitude | You are deciding what a change can reach, what a part of a system owes its neighbours, or which neighbouring parts count as adjacent |
+| [E7](entities/E7-gate.md) | gate - a point past which work proceeds only if a stated condition is shown to hold, decided by a machine, an independent agent or the director | You are about to say work passed, failed or is waiting at a gate, or to decide who may judge one |
 
 ---
 
