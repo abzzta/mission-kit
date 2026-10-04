@@ -10,11 +10,28 @@ related: [E3, E4, E2]
 
 # Sets - the across-the-layers layer
 
-## Purpose
+## Vision
 
-**End state.**\
-Every situation whose guidance spans layers has one set gathering it, so an agent that recognises its situation reaches every entry that applies, whatever layer each lives in.\
-No such concern is left for a reader to assemble from several layers alone, and no set gathers what one layer already holds.
+**North star.**\
+Every situation whose guidance spans layers has one set gathering it, so an agent that recognises its situation reaches every entry that applies, whatever layer each lives in.
+
+**What this set is, and is not.**\
+It is the charters of populations whose members live in two or more layers and govern one concern between them, each declaring its members in a list.\
+It is not a home for a topic that fits one layer, which is that layer's concern, and no set gathers what one layer already holds.
+
+**Succeeding.**\
+Measured on four dimensions, never one score:
+
+- **Reach** - a cold agent in a set's situation reaches the set, and through it every entry that applies.
+- **Gathering** - no cross-layer concern is left for a reader to assemble from several layers alone.
+- **Non-overlap** - one concern, one set, and no set whose members all sit in one layer.
+- **Currency** - every declared member exists and is active.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no set and licenses no change of direction; admission is by the test under *What earns an entry* and the growth policy under *Territory*.
 
 A **set** here is a population whose members live in several layers and govern one concern between them.\
 Each layer holds one kind of guidance; a situation often needs several kinds at once, and this layer is where they are gathered, so an agent finds them by recognising its situation.
@@ -30,6 +47,15 @@ Every concern whose guidance spans two or more layers and has rules of its own.
 Uncapped.\
 A member is one set gathering one concern, with members in two or more layers and an end state, scope and faults of its own; a topic that fits one layer is that layer's concern.\
 Members are balanced on non-overlap of concern - one concern, one set - and a set is drafted only when readers in its situation are shown to miss guidance that applies, never because a concern could be gathered.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on non-overlap of concern, one concern to one set, and a gap here is evidence that readers in a situation missed guidance that applies, not the observation that a concern could be gathered.\
+Membership is read from each set's `members` list, never from the members' own frontmatter, because a member need not know its set.\
+A candidate whose members all sit in one layer is routed to that layer's charter as its sub-concern.
 
 ---
 

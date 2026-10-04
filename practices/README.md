@@ -10,13 +10,27 @@ related: [M0, RU0, S0, A0, E4]
 
 # Practices - the how-you-should layer
 
-## Purpose
+## Vision
 
-**End state.**\
-Wherever judgement about how to proceed changes the result of a unit of work and leaves no record, the guidance that makes the difference is named as a practice.\
-Each practice is backed by observed evidence that following it produces measurably different work, and none could be checked, because guidance that could is a rule.
+**North star.**\
+Wherever judgement about how to proceed changes the result of work and leaves no record, the guidance that makes the difference is named as a practice, backed by observed evidence that following it produces measurably different work.
 
-A **practice** governs how work is done, produces nothing of its own, and **leaves no trace**: nothing in the record afterwards shows whether it was followed.
+**What this set is, and is not.**\
+It is the set of practices: guidance that governs how work is done, produces nothing of its own, and **leaves no trace** - nothing in the record afterwards shows whether it was followed.\
+It is not guidance that could be checked, which is a rule, in [`rules/`](../rules/README.md); nor a procedure producing a result of its own, which is a method; nor a convention about an artifact's form, which is style.
+
+**Succeeding.**\
+Measured on three dimensions, never collapsed into one score:
+
+- **Evidenced** - every practice carries an observed difference in the work, and none was admitted for seeming wise.
+- **Traceless** - no practice could be checked; one that could has moved to `rules/`.
+- **Applied** - where a practice's situation recurs, its guidance is followed, and one never applied is revised or retired.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no practice and licenses no change of direction; a practice is admitted only by the placement, growth policy and member shape in this charter's operating sections.
 
 The set exists because some of the guidance that most changes work cannot be checked, and filing it beside rules would make every rule look as unverifiable as it is.\
 A practice earns its place only by evidence that following it produces measurably different work.
@@ -39,6 +53,15 @@ This set covers **the points in a unit of work where judgement about how to proc
 Uncapped.\
 A member is one piece of guidance at the grain of one situation, carrying the evidence that following it changes the work.\
 Members are balanced on evidence and on leaving no trace: a practice is admitted only once a difference in the work has been observed, one that acquires a trace moves to [`rules/`](../rules/README.md), and one whose situation recurs while it is never applied is revised or retired.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on evidence and on leaving no trace, so an analysis asks of each member whether its evidence still holds, whether it has acquired a trace, and whether its situation recurs without it being applied.\
+A member that has acquired a trace is routed to [`rules/`](../rules/README.md), a candidate producing a result of its own to [`methods/`](../methods/README.md), and one governing an artifact's form to [`style/`](../style/README.md), by the placement stated once in [`M0`](../methods/README.md).\
+A gap found here is not closed by minting a practice, because admission waits on observed evidence, as *Member shape* states.
 
 ---
 

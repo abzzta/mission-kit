@@ -10,12 +10,28 @@ related: [AR1, AR2, AR3, AR4, AR5, AR6, A13, A14, W0]
 
 # Artifacts - the lifecycle loop and the admission rule
 
-## Purpose
+## Vision
 
-**End state.**\
-Every document an engineering lifecycle produces whose shape recurs across projects has exactly one type, and the types compose into one closed control loop with a single inlet.\
-Every position in that loop, at every altitude and transition around a system, is held by a type a project instantiates rather than invents, so any two instances can be compared and no reviewer has to guess what is missing.\
-The set is measured against that loop: it approaches its end state as a programme can run more of the loop from types alone.
+**North star.**\
+Every document an engineering lifecycle produces whose shape recurs across projects has exactly one type, and the types compose into one closed control loop with a single inlet.
+
+**What this set is, and is not.**\
+It is the types that hold every position in that loop, at every altitude and transition around a system, each instantiated by a project rather than invented, so any two instances can be compared and no reviewer has to guess what is missing.\
+It is not a home for instances, generated views, sections of another document or tool output, and it is not the machine-checkable contract for a shape, which [schemas](../schemas/README.md) hold.
+
+**Succeeding.**\
+Measured on four dimensions, never one score:
+
+- **Reach of the loop** - how much of the loop a programme can run from types alone.
+- **Non-overlap** - one position, one type, and no type forking a contract held elsewhere.
+- **No reinvention** - no deliverable shape authored from nothing each time, or buried inside one capability.
+- **Admission integrity** - every type carries its position and an acceptance falsifier, and no instance sits among the types.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no type and licenses no change of direction; admission is by the tests under *What earns a document type*.
 
 The document types an engineering lifecycle produces, each with a schema, so a document is instantiated rather than reinvented.
 
@@ -36,6 +52,15 @@ The claim is set by what the set is for; a position, altitude or transition with
 Uncapped.\
 A member is a type, never an instance, and it holds one position in the loop at a stated altitude; a concern that belongs inside another document is a section of it, not a type.\
 Members are balanced on non-overlap: one position, one type, and a type enters only with its position and after passing every admission test below, never speculatively ahead of a demonstrated need.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on non-overlap: one position in the loop, one type, at a stated altitude.\
+Analysis reads the population against the loop, and also searches projects for a concern that recurs without a home, because only that bottom-up pass can show the loop itself is missing a position (*The strongest evidence is an absence*).\
+A misplaced candidate is routed by the neighbour table: a machine-checkable contract to schemas, a writing convention to style, a capability to skills, and a kind of work to work-types; an instance stays in the project that produced it.
 
 ---
 

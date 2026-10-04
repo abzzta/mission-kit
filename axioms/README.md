@@ -10,12 +10,29 @@ related: [SC6, W0, R0, D0, E1, E5, E6, T0]
 
 # Axioms - the standing-commitment layer
 
-## Purpose
+## Vision
 
-**End state.**\
+**North star.**\
 The fewest orthogonal limits that together leave no way for a system to drift from its own intent unforbidden, each forbidding a failure no other forbids.\
-Every limit binds exactly the systems whose traits bring it into force, and every change within its scope moves toward all of them at once.\
-No axiom restates another, and none is admitted for importance rather than for being always in force.
+A *limit* here is an asymptote a system is built toward and never tested against as pass or fail, as *Standing commitment, not situated move* sets out.
+
+**What this set is, and is not.**\
+This set is the standing commitments a system is built toward, each always in force for every system whose traits it names.\
+It is not the situated moves of style, methods, patterns or skills, which apply only when a task touches them, and it is not a summary of itself: it has no apex member, because its coherence is checked by [`M7`](../methods/M7-axiom-alignment-audit.md) rather than written as an entry.
+
+**Succeeding.**\
+Measured on these dimensions, never collapsed into one score:
+
+- **Orthogonality** - no member restates another or is derivable from another, so each can fail on its own.
+- **Standing** - every member is always in force for the systems it names, and none is admitted for importance.
+- **Exact binding** - every member binds exactly the systems whose traits bring it into force, and no project claims one its traits do not bring.
+- **Direction** - every change within a member's scope moves toward all the limits in force at once, and none is traded against another.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no member and licenses no change of direction; admission is by the tests in this charter's operating sections.
 
 Foundational, always-in-force principles for aligned systems.\
 The layer that states the limits a system is built toward, beneath the tactical entries.
@@ -43,6 +60,16 @@ Uncapped.\
 A member sits at the altitude of a standing commitment: a limit always in force for every system whose traits it names, never a situated move reached for when a task touches it.\
 Members are balanced on orthogonality: each earns its place by forbidding something the others permit, none is derivable from another, and no apex member summarises the rest.\
 A candidate is read against the whole set at admission, so a contradiction or a restatement is caught before it is accepted.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on orthogonality, so an analysis asks of each member what it forbids that no other does, and of the set whether a way to drift from intent is left unforbidden.\
+Admission carries one step the methods do not: the read of the candidate against the whole set that the growth policy requires, which is what keeps a contradiction from being accepted unseen.\
+Citation counts are read as information about a member, never as a reason to admit or retire one, for the reason given under *How the set composes*.\
+A candidate that holds only when a task touches its subject is a situated move and is routed to style, methods, patterns or skills; one stating what an axiom demands on a particular surface is routed to [`domains/`](../domains/README.md); one stating a precondition of binding is routed to [`traits/`](../traits/README.md).
 
 ---
 

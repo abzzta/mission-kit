@@ -10,12 +10,29 @@ related: [A0, D0, E3, E4, E5]
 
 # Traits
 
-## Purpose
+## Vision
 
-**End state.**\
-One trait for every architectural characteristic that changes what a system owes to stay aligned with its intent, each an observable test any reader can apply to their own system.\
-Every axiom's binding is decided by these traits alone, so two readers holding the same system reach the same axioms in force.\
-No trait binds nothing, and no condition that brings an obligation goes uncaptured, its absence included.
+**North star.**\
+One observable test for every architectural characteristic that changes what a system owes to stay aligned with its intent, so two readers holding the same system reach the same axioms in force.\
+What a system *owes* is the set of axioms in force for it, and every axiom's binding is decided by these traits alone.
+
+**What this set is, and is not.**\
+This set is the characteristics of a whole system that decide which axioms bind it, each stated as a test a reader can apply to their own system.\
+It is not the surface work lands on, which is a domain; not a definition that decides no binding, which is an entity; and not the obligation itself, which is an axiom - and the floor, `any-system`, is not a trait.
+
+**Succeeding.**\
+Measured on these dimensions, never collapsed into one score:
+
+- **Agreement** - two readers applying the tests to one system reach the same traits, and so the same axioms.
+- **Binding** - every trait is named by an axiom, or would be, and every `applies-to` value other than the floor has a trait behind it.
+- **Coverage** - no condition that brings an obligation goes uncaptured, its absence included.
+- **Non-overlap** - no two traits settle the same question.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no member and licenses no change of direction; admission is by the tests in this charter's operating sections.
 
 A **trait** is a characteristic of the [system](../entities/E5-system.md) an organisation is working on - stateful, declarative, autonomous - that brings a set of axioms into force.\
 An axiom names the traits it governs in its `applies-to` field, and it binds a system that has at least one of them.
@@ -38,6 +55,15 @@ Uncapped.\
 A member sits at the grain of one characteristic of the whole system, stated as an observable test, that an axiom binds on or would.\
 Members are balanced on non-overlap of the question each settles: traits do not exclude one another on a system, no two settle the same question, and a condition whose absence brings an obligation is as eligible as one whose presence does.\
 A characteristic that would bring an obligation no trait captures is closed by adding a trait, as `domains/` and `work-types/` grow.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on non-overlap of the question each settles, so an analysis asks of each pair whether they settle the same question, and of each trait defined by a presence whether the matching absence brings an obligation no trait captures.\
+A candidate no axiom binds on, or would, is routed to [`entities/`](../entities/README.md); a surface work lands on is routed to [`domains/`](../domains/README.md); a statement of what must hold is routed to [`axioms/`](../axioms/README.md), all as *What belongs here, and what does not* sets out.\
+Because the contract accepts only declared traits as `applies-to` values, adding or retiring a trait changes which axioms bind which systems, so the change is read against every axiom that names it.
 
 ---
 

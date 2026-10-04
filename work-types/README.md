@@ -9,12 +9,30 @@ related: [R0, D0, T0, E5, A3, A6, A7, A11]
 
 # Work-types - composition, closeability, and schema
 
-## Purpose
+## Vision
 
-**End state.**\
-Every recurring kind of work an engineering organisation does is named by exactly one work-type, and none is stretched to cover a neighbour's work.\
-Each compiles to a closeable claimable node with a complete evidence contract, so any unit of work is generated from a role, a work-type and a domain, and closed on evidence, without anyone routing it by hand.\
+**North star.**\
+Every recurring kind of engineering work is named by exactly one work-type that compiles to a closeable claimable node with a complete evidence contract, so any unit of work is generated from a role, a work-type and a domain and closed on evidence, without anyone routing it by hand.\
+A closeable claimable node is a unit of work an agent can claim and that closes only when its evidence contract is met.\
 The kinds of work grow as the organisation does, so the set is approached and never finished.
+
+**What this set is, and is not.**\
+It is the set of verb-families naming the kinds of work an organisation does, each carrying the mode and shape of that work and one evidence contract, and none stretched to cover a neighbour's work.\
+It is not an enumerated table of role, work-type and domain triples, not an overlay layer, and not the procedure that conducts the work or the document it produces, which a work-type cites from `methods/` and `artifacts/`; work that cannot compile to a node, such as incident recovery, is recorded as a routing note instead.
+
+**Succeeding.**\
+Measured on four dimensions, never collapsed into one score:
+
+- **Coverage** - no recurring kind of work is hand-routed for want of a work-type.
+- **Non-overlap** - no act can be minted under two work-types.
+- **Closeability** - every work-type satisfies the canonical constraint set rather than restating it, so every generated node can pass the preflight at seed.
+- **Attachment** - every procedure that conducts work is cited by a work-type, so a coordinating system can attach it.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no work-type and licenses no change of direction; a work-type is admitted only by the entry schema, the canonical constraint set and the growth policy in this charter's operating sections.
 
 This is the **canonical** cross-axis reference for the work-taxonomy.\
 Every `work-types/W*.md` entry references this file for its composition rule and its closeability preflight - **the constraint set is authored here once and never forked per entry** (M7 guardrail #2).\
@@ -36,6 +54,16 @@ Uncapped.\
 A member sits at the grain of a verb-family: one mode and shape of work, compiling to one closeable claimable node with one evidence contract.\
 Members are balanced on non-overlap, one act to one work-type: a recurring kind of work that fits no work-type is closed by adding one, not by stretching a neighbour, because a stretched work-type carries two evidence contracts under one name, and until it exists the work is recorded as a row in the project's backlog ([`AR5`](../artifacts/AR5-backlog.md)).\
 A new work-type is authored like any entry, from a peer exemplar ([`PC1`](../practices/PC1-author-from-exemplar.md)), against the entry schema below, landing through the gate; adding one changes how work is generated, so it is ratified by the director.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on non-overlap, one act to one work-type, so an analysis looks first for an act two work-types could both mint and for recurring work that none covers.\
+A candidate naming who performs work or the surface its evidence lands on is a role or a domain, routed to [`roles/`](../roles/README.md) or [`domains/`](../domains/README.md); a procedure or document it carries goes to [`methods/`](../methods/README.md) or [`artifacts/`](../artifacts/README.md) and is cited from `methods` or `produces`; and work that cannot compile to a node is recorded as a routing note, as incident recovery is below.\
+A pairing on which a work-type and a domain disagree is settled on the work-type, because only its `domainEligibility` governs and the domain's view is generated.\
+A change to the canonical constraint set changes every work-type's preflight at once, so it is made in this charter and never in a member.
 
 ---
 

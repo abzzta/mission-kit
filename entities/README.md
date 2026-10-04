@@ -10,12 +10,29 @@ related: [E1, M0, SC6, A4]
 
 # Entities
 
-## Purpose
+## Vision
 
-**End state.**\
-Every term the corpus leans on across layers, where two competent readers could act differently on the same sentence, resolves to one definition in one home.\
-Each definition states what its term is and what it is not, is cited wherever the term carries weight, and leaves no load-bearing noun for a cold reader to reconstruct.\
-No word carries two meanings, and no concept answers to two words.
+**North star.**\
+Every term the corpus leans on across layers resolves to one definition in one home, so no word carries two meanings and no concept answers to two words.\
+A term is *leaned on* when two competent readers could act differently on the same sentence that uses it.
+
+**What this set is, and is not.**\
+It is the definitions of what load-bearing terms are, each stating what its term is and what it is not.\
+It is not how anything is done, which belongs in [methods](../methods/README.md) or [skills](../skills/README.md), nor the machine-checkable shape of an instance, which belongs in [schemas](../schemas/README.md).
+
+**Succeeding.**\
+The set is measured on four dimensions, never collapsed into one score:
+
+- **One home** - no term is defined both here and in a charter or member, and no concept has two entries.
+- **Cited** - each definition is cited wherever its term carries weight.
+- **Bounded** - each definition states what its term is not, as well as what it is.
+- **Coverage** - no load-bearing noun is left for a cold reader to reconstruct.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing this vision admits no term and licenses no change of direction; a term is admitted only by the test under *What earns an entry*.
 
 What a thing **is**, never how it is done.
 
@@ -56,6 +73,15 @@ The claim is set by what the set is for, not by what it holds today.
 Uncapped.\
 A member is one term, defined at the grain of a single meaning, earned by what imprecision about it would cost rather than by how often it appears.\
 Members are balanced on one home per term - no term defined here and in a charter or member, and no two entries for one concept - and on being cited, so that each definition is reached where its term carries weight.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on one home per term and on being cited, so an analysis searches the corpus for a term defined both here and elsewhere, and for places a term carries weight without citing its definition.\
+A gap is a term that passes the two-readers test under *What earns an entry*, never one that is merely frequent.\
+A candidate that names one layer's members is routed to that layer's charter, one that answers how rather than what to [methods](../methods/README.md) or [skills](../skills/README.md), and the shape of an instance to [schemas](../schemas/README.md).
 
 ---
 

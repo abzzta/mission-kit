@@ -10,12 +10,29 @@ related: [M0, P0, K0, A4]
 
 # Style - the how-you-say-it layer
 
-## Purpose
+## Vision
 
-**End state.**\
-Every medium a reader meets - documents, messages to a human, commit messages and code - has its form held by rules, each stating one property of the finished artifact and none restating another.\
-Every rule a predicate can express is held by exactly one tool, and every other rule is named as held by reading.\
-The rules stay the delivery mechanism and never the payload, and no author fixes the same defect of form twice.
+**North star.**\
+Every artifact a reader meets - documents, messages to a human, commit messages and code - has its form held by rules, so no author fixes the same defect of form twice.\
+*Form* is how the finished artifact reads, as distinct from what the work that produced it had to do or record.
+
+**What this set is, and is not.**\
+It is the rules for the form of every medium a reader meets, each judged by reading the finished artifact, and they stay the delivery mechanism and never the payload.\
+It is not guidance on what work must do or record, which belongs in [rules](../rules/README.md), nor guidance whose following the output could not show, which belongs in [practices](../practices/README.md).
+
+**Succeeding.**\
+The set is measured on four dimensions, never collapsed into one score:
+
+- **Non-overlap** - each rule states one property of the finished artifact, and none restates another.
+- **Mechanical hold** - every rule a predicate can express is held by exactly one tool, and every other rule is named as held by reading.
+- **Coverage** - every medium the scope claims has rules for its form.
+- **Earned** - every rule answers a real defect in a real artifact, never a preference.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing this vision admits no rule and licenses no change of direction; a rule is admitted only by the tests under *What earns an entry*.
 
 A **style rule** governs an artifact's form, and is judged by reading the output rather than by watching it being produced.
 
@@ -36,6 +53,15 @@ Uncapped.\
 A member is one convention about the form of one medium at one grain, judged in the finished artifact, earned by a real defect, and holding across artifacts.\
 Members are balanced on non-overlap: one rule holds one decision on one surface, and an enforced rule names exactly one tool.\
 Rules for media other than documents are grouped into sub-sets by medium once there is a second such rule, in any medium other than documents.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on non-overlap, so an analysis looks for two rules holding one decision on one surface, and for a rule a predicate could express that names no tool.\
+A rule a script can hold names exactly one tool, and the pairing is verified as stated under *Enforcement boundary*.\
+A candidate that governs what the work does or records is routed to [rules](../rules/README.md), and one whose following the finished artifact could not show is routed to [practices](../practices/README.md).
 
 ---
 

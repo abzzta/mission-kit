@@ -9,12 +9,29 @@ related: [W0, R0, A1, A3, A5, T0]
 
 # Domains - the N axis
 
-## Purpose
+## Vision
 
-**End state.**\
-One domain for every surface an engineering organisation's work lands on, each with an evidence contract no other domain shares.\
-Every unit of work resolves to exactly one domain by a rule two independent placers apply alike, and no work is forced into the nearest name.\
-Each surface is named by what it is rather than by one organisation's tools, so any team can place its own work.
+**North star.**\
+One domain for every surface an engineering organisation's work lands on, each with an evidence contract no other shares, so every unit of work resolves to exactly one of them by a rule two independent placers apply alike.\
+A *surface* is what a unit of work's evidence resolves against, and its *evidence contract* is how work on it is proved.
+
+**What this set is, and is not.**\
+This set is the subject surfaces work lands on - the shipped product, and as fully the organisation's own toolchain, control plane and knowledge.\
+It is not a set of work modes, which the work-type carries; not the characteristics of the system being worked on, which are [traits](../traits/README.md); and not incidents, whose domain is the surface they hit.
+
+**Succeeding.**\
+Measured on these dimensions, never collapsed into one score:
+
+- **Distinctness** - every domain has an evidence contract no other shares, and none is a mode of work.
+- **Determinism** - two independent placers resolve the same unit of work to the same domain.
+- **Coverage** - no work is forced into the nearest name; a surface no domain resolves is recorded as a gap until a domain closes it.
+- **Portability** - each surface is named by what it is rather than by one organisation's tools, so any team can place its own work.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no member and licenses no change of direction; admission is by the tests in this charter's operating sections.
 
 Domains are **subject-surfaces**: a domain names *what a node's evidence resolves against*, and the set claims every surface work's evidence can land on, however many that proves to be.\
 The work-*mode* is carried by the work-type, never by the domain - a mode-domain (e.g. `verification`) would double-count with the mode-encoding work-type (`verify-gate` *is* verification) and break orthogonality.
@@ -35,6 +52,15 @@ Uncapped.\
 This set is not complete and is not expected to be.\
 A member sits at the grain of one evidence contract: one product's source and live state are one domain's evidence, and a product splits into more than one domain only where work on one portion is proved differently and the split has been found needed.\
 Members are balanced on distinct evidence contracts, never on modes of work: a surface no domain resolves is closed by adding a domain with its own contract, not by stretching a neighbour, and until then the work is recorded against the gap rather than forced into the nearest domain.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on distinct evidence contracts, never on modes of work, so an analysis tests each pair of domains for a difference in what their evidence resolves against, and places each unit of work by the tie-break rule below rather than by the surface its benefit lands on.\
+A candidate that is a mode of work is routed to [`work-types/`](../work-types/README.md), a characteristic of the system being worked on to [`traits/`](../traits/README.md), and an incident to the surface it hit.\
+Which work-types act on which domains is analysed and changed on the work-types, because the domain side of every pairing is generated from them.
 
 ---
 

@@ -10,12 +10,29 @@ related: [P0, M0, A3]
 
 # Components
 
-## Purpose
+## Vision
 
-**End state.**\
-A managed set of orthogonal duties - a few dozen - covering most of what a system needs, with configuration and glue as the remainder.\
-Every one is internal, a sovereign unit under our own authority, and each is found and used rather than rebuilt, so no duty is implemented twice.\
-That is a direction the registry approaches and never reaches, and adoption outranks tidiness on the way: a registry of perfectly orthogonal components that no project assembles from has failed.
+**North star.**\
+A managed set of a few dozen orthogonal duties, every one internal and each found and used rather than rebuilt, covers most of what a system needs, with configuration and glue as the remainder, so no duty is implemented twice.\
+A duty is one box at architecture altitude, and internal means a sovereign unit under our own authority.
+
+**What this set is, and is not.**\
+It is a registry of portable definitions and references, each stating one duty, the contract it exposes, and where the implementation lives.\
+It is not the implementation, not a structure you reproduce in your own code, which is a pattern, and not the obligation to search before building, which is a procedure.
+
+**Succeeding.**\
+Measured on four dimensions, never one score, and the first outranks the rest:
+
+- **Adoption** - projects assemble from the registry, and work does not start from scratch; a registry of perfectly orthogonal components that no project assembles from has failed.
+- **No duty twice** - no unit reinvented and no fork disguised as a variant.
+- **Orthogonality** - no two duties intersect, and none is a composition of others already present.
+- **Sovereignty** - the number of external entries falls; the end state is approached and never reached.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no component and licenses no change of direction; admission is by the growth policy under *Territory* and the member shape below.
 
 Sovereign, shareable units that should be **used** rather than rebuilt.
 
@@ -46,6 +63,16 @@ Uncapped.\
 A member sits at architecture altitude, as one box with one duty; below that altitude a component is many concerns, and they are not members.\
 Members are balanced on orthogonality: no two duties intersect and none is a composition of others already present; where orthogonality and adoption conflict, adoption wins and the overlap becomes a finding rather than a refusal.\
 A component is admitted when a consumer needs it, not because a gap was named.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on orthogonality at architecture altitude, and adoption outranks orthogonality: an overlap an analysis finds is recorded as a finding, never resolved by refusing or removing a member.\
+Its extent is read from the union of anchored cores across the architectures this organisation holds, and one duty duplicated across projects with no component is a finding of the same kind.\
+Every analysis reads the count of external entries, the measurement *Internal and external* declares.\
+A misplaced candidate is routed by the neighbour table: a reproduced structure to patterns, an agent capability to skills, a composition of skills into a role to bundles, and the obligation to search before building to methods.
 
 ---
 

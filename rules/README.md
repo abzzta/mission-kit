@@ -10,14 +10,27 @@ related: [M0, PC0, S0, A0, E4]
 
 # Rules - the how-you-must layer
 
-## Purpose
+## Vision
 
-**End state.**\
-Every point in a unit of work where how it is done can be verified from its record is held by a rule that names its trace.\
-Every trace is read - by a tool wherever one can check it, by review where none can - so no rule is held in name only.\
-Guidance that could be held is never left merely urged.
+**North star.**\
+Every point where how work is done can be verified from its record is held by a rule that names its trace, and every trace is read - by a tool where one can check it, by review where none can - so no guidance that could be held is left merely urged.
 
-A **rule** governs how work is done, produces nothing of its own, and **leaves a trace a check could test**: something in the record of the work shows whether it was kept.
+**What this set is, and is not.**\
+It is the set of rules: guidance that governs how work is done, produces nothing of its own, and **leaves a trace a check could test** - something in the record of the work that shows whether it was kept.\
+It is not guidance that leaves nothing to check, which is a practice, in [`practices/`](../practices/README.md); nor a convention about an artifact's form, which is style; nor a procedure producing a result of its own, which is a method.
+
+**Succeeding.**\
+Measured on three dimensions, never collapsed into one score:
+
+- **Traced** - every rule declares a trace that a tool or a reader can check.
+- **Read** - every trace is actually checked, by its enforcer where one exists and by review where none does, so no rule is held in name only.
+- **Guarded** - no point where the record of the work could be lost or rewritten is left without a rule saying it may not.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no rule and licenses no change of direction; a rule is admitted only by the placement, growth policy and member shape in this charter's operating sections.
 
 The set exists because a rule that leaves a trace can be held, and one that does not can only be urged.\
 Separating rules from practices tells a reader which guidance can be verified after the fact, and tells an author which guidance owes a check.
@@ -40,6 +53,15 @@ This set covers **the points in a unit of work where how it is done can be verif
 Uncapped.\
 A member is one constraint on how work is done, at the grain of a single trace in the record that shows whether it was kept.\
 Members are balanced on their traces: each declares one that a tool or a reader can check, and guidance whose trace nothing could check is a practice, in [`practices/`](../practices/README.md).
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on their traces, so an analysis checks each declared `trace` against whether anything actually reads it; `tools/check-enforcers.sh` holds only that a named enforcer exists, never that the trace is read.\
+A candidate whose trace nothing could check is routed to [`practices/`](../practices/README.md), one governing an artifact's form to [`style/`](../style/README.md), and one producing a result of its own to [`methods/`](../methods/README.md).\
+Placement is stated in [`M0`](../methods/README.md) and is changed there, not here, and a practice that acquires a trace moves into this set.
 
 ---
 

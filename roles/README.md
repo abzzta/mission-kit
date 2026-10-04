@@ -9,12 +9,29 @@ related: [W0, D0, A3, A6, A13, E1, T0]
 
 # Roles - the M axis
 
-## Purpose
+## Vision
 
-**End state.**\
-One role for every authority engineering work needs, from the intent behind a unit of work to its ratification and across the flow of many units.\
-Each role is pure in essence and held rather than embodied, so any organisation, from one agent to many, fills every authority it can and sees plainly any it cannot.\
-No decision the work needs falls outside a role, and none is made by whoever happens to be acting.
+**North star.**\
+One role for every authority engineering work needs, each pure in essence and held rather than embodied, so no decision the work needs is made by whoever happens to be acting.\
+*Held rather than embodied* means one actor may hold several roles, and independence is a property of identity rather than of role, as *How the roles compose* sets out.
+
+**What this set is, and is not.**\
+This set is the kinds of authority over work, from the intent behind a unit of work to its ratification and across the flow of many units.\
+It is not a set of people or seats, not a mode of work or a flag carried by one - those belong to work-types - and not the evidence a unit of work produces, which `role x work-type` decides.
+
+**Succeeding.**\
+Measured on these dimensions, never collapsed into one score:
+
+- **Coverage** - every decision the work needs falls inside a role.
+- **Independent mandates** - no two roles hold the same authority.
+- **Purity** - each role's essence is invariant across domain and work-type, so composition rather than enumeration determines the aggregate.
+- **Fillability** - any organisation, from one agent to many, fills every authority it can and sees plainly any it cannot, and never presents a self-check as independent assurance.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no member and licenses no change of direction; admission is by the tests in this charter's operating sections.
 
 Roles are defined as **essence + engagement-mode**, independent of domain and work-type so composability determines the aggregate.\
 Read `work-types/README.md` for the composition rule that combines these with the domain and work-type axes.
@@ -33,6 +50,15 @@ This set covers **every authority engineering work needs** - within a unit of wo
 Uncapped: the count of roles follows the authorities the work needs rather than fixing them.\
 A member sits at the grain of one kind of authority over work - pure in essence, independent of domain and work-type - never a person, a mode of work, or a flag carried by a work-type.\
 Members are balanced on independence of mandates: no two roles hold the same authority, and work done after release is the existing authorities applied again, not a new one.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on independence of mandates, so an analysis asks of each pair of roles whether they hold one authority, and of the set whether any decision the work needs falls outside every role.\
+A candidate that is a mode of work, or a flag a unit of work carries, is routed to [`work-types/`](../work-types/README.md), as *Backstop is not a role* records; a candidate that is a surface work lands on is routed to [`domains/`](../domains/README.md).\
+The constraint that one identity may not execute and independently verify the same work is authored in [`W0`](../work-types/README.md) and cited here, so a change to it is made there and not in this charter.
 
 ---
 

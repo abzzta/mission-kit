@@ -10,18 +10,31 @@ related: [S0, P0, K0, W0, E4, RU0, PC0]
 
 # Methods - the how-you-operate layer
 
-## Purpose
+## Vision
 
-**End state.**\
-Every point in a unit of engineering work where a result is produced, and how it is produced decides whether it can be trusted, has a named procedure proportionate to it.\
-Each procedure has been run and shown to change the work, and the set is a few primitives from which most situations are met by composition.\
-No divergence between reliable and merely adequate conduct is left to be discovered after it has cost something.
+**North star.**\
+Every point in engineering work where how a result is produced decides whether it can be trusted is met by a proven procedure proportionate to it, composed from a few primitives, so no divergence between reliable and merely adequate conduct is discovered only after it has cost something.\
+A proven procedure is one that has been run and shown to change the work.
 
-Procedures.\
-Named steps that **produce a result of their own** - a verdict, an artifact, a record - each applying only in the situation it names and binding once you are in it.
+**What this set is, and is not.**\
+It is the set of procedures: named steps that **produce a result of their own** - a verdict, an artifact, a record - each applying only in the situation it names and binding once you are in it.\
+It is not guidance that produces nothing of its own, which is a rule, in [`rules/`](../rules/README.md), or a practice, in [`practices/`](../practices/README.md); nor a convention about the artifact, which is style, nor an invocable capability, which is a skill, nor anything in force whether reached for or not, which is an axiom.
+
+**Succeeding.**\
+Measured on four dimensions, never collapsed into one score:
+
+- **Proven** - every procedure has been run, and following it was observed to produce different work from not following it.
+- **Distinct** - no two procedures differ only in the situation they name.
+- **Composed** - a new situation is met by composing existing procedures before a primitive is added, and no procedure stands outside the citation graph unexamined.
+- **Guarded** - no recurring failure sits at a point in the work that no procedure covers.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing it admits no procedure and licenses no change of direction; a procedure is admitted only by the placement questions and the tests in *What earns an entry*, in this charter's operating sections.
 
 A methodology entry is a procedure: following it yields something that would not exist otherwise, and how it is followed decides whether that result can be trusted.\
-Guidance that governs how work is done and produces nothing of its own is a rule, in [`rules/`](../rules/README.md), or a practice, in [`practices/`](../practices/README.md).\
 It is a *situated move* in the sense [`A0`](../axioms/README.md) draws - you reach for it when the work matches its trigger, unlike an axiom, which is in force whether you reach for it or not.\
 A procedure is declined by not being in its situation, never by deciding it does not apply once you are.
 
@@ -41,6 +54,16 @@ The claim is set by that purpose and not by what the set holds: a point no proce
 Uncapped.\
 A member is one procedure at the grain of the situation its trigger names, producing a result of its own.\
 Members are balanced on distinct situations and on composition: a candidate differing from a member only in the situation it names strengthens that member instead, and a new situation is met by composing existing procedures before a primitive is added, as *What earns an entry* states.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](M12-investigate-a-set.md) and changed by [`M11`](M11-change-a-charter.md).\
+Its members are balanced on distinct situations and on composition, so an analysis reads which members are primitives and which compounds from the citation graph, and takes a member with no edges as the prompt *The orphaned primitive* names.\
+A candidate is placed by the questions under *What belongs here, and what does not*: one producing nothing of its own goes to [`rules/`](../rules/README.md) if it leaves a trace and to [`practices/`](../practices/README.md) if it does not, a convention about the artifact to [`style/`](../style/README.md), and an invocable capability to [`skills/`](../skills/README.md).\
+The population is read against what actually went wrong in the work, not only against its members, because this set's characteristic gap is a failure no procedure covers.\
+Placement is stated once in this charter and cited by `rules/` and `practices/`, so a change to it moves their boundaries too.
 
 ---
 
@@ -95,6 +118,7 @@ Each member declares what it cites, so which members are primitives and which co
 **Rules hold what procedures record.**\
 The discipline about work that does not land - reject it deliberately, record it with a condition for its return, and never rewrite the record - was a cluster here, and is now rules: [`RU1`](../rules/RU1-default-reject-honest-yield.md), [`RU3`](../rules/RU3-anti-amnesia-deferral.md) and [`RU2`](../rules/RU2-frozen-history-rule.md).\
 A procedure that cuts or defers anything is held by them.
+
 ---
 
 ## Faults
@@ -123,4 +147,6 @@ A failure mode of one procedure belongs in that procedure.
 | [M8](M8-artifact-bootstrap.md) | Artifact bootstrap - enter the loop at its inlet, one ratified type at a time | You are adopting the artifact document set in a project that does not use it yet |
 | [M9](M9-history-content-scrub.md) | History content scrub | You must remove content from history that is already committed |
 | [M10](M10-guided-dialogue.md) | Guided dialogue - lead a human to understanding, then to a recorded decision | You need a human with limited context to understand something or decide something |
+| [M11](M11-change-a-charter.md) | Change a charter - account for every changed sentence, test before ratifying | You are about to change a charter's text, its vision, its scope or its growth policy |
+| [M12](M12-investigate-a-set.md) | Investigate a set - partition the population against its charter and find the gaps | You need to know whether a set is complete, balanced or lopsided against its charter, or where its gaps are |
 <!-- END GENERATED -->

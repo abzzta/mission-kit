@@ -10,11 +10,29 @@ related: [M0, S0, C0, A3]
 
 # Patterns - the how-you-shape-it layer
 
-## Purpose
+## Vision
 
-**End state.**\
-Every recurring design problem in the systems the organisation engineers has a named shape, with the forces that make it right and the cost it trades, so each new occurrence is recognised rather than rediscovered.\
-Every shape has been proven in contexts that share no author, no kind of problem is crowded with shapes while another holds none, and a shape every consumer reproduces by hand has become a component instead.
+**North star.**\
+Every recurring design problem in the systems the organisation engineers has a named shape, so each new occurrence is recognised rather than rediscovered.\
+*Recurring* means appearing in contexts that share no author; one occurrence is a design, however good.
+
+**What this set is, and is not.**\
+It is the named solution shapes an engineer reproduces in their own design, each with the forces that make it right and the cost it trades.\
+It is not an artifact to depend on, which belongs in [components](../components/README.md), nor a shape to avoid, which belongs in the `Faults` of the entry owning the invariant it breaks.
+
+**Succeeding.**\
+The set is measured on four dimensions, never collapsed into one score:
+
+- **Proven recurrence** - every shape has been seen in contexts that share no author.
+- **Balance** - no kind of problem is crowded with shapes while another holds none.
+- **Stated trade** - every shape names the forces that make it right and the cost it trades.
+- **Right home** - a shape every consumer reproduces by hand has become a component instead.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing this vision admits no shape and licenses no change of direction; a shape is admitted only by the tests under *What earns an entry*.
 
 Recurring designs.\
 A pattern names the shape of a solution and the forces that make it the right shape, so the next occurrence is recognised rather than rediscovered.
@@ -34,6 +52,15 @@ The claim is set by what the set is for, not by what it holds today.
 Uncapped.\
 A member is one solution shape resolving one force - the pressure that makes the naive design go wrong - at the grain of a structure an engineer reproduces in their own design, recurring across contexts that share no author.\
 Members are balanced on the forces they resolve, so that no force is crowded with shapes while another holds none, and admitted on recurrence, never on the elegance of one design.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on the forces they resolve, so an analysis weighs balance by force, and a force crowded with shapes beside one holding none is the finding.\
+The strongest evidence of a missing member is a shape being rebuilt slightly differently, as *What earns an entry* states.\
+A candidate that is an artifact to depend on is routed to [components](../components/README.md), as is a member every consumer has come to reproduce by hand, and a shape to avoid is routed to the `Faults` of the entry owning the invariant it breaks.
 
 ---
 

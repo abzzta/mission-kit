@@ -10,12 +10,29 @@ related: [M0, RU0, PC0, P0, SC3, A11]
 
 # Skills - the how-you-do-it layer
 
-## Purpose
+## Vision
 
-**End state.**\
-Every capability an engineering agent invokes is built once, installed, and executed the same way each time, whether or not a coordination substrate is running.\
-Each skill packages one capability that would otherwise be reconstructed, declares what it depends on as edges a script can check, and leaves to a script every step a script could take.\
-No kind of capability grows while another holds none.
+**North star.**\
+Every capability an engineering agent invokes is built once, installed, and executed the same way each time, whether or not a [coordination substrate](../entities/E9-substrate.md) is running.\
+A *capability* here is a procedure with inputs, steps and an output, run largely as written.
+
+**What this set is, and is not.**\
+It is the packaged, executable capabilities an agent invokes rather than reconstructs.\
+It is not guidance a reader follows, which belongs in [methods](../methods/README.md), [rules](../rules/README.md) or [practices](../practices/README.md), nor a procedure a script could take whole, which is a [tool](../tools/README.md), nor a runbook for one system, which belongs with that system.
+
+**Succeeding.**\
+The set is measured on four dimensions, never collapsed into one score:
+
+- **Built once** - each skill packages one capability that would otherwise be reconstructed by whoever needs it next.
+- **Declared dependencies** - every dependency is an edge a script can check, and none lives only in prose.
+- **Minimal judgement** - every step a script could take is left to a script.
+- **Balance** - no kind of capability grows while another holds none, and none exists only for one coordination system.
+
+**Authority.**\
+The director holds this vision and ratifies any change to it, under [`M11`](../methods/M11-change-a-charter.md).
+
+**What this vision does not authorise.**\
+Citing this vision admits no skill and licenses no change of direction; a skill is admitted only by the tests under *What earns an entry*.
 
 Operator-level capabilities and reusable tooling.\
 A skill is *invoked*, not followed: it names a procedure with inputs, steps and an output, and it is expected to be executed largely as written.
@@ -34,6 +51,15 @@ The claim is set by what the set is for, not by what it holds today.
 Uncapped.\
 A member is one executable, repeatable capability, invoked and run largely as written, at the grain of a procedure with inputs, steps and an output that would otherwise be reconstructed by whoever needs it next.\
 Members are balanced on what the capability does, so that no family grows while whole kinds of capability hold none, and none exists only for one coordination system without a counterpart for work done without it.
+
+---
+
+## Operation
+
+This set is analysed by [`M12`](../methods/M12-investigate-a-set.md) and changed by [`M11`](../methods/M11-change-a-charter.md).\
+Its members are balanced on what the capability does, and an analysis also checks each family for a counterpart that serves work done without its coordination system.\
+Dependencies between members are the `prerequisite` and `composes` edges declared in each body's frontmatter, so an analysis reads them from those edges and [`tools/skill-graph.mjs`](../tools/skill-graph.mjs), never from names or prose.\
+A candidate that only describes is routed to methods, rules or practices, one a script could take whole to [tools](../tools/README.md), and a composition of capabilities into an operator role to [bundles](../bundles/README.md).
 
 ---
 
