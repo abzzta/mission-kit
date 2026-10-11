@@ -251,7 +251,7 @@ This file described them a second time and the copy had already drifted, naming 
 |---|---|---|
 | [C0](components/README.md) | Components - sovereign shareable units to be used rather than rebuilt | You are about to build a capability that may already exist as a unit you could depend on instead |
 | [C1](components/C1-agp.md) | AGP - name-addressed routing between application components | Parts of your application must reach each other and you are about to write the code that connects them |
-| [C6](components/C6-context-lab.md) | context-lab - experiments on the context given to language-model agents | You are about to judge whether instructions, documents or skills you give agents change what they do, or to build a harness that runs agents to find out |
+| [C2](components/C2-context-lab.md) | context-lab - experiments on the context given to language-model agents | You are about to judge whether instructions, documents or skills you give agents change what they do, or to build a harness that runs agents to find out |
 
 ---
 

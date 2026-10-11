@@ -90,11 +90,21 @@ const BEFORE_THIS_CHECK = {
 	C1: 'the catalogue-entry schema, renamed SC1 on 2026-08-20; C1 is now the AGP component',
 };
 
+// Ids released by a ruling, each with its reason. A release is for a deliberate, one-time move whose
+// citations a reader can still resolve by date; it is never a way past a reuse found by accident.
+const RELEASED_BY_RULING = {
+	C2: 'decision 0094: the schema prefix move C2-C5 -> SC2-SC5 on 2026-08-20 was a one-time fix; the C ids belong to components, numbered without gaps',
+	C3: 'decision 0094, as C2',
+	C4: 'decision 0094, as C2',
+	C5: 'decision 0094, as C2',
+	C6: 'decision 0094: context-lab was registered as C6 on 2026-10-11 and renumbered C2 the same day',
+};
+
 if (process.env.LIST_RETIRED) for (const [id, w] of retired) console.log(`retired  ${id}  ${w.path}`);
 let reused = 0;
 for (const [id, where] of retired) {
 	const now = current.get(id);
-	if (!now || BEFORE_THIS_CHECK[id]) continue;
+	if (!now || BEFORE_THIS_CHECK[id] || RELEASED_BY_RULING[id]) continue;
 	console.log(`FAIL  reused  ${id} is held by ${now}, but was retired at ${where.commit.slice(0, 7)} (${where.path}${where.to ? ` -> ${where.to}` : ''})`);
 	reused++;
 }

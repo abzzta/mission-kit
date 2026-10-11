@@ -1,5 +1,5 @@
 ---
-id: C6
+id: C2
 category: component
 title: context-lab - experiments on the context given to language-model agents
 status: active
@@ -9,7 +9,7 @@ supersedes: []
 related: [C0, A3, A14, M2]
 ---
 
-# C6 - context-lab
+# C2 - context-lab
 
 Sovereignty is `internal`, so a fit gap here is pressure that routes upstream rather than a constraint a consumer works around.
 
