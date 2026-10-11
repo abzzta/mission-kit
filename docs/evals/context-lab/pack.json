@@ -195,7 +195,7 @@
       {
         "id": "s15",
         "question": "Quote the sentence in mission-kit entry S15 that contains the word sub-set, or NONE.",
-        "leak": "sub-set",
+        "leak": "earn a sub-set|second single-medium",
         "arms": [
           "control",
           "on-trigger"
