@@ -135,6 +135,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0091 | 2026-10-10 | A change is judged by its quality - the correct design within its scope, built at the limit and invested forward for those who build on it - and never by its size: no change is chosen or refused for being small or large, though a marginal change is still not made. | general | director | ratified | - | `axioms/README.md`, `axioms/A14-compounding-learning.md` | yes |
 | 0092 | 2026-10-11 | A mechanism that holds none of any tenant's content moves into a neutral core when selected work needs it, even while one tenant needs it; the evidence for promotion is neutrality - the work of making it free of every tenant's data, policies and assumptions done and reviewed - not the count of consumers, and generality no selected work needs is still not built. | general | director | ratified | - | `patterns/P4-neutral-core-tenant-composition.md` | yes |
 | 0093 | 2026-10-11 | context-lab is admitted to the component registry as C6, once usable as 0087 requires: its first delta is complete and mission-kit's suites run on it. | project | director | ratified | amends 0087 | - | - |
+| 0094 | 2026-10-11 | The component registry is numbered without gaps: context-lab is C2, not C6; the schema prefix move that retired C2-C5 was a one-time deliberate fix, so those ids, and C6, are released by name in the id-reuse check. | project | director | ratified | amends 0093 | - | - |
 
 ---
 
@@ -1385,3 +1386,16 @@ Waiting until zorg's pack runs on it - not chosen; `C0` admits on a consumer's n
 
 **Source.**\
 `[V, director ruling 2026-10-11; https://github.com/apnex/context-lab docs/DECISIONS.md 0017]`
+
+### 0094
+
+**Ruling.** context-lab is `C2`.\
+The ids `C2` to `C5`, retired when schemas moved to the `SC` prefix, and `C6`, held for one day, are released by name in `tools/check-id-reuse.mjs`.
+
+**Alternatives refuted.**\
+Keeping `C6` and leaving a gap - refuted by the director: the schema move was a one-time deliberate fix, not a reason for a permanent gap.
+
+**Kind.** project - the numbering of this corpus's registry.
+
+**Source.**\
+`[V, director ruling 2026-10-11]`
