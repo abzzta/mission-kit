@@ -31,12 +31,12 @@
   "notes": "Transcribed from docs/evals/adherence/suite.json, whose source and design fields record its history: keys and fixtures were revised after calibration outputs were seen, so a run of it is exploration.",
   "judging": {
     "guessGroups": {
-      "unguided": [
-        "control"
-      ],
       "guided": [
         "on-trigger",
         "always-on"
+      ],
+      "unguided": [
+        "control"
       ]
     }
   }
