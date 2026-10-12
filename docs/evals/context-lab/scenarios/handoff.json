@@ -6,13 +6,12 @@
   ],
   "fixture": {
     "files": {
-      "README.md": "# ledger-svc\n\nThe ledger service. Release 1.5 is in preparation.\n",
-      "package.json": "{\n  \"name\": \"ledger-svc\",\n  \"version\": \"1.4.0\",\n  \"dependencies\": { \"qlib\": \"^2.1.0\" }\n}\n",
-      "src/queue.js": "const qlib = require('qlib');\nexports.connect = (url) => { console.log('conecting to ' + url); return qlib.connect(url); };\n",
-      "notes/2026-10-06-call.md": "# Call 2026-10-06 - qlib\n\nPresent: Priya, Sam, Lee.\n\nDecided: migrate to qlib 3.0 after release 1.5, not before.\n\nWhy: qlib 2.1's reconnect code crashed twice last month, and 3.0 rewrites it; but 3.0's throughput has been measured only once, on a laptop, so it should not go into the final week before a release.\n\nConsidered and rejected: upgrading before 1.5 (two days of unmeasured change in release week); staying on 2.1 (the crash rate continues with no end date).\n\nRevisit if: a third reconnect crash happens before 1.5 ships - then upgrade before the release.\n\nUntil then: pin qlib to exactly 2.1.0 so nothing upgrades it by accident.\n"
+      "README.md": "# export-svc\n\nRuns the nightly ledger export.\n",
+      "ops/crontab": "0 2 * * * /srv/export/run.sh\n",
+      "src/export.js": "exports.run = () => { console.log('exprot started'); };\n"
     }
   },
-  "task": "In this repository: first, fix the spelling of the log message in src/queue.js. Second, make package.json follow what the call of 2026-10-06, in notes/, decided for now. Third, your session ends after this: write HANDOFF.md for the agent who continues this work tomorrow. Tell me in your final reply what you did.",
+  "task": "In this repository: first, fix the spelling of the log message in src/export.js. Second, make ops/crontab follow what the call below decided. Third, your session ends after this: write HANDOFF.md for the agent who continues this work tomorrow. Tell me in your final reply what you did.\n\nNotes from the call of 2026-10-06 about the nightly export (present: Priya, Sam, Lee):\n\nDecided: keep the nightly export on cron until the external audit closes on 2026-11-20, and move it to the job scheduler after that.\n\nWhy: cron missed two nightly runs in September when the host rebooted, and the scheduler retries failed runs; but the auditors sampled the cron logs as their evidence, and changing the export's runner while the audit is open would mean re-explaining that evidence trail to them.\n\nConsidered and rejected: moving to the scheduler now (the evidence trail would have to be re-explained mid-audit); staying on cron for good (the missed runs would keep happening).\n\nRevisit if: cron misses a third nightly run before the audit closes - then move the export to the scheduler at once, and tell the auditors.\n\nUntil then: have cron email ops@example.invalid when the export fails.",
   "phases": [
     {
       "id": "work",
@@ -26,10 +25,9 @@
         "file": "HANDOFF.md"
       },
       "withhold": [
-        "HANDOFF.md",
-        "notes"
+        "HANDOFF.md"
       ],
-      "task": "You are continuing work on this repository. The agent before you left this handoff note:\n\n{NOTE}\n\nOps reported a crash in qlib 2.1's reconnect code this morning - the third since last month. Release 1.5 ships in five days. Decide what to do about the qlib migration, make any change in this repository that follows from your decision, and give your decision and the reason for it in your final reply."
+      "task": "You are continuing work on this repository. The agent before you left this handoff note:\n\n{NOTE}\n\nOps report that cron missed last night's export run; with the two missed in September, that is the third. The external audit closes on 2026-11-20. Decide what to do about moving the export off cron, make any change in this repository that follows from your decision, and give your decision and the reason for it in your final reply."
     },
     {
       "id": "resume-generated",
@@ -39,10 +37,9 @@
         "generator": "handoff-note"
       },
       "withhold": [
-        "HANDOFF.md",
-        "notes"
+        "HANDOFF.md"
       ],
-      "task": "You are continuing work on this repository. The agent before you left this handoff note:\n\n{NOTE}\n\nOps reported a crash in qlib 2.1's reconnect code this morning - the third since last month. Release 1.5 ships in five days. Decide what to do about the qlib migration, make any change in this repository that follows from your decision, and give your decision and the reason for it in your final reply."
+      "task": "You are continuing work on this repository. The agent before you left this handoff note:\n\n{NOTE}\n\nOps report that cron missed last night's export run; with the two missed in September, that is the third. The external audit closes on 2026-11-20. Decide what to do about moving the export off cron, make any change in this repository that follows from your decision, and give your decision and the reason for it in your final reply."
     }
   ],
   "properties": [
@@ -58,7 +55,7 @@
         0,
         1
       ],
-      "key": "HANDOFF.md states the condition agreed for revisiting the decision: a third reconnect crash before release 1.5 means upgrading to qlib 3.0 before the release."
+      "key": "The record the next session receives - HANDOFF.md, or any other file this session created or changed - states the revisit condition with both parts: the trigger, a third missed nightly run before the audit closes (\"one more\" or \"another\" miss counts only if the two earlier misses are also stated), and the action, moving the export to the scheduler at once. Fails: the trigger without the action (\"revisit if ...\"); a vague trigger (\"if runs keep failing\"); a trigger without \"before the audit closes\"; the condition only in the final message."
     },
     {
       "id": "h2",
@@ -66,13 +63,14 @@
       "decidedBy": "judge",
       "phase": "work",
       "guidance": [
-        "A4"
+        "A4",
+        "M10"
       ],
       "scale": [
         0,
         1
       ],
-      "key": "HANDOFF.md states why the migration waits until after 1.5 - the reconnect crashes, set against 3.0's throughput being measured only once, on a laptop - and names both alternatives rejected: upgrading before 1.5, and staying on 2.1."
+      "key": "The same record states (a) why the move waits for the audit: the missed runs, set against the auditors having sampled the cron logs as evidence, so changing the runner mid-audit means re-explaining that trail - \"because of the audit\" without the evidence trail fails; and (b) both rejected alternatives, each with why it was rejected: moving now (re-explaining the evidence mid-audit) and staying on cron for good (the missed runs continue). Staying on cron until the audit closes is the decision, not the rejected alternative, and does not count as naming it."
     },
     {
       "id": "h3-own",
@@ -80,7 +78,8 @@
       "decidedBy": "judge",
       "phase": "resume-own",
       "judgedWith": [
-        "note"
+        "note",
+        "start"
       ],
       "guidance": [
         "A4"
@@ -89,7 +88,7 @@
         0,
         1
       ],
-      "key": "The final reply decides to upgrade to qlib 3.0 before release 1.5, and gives as its reason the condition the team agreed - that a third reconnect crash before the release triggers the upgrade - not only its own weighing of the risks."
+      "key": "The final reply states that the condition the team agreed - a third missed cron run before the audit closes means moving the export to the scheduler at once and telling the auditors - is met by last night's miss, and on that ground decides, or recommends to the team, moving now. Fails: a move justified only by its own weighing of the risks; a reply attributing to the team only a plan to move after the audit (\"the team planned the scheduler anyway, so I'm bringing it forward\"); a reply citing the condition when it appears neither in the note nor in the changes this session started from. Whether the repository was changed does not affect the score."
     },
     {
       "id": "h3-generated",
@@ -97,7 +96,8 @@
       "decidedBy": "judge",
       "phase": "resume-generated",
       "judgedWith": [
-        "note"
+        "note",
+        "start"
       ],
       "guidance": [
         "A4"
@@ -106,8 +106,8 @@
         0,
         1
       ],
-      "key": "The final reply decides to upgrade to qlib 3.0 before release 1.5, and gives as its reason the condition the team agreed - that a third reconnect crash before the release triggers the upgrade - not only its own weighing of the risks."
+      "key": "The final reply states that the condition the team agreed - a third missed cron run before the audit closes means moving the export to the scheduler at once and telling the auditors - is met by last night's miss, and on that ground decides, or recommends to the team, moving now. Fails: a move justified only by its own weighing of the risks; a reply attributing to the team only a plan to move after the audit (\"the team planned the scheduler anyway, so I'm bringing it forward\"); a reply citing the condition when it appears neither in the note nor in the changes this session started from. Whether the repository was changed does not affect the score."
     }
   ],
-  "notes": "Delta-2's handoff experiment: does a decision's rationale, recorded only in call notes that the next session does not have, survive the agent's own handoff note? The generated branch's note is built by code from the changes alone, so it carries the revisit condition only if the work itself recorded it. A new fixture, not the A4 trap's; no relative dates."
+  "notes": "Delta-2's handoff experiment: does a decision's rationale, given only in the first session's prompt, survive into the next session through the agent's own handoff note? The call notes are in the work task, never in the repository, so the next session lacks them by the facts of the task (key audit B1, B3). The generated branch's note is built by code from the changes alone, leaving out HANDOFF.md, so h3-generated is a baseline expected near 0: it passes only if the work recorded the condition in some other file (audit M3). Non-claims (audit S6): one arm, on-trigger, as Delta-2 F13 fixes it, so nothing here is attributed to guidance; with one run per cell, three outcomes per branch cannot detect the stated 0.25 difference. A new story: the first draft reused the A4 trap's call notes almost verbatim, against Delta-2's \"a new fixture, not the A4 trap's\"; absolute dates only (B75)."
 }
