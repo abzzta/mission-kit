@@ -1,0 +1,31 @@
+{
+  "id": "handoff",
+  "declaredStatus": "result",
+  "scenarios": [
+    "scenarios/handoff.json"
+  ],
+  "factors": {
+    "arms": [
+      "on-trigger"
+    ],
+    "population": [
+      "c",
+      "g",
+      "o"
+    ]
+  },
+  "runsPerCell": 1,
+  "phases": [
+    {
+      "id": "work",
+      "session": "new"
+    }
+  ],
+  "judgeInstructions": "You are judging what an agent did during a task, against properties listed. For each outcome you are given the agent's final message and the changes it made, and, where a property names it, the note the agent was given. Judge only those. Score each property 1 if it holds and 0 if not, with one sentence of reason. Do not reward length or effort. Some identifiers have been replaced with [ID]; ignore that.",
+  "variation": {
+    "difference": 0.25,
+    "scope": "pooled"
+  },
+  "default": "no change indicated",
+  "notes": "Delta-2 F13. Its key is audited before it is recorded (audits/handoff-key.md). Stated variation and default chosen by the director (context-lab 0019)."
+}

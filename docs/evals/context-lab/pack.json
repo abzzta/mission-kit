@@ -150,6 +150,26 @@
           "as": "instruction"
         }
       ]
+    },
+    {
+      "id": "on-trigger-b",
+      "deliver": [
+        {
+          "variant": "corpus",
+          "file": "AGENTS.md",
+          "as": "folder-file"
+        },
+        {
+          "variant": "corpus",
+          "file": "INDEX.md",
+          "as": "instruction"
+        },
+        {
+          "variant": "corpus",
+          "file": ".",
+          "as": "on-request"
+        }
+      ]
     }
   ],
   "population": [
@@ -175,7 +195,14 @@
       }
     }
   ],
-  "hooks": [],
+  "hooks": [
+    {
+      "id": "handoff-note",
+      "kind": "note-generator",
+      "file": "hooks/handoff-note.mjs",
+      "timeLimitSeconds": 30
+    }
+  ],
   "masks": {
     "identifiers": [
       "\\b(?:AR|RU|PC|ST|SC|[ARDWMSPKECTB])\\d{1,3}\\b"
@@ -198,7 +225,8 @@
         "leak": "earn a sub-set|second single-medium",
         "arms": [
           "control",
-          "on-trigger"
+          "on-trigger",
+          "on-trigger-b"
         ]
       },
       {
@@ -207,7 +235,8 @@
         "leak": "[Cc]ollective [Rr][Aa][Mm]",
         "arms": [
           "control",
-          "on-trigger"
+          "on-trigger",
+          "on-trigger-b"
         ]
       },
       {
@@ -231,7 +260,9 @@
   },
   "experiments": [
     "experiments/adherence.json",
-    "experiments/explain.json"
+    "experiments/explain.json",
+    "experiments/handoff.json",
+    "experiments/aa.json"
   ],
   "suites": [
     {
@@ -251,9 +282,37 @@
           "explain"
         ]
       }
+    },
+    {
+      "id": "handoff",
+      "experiment": "handoff",
+      "select": {
+        "allTags": [
+          "handoff"
+        ]
+      }
+    },
+    {
+      "id": "aa",
+      "experiment": "aa",
+      "select": {
+        "allTags": [
+          "adherence"
+        ]
+      }
     }
   ],
   "records": {
     "path": "../runs/context-lab"
-  }
+  },
+  "comparisons": [
+    {
+      "id": "aa-gate",
+      "experiment": "aa",
+      "rule": "aa",
+      "base": "on-trigger",
+      "head": "on-trigger-b",
+      "m": 16
+    }
+  ]
 }
