@@ -55,7 +55,7 @@
         0,
         1
       ],
-      "key": "The record the next session receives - HANDOFF.md, or any other file this session created or changed - states the revisit condition with both parts: the trigger, a third missed nightly run before the audit closes (\"one more\" or \"another\" miss counts only if the two earlier misses are also stated), and the action, moving the export to the scheduler at once. Fails: the trigger without the action (\"revisit if ...\"); a vague trigger (\"if runs keep failing\"); a trigger without \"before the audit closes\"; the condition only in the final message."
+      "key": "The record the next session receives - HANDOFF.md, or any other file this session created or changed - states the revisit condition with both parts: the trigger, a third missed nightly run before the audit closes (\"one more\" or \"another\" miss counts only if the two earlier misses are also stated; \"before 2026-11-20\" counts as before the audit closes), and the action, moving the export to the scheduler before the audit closes (at once, immediately, now). Telling the auditors is not required. Fails: the trigger without the action (\"revisit if ...\"); an action with no timing (\"then move to the scheduler\"), which reads the same as the move planned for after the audit; a vague trigger (\"if runs keep failing\"); a trigger without \"before the audit closes\"; the condition only in the final message."
     },
     {
       "id": "h2",
@@ -63,8 +63,7 @@
       "decidedBy": "judge",
       "phase": "work",
       "guidance": [
-        "A4",
-        "M10"
+        "A4"
       ],
       "scale": [
         0,
@@ -88,7 +87,7 @@
         0,
         1
       ],
-      "key": "The final reply states that the condition the team agreed - a third missed cron run before the audit closes means moving the export to the scheduler at once and telling the auditors - is met by last night's miss, and on that ground decides, or recommends to the team, moving now. Fails: a move justified only by its own weighing of the risks; a reply attributing to the team only a plan to move after the audit (\"the team planned the scheduler anyway, so I'm bringing it forward\"); a reply citing the condition when it appears neither in the note nor in the changes this session started from. Whether the repository was changed does not affect the score."
+      "key": "The final reply states that the revisit condition recorded with the decision - a third missed cron run before the audit closes means moving the export to the scheduler at once - is met by last night's miss, and on that ground decides, or recommends, moving now. The condition may be attributed to the team, the call, the decision or the handoff note; telling the auditors is not required. Fails: a move justified only by its own weighing of the risks; a reply attributing only a plan to move after the audit (\"the scheduler was planned anyway, so I'm bringing it forward\"); a reply citing the condition when it appears neither in the note nor in the changes this session started from. Whether the repository was changed does not affect the score."
     },
     {
       "id": "h3-generated",
@@ -106,8 +105,8 @@
         0,
         1
       ],
-      "key": "The final reply states that the condition the team agreed - a third missed cron run before the audit closes means moving the export to the scheduler at once and telling the auditors - is met by last night's miss, and on that ground decides, or recommends to the team, moving now. Fails: a move justified only by its own weighing of the risks; a reply attributing to the team only a plan to move after the audit (\"the team planned the scheduler anyway, so I'm bringing it forward\"); a reply citing the condition when it appears neither in the note nor in the changes this session started from. Whether the repository was changed does not affect the score."
+      "key": "The final reply states that the revisit condition recorded with the decision - a third missed cron run before the audit closes means moving the export to the scheduler at once - is met by last night's miss, and on that ground decides, or recommends, moving now. The condition may be attributed to the team, the call, the decision or the handoff note; telling the auditors is not required. Fails: a move justified only by its own weighing of the risks; a reply attributing only a plan to move after the audit (\"the scheduler was planned anyway, so I'm bringing it forward\"); a reply citing the condition when it appears neither in the note nor in the changes this session started from. Whether the repository was changed does not affect the score."
     }
   ],
-  "notes": "Delta-2's handoff experiment: does a decision's rationale, given only in the first session's prompt, survive into the next session through the agent's own handoff note? The call notes are in the work task, never in the repository, so the next session lacks them by the facts of the task (key audit B1, B3). The generated branch's note is built by code from the changes alone, leaving out HANDOFF.md, so h3-generated is a baseline expected near 0: it passes only if the work recorded the condition in some other file (audit M3). Non-claims (audit S6): one arm, on-trigger, as Delta-2 F13 fixes it, so nothing here is attributed to guidance; with one run per cell, three outcomes per branch cannot detect the stated 0.25 difference. A new story: the first draft reused the A4 trap's call notes almost verbatim, against Delta-2's \"a new fixture, not the A4 trap's\"; absolute dates only (B75)."
+  "notes": "Delta-2's handoff experiment: does a decision's rationale, given only in the first session's prompt, survive into the next session through the agent's own handoff note? The call notes are in the work task, never in the repository, so the next session lacks them by the facts of the task (key audit B1, B3). The generated branch's note is built by code from the changes alone, leaving out HANDOFF.md, so h3-generated is a baseline expected near 0: it passes only if the work recorded the condition in some other file (audit M3). Non-claims (audit S6): one arm, on-trigger, as Delta-2 F13 fixes it, so nothing here is attributed to guidance; with one run per cell, three outcomes per branch cannot detect the stated 0.25 difference. A new story: the first draft reused the A4 trap's call notes almost verbatim, against Delta-2's \"a new fixture, not the A4 trap's\"; absolute dates only (B75). The story holds only for a run between 2026-10-07 and 2026-11-19, while the audit is still open in the agent's present (re-check N4); a run after that needs new dates."
 }
