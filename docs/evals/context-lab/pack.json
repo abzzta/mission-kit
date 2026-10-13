@@ -177,13 +177,25 @@
       "id": "c",
       "family": "claude",
       "runtime": "opencode",
-      "model": "litellm-netbird/claude-opus-5-5"
+      "model": "litellm-nexus/claude-opus-5-5"
     },
     {
-      "id": "g",
+      "id": "a",
       "family": "gemini",
       "runtime": "opencode",
-      "model": "litellm-netbird/gemini-3.8-flash"
+      "model": "litellm-nexus/gemini-4-argon"
+    },
+    {
+      "id": "f",
+      "family": "gemini",
+      "runtime": "opencode",
+      "model": "litellm-nexus/gemini-3.8-flash"
+    },
+    {
+      "id": "x",
+      "family": "grok",
+      "runtime": "opencode",
+      "model": "litellm-nexus/grok-4.20-non-reasoning"
     },
     {
       "id": "o",
