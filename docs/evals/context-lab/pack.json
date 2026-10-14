@@ -177,25 +177,37 @@
       "id": "c",
       "family": "claude",
       "runtime": "opencode",
-      "model": "litellm-nexus/claude-opus-5-5"
+      "model": "litellm-nexus/claude-opus-5-5",
+      "settings": {
+        "outputTokenMax": 1048576
+      }
     },
     {
       "id": "a",
       "family": "gemini",
       "runtime": "opencode",
-      "model": "litellm-nexus/gemini-4-argon"
+      "model": "litellm-nexus/gemini-4-argon",
+      "settings": {
+        "outputTokenMax": 1048576
+      }
     },
     {
       "id": "f",
       "family": "gemini",
       "runtime": "opencode",
-      "model": "litellm-nexus/gemini-3.8-flash"
+      "model": "litellm-nexus/gemini-3.8-flash",
+      "settings": {
+        "outputTokenMax": 1048576
+      }
     },
     {
       "id": "x",
       "family": "grok",
       "runtime": "opencode",
-      "model": "litellm-nexus/grok-4.20-non-reasoning"
+      "model": "litellm-nexus/grok-4.20-non-reasoning",
+      "settings": {
+        "outputTokenMax": 1048576
+      }
     },
     {
       "id": "o",
