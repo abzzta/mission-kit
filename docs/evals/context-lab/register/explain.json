@@ -1,0 +1,11 @@
+{
+  "experiment": "explain",
+  "records": [
+    {
+      "experiment": "explain",
+      "hash": "8811415f491059ed21e9ab0f9ff8f104e12cad7872d1f5e9318ad76c6fdcba12",
+      "recordedAt": "2026-10-14T11:01:32.837Z",
+      "declaredStatus": "result"
+    }
+  ]
+}

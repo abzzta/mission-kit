@@ -1,0 +1,11 @@
+{
+  "experiment": "adherence",
+  "records": [
+    {
+      "experiment": "adherence",
+      "hash": "59e7b0ee739b70786afb3b859a0ac1cfcc829105178c45c2c3f114651610777f",
+      "recordedAt": "2026-10-14T11:01:32.726Z",
+      "declaredStatus": "exploration"
+    }
+  ]
+}
