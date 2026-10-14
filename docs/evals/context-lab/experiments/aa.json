@@ -35,7 +35,13 @@
         "on-trigger",
         "on-trigger-b"
       ]
-    }
+    },
+    "judges": [
+      "c",
+      "a",
+      "x",
+      "o"
+    ]
   },
   "variation": {
     "difference": 0.25,

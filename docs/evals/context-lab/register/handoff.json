@@ -6,6 +6,12 @@
       "hash": "24561fec71690983b5ab3041d8c9f3ae8c1c09987cbadbe171c50748b6248892",
       "recordedAt": "2026-10-12T10:55:59.546Z",
       "declaredStatus": "result"
+    },
+    {
+      "experiment": "handoff",
+      "hash": "f168a3efcb2034f61ba8afdc64991c0921bc2882dd1c0a9e05bde1935c94aae0",
+      "recordedAt": "2026-10-14T00:29:53.882Z",
+      "declaredStatus": "result"
     }
   ]
 }

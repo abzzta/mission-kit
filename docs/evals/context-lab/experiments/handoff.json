@@ -29,5 +29,13 @@
     "scope": "pooled"
   },
   "default": "no change indicated",
-  "notes": "Delta-2 F13. Its key is audited before it is recorded (audits/handoff-key.md). Stated variation and default chosen by the director (context-lab 0019)."
+  "notes": "Delta-2 F13. Its key is audited before it is recorded (audits/handoff-key.md). Stated variation and default chosen by the director (context-lab 0019).",
+  "judging": {
+    "judges": [
+      "c",
+      "a",
+      "x",
+      "o"
+    ]
+  }
 }
