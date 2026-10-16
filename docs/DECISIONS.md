@@ -136,6 +136,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0092 | 2026-10-11 | A mechanism that holds none of any tenant's content moves into a neutral core when selected work needs it, even while one tenant needs it; the evidence for promotion is neutrality - the work of making it free of every tenant's data, policies and assumptions done and reviewed - not the count of consumers, and generality no selected work needs is still not built. | general | director | ratified | - | `patterns/P4-neutral-core-tenant-composition.md` | yes |
 | 0093 | 2026-10-11 | context-lab is admitted to the component registry as C6, once usable as 0087 requires: its first delta is complete and mission-kit's suites run on it. | project | director | ratified | amends 0087 | - | - |
 | 0094 | 2026-10-11 | The component registry is numbered without gaps: context-lab is C2, not C6; the schema prefix move that retired C2-C5 was a one-time deliberate fix, so those ids, and C6, are released by name in the id-reuse check. | project | director | ratified | amends 0093 | - | - |
+| 0095 | 2026-10-16 | The abbreviations CSSA and TSSA, one downstream programme's names for AR1's current and target projections, are dropped from AR1 and AR6; the projections are named by their frontmatter values (`current` and `target`) and fixed paths (`docs/ARCHITECTURE.md` and `docs/ARCHITECTURE-TARGET.md`). | general | director | ratified | - | `artifacts/AR1-system-architecture.md`, `artifacts/AR6-vision.md` | yes |
 
 ---
 
@@ -1399,3 +1400,18 @@ Keeping `C6` and leaving a gap - refuted by the director: the schema move was a 
 
 **Source.**\
 `[V, director ruling 2026-10-11]`
+
+### 0095
+
+**Ruling.**\
+`"conventionally named CSSA and TSSA"` is dropped from `AR1` and `AR6`.\
+The two temporal projections of a system architecture are named by their `instant` values (`current` and `target`) and by their fixed instance paths (`docs/ARCHITECTURE.md` and `docs/ARCHITECTURE-TARGET.md`).
+
+**Alternatives refuted.**\
+Keeping `CSSA` and `TSSA` without `"conventionally"` - refuted because it retains undefined abbreviations from a single downstream programme that no other repository uses.\
+Promoting `CSSA` and `TSSA` as `E`-layer entities - refuted because `AR1` already defines the two projections directly.
+
+**Kind.** general - how `AR1` projections are named across adopting projects.
+
+**Source.**\
+`[V, director ruling 2026-10-16; docs/BACKLOG.md B10, M4.1]`

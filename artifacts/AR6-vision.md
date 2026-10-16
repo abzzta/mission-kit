@@ -37,7 +37,7 @@ A vision describes an endeavour and names no component at all.
 Two discriminators, both observable:
 
 - **Structure.** If the document names a component, an interface or a duty, it is an `AR1` at some instant. A vision that has grown a component is an architecture wearing the wrong title.
-- **Projection.** `AR1` is *temporally projected* - one architecture stated at two instants, `current` and `target`, conventionally CSSA and TSSA. **A vision is not projected.** There is no current vision and target vision; a vision that changed is a new vision, ratified as such, and never a second view of the same one.
+- **Projection.** `AR1` is *temporally projected* - one architecture stated at two instants, `current` and `target`. **A vision is not projected.** There is no current vision and target vision; a vision that changed is a new vision, ratified as such, and never a second view of the same one.
 
 The relation runs one way.\
 A vision shapes which architecture is worth having; the architecture knows nothing of the vision.\

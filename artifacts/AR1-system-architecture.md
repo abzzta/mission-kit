@@ -29,7 +29,7 @@ An architecture at either projection states structure - components, duties, inte
 Why the *programme* exists is a different altitude and belongs to [`AR6`](AR6-vision.md).\
 The discriminator, when the two are hard to tell apart: a document that states purpose and names no component is not an architecture at any instant.
 
-**Two temporal projections of one architecture**, declared in frontmatter as `instant: current | target`, conventionally named **CSSA** and **TSSA**:
+**Two temporal projections of one architecture**, declared in frontmatter as `instant: current | target`:
 
 - **`current`** - where the system is. **Derived, never hand-authored.** A hand-written statement of where we are is a second representation of the running system, and it drifts. It is evidenced instead: generated from the system's own source where structure can be read from it - its declared components, their duties, the checks that hold it - from delta exit criteria that are binary and gate-checked, and from what the verification harness proves. Its reasoning sections stay authored; its structure does not.
 - **`target`** - where the system is going. Authored, and **living**: it tracks the ratified ruling corpus continuously rather than being frozen and revised. It is the current architecture plus every ratified decision not yet built, so it diverges from the current only while a decision is pending, and a project that builds each ruling as it is made may hold no separate target document.

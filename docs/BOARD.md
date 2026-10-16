@@ -121,7 +121,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B84` | S4 | A2 signal | held | A registry entry's Contract section is restated by hand beside the component's own contract, the two drift, and no schema holds the capability-table form eight component repositories already use. |
 | `B85` | S4 | A3 signal | held | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. |
 | `B86` | S4 | A7 signal | held | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). |
-| `B10` | S5 | A4 signal | M4.1 | `CSSA`/`TSSA` is one downstream programme's vocabulary presented as a corpus convention. |
 | `B39` | S5 | A3 signal | held | Style cannot be scoped by medium. |
 <!-- END GENERATED: ledger -->
 
@@ -182,11 +181,11 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 
 ---
 
-## M4 - conventions and enforcement - `TODO`
+## M4 - conventions and enforcement - `DONE`
 
 | # | Item | Row | Status |
 |---|---|---|---|
-| M4.1 | Rule on `CSSA`/`TSSA` - keep, drop "conventionally", or promote as `E` entities | `B10` | `TODO` |
+| M4.1 | Rule on `CSSA`/`TSSA` - keep, drop "conventionally", or promote as `E` entities | `B10` | `DONE` - dropped from `AR1` and `AR6` (`0095`) |
 | M4.2 | Mechanize the board-record contract: every item cites a live row, every open row is on the board or in Held, milestone order matches the plan | `B16` | `DONE` |
 | M4.3 | `AR2` instance naming and ordinal scheme | `B7` | `DONE` - with M2.6 (`0076`) |
 | M4.4 | Retry network checks with backoff on 5xx, so throttling is told apart from a broken address | `B27` | `DONE` - `check-standing-context.sh` retries 3x with backoff on 5xx/`000` |
