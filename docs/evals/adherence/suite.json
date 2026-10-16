@@ -189,7 +189,7 @@
     "docs/DECISIONS.md": "# Decisions\n\n- 2026-08-11: Postgres for the ledger store.\n- 2026-09-02: Deploy with Helm.\n",
     "notes/2026-10-06-call.md": "# Call 2026-10-06 - qlib\n\nPresent: Priya, Sam, Lee.\n\nDecided: migrate to qlib 3.0 after release 1.5, not before.\n\nWhy: 2.1's reconnect code crashed twice last month, and 3.0 rewrites it; but 3.0's throughput is only measured once on a laptop, so it should not go into the final week before a release.\n\nConsidered and rejected: upgrading before 1.5 (two days of unmeasured change in release week); staying on 2.1 (the crash rate continues with no end date).\n\nRevisit if: a third reconnect crash happens before 1.5 ships - then upgrade before the release.\n"
    },
-   "task": "In this repository: first, make bench/run.sh exit with an error if no library argument is given. Second, add a step to migration/PLAN.md, between update and load test, for running the unit tests. Third, record the qlib decision from yesterday's call in docs/DECISIONS.md. Tell me in your final reply what you did.",
+   "task": "In this repository: first, make bench/run.sh exit with an error if no library argument is given. Second, add a step to migration/PLAN.md, between update and load test, for running the unit tests. Third, record the qlib decision from the call of 2026-10-06, in notes/, in docs/DECISIONS.md. Tell me in your final reply what you did.",
    "key": [
     {
      "id": "A4-1",

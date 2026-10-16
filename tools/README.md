@@ -278,9 +278,10 @@ Validates a standing-context document against the contract it declares.
 ```sh
 tools/check-standing-context.sh /path/to/AGENTS.md
 tools/check-standing-context.sh --no-network /path/to/AGENTS.md
+tools/check-standing-context.sh --addresses-only [--no-network] FILE...
 ```
 
-`check-all.sh` runs it twice: once on [`_template-standing-context.md`](../_template-standing-context.md), and once on this repository's own [`AGENTS.md`](../AGENTS.md).\
+`check-all.sh` runs it three times: once on [`_template-standing-context.md`](../_template-standing-context.md), once on this repository's own [`AGENTS.md`](../AGENTS.md), and once with `--addresses-only` across every tracked markdown file (`B27`, `B30`, `M4.4`, `M4.5`).\
 The second is the point.\
 A corpus that defines the contract and holds an instance nothing validates is asserting a rule it does not keep.
 

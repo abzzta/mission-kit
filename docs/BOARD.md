@@ -83,8 +83,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B77` | S3 | A3 mandate | held | The adherence runner has mission-kit built into it, so it is not yet the universal component `0087` and `0088` place in `context-lab`. |
 | `B18` | S4 | A4 mandate | held | Methodology has no procedure for handing over work in progress. |
 | `B83` | S2 | A8 signal | held | `tools/s6-one-sentence-per-line.mjs` reads a sentence beginning with a lowercase name as the continuation of the line before, so it fails correct files and its `--fix` joins two sentences onto one line. |
-| `B27` | S3 | A8 signal | M4.4 | The full gate's network check fails under GitHub throttling while passing in isolation. |
-| `B30` | S3 | A8 signal | M4.5 | External addresses outside `AGENTS.md` are checked by nothing, and placeholder links look real. |
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
 | `B12` | S4 | A14 signal | held | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. |
@@ -117,7 +115,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B71` | S4 | A3 signal | held | No work-type produces a board, a delta or a vision. |
 | `B73` | S4 | A14 signal | held | No guidance in this corpus is measured for adherence, only for comprehension. |
 | `B74` | S4 | A13 signal | held | `S15` gives two counts for a decision message's picks that cannot both hold. |
-| `B75` | S4 | A14 signal | held | The `A4` adherence trap depends on the real date. |
 | `B78` | S4 | A3 signal | held | No study tests how agents compose mission-kit's components, or which boxes recur in designs that the registry lacks. |
 | `B79` | S4 | A2 signal | held | The language and layout of a component are a convention held only in repositories. |
 | `B80` | S4 | A2 signal | held | The adherence and `explain` suites exist twice: as `docs/evals/<suite>/suite.json` for mission-kit's tools, and as scenarios in the context-lab pack. |
@@ -192,8 +189,8 @@ Every ID-bearing layer either has an observed consumer or a recorded reason it h
 | M4.1 | Rule on `CSSA`/`TSSA` - keep, drop "conventionally", or promote as `E` entities | `B10` | `TODO` |
 | M4.2 | Mechanize the board-record contract: every item cites a live row, every open row is on the board or in Held, milestone order matches the plan | `B16` | `DONE` |
 | M4.3 | `AR2` instance naming and ordinal scheme | `B7` | `DONE` - with M2.6 (`0076`) |
-| M4.4 | Retry network checks with backoff on 5xx, so throttling is told apart from a broken address | `B27` | `TODO` |
-| M4.5 | Check every external address in the corpus, and make placeholders unmistakable | `B30` | `TODO` |
+| M4.4 | Retry network checks with backoff on 5xx, so throttling is told apart from a broken address | `B27` | `DONE` - `check-standing-context.sh` retries 3x with backoff on 5xx/`000` |
+| M4.5 | Check every external address in the corpus, and make placeholders unmistakable | `B30` | `DONE` - `<org>/<repo>` placeholders; `--addresses-only` across all tracked markdown |
 | M4.6 | Derive `docs/ARCHITECTURE.md`'s current projection from the completed deltas, or record exactly what stops it | `B8` | `DONE` - structure generated (`0080`) |
 
 ---
@@ -279,7 +276,6 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B71` | S4 | A3 signal | No work-type produces a board, a delta or a vision. | one of these is done as claimed work on the coordination substrate, or a project asks which work-type authors one. |
 | `B73` | S4 | A14 signal | No guidance in this corpus is measured for adherence, only for comprehension. | The first adherence run is scored: write `A3` and `A14` traps next, then the remaining axioms, each key committed and audited before its run |
 | `B74` | S4 | A13 signal | `S15` gives two counts for a decision message's picks that cannot both hold. | `S15` is next changed, or a reader or scorer splits on the pick count again |
-| `B75` | S4 | A14 signal | The `A4` adherence trap depends on the real date. | The suite is next revised: drop the relative date, then re-run `A4` alone |
 | `B78` | S4 | A3 signal | No study tests how agents compose mission-kit's components, or which boxes recur in designs that the registry lacks. | mission-kit's pack runs on context-lab's core (context-lab M1.2) |
 | `B79` | S4 | A2 signal | The language and layout of a component are a convention held only in repositories. | a third component is founded, or a component departs from the convention again |
 | `B80` | S4 | A2 signal | The adherence and `explain` suites exist twice: as `docs/evals/<suite>/suite.json` for mission-kit's tools, and as scenarios in the context-lab pack. | either copy is edited, or mission-kit's tools retire (context-lab board M3.2), when the suite files go |

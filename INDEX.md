@@ -21,7 +21,7 @@ A section states its layer once, in the heading, rather than in every row.\
 `Status` appears only in sections holding an entry that is not `active`.
 
 Links below are relative to the repository root.\
-Resolve them against a local mission-kit checkout when you have one, otherwise fetch from `https://raw.githubusercontent.com/apnex/mission-kit/main/`.
+Resolve them against a local mission-kit checkout when you have one, otherwise fetch from `https://raw.githubusercontent.com/apnex/mission-kit/main/<path>`.
 
 Layers that carry no ID prefix hold mechanism rather than knowledge, so they appear in no ledger.\
 They are listed once, with the concern each owns, in the [charter](README.md#mechanics).\

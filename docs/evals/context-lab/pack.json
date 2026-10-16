@@ -299,6 +299,16 @@
       }
     },
     {
+      "id": "adherence-a4",
+      "experiment": "adherence",
+      "select": {
+        "allTags": [
+          "adherence",
+          "exercises:A4"
+        ]
+      }
+    },
+    {
       "id": "explain",
       "experiment": "explain",
       "select": {

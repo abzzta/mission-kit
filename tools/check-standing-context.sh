@@ -18,17 +18,21 @@
 #
 # Usage:  tools/check-standing-context.sh PATH_TO_AGENTS.md [...]
 #         tools/check-standing-context.sh --no-network PATH   (skip address resolution)
+#         tools/check-standing-context.sh --addresses-only [--no-network] FILE [...]
+#                                                             (check external https addresses only)
 
 set -uo pipefail
 
 DEFAULT_SECTIONS="Contract|External references|Enforcement"
 
 network=1
+addresses_only=0
 files=()
 while [ $# -gt 0 ]; do
 	case "$1" in
 		--no-network) network=0; shift ;;
-		-h|--help) sed -n '2,20p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+		--addresses-only) addresses_only=1; shift ;;
+		-h|--help) sed -n '2,22p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
 		*) files+=("$1"); shift ;;
 	esac
 done
@@ -36,6 +40,40 @@ done
 
 fail_count=0
 report() { printf 'FAIL  %-10s %s  %s\n' "$1" "$2" "$3"; fail_count=$((fail_count + 1)); }
+
+# Fetch one address with retry and backoff on HTTP 5xx or transient failure (000), so throttling
+# is told apart from a broken address (B27, M4.4).
+fetch_code() {
+	local url=$1 code="000" delay=1 attempt
+	for attempt in 1 2 3; do
+		code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 15 "$url" 2>/dev/null || echo 000)
+		case "$code" in
+			5*|000)
+				[ "$attempt" -lt 3 ] && sleep "$delay"
+				delay=$((delay * 2))
+				;;
+			*) break ;;
+		esac
+	done
+	printf '%s' "$code"
+}
+
+if [ "$addresses_only" -eq 1 ]; then
+	if [ "$network" -eq 1 ]; then
+		while IFS= read -r url; do
+			[ -z "$url" ] && continue
+			code=$(fetch_code "$url")
+			[ "$code" = "200" ] || report address "corpus" "$url returned HTTP $code"
+		done < <(grep -hoP 'https://[^\s`)>,]+' "${files[@]}" 2>/dev/null | sed 's/[.]$//' | grep -v '[<>{}]' | sort -u)
+	fi
+	echo
+	if [ "$fail_count" -gt 0 ]; then
+		echo "$fail_count failure(s) across ${#files[@]} document(s)."
+		exit 1
+	fi
+	echo "clean: ${#files[@]} document(s)."
+	exit 0
+fi
 
 # Read one scalar key out of the frontmatter block.
 fm_scalar() {
@@ -98,7 +136,7 @@ for f in "${files[@]}"; do
 	if [ "$network" -eq 1 ]; then
 		while IFS= read -r url; do
 			[ -z "$url" ] && continue
-			code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 15 "$url" 2>/dev/null || echo 000)
+			code=$(fetch_code "$url")
 			[ "$code" = "200" ] || report address "$f" "$url returned HTTP $code"
 		# A URL carrying a placeholder is a template, not an address; do not resolve it.
 		done < <(echo "$body" | grep -oP 'https://[^\s`)>,]+' | sed 's/[.]$//' | grep -v '[<>{}]' | sort -u)

@@ -40,11 +40,11 @@ Format:
 **Probe date:** YYYY-MM-DD
 
 ## Canonical repo
-- https://github.com/org/repo @ <full-sha>
+- https://github.com/<org>/<repo> @ <full-sha>
 
 ## Satellite repos (referenced, not probed)
-- https://github.com/org/repo-sdk-python - purpose: Python client SDK
-- https://github.com/org/repo-docs - purpose: docs site source
+- https://github.com/<org>/<repo>-sdk-python - purpose: Python client SDK
+- https://github.com/<org>/<repo>-docs - purpose: docs site source
 
 ## Documentation
 | URL | Section | Retrieved |

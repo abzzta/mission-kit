@@ -262,6 +262,7 @@ A claim about this corpus is proved by running them, not by reading it.
 | entries conform to their contract | `schemas test suite` |
 | standing-context template holds | `check-standing-context.sh` |
 | this repo's own standing context holds | `check-standing-context.sh` |
+| external addresses across the corpus resolve | `check-standing-context.sh` |
 | every changed markdown file keeps the style rules a script can hold | the `s*` tools, on changed files |
 <!-- END GENERATED: architecture-checks -->
 

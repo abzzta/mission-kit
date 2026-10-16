@@ -72,6 +72,8 @@ run "catalogue graph resolves" node tools/skill-graph.mjs
 run "entries conform to their contract" bash -c 'cd schemas && npm ci --silent >/dev/null 2>&1 || npm install --silent >/dev/null 2>&1; npm test --silent'
 run "standing-context template holds" ./tools/check-standing-context.sh $network_flag _template-standing-context.md
 run "this repo's own standing context holds" ./tools/check-standing-context.sh $network_flag AGENTS.md
+mapfile -t tracked_md < <(git ls-files '*.md')
+run "external addresses across the corpus resolve" ./tools/check-standing-context.sh --addresses-only $network_flag "${tracked_md[@]}"
 
 # A tool's own behaviour tests, discovered rather than listed, so adding a test adds its gate.
 # These run over fixtures rather than the corpus, so they are unconditional: a checker can be
