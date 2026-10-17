@@ -33,10 +33,13 @@ What a consumer depends on, and what it may not reach past.
 
 | surface | contract |
 |---|---|
-| construction | one factory for one implementation; a node's position in a topology is configuration, never a different type |
-| addressing | an endpoint name is the unit of reachability - never a host, port, address, or intermediate node |
+| construction | one factory (`createNode`) for one implementation; a node's position in a topology is configuration, never a different type |
+| addressing | an endpoint name is the unit of reachability - never a host, port, address, or intermediate hop; a sender may optionally select which advertiser instance of that endpoint a message is for, as a requirement (refused if unmet, locally or downstream) or a preference |
 | wire | every named public data-only structure carries its own schema, generated rather than hand-written |
-| send | resolves only when one node admitted the message against a route it can justify; a message with no usable route is refused before it is sent, never accepted and dropped |
+| send | resolves only when one node admitted the message against a route it can justify; a message with no usable route is refused before it is sent, never accepted and dropped; an admission deadline (`timeoutMs`) or cancellation that wins before the admission commit boundary rejects the send (`TIMEOUT` or `ABORTED`) so it is never admitted later; each hop enforces per-hop flow control, pacing senders and refusing when its queue is full rather than buffering without bound |
+| delivery report | per message and per destination, reports one of three terminal outcomes: `delivered` (admitted to the destination's handler, not processed), `failed` (refused before any destination handler admitted it), or `unknown` (AGP can no longer determine whether a handler admitted it, such as on session loss); no report or expired tracking establishes nothing |
+| correlation | an optional application-owned correlation label travels unchanged through forwarding, handler delivery, the send receipt and the delivery report so the application can pair a reply send with a request; AGP never generates, pairs or deduplicates labels |
+| peer identity | the transport reports bounded peer-identity evidence (self-asserted or proved with per-node keys) and the application supplies the admission ruling |
 | carrier | a neutral transport port, with a conformance kit a new carrier is tested against |
 | observation | read-only projections of node state; observing never mutates |
 
@@ -109,26 +112,25 @@ A gap that can be closed at that seam is not pressure on this component at all.
 
 ## Edges
 
-**Composes** - eight sovereign units, each stating one duty, at the altitude below this entry.
+**Contains** - eight sovereign units, each stating one duty, at the altitude below this entry; because AGP contains them, it inherits every trait any of them has ([`E5`](../entities/E5-system.md)).
 
-| unit | duty |
-|---|---|
-| core | node configuration and state schemas, peer state machine, routing information base, bounded resources, clocks, canonical operations |
-| protocol | wire schemas, generated structures, codec, preflight checks, contextual semantics |
-| transport | the carrier-neutral port: listener, acquisition, channel, terminal, evidence, diagnostics, and its conformance kit |
-| transport-node-ws | a runtime implementation of the neutral port |
-| transport-loopback | a process-local implementation of the neutral port |
-| binding-websocket | the wire protocol over one carrier: configuration, subprotocol, validation, close mappings |
-| node | lifecycle, endpoints, sessions, routing composition, data admission, reverse errors |
-| management-http | an optional read-only projection over node state |
+| unit | duty | implements |
+|---|---|---|
+| core | node configuration and state schemas, peer state machine, routing information base, bounded resources, clocks, canonical operations | - |
+| protocol | wire schemas, generated structures, codec, preflight checks, contextual semantics | - |
+| transport | the carrier-neutral port: listener, acquisition, channel, terminal, evidence, diagnostics, and its conformance kit | - |
+| transport-node-ws | a runtime WebSocket implementation of the neutral port | `transport` |
+| transport-loopback | a process-local implementation of the neutral port | `transport` |
+| binding-websocket | the wire protocol over one carrier: configuration, subprotocol, validation, close mappings | - |
+| node | lifecycle, endpoints, sessions, routing composition, data admission, reverse errors | - |
+| management-http | an optional read-only projection over node state | - |
 
-**Composed-by** - nothing yet.
+**Contained-by** - nothing; AGP is a top-level registered component.
 
-None of the eight is registered here.\
+**Consumes** - nothing; AGP depends on no other registered component.
+
+**Consumed-by** - `operation-call` and `operation-proxy` (in `zorg`), which use AGP through its declared contract without containing it, so neither inherits internal details across the boundary ([`E5`](../entities/E5-system.md)).
+
+None of the eight contained units is registered here.\
 Each earns an entry when a consumer outside this component needs it, per [`A3`](../axioms/A3-sovereign-composition.md)'s Earned Exposure, and not before.\
-`transport` is the likeliest first: a carrier-neutral port shipped with a conformance kit is useful to anything that has to abstract a carrier.
-
-**A relation this vocabulary cannot express.**\
-Three of the eight stand in a port-and-adapter relation - one declares the contract, two implement it and are substitutable for each other.\
-`composes` and `composed-by` record that all three are inside AGP and lose the fact that two are interchangeable.\
-Substitutability is the property a registry exists to expose, so the omission is worth recording rather than working around.
+`transport` is the likeliest first: a carrier-neutral port shipped with a conformance kit is useful to anything that has to abstract a carrier, and `implements` records that `transport-node-ws` and `transport-loopback` are interchangeable adapters for that port.

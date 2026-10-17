@@ -24,6 +24,14 @@
       "canaries": [
         "The lantern on pier nine burns green."
       ]
+    },
+    {
+      "id": "corpus-base",
+      "source": "mission-kit",
+      "revision": "2256e56ce998239a27ab916389829fa55eb2c649",
+      "canaries": [
+        "The lantern on pier nine burns green."
+      ]
     }
   ],
   "arms": [
@@ -170,6 +178,26 @@
           "as": "on-request"
         }
       ]
+    },
+    {
+      "id": "on-trigger-base",
+      "deliver": [
+        {
+          "variant": "corpus-base",
+          "file": "AGENTS.md",
+          "as": "folder-file"
+        },
+        {
+          "variant": "corpus-base",
+          "file": "INDEX.md",
+          "as": "instruction"
+        },
+        {
+          "variant": "corpus-base",
+          "file": ".",
+          "as": "on-request"
+        }
+      ]
     }
   ],
   "population": [
@@ -250,7 +278,8 @@
         "arms": [
           "control",
           "on-trigger",
-          "on-trigger-b"
+          "on-trigger-b",
+          "on-trigger-base"
         ]
       },
       {
@@ -260,7 +289,8 @@
         "arms": [
           "control",
           "on-trigger",
-          "on-trigger-b"
+          "on-trigger-b",
+          "on-trigger-base"
         ]
       },
       {

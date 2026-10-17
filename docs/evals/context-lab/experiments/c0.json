@@ -6,6 +6,7 @@
   ],
   "factors": {
     "arms": [
+      "on-trigger-base",
       "on-trigger"
     ],
     "population": [

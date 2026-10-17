@@ -22,8 +22,8 @@ Run experiments on the context language-model agents are given, and report what 
 That is the whole duty.\
 It does not also own a project's experiments, keys or conclusions, edit a project's working context, rank models, or decide for a project - each of those is either the project's or a second concern.
 
-At the altitude below this one it is twenty-one units, each with one duty, listed in its architecture's anchored core.\
-That is the anchored core of one box, per [`C0`](README.md#duty-is-singular-at-an-altitude), not twenty-one duties.
+At the altitude below this one it is twenty-two units, each with one duty, listed in its architecture's anchored core.\
+That is the anchored core of one box, per [`C0`](README.md#duty-is-singular-at-an-altitude), not twenty-two duties.
 
 ---
 
@@ -100,12 +100,13 @@ Internal and sovereign, so a fit gap has somewhere to go.
 
 ## Edges
 
-**Composes** - twenty-one units at the altitude below this entry, each with one duty, in the anchored core of its architecture: pack checker, experiment register, selector, variant builder, arm composer, workspace builder, runtime adapter, isolation prober, phase driver, answer parser, validity classifier, code measurer, blinder, judge panel, pair chooser, human panel, tally, threshold deriver, comparator, candidate writer, run conductor.
+**Contains** - twenty-two units at the altitude below this entry, each with one duty, in the anchored core of its architecture: pack checker, experiment register, selector, variant builder, arm composer, workspace builder, runtime adapter (implemented by the `opencode`, `codex`, and `external` adapters), isolation prober, phase driver, answer parser, validity classifier, code measurer, blinder, judge panel, pair chooser, human panel, tally, threshold deriver, comparator, candidate writer, run conductor, and review panel; because context-lab contains them, it inherits every trait any of them has ([`E5`](../entities/E5-system.md)).
 
-**Composed-by** - nothing yet.
+**Contained-by** - nothing; context-lab is a top-level registered component.
 
-**Used by** - mission-kit, whose standing evaluation suite is a pack for it; zorg, whose evaluations are to become one.\
-This registry's vocabulary has no edge for one system using another's contract, and `composes` here means containment ([`B81`](../docs/BACKLOG.md)).
+**Consumes** - nothing; context-lab depends on no other registered component.
 
-None of the twenty-one is registered here.\
-The runtime adapters are the likeliest first: running one isolated agent on any runtime and returning its events in one form is useful to anything that drives agents.
+**Consumed-by** - mission-kit (`docs/evals/context-lab/`) and zorg (`evals/context-lab/`), which supply project packs and use context-lab through its declared contract without containing it ([`E5`](../entities/E5-system.md)).
+
+None of the twenty-two contained units is registered here.\
+The runtime adapters are the likeliest first: running one isolated agent on any runtime and returning its events in one form (`implements` the runtime-adapter port) is useful to anything that drives agents.

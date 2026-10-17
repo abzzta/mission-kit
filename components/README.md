@@ -146,7 +146,7 @@ The shape is declared in [`SC6`](../schemas/SC6-entry-body.md) and enforced by `
 - **Reference** - where the implementation lives, pinned.
 - **Fit criteria** - when to reach for it, and when it is the wrong tool.
 - **Adjustment policy** - how it may be extended without forking.
-- **Edges** - `composes` and `composed-by`, so depth is derived rather than named.
+- **Edges** - `contains` and `contained-by` for the internal units inside the component (with `implements` where an internal unit implements a neutral port inside the component), and `consumes` and `consumed-by` for components or systems that use or are used by it through a declared contract ([`E5`](../entities/E5-system.md)).
 
 ---
 
@@ -164,7 +164,7 @@ The shape is declared in [`SC6`](../schemas/SC6-entry-body.md) and enforced by `
 
 ## Composition
 
-Components compose by the `composes` and `composed-by` edges each declares, so depth is derived rather than named.\
+Components state two kinds of edge, matching the two system relations [`E5`](../entities/E5-system.md) defines: `contains` and `contained-by` record the internal units inside a component's boundary (with `implements` where interchangeable internal adapters implement a neutral port), from which the component inherits traits; `consumes` and `consumed-by` record components or systems that work together through a declared contract without containing one another, across which traits are not inherited.\
 Coverage of the duty space, orthogonality between duties, and duplication of one duty across projects with no component are how members relate, and they are checked across the set because no member can hold them.
 
 ---
