@@ -118,14 +118,26 @@ function reflow(src) {
 		}
 		if (fence !== null || isStructural(line)) { out.push(line); i++; continue; }
 
-		// gather one prose paragraph
-		const buf = [];
+		// gather one prose paragraph, preserving an explicit sentence-ending `\` when the next line
+		// begins with a lowercase name (e.g. "opcall keeps...", "zorg's own code..."), which the
+		// joined-line regex cannot distinguish from a mid-sentence abbreviation (`B83`).
+		const segments = [[]];
 		while (i < lines.length && !isStructural(lines[i]) && !/^\s*`{3,}/.test(lines[i])) {
-			buf.push(lines[i].replace(/\\$/, '').trim());
+			const raw = lines[i];
+			const stripped = raw.replace(/\\$/, '').trim();
+			segments[segments.length - 1].push(stripped);
+			const endsSentence = /[.!?]["'*`\)\]]*\\$/.test(raw.trim()) && !ABBREV.test(stripped);
+			const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : '';
+			if (endsSentence && /^[a-z]/.test(nextLine) && !isStructural(lines[i + 1]) && !/^\s*`{3,}/.test(lines[i + 1])) {
+				segments.push([]);
+			}
 			i++;
 		}
-		const { masked, spans } = maskInlineCode(buf.join(' '));
-		const sentences = splitSentences(masked).map((s) => restoreInlineCode(s, spans));
+		const sentences = segments.flatMap((buf) => {
+			if (!buf.length) return [];
+			const { masked, spans } = maskInlineCode(buf.join(' '));
+			return splitSentences(masked).map((s) => restoreInlineCode(s, spans));
+		});
 		sentences.forEach((s, n) => out.push(n < sentences.length - 1 ? `${s}\\` : s));
 	}
 	return out.join('\n');

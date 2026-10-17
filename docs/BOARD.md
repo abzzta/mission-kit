@@ -79,7 +79,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 |---|---|---|---|---|
 | `B21` | S2 | A4 mandate | held | No axiom states the property that protects an agent against its own error. |
 | `B18` | S4 | A4 mandate | held | Methodology has no procedure for handing over work in progress. |
-| `B83` | S2 | A8 signal | held | `tools/s6-one-sentence-per-line.mjs` reads a sentence beginning with a lowercase name as the continuation of the line before, so it fails correct files and its `--fix` joins two sentences onto one line. |
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
 | `B12` | S4 | A14 signal | held | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. |
@@ -114,7 +113,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B74` | S4 | A13 signal | held | `S15` gives two counts for a decision message's picks that cannot both hold. |
 | `B78` | S4 | A3 signal | held | No study tests how agents compose mission-kit's components, or which boxes recur in designs that the registry lacks. |
 | `B79` | S4 | A2 signal | held | The language and layout of a component are a convention held only in repositories. |
-| `B80` | S4 | A2 signal | held | The adherence and `explain` suites exist twice: as `docs/evals/<suite>/suite.json` for mission-kit's tools, and as scenarios in the context-lab pack. |
 | `B84` | S4 | A2 signal | held | A registry entry's Contract section is restated by hand beside the component's own contract, the two drift, and no schema holds the capability-table form eight component repositories already use. |
 | `B85` | S4 | A3 signal | held | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. |
 | `B86` | S4 | A7 signal | held | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). |
@@ -236,7 +234,6 @@ Open rows no live item cites, with their scores and the condition that would rev
 |---|---|---|---|---|
 | `B21` | S2 | A4 mandate | No axiom states the property that protects an agent against its own error. | a lone agent ships a claim it corroborated itself and was wrong, or the axiom set is next audited. Whether this is a new axiom or a property an existing one should state - `A8`'s gating and `A4`'s zero-loss are the nearest - is a question for the set. |
 | `B18` | S4 | A4 mandate | Methodology has no procedure for handing over work in progress. | a handover loses information that a procedure would have preserved, or `M5` converts `M0` and the gap becomes a stated thinness. |
-| `B83` | S2 | A8 signal | `tools/s6-one-sentence-per-line.mjs` reads a sentence beginning with a lowercase name as the continuation of the line before, so it fails correct files and its `--fix` joins two sentences onto one line. | the checker is next changed, or another project reports rewriting a correct sentence to pass it |
 | `B70` | S3 | A8 signal | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. | either is documented, or a gate is refused on the distinction. |
 | `B76` | S3 | A12 signal | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. | The ledger's reading instructions are next changed, or a second run repeats the pattern |
 | `B12` | S4 | A14 signal | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. | the first external brownfield adopter reports back. Waiting is deliberate - their run is the only evidence available and costs nothing. |
@@ -271,7 +268,6 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B74` | S4 | A13 signal | `S15` gives two counts for a decision message's picks that cannot both hold. | `S15` is next changed, or a reader or scorer splits on the pick count again |
 | `B78` | S4 | A3 signal | No study tests how agents compose mission-kit's components, or which boxes recur in designs that the registry lacks. | mission-kit's pack runs on context-lab's core (context-lab M1.2) |
 | `B79` | S4 | A2 signal | The language and layout of a component are a convention held only in repositories. | a third component is founded, or a component departs from the convention again |
-| `B80` | S4 | A2 signal | The adherence and `explain` suites exist twice: as `docs/evals/<suite>/suite.json` for mission-kit's tools, and as scenarios in the context-lab pack. | either copy is edited, or mission-kit's tools retire (context-lab board M3.2), when the suite files go |
 | `B84` | S4 | A2 signal | A registry entry's Contract section is restated by hand beside the component's own contract, the two drift, and no schema holds the capability-table form eight component repositories already use. | the first component is filed with its entry generated from its contract, or a second, unrelated project writes contracts in this shape |
 | `B85` | S4 | A3 signal | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. | operation-proxy is built and its start, staleness and idle-ending tests pass |
 | `B86` | S4 | A7 signal | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). | operation-call is certified, so the entry can cite a working instance |

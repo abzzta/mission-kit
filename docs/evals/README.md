@@ -24,7 +24,7 @@ Suites are under `docs/` because they are about this corpus, and because `eval.m
 ## The context-lab pack
 
 `docs/evals/context-lab/` is mission-kit's pack for [context-lab](https://github.com/apnex/context-lab), the shared evaluation component (`0087`, `0088`).\
-It carries the adherence suite and the `explain` suite, transcribed as they stand; until mission-kit's own tools retire, each suite file and its pack scenarios are twins (`B80`).\
+It is the single source of truth for the `adherence`, `explain`, `handoff`, `aa`, and `c0` suites (`B80`); the earlier `docs/evals/adherence/suite.json` and `docs/evals/explain/suite.json` copies are retired alongside `tools/adherence.mjs` and `tools/eval-human.mjs` (`B77`, `B80`).\
 Its experiment register lives in its `register/` folder and is committed: it is the evidence an experiment was fixed before its outcomes.
 
 ---

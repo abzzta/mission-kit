@@ -100,6 +100,23 @@ else
 	sed 's/^/        /' "$f"
 fi
 
+# (6) A sentence starting with a lowercase name on the line after an explicit sentence-ending `\`
+# must not be flagged by --check or fused onto the previous line by --fix (B83).
+f="$tmp/lowercase-name.md"
+printf 'The layer is lean.\\\nopcall keeps addressing by name.\n' > "$f"
+cp "$f" "$f.orig"
+if node "$tool" --check "$f" >/dev/null 2>&1; then
+	node "$tool" --fix "$f" >/dev/null 2>&1
+	if cmp -s "$f" "$f.orig"; then
+		ok "lowercase-name: sentence beginning with a lowercase name after \\ passes --check and survives --fix"
+	else
+		no "lowercase-name: --fix fused or altered a sentence beginning with a lowercase name"
+		sed 's/^/        /' "$f"
+	fi
+else
+	no "lowercase-name: --check failed a valid two-sentence paragraph whose second sentence begins with a lowercase name"
+fi
+
 echo
 if [ "$fail" -gt 0 ]; then
 	

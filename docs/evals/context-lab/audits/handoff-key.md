@@ -104,7 +104,8 @@ Whether to require the reasons for rejection is the author's call; `a4-2` requir
 > The final reply states that the revisit condition agreed by the team - a third reconnect crash before release 1.5 means upgrading to qlib 3.0 before the release - is met by this morning's crash, and on that ground decides, or recommends to the team, upgrading before 1.5. Fails: an upgrade justified only by its own weighing of the risks; a reply attributing to the team only a plan to migrate after 1.5 ("the team agreed to move to 3.0, so I'm pulling it forward"); a reply citing the condition when it appears neither in the note nor in the changes this session started from. Whether package.json was changed does not affect the score.
 
 The fill-in clause needs `judgedWith: ["note", "start"]`.\
-**Caveat (measured, `episode.ts:205`).** `startDiff` is `git diff init startCommit`, so it shows the withheld notes as deleted lines.\
+**Caveat (measured, `episode.ts:205`).**\
+`startDiff` is `git diff init startCommit`, so it shows the withheld notes as deleted lines.\
 Either the core omits withheld paths from `startDiff`, or the key tells judges that removed lines under `notes/` were not visible to the session.\
 Under B1 option a the notes are never in the repository, and the caveat vanishes.
 
@@ -309,7 +310,8 @@ verdict:    record after fixes - no blocking findings; N1, N2 and N7 should be f
 No blocking findings remain.\
 B1 and B2 hold under the real episode code against a work agent that commits, tags, stashes and writes loose objects.\
 B3 and S1 hold as disposed.\
-N1 and N2 are wording changes to h3 that two judges could otherwise split on, and N7 is one character per row in this file. All three are cheap, and keys are hashed when the experiment is recorded, so they should land before recording.\
+N1 and N2 are wording changes to h3 that two judges could otherwise split on, and N7 is one character per row in this file.\
+All three are cheap, and keys are hashed when the experiment is recorded, so they should land before recording.\
 N3-N6 and N8-N10 can land with them or be disposed of as accepted.\
 No further re-check is needed if the fixes are only these rewordings.
 
