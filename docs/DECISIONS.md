@@ -138,6 +138,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0094 | 2026-10-11 | The component registry is numbered without gaps: context-lab is C2, not C6; the schema prefix move that retired C2-C5 was a one-time deliberate fix, so those ids, and C6, are released by name in the id-reuse check. | project | director | ratified | amends 0093 | - | - |
 | 0095 | 2026-10-16 | The abbreviations CSSA and TSSA, one downstream programme's names for AR1's current and target projections, are dropped from AR1 and AR6; the projections are named by their frontmatter values (`current` and `target`) and fixed paths (`docs/ARCHITECTURE.md` and `docs/ARCHITECTURE-TARGET.md`). | general | director | ratified | - | `artifacts/AR1-system-architecture.md`, `artifacts/AR6-vision.md` | yes |
 | 0096 | 2026-10-17 | Component entries declare `contains` / `contained-by` (with `implements` for internal port-and-adapter pairs) and `consumes` / `consumed-by` (matching `E5`'s contain and compose relations and their trait-inheritance rule), and `C1`'s contract table carries AGP's advertiser-instance selection, send admission deadline/cancellation and per-hop flow control, delivery report outcomes (`delivered`, `failed`, `unknown`), correlation label, and peer identity evidence (`B81`, `B82`). | general | director | ratified | - | `components/README.md`, `components/C1-agp.md`, `components/C2-context-lab.md` | yes |
+| 0097 | 2026-10-17 | `C2` (`components/C2-context-lab.md`) and `context-lab`'s consumer documentation (`README.md` and `docs/OPERATIONS.md`) state all 13 CLI commands, the complete `context-lab.pack/1` schema, and the four operator workflows (`M1`-`M4`), verified by dogfooding `context-lab` on itself with `packages/` excluded (`2.80/10 -> 10.00/10` across all 5 models). | general | director | ratified | - | `components/C2-context-lab.md` | yes |
 
 ---
 
@@ -1442,3 +1443,27 @@ Totals out of 22: `on-trigger-base` 17.87, `on-trigger` 21.20 (+3.33); none of t
 
 **Source.**\
 `[V, director ruling 2026-10-17 selecting Option 1; docs/BACKLOG.md B81, B82; zorg upstream/mission-kit-issues.md issues 1-2; zorg upstream/agp-capabilities.md; agp docs/design/sdk.md; agp docs/DECISIONS.md D31, D32]`
+
+### 0097
+
+**Ruling.**\
+`C2` (`components/C2-context-lab.md`) and `context-lab`'s consumer documentation (`README.md` in `S4`/`S9` four-journey layout and `docs/OPERATIONS.md`) state all 13 CLI commands, the complete `context-lab.pack/1` schema (`pack.json`, `experiments/*.json`, `scenarios/*.json`, `hooks/*.mjs`), a copy-pasteable minimal pack, and step-by-step operator workflows across `M1`-`M4` (episodes, classify-then-verify chains and `candidates`, `pick`, `thresholds`/`compare`, `resume`, and `review --verify`), so a cold agent in another project can onboard and operate `context-lab` without reading its TypeScript implementation.
+
+**Alternatives refuted.**\
+Leaving `context-lab/README.md` and `C2`'s Contract table at their Delta-1 text - refuted by baseline run `c2-base` in `2026-10-17-100515-c2`, where 0 of 5 models could author a valid `context-lab.pack/1` pack from the documentation alone (`P0 = 0.00/2`) and pooled score across `P0` and `Q1`-`Q4` was `2.80/10`.
+
+**Kind.** general - how any project's cold agent discovers and uses `C2` (`context-lab`).
+
+**Test, under `M2` and `W12` (dogfooding `context-lab` on itself).**\
+Scenario `docs/evals/context-lab/scenarios/c2.json`, experiment `experiments/c2.json`, and `checkPack` code-measurer hook `hooks/c2-pack-measure.mjs` were keyed, audited by a fresh agent (`ses_eb6bff882ffeUDGTU3uvuFfkn8`), and committed (`6524f78`) before any reader ran, with `context-lab`'s `packages/`, `docs/DELTAS/`, and `docs/probes/` excluded from the delivered variants.\
+An initial run (`2026-10-17-095808-c2`) surfaced two harness/pack lessons (abbreviated 7-char SHAs expanded with unverified hex digits failed `git rev-parse`, and two variants in one arm need one shared canary or `opencode` reads only one `0N-context-lab-canary.md`) and five cold-reader documentation observations (`compare --runs K`, `m` on `aa` comparisons, `pick` defaults, `contained-paths` vs pack-relative paths, and `C2` command coverage), all closed in `context-lab` `5cd7366` and `mission-kit` `bafa65b`.\
+In the full 5-model (`c`, `a`, `f`, `x`, `o`), 10-cell run `2026-10-17-100515-c2` (`10/10` isolation probes passed, 4-family cross-judging):
+- `P0` (code-scored by running `context-lab`'s own `checkPack` on the pack authored by the cold agent): `0.00/2` (`0/5` models) on `c2-base` -> `2.00/2` (`5/5` models, zero defects) on `c2-head`.
+- `Q1` (preregistered `result` vs `exploration` workflow): `1.40/2` -> `2.00/2`.
+- `Q2` (two-stage A/A `thresholds` / `compare` and `resume` preconditions): `0.73/2` -> `2.00/2`.
+- `Q3` (`pick` human panel and `candidates` extraction): `0.20/2` -> `2.00/2`.
+- `Q4` (on-demand multi-family `review --verify`): `0.47/2` -> `2.00/2`.
+- Pooled total out of `10.00`: `c2-base` **`2.80`**, `c2-head` **`10.00`** (`+7.20`), with zero documentation gaps flagged by `c2-head` readers.
+
+**Source.**\
+`[V, director ruling 2026-10-17; context-lab commits 29f787e, 5cd7366; mission-kit commits 6524f78, 242e6bc, bafa65b; docs/evals/runs/context-lab/2026-10-17-100515-c2/RESULT.md]`
