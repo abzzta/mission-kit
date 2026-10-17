@@ -137,6 +137,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0093 | 2026-10-11 | context-lab is admitted to the component registry as C6, once usable as 0087 requires: its first delta is complete and mission-kit's suites run on it. | project | director | ratified | amends 0087 | - | - |
 | 0094 | 2026-10-11 | The component registry is numbered without gaps: context-lab is C2, not C6; the schema prefix move that retired C2-C5 was a one-time deliberate fix, so those ids, and C6, are released by name in the id-reuse check. | project | director | ratified | amends 0093 | - | - |
 | 0095 | 2026-10-16 | The abbreviations CSSA and TSSA, one downstream programme's names for AR1's current and target projections, are dropped from AR1 and AR6; the projections are named by their frontmatter values (`current` and `target`) and fixed paths (`docs/ARCHITECTURE.md` and `docs/ARCHITECTURE-TARGET.md`). | general | director | ratified | - | `artifacts/AR1-system-architecture.md`, `artifacts/AR6-vision.md` | yes |
+| 0096 | 2026-10-17 | Component entries declare `contains` / `contained-by` (with `implements` for internal port-and-adapter pairs) and `consumes` / `consumed-by` (matching `E5`'s contain and compose relations and their trait-inheritance rule), and `C1`'s contract table carries AGP's advertiser-instance selection, send admission deadline/cancellation and per-hop flow control, delivery report outcomes (`delivered`, `failed`, `unknown`), correlation label, and peer identity evidence (`B81`, `B82`). | general | director | ratified | - | `components/README.md`, `components/C1-agp.md`, `components/C2-context-lab.md` | yes |
 
 ---
 
@@ -1415,3 +1416,29 @@ Promoting `CSSA` and `TSSA` as `E`-layer entities - refuted because `AR1` alread
 
 **Source.**\
 `[V, director ruling 2026-10-16; docs/BACKLOG.md B10, M4.1]`
+
+### 0096
+
+**Ruling.**\
+`C0`, `C1` and `C2` replace the overloaded `composes` / `composed-by` edge names with `contains` / `contained-by` for internal units inside a component (with `implements` where interchangeable internal units implement a neutral port) and `consumes` / `consumed-by` for components or systems that use or are used by the component through a declared contract without containing it, matching `E5`'s two system relations and their trait-inheritance rule (`B81`).\
+`C1`'s contract table is updated to state AGP's optional advertiser-instance selection (as a requirement or preference), send admission deadlines (`timeoutMs`) and cancellation before the admission commit boundary, per-hop flow control, the three-valued per-message delivery report (`delivered`, `failed`, `unknown`), the application-owned correlation label, and transport-reported peer identity evidence (`B82`).
+
+**Alternatives refuted.**\
+Keeping `composes` for containment in `C0` - refuted because `E5` defines `compose` as its opposite (cooperation across a declared contract without containment), which misstates whether traits are inherited (`B81`).\
+Leaving `C1`'s six-row contract table unchanged - refuted because a consumer evaluating fit from `C1` alone could not see advertiser-instance selection, the `unknown` delivery outcome, per-hop flow control, send deadlines/cancellation, correlation labels, or peer identity evidence (`B82`).
+
+**Kind.** general - how component entries declare containment, port-and-adapter substitutability, and contract consumption across the registry.
+
+**Change to `C0`, under `M11`.**
+
+| Sentence | Change | Evidence |
+|---|---|---|
+| *Member shape*: "**Edges** - `composes` and `composed-by`, so depth is derived rather than named." | correct, to "**Edges** - `contains` and `contained-by` for the internal units inside the component (with `implements` where an internal unit implements a neutral port inside the component), and `consumes` and `consumed-by` for components or systems that use or are used by it through a declared contract ([`E5`](../entities/E5-system.md))." | `composes` contradicted `E5` (`B81`) and omitted both the contract-usage edge and the port-and-adapter substitutability relation noted in `C1` |
+| *Composition*: "Components compose by the `composes` and `composed-by` edges each declares, so depth is derived rather than named." | correct, to "Components state two kinds of edge, matching the two system relations [`E5`](../entities/E5-system.md) defines: `contains` and `contained-by` record the internal units inside a component's boundary (with `implements` where interchangeable internal adapters implement a neutral port), from which the component inherits traits; `consumes` and `consumed-by` record components or systems that work together through a declared contract without containing one another, across which traits are not inherited." | aligns `C0`'s composition rule with `E5`'s contain vs compose distinction and trait-inheritance rule (`B81`) |
+
+**Test, under `M2`.**\
+Run `2026-10-17-082606-c0` via `context-lab`: the `c0` suite with `Q11` (edge vocabulary and trait inheritance) and `Q12` (`C1` contract capabilities) keyed, audited by a fresh agent (`ses_eb7140f3affenYMABzmOEYENsC`), and committed (`2256e56`) before any reader ran; the baseline (`on-trigger-base` at `2256e56`) and the candidate (`on-trigger` at `7d49e70`) run blind across all 5 population members (`c`, `a`, `f`, `x`, `o`) and judged blind cross-family by the 4-family panel (`c`, `a`, `x`, `o`).\
+Totals out of 22: `on-trigger-base` 17.87, `on-trigger` 21.20 (+3.33); none of the nine control probes regressed (`Q1`-`Q10` sum to 17.00 on base and 17.40 on candidate), `Q11` rose from 0.87 to 2.00 across all 5 models, and `Q12` rose from 0.00 to 1.80 across all 5 models; baseline readers (`a`, `c`, `o`) independently flagged the `composes` vs `E5` contradiction and `C1`'s missing contract capabilities under `OBSERVATIONS`, whereas no candidate reader flagged either.
+
+**Source.**\
+`[V, director ruling 2026-10-17 selecting Option 1; docs/BACKLOG.md B81, B82; zorg upstream/mission-kit-issues.md issues 1-2; zorg upstream/agp-capabilities.md; agp docs/design/sdk.md; agp docs/DECISIONS.md D31, D32]`

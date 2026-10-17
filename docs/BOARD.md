@@ -77,8 +77,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 <!-- BEGIN GENERATED: ledger. Run tools/check-board.mjs --write; do not edit by hand. -->
 | Row | Impact | Principle | Planned in | Finding |
 |---|---|---|---|---|
-| `B81` | S1 | A3 mandate | held | The component registry's edge `composes` means containment, which `E5` defines as its opposite, and no edge records one component using another's contract. |
-| `B82` | S1 | A2 mandate | held | `C1`'s contract table omits capabilities AGP's own contract offers, and its addressing row contradicts AGP's instance selection. |
 | `B21` | S2 | A4 mandate | held | No axiom states the property that protects an agent against its own error. |
 | `B18` | S4 | A4 mandate | held | Methodology has no procedure for handing over work in progress. |
 | `B83` | S2 | A8 signal | held | `tools/s6-one-sentence-per-line.mjs` reads a sentence beginning with a lowercase name as the continuation of the line before, so it fails correct files and its `--fix` joins two sentences onto one line. |
@@ -236,8 +234,6 @@ Open rows no live item cites, with their scores and the condition that would rev
 <!-- BEGIN GENERATED: held. Run tools/check-board.mjs --write; do not edit by hand. -->
 | Row | Impact | Principle | Finding | Revival trigger |
 |---|---|---|---|---|
-| `B81` | S1 | A3 mandate | The component registry's edge `composes` means containment, which `E5` defines as its opposite, and no edge records one component using another's contract. | FIRED 2026-10-11: a second component, `C2` (context-lab), is filed; the row returns to triage for the board to weigh - original trigger: a second component is filed in the registry, or an entry must record using another component |
-| `B82` | S1 | A2 mandate | `C1`'s contract table omits capabilities AGP's own contract offers, and its addressing row contradicts AGP's instance selection. | `C1` is next edited, or a component is filed that depends on one of the omitted capabilities |
 | `B21` | S2 | A4 mandate | No axiom states the property that protects an agent against its own error. | a lone agent ships a claim it corroborated itself and was wrong, or the axiom set is next audited. Whether this is a new axiom or a property an existing one should state - `A8`'s gating and `A4`'s zero-loss are the nearest - is a question for the set. |
 | `B18` | S4 | A4 mandate | Methodology has no procedure for handing over work in progress. | a handover loses information that a procedure would have preserved, or `M5` converts `M0` and the gap becomes a stated thinness. |
 | `B83` | S2 | A8 signal | `tools/s6-one-sentence-per-line.mjs` reads a sentence beginning with a lowercase name as the continuation of the line before, so it fails correct files and its `--fix` joins two sentences onto one line. | the checker is next changed, or another project reports rewriting a correct sentence to pass it |
