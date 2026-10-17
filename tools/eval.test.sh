@@ -43,7 +43,7 @@ mkdir -p "$tmp/leaky/docs"; echo x > "$tmp/leaky/INDEX.md"
 if node "$tool" prepare --suites alpha --corpus x="$tmp/leaky" --readers 1 --out "$tmp/r0" 2>/dev/null; then no "prepare refuses a corpus containing docs/"; else ok "prepare refuses a corpus containing docs/"; fi
 
 run="$tmp/run"
-node "$tool" prepare --suites alpha --corpus OLDLABEL="$tmp/oldc" --corpus NEWLABEL="$tmp/newc" --readers 2 --out "$run" >/dev/null
+node "$tool" prepare --suites alpha --corpus OLDLABEL="$tmp/oldc" --corpus NEWLABEL="$tmp/newc" --readers 2 --seed fixed --out "$run" >/dev/null
 n=$(ls "$run/prompts" | wc -l)
 [ "$n" -eq 4 ] && ok "one prompt per corpus per reader" || no "one prompt per corpus per reader (got $n)"
 if grep -rqE 'OLDLABEL|NEWLABEL' "$run/prompts" "$run/TASKS.md"; then no "reader prompts carry no corpus label"; else ok "reader prompts carry no corpus label"; fi

@@ -151,7 +151,7 @@ function cmdPrepare(o) {
 		if (grp.suites.length && (grp.suites[0].mode === "file" || s.mode === "file")) die(`group ${g} mixes a file-mode suite with others`);
 		grp.suites.push(s);
 	}
-	const salt = randomBytes(8).toString("hex");
+	const salt = String(o.seed ?? randomBytes(8).toString("hex"));
 	const prompts = [];
 	for (const c of corpora) for (const g of groups.values()) for (let r = 1; r <= readers; r++) {
 		const pid = "r-" + hex(`${salt}:${c.label}:${g.id}:${r}`);
