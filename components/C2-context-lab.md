@@ -33,13 +33,17 @@ What a consumer depends on, and what it may not reach past.
 
 | surface | contract |
 |---|---|
-| project pack | everything project-specific - experiments, suites, context sources and variants, arms, population, masks, isolation probes - enters through one directory the core validates before anything runs; nothing project-specific is read from anywhere else |
-| hooks | project scripts run at four fixed points, each with a stated contract, in a sandbox with no network and bounded reads and writes |
-| delivery | each arm's context is a local copy at a pinned revision, every published address rewritten to it, and a canary proving it was read |
-| isolation | every arm and every judge on every runtime is probed before any cell runs; an arm without a pass never runs |
-| runtimes | each agent runtime sits behind one adapter returning one common outcome form; driven runtimes run in a filesystem sandbox |
-| judging | code decides what a check can; every outcome is judged by the model families other than its agent's, never its own |
-| record | every run writes a record from which its result re-tallies exactly, and a run of an experiment unrecorded or changed after recording is marked exploration |
+| project pack | everything project-specific - experiments, suites, context sources and variants, arms, population, masks, isolation probes, and comparisons (`schema: "context-lab.pack/1"`) - enters through one directory the core validates (`context-lab check <pack>`) before anything runs; nothing project-specific is read from anywhere else |
+| hooks | project scripts (`declaration-check`, `variant-transform`, `outcome-measure`, `note-generator`) run at four fixed points, each with a stated JSON stdin/stdout contract, in a `bwrap` sandbox with no network and bounded reads and writes |
+| delivery | each arm's context is a local copy at a pinned revision (`instruction`, `folder-file`, or `on-request`), every published address rewritten to it, and a canary proving it was read |
+| isolation | every arm and every judge on every runtime is probed (`leakProbes`) before any cell runs; an arm without a pass never runs, and any cell touching a forbidden path or address is invalidated |
+| runtimes | each agent runtime (`opencode`, `codex`, `external`) sits behind one adapter returning one common `Outcome` form (`cost`, `stop`, `tools`, `trace`, scrubbed `events.jsonl`) and recording sanitized `routes` in `run.json`; driven runtimes run in a `bwrap` filesystem sandbox |
+| episodes | single- or multi-phase episodes (`session: "new" \| "continue"`, branching via `after`, handoff notes via `note` and `withhold` with fresh git history, and rotating `trapPairs`); a behaviour failure ends only the phases that follow from it while sibling branches still run |
+| judging | code decides what a check can (`decidedBy: "code"`); every judged outcome (`decidedBy: "judge"`) is blinded and scored by the model families other than its agent's, never its own; optional classify-then-verify `judging.chain` requires an exact quote in the outcome before cross-family verification, and `context-lab candidates <pack> <run-dir>` extracts recurring findings into `CANDIDATES.json` and `CANDIDATES.md` |
+| human panel | `context-lab pick <pack> <run-dir> [--mode calibration\|preference] [--count N] [--with ARM] [--without ARM]` runs an interactive terminal panel on blinded outcome pairs, writes `picks.json`, and re-tallies `RESULT.json` and `RESULT.md` |
+| comparison | `context-lab thresholds <pack> <comparison> <aa-run-dir>` derives two-stage size-3 and size-9 noise thresholds from an identical-arm A/A run into `register/thresholds/<comparison>.jsonl`, and `context-lab compare <pack> <comparison> <base-run-dir> [--head DIR] [--runs K] [--nine DIR] [--nine-head DIR] [--out FILE]` compares base and head arms |
+| record and resume | `context-lab record <pack> <experiment>` fixes the experiment's content hash in `register/<experiment>.json` (requiring `variation` and `default` when `declaredStatus` is `"result"`), `context-lab status <pack> <experiment>` reports whether a run will carry `result` or `exploration`, and `context-lab resume <pack> <run-dir>` resumes an interrupted run from state `probed` after verifying the register hash, routes, variant manifests, and recorded cell files |
+| review panel | `context-lab review <pack> --prompt <file> [--files <path,...>] --out <dir> [--members <id,...>] [--verify] [--parallel N]` runs a review prompt across distinct model families in parallel and, with `--verify`, cross-verifies every extracted finding with boolean `supports` verdicts (`supportingFamilies`, `familyCount`) across the other families, writing `REVIEW.json` and `REVIEW.md` |
 
 The project pack and the runtime adapter are the two seams: a new project is a new pack, and a new runtime is a new adapter, neither a change to the core.
 
@@ -47,7 +51,7 @@ The project pack and the runtime adapter are the two seams: a new project is a n
 
 ## Reference
 
-The sovereign repository, `https://github.com/apnex/context-lab`, with its vision in `VISION.md` and its architecture in `docs/ARCHITECTURE-TARGET.md`.
+The sovereign repository, `https://github.com/apnex/context-lab`, with its consumer operations and pack authoring guide in `README.md` and `docs/OPERATIONS.md`, its vision in `VISION.md`, and its architecture in `docs/ARCHITECTURE-TARGET.md`.
 
 The architecture **declares its own instant**, so this reference stays true without a version recorded here.\
 What is built is stated by its completed deltas under `docs/DELTAS/`.
