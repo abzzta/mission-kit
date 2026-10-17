@@ -286,7 +286,8 @@
     "experiments/adherence.json",
     "experiments/explain.json",
     "experiments/handoff.json",
-    "experiments/aa.json"
+    "experiments/aa.json",
+    "experiments/c0.json"
   ],
   "suites": [
     {
@@ -332,6 +333,15 @@
       "select": {
         "allTags": [
           "adherence"
+        ]
+      }
+    },
+    {
+      "id": "c0",
+      "experiment": "c0",
+      "select": {
+        "allTags": [
+          "c0"
         ]
       }
     }

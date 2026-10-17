@@ -1,0 +1,11 @@
+{
+  "experiment": "c0",
+  "records": [
+    {
+      "experiment": "c0",
+      "hash": "da6a57b929604bf5c861a4496595d3ce177ae6eca366f97c9aa10b0638cc333d",
+      "recordedAt": "2026-10-17T08:17:44.063Z",
+      "declaredStatus": "result"
+    }
+  ]
+}
