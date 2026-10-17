@@ -15,6 +15,22 @@
       "exclude": [
         "docs/"
       ]
+    },
+    {
+      "id": "context-lab",
+      "path": "../../../../context-lab",
+      "addresses": [
+        "https://github.com/apnex/context-lab",
+        "https://github.com/apnex/context-lab/blob/main",
+        "https://github.com/apnex/context-lab/tree/main",
+        "https://raw.githubusercontent.com/apnex/context-lab",
+        "https://raw.githubusercontent.com/apnex/context-lab/main"
+      ],
+      "exclude": [
+        "packages/",
+        "docs/DELTAS/",
+        "docs/probes/"
+      ]
     }
   ],
   "variants": [
@@ -31,6 +47,29 @@
       "revision": "2256e56ce998239a27ab916389829fa55eb2c649",
       "canaries": [
         "The lantern on pier nine burns green."
+      ]
+    },
+    {
+      "id": "corpus-c2-base",
+      "source": "mission-kit",
+      "revision": "d09461ec6c51d477ef36c59277f4d28b797be4a9",
+      "canaries": [
+        "The lantern on pier nine burns green."
+      ]
+    },
+    {
+      "id": "context-lab-docs-base",
+      "source": "context-lab",
+      "revision": "2ffda23bc23b9d72b150e78bdcc1031e53075a16",
+      "canaries": [
+        "The compass on deck four points north."
+      ]
+    },
+    {
+      "id": "context-lab-docs",
+      "source": "context-lab",
+      "canaries": [
+        "The compass on deck four points north."
       ]
     }
   ],
@@ -198,6 +237,56 @@
           "as": "on-request"
         }
       ]
+    },
+    {
+      "id": "c2-base",
+      "deliver": [
+        {
+          "variant": "corpus-c2-base",
+          "file": "AGENTS.md",
+          "as": "folder-file"
+        },
+        {
+          "variant": "corpus-c2-base",
+          "file": "INDEX.md",
+          "as": "instruction"
+        },
+        {
+          "variant": "corpus-c2-base",
+          "file": ".",
+          "as": "on-request"
+        },
+        {
+          "variant": "context-lab-docs-base",
+          "file": ".",
+          "as": "on-request"
+        }
+      ]
+    },
+    {
+      "id": "c2-head",
+      "deliver": [
+        {
+          "variant": "corpus",
+          "file": "AGENTS.md",
+          "as": "folder-file"
+        },
+        {
+          "variant": "corpus",
+          "file": "INDEX.md",
+          "as": "instruction"
+        },
+        {
+          "variant": "corpus",
+          "file": ".",
+          "as": "on-request"
+        },
+        {
+          "variant": "context-lab-docs",
+          "file": ".",
+          "as": "on-request"
+        }
+      ]
     }
   ],
   "population": [
@@ -253,6 +342,12 @@
       "kind": "note-generator",
       "file": "hooks/handoff-note.mjs",
       "timeLimitSeconds": 30
+    },
+    {
+      "id": "c2-pack-measure",
+      "kind": "outcome-measure",
+      "file": "hooks/c2-pack-measure.mjs",
+      "timeLimitSeconds": 30
     }
   ],
   "masks": {
@@ -279,7 +374,9 @@
           "control",
           "on-trigger",
           "on-trigger-b",
-          "on-trigger-base"
+          "on-trigger-base",
+          "c2-base",
+          "c2-head"
         ]
       },
       {
@@ -290,7 +387,9 @@
           "control",
           "on-trigger",
           "on-trigger-b",
-          "on-trigger-base"
+          "on-trigger-base",
+          "c2-base",
+          "c2-head"
         ]
       },
       {
@@ -304,11 +403,14 @@
     ],
     "forbidden": {
       "paths": [
-        "../../.."
+        "../../..",
+        "../../../../context-lab"
       ],
       "addresses": [
         "https://github.com/apnex/mission-kit",
-        "https://raw.githubusercontent.com/apnex/mission-kit"
+        "https://raw.githubusercontent.com/apnex/mission-kit",
+        "https://github.com/apnex/context-lab",
+        "https://raw.githubusercontent.com/apnex/context-lab"
       ]
     }
   },
@@ -317,7 +419,8 @@
     "experiments/explain.json",
     "experiments/handoff.json",
     "experiments/aa.json",
-    "experiments/c0.json"
+    "experiments/c0.json",
+    "experiments/c2.json"
   ],
   "suites": [
     {
@@ -372,6 +475,15 @@
       "select": {
         "allTags": [
           "c0"
+        ]
+      }
+    },
+    {
+      "id": "c2",
+      "experiment": "c2",
+      "select": {
+        "allTags": [
+          "c2"
         ]
       }
     }
