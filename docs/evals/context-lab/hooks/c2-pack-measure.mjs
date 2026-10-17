@@ -1,21 +1,22 @@
 #!/usr/bin/env node
 // c2-pack-measure - outcome-measure hook for scenario c2.
 //
-// Reconstructs the workspace diff in /tmp/pack-check, creates any referenced source/fixture
-// directories that the scenario task names, and runs context-lab's own checkPack() on
-// /tmp/pack-check/evals/context-lab. Scores P0 = 2 if checkPack passes with 0 defects AND the
-// pack includes the required multi-phase episode, classify-then-verify chain, comparison, and
-// leakProbe; P0 = 1 if checkPack passes with 0 defects or fails with at most 2 minor defects while
-// pack.json, experiment and scenario parse as JSON; P0 = 0 otherwise.
+// Uses outcome.snapshot (mounted read-only in the hook sandbox) when present, falling back to
+// reconstructing added files from outcome.diff, and runs context-lab's own checkPack() on
+// <workspace>/evals/context-lab. Scores P0 = 2 if checkPack passes with 0 defects AND the pack
+// includes the required multi-phase episode, classify-then-verify chain, comparison, and leakProbe;
+// P0 = 1 if checkPack passes with 0 defects or fails with at most 2 minor defects while pack.json,
+// experiment and scenario parse as JSON; P0 = 0 otherwise.
 
 import fs from "node:fs";
 import path from "node:path";
 import { checkPack } from "../../../../../context-lab/packages/core/dist/src/pack-checker.js";
 
 const input = JSON.parse(fs.readFileSync(0, "utf8"));
+const snap = input?.outcome?.snapshot;
 const diff = String(input?.outcome?.diff ?? "");
 
-/** Extract newly created files from a unified git diff (added files only). */
+/** Extract newly created files from a unified git diff (fallback when snapshot is absent). */
 function extractAddedFiles(patch, rootDir) {
 	const lines = patch.split("\n");
 	let curFile = null;
@@ -32,27 +33,24 @@ function extractAddedFiles(patch, rootDir) {
 		buf = [];
 	};
 	for (const line of lines) {
-		if (line.startsWith("diff --git ")) {
-			flush();
-			continue;
-		}
-		if (line.startsWith("+++ b/")) {
-			curFile = line.slice(6).trim();
-			continue;
-		}
-		if (curFile !== null && line.startsWith("+") && !line.startsWith("+++")) {
-			buf.push(line.slice(1));
-		}
+		if (line.startsWith("diff --git ")) { flush(); continue; }
+		if (line.startsWith("+++ b/")) { curFile = line.slice(6).trim(); continue; }
+		if (curFile !== null && line.startsWith("+") && !line.startsWith("+++")) buf.push(line.slice(1));
 	}
 	flush();
 }
 
-const work = fs.mkdtempSync("/tmp/c2-pack-");
-fs.mkdirSync(path.join(work, "docs"), { recursive: true });
-fs.writeFileSync(path.join(work, "docs", "GUIDE.md"), "# Guide\n");
-extractAddedFiles(diff, work);
+let rootDir;
+if (typeof snap === "string" && fs.existsSync(snap)) {
+	rootDir = snap;
+} else {
+	rootDir = fs.mkdtempSync("/tmp/c2-pack-");
+	fs.mkdirSync(path.join(rootDir, "docs"), { recursive: true });
+	fs.writeFileSync(path.join(rootDir, "docs", "GUIDE.md"), "# Guide\n");
+	extractAddedFiles(diff, rootDir);
+}
 
-const packDir = path.join(work, "evals", "context-lab");
+const packDir = path.join(rootDir, "evals", "context-lab");
 let p0 = 0;
 let detail = "";
 try {
