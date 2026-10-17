@@ -6,6 +6,12 @@
       "hash": "aba8603cee585e41bb50b73c2ebfde708db74176fa8035e8e41f49e09f51909c",
       "recordedAt": "2026-10-17T09:51:12.029Z",
       "declaredStatus": "result"
+    },
+    {
+      "experiment": "c2",
+      "hash": "6ac7a526865ff2cc269ed9b838a36e0644c9b4f38f6b0dd82447ad20448b0241",
+      "recordedAt": "2026-10-17T10:04:47.863Z",
+      "declaredStatus": "result"
     }
   ]
 }

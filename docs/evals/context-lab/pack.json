@@ -52,7 +52,7 @@
     {
       "id": "corpus-c2-base",
       "source": "mission-kit",
-      "revision": "d09461ec6c51d477ef36c59277f4d28b797be4a9",
+      "revision": "d09461e8d9588fba8e59f4a63d0f93418f773dbe",
       "canaries": [
         "The lantern on pier nine burns green."
       ]
@@ -60,16 +60,16 @@
     {
       "id": "context-lab-docs-base",
       "source": "context-lab",
-      "revision": "2ffda23bc23b9d72b150e78bdcc1031e53075a16",
+      "revision": "2ffda2386541bcf2fd7db67911a7c5f2e03514f1",
       "canaries": [
-        "The compass on deck four points north."
+        "The lantern on pier nine burns green."
       ]
     },
     {
       "id": "context-lab-docs",
       "source": "context-lab",
       "canaries": [
-        "The compass on deck four points north."
+        "The lantern on pier nine burns green."
       ]
     }
   ],
