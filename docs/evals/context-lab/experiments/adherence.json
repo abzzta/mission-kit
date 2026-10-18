@@ -10,7 +10,9 @@
     "scenarios/adherence-a3.json",
     "scenarios/adherence-a14.json",
     "scenarios/adherence-a1.json",
-    "scenarios/adherence-a5.json"
+    "scenarios/adherence-a5.json",
+    "scenarios/adherence-a6.json",
+    "scenarios/adherence-a7.json"
   ],
   "factors": {
     "arms": [

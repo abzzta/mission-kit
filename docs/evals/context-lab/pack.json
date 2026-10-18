@@ -469,6 +469,19 @@
       }
     },
     {
+      "id": "adherence-a6-a7",
+      "experiment": "adherence",
+      "select": {
+        "allTags": [
+          "adherence"
+        ],
+        "anyTags": [
+          "exercises:A6",
+          "exercises:A7"
+        ]
+      }
+    },
+    {
       "id": "explain",
       "experiment": "explain",
       "select": {
