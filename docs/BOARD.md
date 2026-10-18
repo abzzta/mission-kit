@@ -81,6 +81,7 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B18` | S4 | A4 mandate | held | Methodology has no procedure for handing over work in progress. |
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
+| `B87` | S3 | A8 signal | held | The Grok judge disagrees alone far more than any other judge, on every experiment with enough splits, and four experiments still use it. |
 | `B12` | S4 | A14 signal | held | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. |
 | `B19` | S4 | A14 signal | held | Methodology has nothing proportionate for a small design decision. |
 | `B22` | S4 | A9 signal | held | `A9` binds every system unconditionally and is the least exercised axiom in the corpus. |
@@ -114,6 +115,7 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B84` | S4 | A2 signal | held | A registry entry's Contract section is restated by hand beside the component's own contract, the two drift, and no schema holds the capability-table form eight component repositories already use. |
 | `B85` | S4 | A3 signal | held | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. |
 | `B86` | S4 | A7 signal | held | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). |
+| `B88` | S4 | A12 signal | held | Agents rarely open `A4` or `M10` when they apply. |
 | `B39` | S5 | A3 signal | held | Style cannot be scoped by medium. |
 <!-- END GENERATED: ledger -->
 
@@ -234,6 +236,7 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B18` | S4 | A4 mandate | Methodology has no procedure for handing over work in progress. | a handover loses information that a procedure would have preserved, or `M5` converts `M0` and the gap becomes a stated thinness. |
 | `B70` | S3 | A8 signal | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. | either is documented, or a gate is refused on the distinction. |
 | `B76` | S3 | A12 signal | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. | The ledger's reading instructions are next changed, or a second run repeats the pattern |
+| `B87` | S3 | A8 signal | The Grok judge disagrees alone far more than any other judge, on every experiment with enough splits, and four experiments still use it. | the next `aa` threshold derivation, or the next run of `explain`, `handoff`, `c0` or `c2` |
 | `B12` | S4 | A14 signal | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. | the first external brownfield adopter reports back. Waiting is deliberate - their run is the only evidence available and costs nothing. |
 | `B19` | S4 | A14 signal | Methodology has nothing proportionate for a small design decision. | a small design decision fails in a way an anchoring check would have caught. |
 | `B22` | S4 | A9 signal | `A9` binds every system unconditionally and is the least exercised axiom in the corpus. | a deployment fails in a way chaos validation would have caught, or `A9` is cited as the reason a change was refused. |
@@ -267,6 +270,7 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B84` | S4 | A2 signal | A registry entry's Contract section is restated by hand beside the component's own contract, the two drift, and no schema holds the capability-table form eight component repositories already use. | the first component is filed with its entry generated from its contract, or a second, unrelated project writes contracts in this shape |
 | `B85` | S4 | A3 signal | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. | operation-proxy is built and its start, staleness and idle-ending tests pass |
 | `B86` | S4 | A7 signal | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). | operation-call is certified, so the entry can cite a working instance |
+| `B88` | S4 | A12 signal | Agents rarely open `A4` or `M10` when they apply. | the director selects a trigger rewrite for `A4` or `M10`, or the next adherence pass |
 | `B39` | S5 | A3 signal | Style cannot be scoped by medium. | FIRED and moved: `S15` is the first single-medium rule; one rule does not earn a sub-set. TRIGGER: a second single-medium style rule. Nested sets need generator support, shared with `B38`'s set spanning layers. |
 <!-- END GENERATED: held -->
 

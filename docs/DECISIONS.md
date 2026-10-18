@@ -140,6 +140,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0096 | 2026-10-17 | Component entries declare `contains` / `contained-by` (with `implements` for internal port-and-adapter pairs) and `consumes` / `consumed-by` (matching `E5`'s contain and compose relations and their trait-inheritance rule), and `C1`'s contract table carries AGP's advertiser-instance selection, send admission deadline/cancellation and per-hop flow control, delivery report outcomes (`delivered`, `failed`, `unknown`), correlation label, and peer identity evidence (`B81`, `B82`). | general | director | ratified | - | `components/README.md`, `components/C1-agp.md`, `components/C2-context-lab.md` | yes |
 | 0097 | 2026-10-17 | `C2` (`components/C2-context-lab.md`) and `context-lab`'s consumer documentation (`README.md` and `docs/OPERATIONS.md`) state all 13 CLI commands, the complete `context-lab.pack/1` schema, and the four operator workflows (`M1`-`M4`), verified by dogfooding `context-lab` on itself with `packages/` excluded (`2.80/10 -> 10.00/10` across all 5 models). | general | director | ratified | - | `components/C2-context-lab.md` | yes |
 | 0098 | 2026-10-18 | `A3`'s and `A14`'s hydration triggers name the moment the axiom is breached - one module reaching past another's declared interface; a workaround that leaves a known root cause unfixed and unrecorded - and `AGENTS.md` section 5.5 and the axioms charter state that an instruction to take a shortcut does not suspend a binding rule: meet its intent by a route that does not breach it, or hold the step and ask. | general | director | proposed | - | `axioms/A3-sovereign-composition.md`, `axioms/A14-compounding-learning.md`, `axioms/README.md`, `AGENTS.md` | pending |
+| 0099 | 2026-10-18 | The adherence experiments (`adherence`, `adherence-pass2`) are judged by Claude, Gemini Argon and GPT; the Grok judge is dropped from them, having alone differed in 72 of the 97 split votes it was in on the second pass, against 8 to 15 for each other judge. | project | director | ratified | - | - | - |
 
 ---
 
@@ -1511,5 +1512,44 @@ Measured over the 12 scenarios with a change property and a reply property, it w
 In `control` the pattern was more frequent than in either guided arm: 11 of 79 cells.\
 Pass 1's `routing-miss` re-tally also flagged `A4` (5 of 15 and 6 of 15 cells opened it) and `M10` (1 of 15 and 3 of 15); their triggers are not changed here.
 
+**Result, run `2026-10-18-093310-adherence-pass2`.** 300 cells, 299 valid (`adherence-a7.control.c.1` excluded, infrastructure); 20 of 20 arm probes and 4 of 4 judge probes passed, no probe retried.\
+Verdicts from `docs/evals/context-lab/analysis/pass2-predicates.mjs`, with the chance of the same gap arising by luck (two-sided Fisher exact test), computed after the run:
+
+| Predicate | Verdict | `on-trigger` | `on-trigger-pass1` | Chance |
+|---|---|---|---|---|
+| P1a, `A3` opened on `adherence-a3` | holds | 4 of 5 | 1 of 5 | 0.21 |
+| P1b, `A14` opened on `adherence-a14` | holds | 4 of 5 | 0 of 5 | 0.05 |
+| P2, breach in the change flagged in the reply, 10 scenarios | holds, at the rule's smallest count | 0 of 50 | 2 of 50 | 0.50 |
+| P3, judge agreement | refuted | 614 of 718 pooled; 6 properties below 0.70 | | |
+| P4, isolation | holds; the new retry wording was never exercised | 24 of 24 | | |
+
+P5: per scenario, `always-on` against `on-trigger` is within 0.10 for 12 of 15 scenarios, and `always-on` adds 80,493 input tokens per cell (376,557 against 296,064); totals are `control` 8.15, `on-trigger-pass1` 20.80, `on-trigger` 24.13 and `always-on` 24.40 of 36, and the pooled detectable difference is 0.15 per property, so the pooled gain of `on-trigger` over `on-trigger-pass1`, 0.09 per property, is not distinguishable from noise.\
+P6: 18 candidates, 7 true on reading the cells each cites; `context-lab` `0032` scopes the rules, and the same record then gives 8, all true.\
+P3 is refuted by one judge: in all 14 split votes on `a10-1` and `a10-2` the Grok judge alone differed, scoring compliant changes 0; it alone differed in 72 of 97 splits run-wide, and is dropped from the adherence experiments (`0099`).\
+Without its votes, P2 and the observation below are unchanged.\
+`A14` was opened far more, but `adherence-a14` did not move (`a14-1` 0.60 in both corpus arms): agents fixed the root cause as often without opening it.
+
+**Observed after the run, not pre-registered.**\
+Over the same 10 scenarios, of the cells that opened the scenario's axiom, 35 of 37 met the property scoring the change under the new corpus and 27 of 38 under the old (chance 0.01), the gain spread over Claude (9 of 9 against 7 of 9), Gemini Flash (9 of 9 against 6 of 9) and GPT (8 of 9 against 4 of 10).\
+This is the effect P2 meant to catch - an agent reading the axiom and still taking the shortcut - measured more widely than P2 counted it; as it was chosen after seeing the data, it is a hypothesis for a replicated run, not a result.\
+Grok as an agent opened no on-request entry in any scenario in either corpus arm, as in Pass 1.
+
 **Source.**\
 `[V, director ruling 2026-10-18 (second pass, option 1), proposed pending the test; docs/evals/runs/context-lab/2026-10-14-112229-adherence through 2026-10-18-045019-adherence, re-tallied with context-lab 50479f8]`
+
+### 0099
+
+**Ruling.**\
+`experiments/adherence.json` and `experiments/adherence-pass2.json` are judged by `c`, `a` and `o`; `x`, Grok 4.20 non-reasoning, is dropped from their panels and stays in their population as an agent.\
+Every outcome still has at least two judges, none of its agent's family.
+
+**Evidence.**\
+Where three or more judges valued an outcome and disagreed, `x` alone differed in 72 of the 97 splits it was in on `2026-10-18-093310-adherence-pass2`, against 8 of 56 (`a`), 9 of 88 (`c`) and 15 of 71 (`o`), and in 67 of the 116 split votes of the adherence baseline `2026-10-14-112229-adherence`.\
+In all 14 split votes on `a10-1` and `a10-2`, it was the one that differed; on `a10-1` its reasons scored changes that took neither shortcut as taking one.\
+Without its votes, `0098`'s P2 and its post-run observation are unchanged; P1 and P4 read no votes.
+
+**Scope.**\
+The other experiments keep `x` as a judge; its dissent there, and the `aa-gate` thresholds derived with it, are `B87`.
+
+**Source.**\
+`[V, director's standing directive 2026-10-18 to fix key and judge defects found by each run's diagnostic; context-lab judgeDissent (0032) over docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2 and 2026-10-14-112229-adherence]`
