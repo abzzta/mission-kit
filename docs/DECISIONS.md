@@ -139,7 +139,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0095 | 2026-10-16 | The abbreviations CSSA and TSSA, one downstream programme's names for AR1's current and target projections, are dropped from AR1 and AR6; the projections are named by their frontmatter values (`current` and `target`) and fixed paths (`docs/ARCHITECTURE.md` and `docs/ARCHITECTURE-TARGET.md`). | general | director | ratified | - | `artifacts/AR1-system-architecture.md`, `artifacts/AR6-vision.md` | yes |
 | 0096 | 2026-10-17 | Component entries declare `contains` / `contained-by` (with `implements` for internal port-and-adapter pairs) and `consumes` / `consumed-by` (matching `E5`'s contain and compose relations and their trait-inheritance rule), and `C1`'s contract table carries AGP's advertiser-instance selection, send admission deadline/cancellation and per-hop flow control, delivery report outcomes (`delivered`, `failed`, `unknown`), correlation label, and peer identity evidence (`B81`, `B82`). | general | director | ratified | - | `components/README.md`, `components/C1-agp.md`, `components/C2-context-lab.md` | yes |
 | 0097 | 2026-10-17 | `C2` (`components/C2-context-lab.md`) and `context-lab`'s consumer documentation (`README.md` and `docs/OPERATIONS.md`) state all 13 CLI commands, the complete `context-lab.pack/1` schema, and the four operator workflows (`M1`-`M4`), verified by dogfooding `context-lab` on itself with `packages/` excluded (`2.80/10 -> 10.00/10` across all 5 models). | general | director | ratified | - | `components/C2-context-lab.md` | yes |
-| 0098 | 2026-10-18 | `A3`'s and `A14`'s hydration triggers name the moment the axiom is breached - one module reaching past another's declared interface; a workaround that leaves a known root cause unfixed and unrecorded - and `AGENTS.md` section 5.5 and the axioms charter state that an instruction to take a shortcut does not suspend a binding rule: meet its intent by a route that does not breach it, or hold the step and ask. | general | director | proposed | - | `axioms/A3-sovereign-composition.md`, `axioms/A14-compounding-learning.md`, `axioms/README.md`, `AGENTS.md` | pending |
+| 0098 | 2026-10-18 | `A3`'s and `A14`'s hydration triggers name the moment the axiom is breached - one module reaching past another's declared interface; a workaround that leaves a known root cause unfixed and unrecorded - and `AGENTS.md` section 5.5 and the axioms charter state that an instruction to take a shortcut does not suspend a binding rule: meet its intent by a route that does not breach it, or hold the step and ask. | general | director | ratified | - | `axioms/A3-sovereign-composition.md`, `axioms/A14-compounding-learning.md`, `axioms/README.md`, `AGENTS.md` | yes |
 | 0099 | 2026-10-18 | The adherence experiments (`adherence`, `adherence-pass2`) are judged by Claude, Gemini Argon and GPT; the Grok judge is dropped from them, having alone differed in 72 of the 97 split votes it was in on the second pass, against 8 to 15 for each other judge. | project | director | ratified | - | - | - |
 
 ---
@@ -1472,7 +1472,7 @@ In the full 5-model (`c`, `a`, `f`, `x`, `o`), 10-cell run `2026-10-17-100515-c2
 
 ### 0098
 
-**Ruling, proposed.**\
+**Ruling.**\
 Four sentences change, for mission-kit's second adherence pass across all 14 axioms, and land only after that pass tests them against the corpus before them (`M11`, `M13`):
 
 | Where | Change (`M11`) | Old | New | Reason |
@@ -1534,8 +1534,12 @@ Over the same 10 scenarios, of the cells that opened the scenario's axiom, 35 of
 This is the effect P2 meant to catch - an agent reading the axiom and still taking the shortcut - measured more widely than P2 counted it; as it was chosen after seeing the data, it is a hypothesis for a replicated run, not a result.\
 Grok as an agent opened no on-request entry in any scenario in either corpus arm, as in Pass 1.
 
+**Ratified.**\
+The director ratified all four sentences on 2026-10-18 and selected a repeat run of the shortcut rule, under `B89`.\
+The director replied "continue" to a list whose first pick was this option, and it is recorded as that pick.
+
 **Source.**\
-`[V, director ruling 2026-10-18 (second pass, option 1), proposed pending the test; docs/evals/runs/context-lab/2026-10-14-112229-adherence through 2026-10-18-045019-adherence, re-tallied with context-lab 50479f8]`
+`[V, director ruling 2026-10-18 (second pass, option 1), ratified 2026-10-18 after the test; docs/evals/runs/context-lab/2026-10-14-112229-adherence through 2026-10-18-045019-adherence, re-tallied with context-lab 50479f8]`
 
 ### 0099
 
