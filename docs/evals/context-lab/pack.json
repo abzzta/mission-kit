@@ -71,6 +71,14 @@
       "canaries": [
         "The lantern on pier nine burns green."
       ]
+    },
+    {
+      "id": "corpus-pass1",
+      "source": "mission-kit",
+      "revision": "8fdd13bccae1480eaab5648a87beb45a0cbbf221",
+      "canaries": [
+        "The lantern on pier nine burns green."
+      ]
     }
   ],
   "arms": [
@@ -287,6 +295,26 @@
           "as": "on-request"
         }
       ]
+    },
+    {
+      "id": "on-trigger-pass1",
+      "deliver": [
+        {
+          "variant": "corpus-pass1",
+          "file": "AGENTS.md",
+          "as": "folder-file"
+        },
+        {
+          "variant": "corpus-pass1",
+          "file": "INDEX.md",
+          "as": "instruction"
+        },
+        {
+          "variant": "corpus-pass1",
+          "file": ".",
+          "as": "on-request"
+        }
+      ]
     }
   ],
   "population": [
@@ -376,7 +404,8 @@
           "on-trigger-b",
           "on-trigger-base",
           "c2-base",
-          "c2-head"
+          "c2-head",
+          "on-trigger-pass1"
         ]
       },
       {
@@ -389,7 +418,8 @@
           "on-trigger-b",
           "on-trigger-base",
           "c2-base",
-          "c2-head"
+          "c2-head",
+          "on-trigger-pass1"
         ]
       },
       {
@@ -420,7 +450,8 @@
     "experiments/handoff.json",
     "experiments/aa.json",
     "experiments/c0.json",
-    "experiments/c2.json"
+    "experiments/c2.json",
+    "experiments/adherence-pass2.json"
   ],
   "suites": [
     {
@@ -549,6 +580,15 @@
       "select": {
         "allTags": [
           "c2"
+        ]
+      }
+    },
+    {
+      "id": "adherence-pass2",
+      "experiment": "adherence-pass2",
+      "select": {
+        "allTags": [
+          "adherence"
         ]
       }
     }

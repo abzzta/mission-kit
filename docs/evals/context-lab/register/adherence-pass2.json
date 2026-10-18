@@ -1,0 +1,11 @@
+{
+  "experiment": "adherence-pass2",
+  "records": [
+    {
+      "experiment": "adherence-pass2",
+      "hash": "0111e976d4c2f257ac6d28c0786e76ab46aef1a4306e7fcd0ce611664d84302a",
+      "recordedAt": "2026-10-18T09:31:47.465Z",
+      "declaredStatus": "exploration"
+    }
+  ]
+}
