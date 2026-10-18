@@ -1538,6 +1538,11 @@ Grok as an agent opened no on-request entry in any scenario in either corpus arm
 The director ratified all four sentences on 2026-10-18 and selected a repeat run of the shortcut rule, under `B89`.\
 The director replied "continue" to a list whose first pick was this option, and it is recorded as that pick.
 
+**Repeat, `B89`.**\
+Run `2026-10-18-111520-adherence-rule-repeat`, pre-registered with its predicates before running: the 10 scenarios whose triggers this ruling left unchanged, old corpus against new, 3 runs per cell, judged by `c`, `a` and `o`.\
+Of the cells that opened the scenario's axiom, 107 of 114 met the property scoring the change under the new corpus against 85 of 112 under the old (chance 0.0002); over every cell, 110 of 150 against 89 of 150 (chance 0.014); hydration was balanced, 114 of 150 against 112 of 150.\
+The rule's effect is confirmed for this population: GPT moved most (26 of 30 against 12 of 30), Claude next (28 of 28 against 21 of 26), and Grok, which opened no entry, is outside what the measure can see.
+
 **Source.**\
 `[V, director ruling 2026-10-18 (second pass, option 1), ratified 2026-10-18 after the test; docs/evals/runs/context-lab/2026-10-14-112229-adherence through 2026-10-18-045019-adherence, re-tallied with context-lab 50479f8]`
 
