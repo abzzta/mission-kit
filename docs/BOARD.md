@@ -110,7 +110,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B69` | S4 | A14 signal | held | Gaps the `W0` investigation of 2026-10-04 found in `work-types/`. |
 | `B71` | S4 | A3 signal | held | No work-type produces a board, a delta or a vision. |
 | `B73` | S4 | A14 signal | held | No guidance in this corpus is measured for adherence, only for comprehension. |
-| `B74` | S4 | A13 signal | held | `S15` gives two counts for a decision message's picks that cannot both hold. |
 | `B78` | S4 | A3 signal | held | No study tests how agents compose mission-kit's components, or which boxes recur in designs that the registry lacks. |
 | `B79` | S4 | A2 signal | held | The language and layout of a component are a convention held only in repositories. |
 | `B84` | S4 | A2 signal | held | A registry entry's Contract section is restated by hand beside the component's own contract, the two drift, and no schema holds the capability-table form eight component repositories already use. |
@@ -265,7 +264,6 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B69` | S4 | A14 signal | Gaps the `W0` investigation of 2026-10-04 found in `work-types/`. | each gap's own trigger, as stated in the investigation; OR the next investigation of this set, which re-triages all of them. |
 | `B71` | S4 | A3 signal | No work-type produces a board, a delta or a vision. | one of these is done as claimed work on the coordination substrate, or a project asks which work-type authors one. |
 | `B73` | S4 | A14 signal | No guidance in this corpus is measured for adherence, only for comprehension. | ` 1.40/4, `always-on` 2.25/4): write the remaining eight axiom traps (`A1`, `A5`-`A10`, `A12`) next, each key committed and audited before its run |
-| `B74` | S4 | A13 signal | `S15` gives two counts for a decision message's picks that cannot both hold. | `S15` is next changed, or a reader or scorer splits on the pick count again |
 | `B78` | S4 | A3 signal | No study tests how agents compose mission-kit's components, or which boxes recur in designs that the registry lacks. | mission-kit's pack runs on context-lab's core (context-lab M1.2) |
 | `B79` | S4 | A2 signal | The language and layout of a component are a convention held only in repositories. | a third component is founded, or a component departs from the convention again |
 | `B84` | S4 | A2 signal | A registry entry's Contract section is restated by hand beside the component's own contract, the two drift, and no schema holds the capability-table form eight component repositories already use. | the first component is filed with its entry generated from its contract, or a second, unrelated project writes contracts in this shape |
