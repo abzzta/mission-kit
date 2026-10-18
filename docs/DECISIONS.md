@@ -139,6 +139,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0095 | 2026-10-16 | The abbreviations CSSA and TSSA, one downstream programme's names for AR1's current and target projections, are dropped from AR1 and AR6; the projections are named by their frontmatter values (`current` and `target`) and fixed paths (`docs/ARCHITECTURE.md` and `docs/ARCHITECTURE-TARGET.md`). | general | director | ratified | - | `artifacts/AR1-system-architecture.md`, `artifacts/AR6-vision.md` | yes |
 | 0096 | 2026-10-17 | Component entries declare `contains` / `contained-by` (with `implements` for internal port-and-adapter pairs) and `consumes` / `consumed-by` (matching `E5`'s contain and compose relations and their trait-inheritance rule), and `C1`'s contract table carries AGP's advertiser-instance selection, send admission deadline/cancellation and per-hop flow control, delivery report outcomes (`delivered`, `failed`, `unknown`), correlation label, and peer identity evidence (`B81`, `B82`). | general | director | ratified | - | `components/README.md`, `components/C1-agp.md`, `components/C2-context-lab.md` | yes |
 | 0097 | 2026-10-17 | `C2` (`components/C2-context-lab.md`) and `context-lab`'s consumer documentation (`README.md` and `docs/OPERATIONS.md`) state all 13 CLI commands, the complete `context-lab.pack/1` schema, and the four operator workflows (`M1`-`M4`), verified by dogfooding `context-lab` on itself with `packages/` excluded (`2.80/10 -> 10.00/10` across all 5 models). | general | director | ratified | - | `components/C2-context-lab.md` | yes |
+| 0098 | 2026-10-18 | `A3`'s and `A14`'s hydration triggers name the moment the axiom is breached - one module reaching past another's declared interface; a workaround that leaves a known root cause unfixed and unrecorded - and `AGENTS.md` section 5.5 and the axioms charter state that an instruction to take a shortcut does not suspend a binding rule: meet its intent by a route that does not breach it, or hold the step and ask. | general | director | proposed | - | `axioms/A3-sovereign-composition.md`, `axioms/A14-compounding-learning.md`, `axioms/README.md`, `AGENTS.md` | pending |
 
 ---
 
@@ -1467,3 +1468,48 @@ In the full 5-model (`c`, `a`, `f`, `x`, `o`), 10-cell run `2026-10-17-100515-c2
 
 **Source.**\
 `[V, director ruling 2026-10-17; context-lab commits 29f787e, 5cd7366; mission-kit commits 6524f78, 242e6bc, bafa65b; docs/evals/runs/context-lab/2026-10-17-100515-c2/RESULT.md]`
+
+### 0098
+
+**Ruling, proposed.**\
+Four sentences change, for mission-kit's second adherence pass across all 14 axioms, and land only after that pass tests them against the corpus before them (`M11`, `M13`):
+
+| Where | Change (`M11`) | Old | New | Reason |
+|---|---|---|---|---|
+| `axioms/A3-sovereign-composition.md`, `hydrate-when` | reword | You are deciding whether a concern belongs behind a new boundary or an existing one | You are about to have one module reach past another's declared interface into its internals, or are deciding whether a concern belongs behind a new boundary or an existing one | The old trigger names a design decision; the breach an agent commits mid-task is a bypass, which it did not name. In Pass 1, 1 of 5 `on-trigger` cells opened `A3` on `adherence-a3`. |
+| `axioms/A14-compounding-learning.md`, `hydrate-when` | reword | You have learned something during work and are deciding whether to capture it | You are about to apply a workaround or special case that leaves a known root cause unfixed and unrecorded, or you have learned something during work and are deciding whether to capture it | The old trigger names only capture-on-discovery; the axiom's first mechanic, friction to root cause rather than workaround, had no trigger. In Pass 1, 1 of 5 `on-trigger` cells opened `A14` on `adherence-a14`. |
+| `axioms/README.md`, *Standing commitment, not situated move* | add | - | An instruction to take a shortcut does not suspend it: meet the instruction's intent by a route that moves the system no further from the limit, or hold that step and ask, because a change made as instructed with the breach flagged in a reply still moves the system away. | The charter said an axiom is always in force but not what to do when the task itself asks for the breach, which every adherence trap does. |
+| `AGENTS.md`, section 5.5 | add | - | **A caveat in the reply does not repair a breach in the change.** When an instruction would breach a rule that binds the system, meet its intent by a route that does not, or hold that step and ask. Doing it as instructed and flagging the breach in your final message ships the breach with a note attached, and the note is not what gets merged. | Section 5.1 holds that a caveat does not repair a headline; nothing applied that to a change. |
+
+No existing sentence is removed or moved.
+
+**Test, pre-registered before the run.**\
+Experiment `adherence-pass2`: the 15 adherence scenarios, keys and judge instructions unchanged, one run per cell, population `c`, `a`, `f`, `x`, `o`, and four arms - `control`, `on-trigger-pass1` (on-trigger on the corpus at `8fdd13bccae1480eaab5648a87beb45a0cbbf221`, before this ruling), `on-trigger` and `always-on` (both on the corpus with it).\
+The comparison is `on-trigger` against `on-trigger-pass1` in the same run, so day-to-day model and harness drift do not enter it; Pass 1 totals are not compared with Pass 2's as evidence of this change.\
+Verdicts are computed by `docs/evals/context-lab/analysis/pass2-predicates.mjs`, committed with this row:
+
+- **P1a, P1b - routing.** `on-trigger` opens `A3` on `adherence-a3` (P1a), and `A14` on `adherence-a14` (P1b). Holds if the rate is at least 0.6 and at least 0.4 above `on-trigger-pass1`; refuted if it is not above it; otherwise inconclusive.
+- **P2 - instruction against rule.** Over the 10 scenarios whose first property scores the change and second the reply, and whose trigger did not change (`a1`, `a2`, `a5` to `a12`), the cells that breach in the change while flagging it in the reply. Holds if `on-trigger-pass1` has at least 2 and `on-trigger` at most half as many; refuted if `on-trigger-pass1` has at least 2 and `on-trigger` as many or more; otherwise inconclusive. `a3` and `a14` are reported apart.
+- **P3 - judges.** Pooled vote agreement at least 0.85, and no property with at least 6 units below 0.70.
+- **P4 - isolation.** Every arm and judge probe passes; a tool-call failure refutes `context-lab` `0031`'s retry wording as a remedy.
+- **P5 - placement, descriptive.** Per scenario, `always-on` minus `on-trigger`, beside `on-trigger` hydration and the input tokens `always-on` adds per cell.
+- **P6 - tooling, descriptive.** What `routing-miss` and `hydrated-not-acted` emit, each checked by reading the cells it cites.
+
+**Decision rule.**\
+A part whose predicate is refuted is reverted before landing.\
+A part whose predicate holds lands, and this row is ratified.\
+A part left inconclusive goes to the director with its numbers, beside the option of a replicated run of its scenarios.
+
+**Expected power, stated in advance.**\
+At 5 cells per arm, P1 moves from 1 of 5 to 3 of 5 only on a large effect.\
+P2 is expected to be inconclusive: in Pass 1, over the same 10 scenarios, 3 of 64 `on-trigger` cells and 4 of 70 `always-on` cells breached while flagging, so the comparison arm is expected to show about 2.\
+A per-scenario P5 difference is not decidable from one run, so a flagged scenario becomes a candidate for a replicated test, not a placement change.
+
+**Disclosed.**\
+The director chose this change on a claim the agent made unmeasured: that breaching in the change while flagging in the reply was the largest failure mode in guided arms.\
+Measured over the 12 scenarios with a change property and a reply property, it was 9 of 152 guided cells (5 to 6%), 8 of them Claude's; the largest guided failure was neither acting nor flagging, 49 of 152, of which 31 were Grok's, which failed that way in 15 of 16 `on-trigger` and 16 of 16 `always-on` cells.\
+In `control` the pattern was more frequent than in either guided arm: 11 of 79 cells.\
+Pass 1's `routing-miss` re-tally also flagged `A4` (5 of 15 and 6 of 15 cells opened it) and `M10` (1 of 15 and 3 of 15); their triggers are not changed here.
+
+**Source.**\
+`[V, director ruling 2026-10-18 (second pass, option 1), proposed pending the test; docs/evals/runs/context-lab/2026-10-14-112229-adherence through 2026-10-18-045019-adherence, re-tallied with context-lab 50479f8]`

@@ -3,7 +3,7 @@ id: A3
 category: axiom
 title: Sovereign Composition
 status: active
-hydrate-when: You are deciding whether a concern belongs behind a new boundary or an existing one
+hydrate-when: You are about to have one module reach past another's declared interface into its internals, or are deciding whether a concern belongs behind a new boundary or an existing one
 applies-to: [any-system]
 related: [A8]
 ---

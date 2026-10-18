@@ -83,7 +83,8 @@ Few systems reach it, and a system is not wrong for being short of it; it is wro
 So an axiom binds every change in two directions at once.\
 **No change may move the system away from the limit, and each change moves it toward the limit as far as the change's own scope allows.**\
 Preserving and improving are one rule: never backwards, and forward with every step.\
-It is not advice you weigh against deadlines; once your architecture is in scope, it is always in force.
+It is not advice you weigh against deadlines; once your architecture is in scope, it is always in force.\
+An instruction to take a shortcut does not suspend it: meet the instruction's intent by a route that moves the system no further from the limit, or hold that step and ask, because a change made as instructed with the breach flagged in a reply still moves the system away.
 
 **How far a change must move is set by its scope** - what the change was undertaken to do, and the parts of the system it touches in doing it.\
 A change touches what it modifies, what it newly depends on, and any consumer whose contract it alters; code that merely sits beside it, in the same file or module, is not touched.\
@@ -193,7 +194,7 @@ Axioms carry this shape rather than the `S`/`M`/`P`/`K` skeleton because an axio
 | [A0](README.md) | Axioms - standing commitments, what brings one into force, and how they compose |  | You are deciding whether a principle is a standing commitment or a situated move, or which axioms bind the system in front of you |
 | [A1](A1-sovereign-state-transparency.md) | Sovereign State Transparency | stateful | You cannot see the current state of the system from one place and are about to infer it |
 | [A2](A2-isomorphic-specification.md) | Isomorphic Specification | declarative | Declared intent and running reality have drifted, or you are about to change one without the other |
-| [A3](A3-sovereign-composition.md) | Sovereign Composition | any-system | You are deciding whether a concern belongs behind a new boundary or an existing one |
+| [A3](A3-sovereign-composition.md) | Sovereign Composition | any-system | You are about to have one module reach past another's declared interface into its internals, or are deciding whether a concern belongs behind a new boundary or an existing one |
 | [A4](A4-zero-loss-knowledge.md) | Zero-Loss Knowledge | any-system | You are about to summarise an artifact rather than carry it forward whole |
 | [A5](A5-perceptual-parity.md) | Perceptual Parity | multi-agent, llm-in-the-loop | An agent is about to act on state it derived rather than state it was given |
 | [A6](A6-frictionless-agentic-collaboration.md) | Frictionless Agentic Collaboration | multi-agent | You are designing a seam between two agents that must collaborate without a human relay |
@@ -204,5 +205,5 @@ Axioms carry this shape rather than the `S`/`M`/`P`/`K` skeleton because an axio
 | [A11](A11-cognitive-minimalism.md) | Cognitive Minimalism | llm-in-the-loop | You are about to have an agent do work that deterministic code could do instead |
 | [A12](A12-precision-context-engineering.md) | Precision Context Engineering | llm-in-the-loop | You are assembling the context for an invocation and deciding what earns its place |
 | [A13](A13-director-intent-amplification.md) | Director Intent Amplification | multi-agent, autonomous | You are about to consume the director's attention, or to decide something in their absence |
-| [A14](A14-compounding-learning.md) | Compounding Learning | any-system | You have learned something during work and are deciding whether to capture it |
+| [A14](A14-compounding-learning.md) | Compounding Learning | any-system | You are about to apply a workaround or special case that leaves a known root cause unfixed and unrecorded, or you have learned something during work and are deciding whether to capture it |
 <!-- END GENERATED -->
