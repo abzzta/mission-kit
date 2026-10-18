@@ -116,6 +116,7 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B85` | S4 | A3 signal | held | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. |
 | `B86` | S4 | A7 signal | held | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). |
 | `B88` | S4 | A12 signal | held | Agents rarely open `A4` or `M10` when they apply. |
+| `B89` | S4 | A14 signal | held | The effect of `0098`'s shortcut rule is unconfirmed. |
 | `B39` | S5 | A3 signal | held | Style cannot be scoped by medium. |
 <!-- END GENERATED: ledger -->
 
@@ -271,6 +272,7 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B85` | S4 | A3 signal | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. | operation-proxy is built and its start, staleness and idle-ending tests pass |
 | `B86` | S4 | A7 signal | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). | operation-call is certified, so the entry can cite a working instance |
 | `B88` | S4 | A12 signal | Agents rarely open `A4` or `M10` when they apply. | the director selects a trigger rewrite for `A4` or `M10`, or the next adherence pass |
+| `B89` | S4 | A14 signal | The effect of `0098`'s shortcut rule is unconfirmed. | the repeat's result; R1 holding with R3 balanced closes this row as confirmed, R1 refuted reopens the rule for revision by a later ruling, anything else goes to the director |
 | `B39` | S5 | A3 signal | Style cannot be scoped by medium. | FIRED and moved: `S15` is the first single-medium rule; one rule does not earn a sub-set. TRIGGER: a second single-medium style rule. Nested sets need generator support, shared with `B38`'s set spanning layers. |
 <!-- END GENERATED: held -->
 

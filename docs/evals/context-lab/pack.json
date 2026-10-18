@@ -451,7 +451,8 @@
     "experiments/aa.json",
     "experiments/c0.json",
     "experiments/c2.json",
-    "experiments/adherence-pass2.json"
+    "experiments/adherence-pass2.json",
+    "experiments/adherence-rule-repeat.json"
   ],
   "suites": [
     {
@@ -589,6 +590,27 @@
       "select": {
         "allTags": [
           "adherence"
+        ]
+      }
+    },
+    {
+      "id": "adherence-rule-repeat",
+      "experiment": "adherence-rule-repeat",
+      "select": {
+        "allTags": [
+          "adherence"
+        ],
+        "anyTags": [
+          "exercises:A1",
+          "exercises:A2",
+          "exercises:A5",
+          "exercises:A6",
+          "exercises:A7",
+          "exercises:A8",
+          "exercises:A9",
+          "exercises:A10",
+          "exercises:A11",
+          "exercises:A12"
         ]
       }
     }

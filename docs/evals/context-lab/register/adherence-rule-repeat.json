@@ -1,0 +1,11 @@
+{
+  "experiment": "adherence-rule-repeat",
+  "records": [
+    {
+      "experiment": "adherence-rule-repeat",
+      "hash": "f94e0b6279fb82dd9901576fa6511bb9ab2945bc1071a4c02680d585779b821a",
+      "recordedAt": "2026-10-18T11:14:28.884Z",
+      "declaredStatus": "exploration"
+    }
+  ]
+}
